@@ -38,7 +38,7 @@ export default function WorkWithMePage() {
       </p>
 
       <section className="mt-8 card">
-        <h2 className="h3">Optional packaged pathway</h2>
+        <h2 className="h3">Optional track: structured model-building</h2>
         <p className="mt-3 body max-w-3xl">
           Structured model-building is available as a defined package when it supports treatment goals. It is optional and never required for effective work at Arc.
         </p>

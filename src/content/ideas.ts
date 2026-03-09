@@ -137,8 +137,20 @@ function countWords(input: string) {
   return input.trim().split(/\s+/).filter(Boolean).length;
 }
 
+const essayDateFormatter = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  year: "numeric",
+  timeZone: "UTC"
+});
+
 export function getReadingTimeMinutes(text: string) {
   return Math.max(3, Math.ceil(countWords(text) / 220));
+}
+
+export function formatEssayDate(date: string) {
+  const parsed = new Date(`${date}T00:00:00Z`);
+  if (Number.isNaN(parsed.getTime())) return date;
+  return essayDateFormatter.format(parsed);
 }
 
 export function getAllEssays() {

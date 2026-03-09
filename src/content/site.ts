@@ -5,7 +5,7 @@ export const siteContent = {
   siteUrl: "https://arc-psychotherapy.com",
   bookingUrl: "https://calendly.com/your-handle/consult",
   contactEndpoint: "/api/contact",
-  email: "hello@arcpsychotherapy.com",
+  email: "hello@arc-psychotherapy.com",
   phone: "(512) 555-0148",
   authorDisplayName: "Leila Anderson, LMFT-S",
   positioningStatementShort:
@@ -58,7 +58,7 @@ export const siteContent = {
     "Pflugerville"
   ],
   heroTagline:
-    "Structured psychotherapy for high-achieving adults navigating perfectionism, rigidity, and religious harm.",
+    "Psychotherapy for high-achieving adults navigating perfectionism, rigidity, and religious harm.",
   standardSessionFee: 200,
   sessionLength: "50–55 minutes",
   clinician: {
@@ -85,9 +85,9 @@ export const siteContent = {
     subhead:
       "Structured psychotherapy for high-achieving adults navigating perfectionism, rigidity, and religious harm.",
     secondaryLine:
-      "Private-pay care for adults with high external functioning and high internal strain.",
+      "Private-pay care for adults whose external competence masks high internal strain.",
     locationLine:
-      "Downtown Round Rock, Texas • Serving North Austin and surrounding communities • Telehealth across Texas.",
+      "Downtown Round Rock, Texas",
     fitSignals: [
       "You are competent at work, but your internal world feels overmanaged and brittle.",
       "You do not need vague reassurance; you want a method you can think with.",

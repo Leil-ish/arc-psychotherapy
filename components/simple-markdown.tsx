@@ -1,42 +1,101 @@
+type MarkdownNode =
+  | { type: "h2"; content: string }
+  | { type: "h3"; content: string }
+  | { type: "p"; content: string }
+  | { type: "ul"; items: string[] };
+
+function parseSimpleMarkdown(body: string): MarkdownNode[] {
+  const lines = body.trim().split(/\r?\n/);
+  const nodes: MarkdownNode[] = [];
+  let paragraph: string[] = [];
+  let listItems: string[] = [];
+
+  const flushParagraph = () => {
+    if (paragraph.length === 0) return;
+    nodes.push({ type: "p", content: paragraph.join(" ").trim() });
+    paragraph = [];
+  };
+
+  const flushList = () => {
+    if (listItems.length === 0) return;
+    nodes.push({ type: "ul", items: [...listItems] });
+    listItems = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+
+    if (!line) {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+
+    if (line.startsWith("## ")) {
+      flushParagraph();
+      flushList();
+      nodes.push({ type: "h2", content: line.slice(3).trim() });
+      continue;
+    }
+
+    if (line.startsWith("### ")) {
+      flushParagraph();
+      flushList();
+      nodes.push({ type: "h3", content: line.slice(4).trim() });
+      continue;
+    }
+
+    if (line.startsWith("- ")) {
+      flushParagraph();
+      listItems.push(line.slice(2).trim());
+      continue;
+    }
+
+    flushList();
+    paragraph.push(line);
+  }
+
+  flushParagraph();
+  flushList();
+
+  return nodes;
+}
+
 export function SimpleMarkdown({ body }: { body: string }) {
-  const blocks = body
-    .trim()
-    .split(/\n\n+/)
-    .map((block) => block.trim())
-    .filter(Boolean);
+  const nodes = parseSimpleMarkdown(body);
 
   return (
-    <div className="space-y-6">
-      {blocks.map((block, index) => {
-        if (block.startsWith("## ")) {
+    <div className="space-y-5">
+      {nodes.map((node, index) => {
+        if (node.type === "h2") {
           return (
-            <h2 key={`${index}-${block}`} className="h2">
-              {block.slice(3)}
+            <h2 key={`${index}-${node.content}`} className="font-serif text-2xl leading-tight text-ink md:text-3xl">
+              {node.content}
             </h2>
           );
         }
 
-        if (block.startsWith("### ")) {
+        if (node.type === "h3") {
           return (
-            <h3 key={`${index}-${block}`} className="h3">
-              {block.slice(4)}
+            <h3 key={`${index}-${node.content}`} className="font-serif text-xl leading-tight text-ink md:text-2xl">
+              {node.content}
             </h3>
           );
         }
 
-        if (block.split("\n").every((line) => line.startsWith("- "))) {
+        if (node.type === "ul") {
           return (
-            <ul key={`${index}-${block}`} className="space-y-2 body">
-              {block.split("\n").map((line) => (
-                <li key={line}>• {line.slice(2)}</li>
+            <ul key={`${index}-list`} className="body list-disc space-y-2 pl-6">
+              {node.items.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           );
         }
 
         return (
-          <p key={`${index}-${block}`} className="body">
-            {block}
+          <p key={`${index}-${node.content}`} className="body">
+            {node.content}
           </p>
         );
       })}

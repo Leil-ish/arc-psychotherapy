@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/button-link";
 import { SimpleMarkdown } from "@/components/simple-markdown";
 import {
+  formatEssayDate,
   getAllEssays,
   getEssayBySlug,
   getReadingTimeMinutes,
@@ -13,18 +14,23 @@ import {
 } from "@/src/content/ideas";
 import { siteContent } from "@/src/content/site";
 
-const conceptHrefByTag: Partial<Record<IdeaTag, string>> = {
-  Perfectionism: "/perfectionism",
-  Overcontrol: "/overcontrol",
-  "Religious Harm": "/religious-harm"
+type ConceptLink = {
+  label: string;
+  href: string;
+};
+
+const conceptByTag: Partial<Record<IdeaTag, ConceptLink>> = {
+  Perfectionism: { href: "/perfectionism", label: "Perfectionism concept hub" },
+  Overcontrol: { href: "/overcontrol", label: "Overcontrol concept hub" },
+  "Religious Harm": { href: "/religious-harm", label: "Religious harm concept hub" }
 };
 
 function conceptLinksForTags(tags: IdeaTag[]) {
-  const hrefs = tags
-    .map((tag) => conceptHrefByTag[tag])
-    .filter((href): href is string => Boolean(href));
+  const links = tags
+    .map((tag) => conceptByTag[tag])
+    .filter((link): link is ConceptLink => Boolean(link));
 
-  return Array.from(new Set(hrefs));
+  return Array.from(new Map(links.map((link) => [link.href, link])).values());
 }
 
 export function generateStaticParams() {
@@ -96,7 +102,7 @@ export default async function IdeaEssayPage({
       <h1 className="h1 mt-3 max-w-4xl">{essay.title}</h1>
       <p className="mt-4 body max-w-3xl text-ink/85">{essay.description}</p>
       <p className="mt-3 text-sm text-ink/70">
-        {essay.date} • {getReadingTimeMinutes(essay.body)} min read
+        {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
       </p>
 
       <section className="card mt-8">
@@ -109,7 +115,7 @@ export default async function IdeaEssayPage({
       </section>
 
       <section className="card mt-10">
-        <h2 className="h3">Related</h2>
+        <h2 className="h3">Related orientation links</h2>
         <div className="mt-4 flex flex-wrap gap-2">
           {essay.related.map((link) => (
             <Link key={link.href} href={link.href as Route} className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
@@ -117,14 +123,17 @@ export default async function IdeaEssayPage({
             </Link>
           ))}
           <Link href="/frameworks" className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
-            Frameworks
+            Frameworks index
+          </Link>
+          <Link href="/start-here" className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
+            Start Here orientation page
           </Link>
           <Link href="/work-with-me" className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
-            Learn how Arc works
+            Work With Me
           </Link>
-          {conceptLinks.map((href) => (
-            <Link key={href} href={href as Route} className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
-              {href.replace("/", "").replace("-", " ")}
+          {conceptLinks.map((link) => (
+            <Link key={link.href} href={link.href as Route} className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
+              {link.label}
             </Link>
           ))}
         </div>

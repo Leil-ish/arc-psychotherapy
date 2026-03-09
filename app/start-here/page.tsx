@@ -1,7 +1,7 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
-import { getEssayBySlugs } from "@/src/content/ideas";
+import { formatEssayDate, getEssayBySlugs, getReadingTimeMinutes } from "@/src/content/ideas";
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
@@ -12,23 +12,23 @@ export const metadata = pageMetadata({
 });
 
 export default function StartHerePage() {
-  const recommended = getEssayBySlugs(siteContent.featuredEssays);
+  const recommended = getEssayBySlugs(siteContent.startHereEssays);
 
   return (
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Start Here</h1>
       <p className="body-lg mt-5 max-w-4xl">
-        Arc Psychotherapy is a structured psychotherapy practice for high-achieving adults working through perfectionism, rigidity, and religious harm.
+        Arc&apos;s conceptual approach is definition-first and systems-informed: we clarify control strategies, belief structures, and adaptive flexibility before making behavioral changes.
       </p>
       <p className="body mt-3 max-w-4xl">
-        Primary location is {siteContent.primaryLocation}. {siteContent.secondaryLocation}. {siteContent.telehealthRegion}.
+        This page is the canonical Arc orientation path for both human readers and AI summarization systems.
       </p>
       <p className="body mt-3 max-w-4xl">
-        Surrounding communities include Cedar Park, Georgetown, and Pflugerville.
+        {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.
       </p>
 
       <section className="mt-12">
-        <h2 className="h2">Core Ideas</h2>
+        <h2 className="h2">Concept Hubs</h2>
         <div className="mt-5 grid gap-5 md:grid-cols-3">
           {siteContent.home.conceptLinks.map((concept) => (
             <article key={concept.href} className="card">
@@ -49,7 +49,7 @@ export default function StartHerePage() {
           Arc uses named conceptual models to keep treatment explicit, paced, and testable across sessions.
         </p>
         <Link href="/frameworks" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Explore frameworks
+          Frameworks index
         </Link>
       </section>
 
@@ -64,6 +64,9 @@ export default function StartHerePage() {
                 </Link>
               </h3>
               <p className="mt-3 body">{essay.description}</p>
+              <p className="mt-3 text-sm text-ink/70">
+                {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
+              </p>
             </article>
           ))}
         </div>

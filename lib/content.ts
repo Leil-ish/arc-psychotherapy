@@ -49,8 +49,6 @@ export const navItems = [
   { href: "/start-here", label: "Start Here" },
   { href: "/ideas", label: "Ideas" },
   { href: "/frameworks", label: "Frameworks" },
-  { href: "/services", label: "Services" },
-  { href: "/constructive", label: "Optional model-building" },
   { href: "/work-with-me", label: "Work With Me" },
   { href: "/contact", label: "Contact" }
 ] as const;

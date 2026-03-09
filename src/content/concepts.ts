@@ -21,7 +21,7 @@ export const conceptHubs: ConceptHub[] = [
     slug: "perfectionism",
     title: "Perfectionism",
     definition: [
-      "Perfectionism is a control strategy that treats error as threat and worth as performance stability.",
+      "Perfectionism is a control strategy that links worth, threat prediction, and behavioral rigidity.",
       "It can look productive from the outside while creating chronic constraint, shame, and decision fatigue.",
       "Arc approaches perfectionism as a structural issue, not a personality flaw."
     ],
@@ -65,7 +65,7 @@ export const conceptHubs: ConceptHub[] = [
     slug: "overcontrol",
     title: "Overcontrol",
     definition: [
-      "Overcontrol is persistent inhibition used to prevent uncertainty, error, or social risk.",
+      "Overcontrol refers to chronic inhibition and rigidity used to maintain certainty and prevent perceived threat.",
       "It often produces external stability while reducing spontaneity, trust in process, and relational range.",
       "Arc treats overcontrol by increasing adaptive flexibility in measurable steps."
     ],
@@ -109,7 +109,7 @@ export const conceptHubs: ConceptHub[] = [
     slug: "religious-harm",
     title: "Religious Harm",
     definition: [
-      "Religious harm is psychological injury associated with coercive, fear-based, or shaming belief environments.",
+      "Religious harm refers to psychological injury caused by coercive, shaming, or authoritarian religious systems.",
       "It can affect identity formation, authority relationships, nervous system regulation, and meaning-making.",
       "Arc addresses religious harm through structured reconstruction and consent-based integration."
     ],

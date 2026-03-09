@@ -4,7 +4,7 @@ import Script from "next/script";
 import { ButtonLink } from "@/components/button-link";
 import { pageMetadata } from "@/lib/seo";
 import { frameworks } from "@/src/content/frameworks";
-import { getEssayBySlugs, getReadingTimeMinutes } from "@/src/content/ideas";
+import { formatEssayDate, getEssayBySlugs, getReadingTimeMinutes } from "@/src/content/ideas";
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
@@ -34,9 +34,9 @@ export default function HomePage() {
   return (
     <>
       <section className="container-wrap py-16 md:py-24">
-        <h1 className="h1">{siteContent.brandName}</h1>
-        <p className="body-lg mt-5 max-w-3xl">{siteContent.heroTagline}</p>
-        <p className="mt-3 body max-w-3xl">Collaborative, systems-informed work grounded in clarity, not quick fixes.</p>
+        <p className="label">{siteContent.brandName}</p>
+        <h1 className="h1 mt-3 max-w-4xl">{siteContent.heroTagline}</h1>
+        <p className="body-lg mt-5 max-w-3xl">Collaborative, systems-informed work grounded in clarity, not quick fixes.</p>
         <p className="mt-3 body max-w-3xl text-ink/90">{siteContent.home.secondaryLine}</p>
         <p className="mt-3 body text-sm uppercase tracking-[0.12em] text-sage">{siteContent.home.locationLine}</p>
         <div className="mt-8 flex flex-wrap gap-3">
@@ -62,9 +62,18 @@ export default function HomePage() {
         </figure>
       </section>
 
+      <section className="container-wrap mt-4">
+        <article className="card">
+          <h2 className="h3">Location and Access</h2>
+          <p className="mt-3 body">Downtown Round Rock, Texas</p>
+          <p className="body">Serving North Austin, Cedar Park, Georgetown, and surrounding communities</p>
+          <p className="body">Telehealth across Texas</p>
+        </article>
+      </section>
+
       <section className="container-wrap mt-16 grid gap-8 md:grid-cols-2">
         <article className="card">
-          <h2 className="h2">Fit signals</h2>
+          <h2 className="h2">You might be a good fit if:</h2>
           <ul className="mt-5 space-y-3 body">
             {siteContent.home.fitSignals.map((signal) => (
               <li key={signal}>• {signal}</li>
@@ -123,7 +132,9 @@ export default function HomePage() {
                 </h3>
                 <p className="mt-2 body">{essay.description}</p>
                 <p className="mt-2 text-xs uppercase tracking-[0.11em] text-sage">{essay.tags.join(" • ")}</p>
-                <p className="mt-2 text-sm text-ink/70">{getReadingTimeMinutes(essay.body)} min read</p>
+                <p className="mt-2 text-sm text-ink/70">
+                  {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
+                </p>
               </div>
             ))}
           </div>
@@ -154,6 +165,9 @@ export default function HomePage() {
           <h2 className="h2">Speaking & Systems Work</h2>
           <p className="mt-3 body max-w-3xl">
             Arc contributes to professional conversations through TAMFT presentations, clinical AI workflow design, and advocacy work focused on responsible, structured mental health systems.
+          </p>
+          <p className="mt-3 body max-w-3xl">
+            Recent work includes a 2026 TAMFT conference presentation: Parts, Politics, and Presence.
           </p>
         </article>
       </section>

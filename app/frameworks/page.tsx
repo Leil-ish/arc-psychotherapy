@@ -18,6 +18,9 @@ export default function FrameworksPage() {
         Frameworks are the conceptual models Arc uses to keep psychotherapy explicit, paced, and coherent across sessions.
       </p>
       <p className="body mt-3 max-w-3xl">
+        Arc frameworks are conceptual tools developed in practice to help clients think clearly about control, belief systems, and adaptive flexibility.
+      </p>
+      <p className="body mt-3 max-w-3xl">
         Use this page as a working glossary, then open each framework for examples, practical application, and related reading.
       </p>
       <div className="mt-4 flex flex-wrap gap-3">

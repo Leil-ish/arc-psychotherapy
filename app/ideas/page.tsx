@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Route } from "next";
 import { pageMetadata } from "@/lib/seo";
 import {
+  formatEssayDate,
   getAllEssays,
   getEssayBySlugs,
   getReadingTimeMinutes,
@@ -71,6 +72,9 @@ export default async function IdeasPage({
             <Link key={essay.slug} href={`/ideas/${essay.slug}` as Route} className="focus-ring rounded-xl border border-stone/70 bg-sand/60 p-4 transition hover:border-sage/40">
               <p className="text-sm font-semibold text-ink">{essay.title}</p>
               <p className="mt-2 text-sm text-ink/80">{essay.description}</p>
+              <p className="mt-2 text-sm text-ink/70">
+                {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
+              </p>
             </Link>
           ))}
         </div>
@@ -113,7 +117,9 @@ export default async function IdeasPage({
               </h3>
               <p className="mt-3 body">{essay.description}</p>
               <p className="mt-3 text-xs uppercase tracking-[0.11em] text-sage">{essay.tags.join(" • ")}</p>
-              <p className="mt-2 text-sm text-ink/70">{getReadingTimeMinutes(essay.body)} min read</p>
+              <p className="mt-2 text-sm text-ink/70">
+                {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
+              </p>
             </article>
           ))}
         </div>
@@ -137,7 +143,9 @@ export default async function IdeasPage({
                   </span>
                 ))}
               </div>
-              <p className="mt-3 text-sm text-ink/70">{getReadingTimeMinutes(essay.body)} min read</p>
+              <p className="mt-3 text-sm text-ink/70">
+                {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
+              </p>
             </article>
           ))}
         </div>

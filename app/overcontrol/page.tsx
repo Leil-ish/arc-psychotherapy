@@ -33,10 +33,10 @@ export default function OvercontrolPage() {
           {siteContent.primaryLocation} • {siteContent.secondaryLocation} • {siteContent.telehealthRegion}
         </p>
         <Link href="/start-here" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Start here
+          Start Here orientation page
         </Link>
         <Link href="/work-with-me" className="focus-ring ml-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Learn how Arc works
+          Work With Me
         </Link>
       </section>
 

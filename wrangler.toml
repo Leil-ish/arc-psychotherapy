@@ -1,4 +1,4 @@
-name = "constructive-therapy-round-rock"
+name = "arc-psychotherapy"
 main = ".open-next/worker.js"
 compatibility_date = "2026-02-20"
 compatibility_flags = ["nodejs_compat"]
