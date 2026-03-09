@@ -43,10 +43,10 @@ export const siteContent = {
     neighborhood: "Downtown",
     city: "Round Rock",
     state: "TX",
-    addressLine1: "201 E Main St, Suite 220",
+    addressLine1: "309 W. Main",
     postalCode: "78664",
     mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=201+E+Main+St+Round+Rock+TX+78664"
+      "https://www.google.com/maps/search/?api=1&query=309+W+Main+Round+Rock+TX+78664"
   },
   telehealthRegion: "Telehealth across Texas",
   telehealthLine: "Telehealth across Texas",
