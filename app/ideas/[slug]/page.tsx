@@ -166,7 +166,7 @@ export default async function IdeaEssayPage({
           <ButtonLink href="/work-with-me" variant="secondary">
             Learn how Arc works
           </ButtonLink>
-          <ButtonLink href={siteContent.bookingUrl} external>
+          <ButtonLink href={siteContent.bookingUrl}>
             Schedule consult
           </ButtonLink>
         </div>

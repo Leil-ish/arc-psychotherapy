@@ -3,7 +3,7 @@ export const siteContent = {
   legalEntityNote:
     "A practice of Oleander Counseling & Consulting, LLC",
   siteUrl: "https://arc-psychotherapy.com",
-  bookingUrl: "https://calendly.com/your-handle/consult",
+  bookingUrl: "/contact#consult-request",
   contactEndpoint: "/api/contact",
   email: "hello@arc-psychotherapy.com",
   phone: "(512) 555-0148",

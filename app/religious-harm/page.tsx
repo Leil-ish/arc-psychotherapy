@@ -40,6 +40,8 @@ export default function ReligiousHarmPage() {
         </Link>
       </section>
 
+      <FaqBlock heading="Common questions about religious harm" items={hub.faq} schemaId="religious-harm-faq" />
+
       <section className="container-wrap grid gap-5 md:grid-cols-2">
         <article className="card">
           <h2 className="h2">Common presentations</h2>
@@ -85,7 +87,6 @@ export default function ReligiousHarmPage() {
         </article>
       </section>
 
-      <FaqBlock items={hub.faq} schemaId="religious-harm-faq" />
     </>
   );
 }

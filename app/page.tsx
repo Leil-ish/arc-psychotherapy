@@ -40,13 +40,19 @@ export default function HomePage() {
         <p className="mt-3 body max-w-3xl text-ink/90">{siteContent.home.secondaryLine}</p>
         <p className="mt-3 body text-sm uppercase tracking-[0.12em] text-sage">{siteContent.home.locationLine}</p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <ButtonLink href={siteContent.bookingUrl} external>
+          <ButtonLink href={siteContent.bookingUrl}>
             Schedule consult
           </ButtonLink>
           <ButtonLink href="/contact" variant="secondary">
             Contact
           </ButtonLink>
         </div>
+        <p className="mt-4 body text-sm max-w-3xl text-ink/80">
+          The consultation helps determine whether Arc&apos;s structured approach is a good match for your goals.
+        </p>
+        <p className="mt-2 body text-sm max-w-3xl text-ink/80">
+          Standard session fee: ${siteContent.standardSessionFee} ({siteContent.sessionLength}).
+        </p>
         <p className="mt-4 body text-sm max-w-3xl text-ink/75">
           Core offer: ongoing psychotherapy. Optional structured model-building is available when clinically useful.
         </p>
@@ -90,7 +96,7 @@ export default function HomePage() {
             ))}
           </ol>
           <p className="mt-5 body text-sm text-ink/75">
-            Standard sessions are ${siteContent.standardSessionFee} per session ({siteContent.sessionLength}).
+            Sessions are conversational but structured: we define patterns, test changes, and review what actually shifts between sessions.
           </p>
           <div className="mt-5">
             <ButtonLink href="/work-with-me" variant="secondary">
@@ -100,9 +106,32 @@ export default function HomePage() {
         </article>
       </section>
 
+      <section className="container-wrap mt-12 grid gap-5 md:grid-cols-2">
+        <article className="card">
+          <h2 className="h2">Who Arc Is For</h2>
+          <ul className="mt-4 space-y-2 body">
+            <li>• High-functioning adults experiencing internal rigidity</li>
+            <li>• Clients interested in conceptual clarity</li>
+            <li>• People navigating perfectionism, overcontrol, or religious harm</li>
+            <li>• Adults comfortable with private-pay psychotherapy</li>
+          </ul>
+        </article>
+        <article className="card">
+          <h2 className="h2">When Arc May Not Be the Best Fit</h2>
+          <ul className="mt-4 space-y-2 body">
+            <li>• Crisis stabilization</li>
+            <li>• Insurance-based therapy</li>
+            <li>• Short-term coaching</li>
+            <li>• Symptom-checklist style treatment</li>
+          </ul>
+        </article>
+      </section>
+
       <section className="container-wrap mt-16">
         <h2 className="h2">Start here</h2>
-        <p className="mt-3 body max-w-2xl">Use the orientation path: concept hubs first, then frameworks and essays.</p>
+        <p className="mt-3 body max-w-2xl">
+          If you prefer to understand the ideas behind Arc first, begin with the concept hubs below, then explore the frameworks and essays.
+        </p>
         <Link href="/start-here" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
           Start here
         </Link>

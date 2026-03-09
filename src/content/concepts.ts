@@ -45,12 +45,26 @@ export const conceptHubs: ConceptHub[] = [
     arcApproach:
       "Arc uses explicit mapping, paced experiments, and integration reviews to separate excellence from compulsive certainty.",
     faq: [
-      { question: "Is perfectionism always unhealthy?", answer: "No. Precision can be adaptive. The issue is whether control narrows functioning and identity." },
-      { question: "Can perfectionism look calm rather than anxious?", answer: "Yes. It often appears as composure with high internal pressure." },
-      { question: "Does treatment lower standards?", answer: "The aim is flexible, values-based standards, not lowered care." },
-      { question: "Why does insight not automatically change behavior?", answer: "Because the control structure is behavioral and identity-linked, not only cognitive." },
-      { question: "Can this be treated in telehealth?", answer: "Yes, when the treatment plan is structured and clinically appropriate for telehealth." },
-      { question: "How long does this work take?", answer: "Length varies by complexity and goals. Arc uses phased work rather than generic timelines." }
+      {
+        question: "What is perfectionism in psychology?",
+        answer:
+          "Perfectionism is a control strategy that links worth to performance and treats error as threat. In psychology, it often presents as high output with persistent fear of mistakes, delay, and harsh self-evaluation."
+      },
+      {
+        question: "What causes perfectionism?",
+        answer:
+          "Perfectionism develops when safety, belonging, or approval become tied to flawless performance. Family, school, work, and religious systems that punish error can reinforce this rule structure over time."
+      },
+      {
+        question: "Is perfectionism an anxiety disorder?",
+        answer:
+          "Perfectionism is not a standalone diagnosis; it is a transdiagnostic control pattern. It can amplify anxiety, depression, obsessive checking, and burnout by narrowing flexibility."
+      },
+      {
+        question: "How do you treat perfectionism without lowering standards?",
+        answer:
+          "Treatment separates values-based standards from compulsive certainty rules. Work then uses graded experiments so standards remain intentional while rigidity decreases."
+      }
     ],
     relatedEssays: [
       { label: "Perfectionism as a Structural Problem", href: "/ideas/perfectionism-structural-problem" },
@@ -89,12 +103,26 @@ export const conceptHubs: ConceptHub[] = [
     arcApproach:
       "Arc uses phased flexibility work, explicit sequence design, and reflective integration so adaptation does not feel like collapse.",
     faq: [
-      { question: "Is overcontrol the same as discipline?", answer: "No. Discipline supports goals; overcontrol restricts range beyond what goals require." },
-      { question: "Can overcontrol come from success history?", answer: "Yes. Strategies that once worked can become rigid under changing demands." },
-      { question: "Why does flexibility feel unsafe?", answer: "Because control has been linked to identity and threat reduction for a long time." },
-      { question: "Does this work require major life disruption?", answer: "No. Arc emphasizes adjacent, structured changes." },
-      { question: "Is this compatible with high-responsibility roles?", answer: "Yes. The goal is improved adaptability under responsibility, not reduced responsibility." },
-      { question: "Can model-building be used here?", answer: "Optionally, yes, when externalization improves precision and pacing." }
+      {
+        question: "What is overcontrol in psychology?",
+        answer:
+          "Overcontrol refers to chronic inhibition and rigidity used to maintain certainty and reduce perceived threat. It often looks like reliability and composure externally, with internal inflexibility and high strain."
+      },
+      {
+        question: "What causes overcontrol?",
+        answer:
+          "Overcontrol develops when strict self-management is repeatedly rewarded or required for safety. High-responsibility environments, perfectionistic rules, and threat-sensitive learning can all reinforce the pattern."
+      },
+      {
+        question: "Is overcontrol the same as self-discipline?",
+        answer:
+          "Overcontrol is not the same as self-discipline. Discipline serves chosen goals, while overcontrol narrows behavior beyond what goals require."
+      },
+      {
+        question: "How is overcontrol treated in therapy?",
+        answer:
+          "Therapy defines where control is useful and where it has become costly. Treatment then builds adaptive flexibility through bounded experiments, sequence tracking, and integration."
+      }
     ],
     relatedEssays: [
       { label: "The Adjacent Possible", href: "/ideas/adjacent-possible" },
@@ -133,12 +161,26 @@ export const conceptHubs: ConceptHub[] = [
     arcApproach:
       "Arc uses paced deconstruction, values clarification, and behavioral integration to rebuild coherence without reenacting coercion.",
     faq: [
-      { question: "Is religious harm a clinical diagnosis?", answer: "It is a descriptive framework for patterned psychological injury, not a standalone diagnosis." },
-      { question: "Do I need to reject all prior beliefs?", answer: "No. Treatment supports selective retention, revision, and release based on agency and alignment." },
-      { question: "Can this work include grief?", answer: "Yes. Grief is often central when community, certainty, or identity structures change." },
-      { question: "Is this anti-faith therapy?", answer: "No. The focus is coercion, harm, and agency, not blanket opposition to faith." },
-      { question: "Can telehealth work for this topic?", answer: "Yes, when clinically appropriate for the case and treatment phase." },
-      { question: "How is safety handled in this work?", answer: "By pacing decisions, clarifying boundaries, and using structured integration rather than pressure." }
+      {
+        question: "What is religious harm?",
+        answer:
+          "Religious harm is psychological injury caused by coercive, shaming, or authoritarian religious systems. It can affect identity, authority relationships, nervous system regulation, and meaning-making."
+      },
+      {
+        question: "What are common signs of religious harm?",
+        answer:
+          "Common signs include persistent shame, fear of dissent, difficulty trusting personal judgment, and panic around uncertainty. These patterns often continue even after formal disaffiliation."
+      },
+      {
+        question: "Can religious harm happen even if I still have faith?",
+        answer:
+          "Religious harm can occur regardless of current faith identity. The core issue is coercion and psychological injury, not whether someone believes, doubts, or returns to faith."
+      },
+      {
+        question: "How is religious harm treated in therapy?",
+        answer:
+          "Treatment maps inherited rules, authority dynamics, and current costs. Therapy then supports selective retention, revision, and release while rebuilding agency and coherent meaning."
+      }
     ],
     relatedEssays: [
       { label: "When Leaving a Faith System Feels Like Losing Gravity", href: "/ideas/leaving-faith-losing-gravity" },

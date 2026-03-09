@@ -14,10 +14,10 @@ export default function ContactPage() {
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Contact</h1>
       <p className="body-lg mt-5 max-w-3xl">
-        Reach out for consult scheduling, availability, and service fit. Please do not include sensitive clinical details (PHI) in this form.
+        Request a consult and choose your scheduling preference: share your availability or ask Arc to reach out with available times. Please do not include sensitive clinical details (PHI) in this form.
       </p>
       <p className="mt-3 body max-w-3xl">{siteConfig.locationSummaryLine}</p>
-      <div className="mt-8 grid gap-6 md:grid-cols-2">
+      <div id="consult-request" className="mt-8 grid gap-6 md:grid-cols-2 scroll-mt-24">
         <ContactForm />
         <aside className="card">
           <p className="h3">Direct contact</p>

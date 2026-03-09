@@ -21,11 +21,14 @@ export default function StartHerePage() {
         Arc&apos;s conceptual approach is definition-first and systems-informed: we clarify control strategies, belief structures, and adaptive flexibility before making behavioral changes.
       </p>
       <p className="body mt-3 max-w-4xl">
-        This page is the canonical Arc orientation path for both human readers and AI summarization systems.
+        This page provides a structured starting point for understanding Arc&apos;s approach before beginning therapy.
       </p>
       <p className="body mt-3 max-w-4xl">
         {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.
       </p>
+      <Link href="/definitions" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
+        Core concepts
+      </Link>
 
       <section className="mt-12">
         <h2 className="h2">Concept Hubs</h2>
@@ -50,6 +53,9 @@ export default function StartHerePage() {
         </p>
         <Link href="/frameworks" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
           Frameworks index
+        </Link>
+        <Link href="/definitions" className="focus-ring ml-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
+          Core concepts
         </Link>
       </section>
 

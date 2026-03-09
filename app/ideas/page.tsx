@@ -51,6 +51,9 @@ export default async function IdeasPage({
         <Link href="/start-here" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
           Start here
         </Link>
+        <Link href="/definitions" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
+          Core concepts
+        </Link>
         <Link href="/perfectionism" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
           Perfectionism hub
         </Link>
@@ -66,7 +69,7 @@ export default async function IdeasPage({
       </div>
 
       <div className="card mt-8">
-        <h2 className="h3">Start here sequence</h2>
+        <h2 className="h3">Recommended starting essays</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-3">
           {startHere.map((essay) => (
             <Link key={essay.slug} href={`/ideas/${essay.slug}` as Route} className="focus-ring rounded-xl border border-stone/70 bg-sand/60 p-4 transition hover:border-sage/40">

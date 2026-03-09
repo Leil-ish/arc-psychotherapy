@@ -40,6 +40,8 @@ export default function PerfectionismPage() {
         </Link>
       </section>
 
+      <FaqBlock heading="Common questions about perfectionism" items={hub.faq} schemaId="perfectionism-faq" />
+
       <section className="container-wrap grid gap-5 md:grid-cols-2">
         <article className="card">
           <h2 className="h2">Common presentations</h2>
@@ -85,7 +87,6 @@ export default function PerfectionismPage() {
         </article>
       </section>
 
-      <FaqBlock items={hub.faq} schemaId="perfectionism-faq" />
     </>
   );
 }

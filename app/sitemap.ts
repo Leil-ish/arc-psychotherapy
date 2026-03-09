@@ -14,6 +14,7 @@ const staticRoutes = [
   "/faq",
   "/contact",
   "/frameworks",
+  "/definitions",
   "/ideas",
   "/perfectionism",
   "/religious-harm",

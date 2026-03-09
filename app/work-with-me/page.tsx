@@ -50,7 +50,7 @@ export default function WorkWithMePage() {
       </section>
 
       <div className="mt-6 flex flex-wrap gap-3">
-        <ButtonLink href={siteContent.bookingUrl} external>
+        <ButtonLink href={siteContent.bookingUrl}>
           Schedule consult
         </ButtonLink>
         <ButtonLink href="/contact" variant="secondary">

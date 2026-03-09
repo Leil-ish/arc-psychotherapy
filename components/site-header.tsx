@@ -16,12 +16,12 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <ButtonLink href={siteConfig.bookingUrl} external>
+            <ButtonLink href={siteConfig.bookingUrl}>
               Schedule consult
             </ButtonLink>
           </nav>
           <div className="md:hidden">
-            <ButtonLink href={siteConfig.bookingUrl} external>
+            <ButtonLink href={siteConfig.bookingUrl}>
               Schedule consult
             </ButtonLink>
           </div>
