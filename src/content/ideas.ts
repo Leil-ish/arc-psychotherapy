@@ -28,9 +28,9 @@ const essays: IdeaEssay[] = [
     title: "The Adjacent Possible",
     date: "2026-02-20",
     description:
-      "The adjacent possible is the next workable move that preserves structure while expanding range.",
+      "The adjacent possible is the next workable move that keeps you grounded while expanding your range.",
     keyIdea:
-      "Most durable change starts with proximity, not reinvention. The question is not what is ideal. The question is what is adjacent and executable.",
+      "Most durable change starts with proximity, not reinvention. The question is not what is ideal. The question is what is adjacent and doable right now.",
     tags: ["Systems", "Practice", "Overcontrol"],
     body: `## Why this matters
 When clients are overcontrolled, they often think in binaries: perfect or failed, certain or unsafe, stay or leave. The adjacent possible interrupts that collapse.
@@ -38,7 +38,7 @@ When clients are overcontrolled, they often think in binaries: perfect or failed
 A treatment plan becomes more usable when each step can be completed under real constraints. Adjacent moves build evidence that flexibility does not require chaos.
 
 ## Clinical pattern
-In high-functioning adults, planning can look strong while adaptation remains narrow. The person can perform, but cannot pivot.
+In high-functioning adults, planning can look strong while adaptation stays narrow. The person can perform, but cannot pivot.
 
 The adjacent possible gives a decision rule: choose the smallest move that increases optionality without violating core values.
 
@@ -51,7 +51,7 @@ The adjacent possible gives a decision rule: choose the smallest move that incre
 ## Practical use
 This method is especially useful for perfectionism and post-religious identity reconstruction, where all-or-nothing thinking can hide as moral seriousness.
 
-Small, structured experiments reduce shame and increase cognitive range.
+Small, repeatable experiments reduce shame and increase cognitive range.
 `,
     related: [
       { label: "Overcontrol", href: "/overcontrol" },
@@ -64,17 +64,19 @@ Small, structured experiments reduce shame and increase cognitive range.
     title: "Perfectionism as a Structural Problem",
     date: "2026-02-20",
     description:
-      "Perfectionism is less a personality style and more a system that links worth, control, and threat prediction.",
+      "Perfectionism is less a personality style and more a pattern that links worth, control, and threat prediction.",
     keyIdea:
-      "If perfectionism is treated only as mindset, behavior will relapse. Structural treatment changes the underlying rule set.",
+      "If perfectionism is treated only as mindset, behavior usually snaps back. Useful treatment changes the rules underneath it.",
     tags: ["Perfectionism", "Systems", "Practice"],
     body: `## Definition first
 Perfectionism is a structure, not just a preference for quality. It defines safety as error prevention and identity as performance stability.
 
 When this structure is unexamined, effort increases while flexibility decreases.
 
+If insight alone fixed things, you'd already be done.
+
 ## What breaks treatment
-Advice such as "be kinder to yourself" is often too global. It does not modify the control architecture that drives checking, delay, and over-preparation.
+Advice such as "be kinder to yourself" is often too broad. It does not modify the control rules that drive checking, delay, and over-preparation.
 
 Clients then conclude they failed therapy, when the intervention failed to match the structure.
 
@@ -102,7 +104,7 @@ That distinction protects values while loosening rigidity.
     description:
       "After coercive faith environments, clients often lose the organizing structure that once defined meaning, authority, and identity.",
     keyIdea:
-      "The initial task is not immediate replacement beliefs. The task is rebuilding orientation without reenacting coercion.",
+      "The initial task is not immediate replacement beliefs. The task is rebuilding orientation without repeating coercion.",
     tags: ["Religious Harm", "Meaning", "Practice"],
     body: `## The felt problem
 Clients often describe post-faith life as disorientation rather than freedom. Old certainty is gone, but new coherence is not yet built.

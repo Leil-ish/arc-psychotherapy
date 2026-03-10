@@ -54,37 +54,45 @@ export default async function FrameworkDetailPage({
   return (
     <>
       <section className="container-wrap py-16 md:py-20">
-        <h1 className="h1">{framework.name}</h1>
-        <p className="body-lg mt-5 max-w-3xl">{framework.definition}</p>
+        <h1 className="editorial-header">{framework.name}</h1>
+        <p className="body-lg mt-5 editorial-measure">{framework.definition}</p>
       </section>
 
-      <section className="container-wrap grid gap-5 md:grid-cols-2">
-        <article className="card framework-diagram">
-          <h2 className="h2">How it shows up</h2>
-          <ul className="mt-4 space-y-2 body">
-            {framework.howItShowsUp.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </article>
-        <article className="card framework-diagram">
-          <h2 className="h2">What helps</h2>
-          <ul className="mt-4 space-y-2 body">
-            {framework.whatHelps.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </article>
+      <section className="container-wrap editorial-section">
+        <h2 className="h2">How this framework is used</h2>
+        <div className="editorial-list mt-6">
+          <article className="editorial-item">
+            <h3 className="h3">How it shows up</h3>
+            <ul className="mt-5 space-y-2 body editorial-measure">
+              {framework.howItShowsUp.map((item) => (
+                <li key={item}>• {item}</li>
+              ))}
+            </ul>
+          </article>
+          <article className="editorial-item">
+            <h3 className="h3">What helps</h3>
+            <ul className="mt-5 space-y-2 body editorial-measure">
+              {framework.whatHelps.map((item) => (
+                <li key={item}>• {item}</li>
+              ))}
+            </ul>
+          </article>
+        </div>
       </section>
 
-      <section className="container-wrap mt-12">
+      <section className="container-wrap editorial-section">
         <h2 className="h2">Related</h2>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {framework.relatedLinks.map((link) => (
-            <Link key={link.href} href={link.href as Route} className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
-              {link.label}
-            </Link>
-          ))}
+        <div className="editorial-list mt-5">
+          <div className="editorial-item-tight flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+            {framework.relatedLinks.map((link, index) => (
+              <span key={link.href} className="inline-flex items-center gap-3">
+                {index > 0 ? <span className="text-ink/35">•</span> : null}
+                <Link href={link.href as Route} className="focus-ring underline-offset-4 hover:underline">
+                  {link.label}
+                </Link>
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

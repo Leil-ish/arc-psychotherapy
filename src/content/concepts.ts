@@ -22,8 +22,8 @@ export const conceptHubs: ConceptHub[] = [
     title: "Perfectionism",
     definition: [
       "Perfectionism is a control strategy that links worth, threat prediction, and behavioral rigidity.",
-      "It can look productive from the outside while creating chronic constraint, shame, and decision fatigue.",
-      "Arc approaches perfectionism as a structural issue, not a personality flaw."
+      "It can look impressive from the outside while creating shame, constraint, and constant mental load on the inside.",
+      "This is not a character flaw. It is usually an old survival strategy that now costs too much."
     ],
     commonPresentations: [
       "Over-preparation followed by delayed action",
@@ -40,10 +40,10 @@ export const conceptHubs: ConceptHub[] = [
       "Define non-negotiable values and flexible standards",
       "Use graded experiments that tolerate visible imperfection",
       "Track patterns by sequence, not by mood alone",
-      "Integrate behavioral data into future decision rules"
+      "Use what happened to update future decision rules"
     ],
     arcApproach:
-      "Arc uses explicit mapping, paced experiments, and integration reviews to separate excellence from compulsive certainty.",
+      "In therapy, we separate high standards from fear rules, then test changes you can actually use in real life.",
     faq: [
       {
         question: "What is perfectionism in psychology?",
@@ -58,12 +58,12 @@ export const conceptHubs: ConceptHub[] = [
       {
         question: "Is perfectionism an anxiety disorder?",
         answer:
-          "Perfectionism is not a standalone diagnosis; it is a transdiagnostic control pattern. It can amplify anxiety, depression, obsessive checking, and burnout by narrowing flexibility."
+          "Perfectionism is not a standalone diagnosis; it is a control pattern that can show up across different diagnoses. It can amplify anxiety, depression, obsessive checking, and burnout by narrowing flexibility."
       },
       {
         question: "How do you treat perfectionism without lowering standards?",
         answer:
-          "Treatment separates values-based standards from compulsive certainty rules. Work then uses graded experiments so standards remain intentional while rigidity decreases."
+          "Treatment separates values-based standards from compulsive certainty rules. Then we use graded experiments so standards stay intentional while rigidity decreases."
       }
     ],
     relatedEssays: [
@@ -80,8 +80,8 @@ export const conceptHubs: ConceptHub[] = [
     title: "Overcontrol",
     definition: [
       "Overcontrol refers to chronic inhibition and rigidity used to maintain certainty and prevent perceived threat.",
-      "It often produces external stability while reducing spontaneity, trust in process, and relational range.",
-      "Arc treats overcontrol by increasing adaptive flexibility in measurable steps."
+      "People may see you as steady and reliable while you feel tight, watchful, and chronically braced.",
+      "The goal is not chaos. The goal is more range without losing what matters."
     ],
     commonPresentations: [
       "All-or-nothing planning",
@@ -101,7 +101,7 @@ export const conceptHubs: ConceptHub[] = [
       "Decision rules that preserve values while widening options"
     ],
     arcApproach:
-      "Arc uses phased flexibility work, explicit sequence design, and reflective integration so adaptation does not feel like collapse.",
+      "We look at where control still serves you and where it is costing you, then build range in small tolerable steps.",
     faq: [
       {
         question: "What is overcontrol in psychology?",
@@ -121,7 +121,7 @@ export const conceptHubs: ConceptHub[] = [
       {
         question: "How is overcontrol treated in therapy?",
         answer:
-          "Therapy defines where control is useful and where it has become costly. Treatment then builds adaptive flexibility through bounded experiments, sequence tracking, and integration."
+          "Therapy defines where control is useful and where it has become costly. Treatment then builds flexibility through bounded experiments, sequence tracking, and integration."
       }
     ],
     relatedEssays: [
@@ -138,8 +138,8 @@ export const conceptHubs: ConceptHub[] = [
     title: "Religious Harm",
     definition: [
       "Religious harm refers to psychological injury caused by coercive, shaming, or authoritarian religious systems.",
-      "It can affect identity formation, authority relationships, nervous system regulation, and meaning-making.",
-      "Arc addresses religious harm through structured reconstruction and consent-based integration."
+      "Even after beliefs change, fear, shame, and authority pressure can stay in your body, relationships, and decisions.",
+      "Work focuses on rebuilding agency and meaning without replacing one rigid system with another."
     ],
     commonPresentations: [
       "Persistent shame independent of current beliefs",
@@ -159,7 +159,7 @@ export const conceptHubs: ConceptHub[] = [
       "Integrate grief, meaning, and identity over time"
     ],
     arcApproach:
-      "Arc uses paced deconstruction, values clarification, and behavioral integration to rebuild coherence without reenacting coercion.",
+      "We map what you inherited, decide what still fits, and rebuild meaning at your pace without pressure.",
     faq: [
       {
         question: "What is religious harm?",

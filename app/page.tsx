@@ -1,223 +1,122 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-import { ButtonLink } from "@/components/button-link";
 import { pageMetadata } from "@/lib/seo";
-import { frameworks } from "@/src/content/frameworks";
-import { formatEssayDate, getEssayBySlugs, getReadingTimeMinutes } from "@/src/content/ideas";
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
-  title: "Structured therapy for perfectionism & religious harm | Round Rock, TX",
+  title: "Therapy for perfectionism & religious harm | Round Rock, TX",
   description:
-    "Structured psychotherapy for high-achieving adults navigating perfectionism, rigidity, and religious harm. Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas.",
+    "Therapy with clear structure for high-achieving adults navigating perfectionism, rigidity, and religious harm. Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas.",
   path: "/"
 });
 
 export default function HomePage() {
-  const featuredEssays = getEssayBySlugs(siteContent.featuredEssays);
-  const featuredFrameworks = frameworks.slice(0, 3);
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: siteContent.home.faq.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer
-      }
-    }))
-  };
-
   return (
     <>
-      <section className="container-wrap py-16 md:py-24">
-        <p className="label">{siteContent.brandName}</p>
-        <h1 className="h1 mt-3 max-w-4xl">{siteContent.heroTagline}</h1>
-        <p className="body-lg mt-5 max-w-3xl">Collaborative, systems-informed work grounded in clarity, not quick fixes.</p>
-        <p className="mt-3 body max-w-3xl text-ink/90">{siteContent.home.secondaryLine}</p>
-        <p className="mt-3 body text-sm uppercase tracking-[0.12em] text-sage">{siteContent.home.locationLine}</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <ButtonLink href={siteContent.bookingUrl}>
-            Schedule consult
-          </ButtonLink>
-          <ButtonLink href="/contact" variant="secondary">
-            Contact
-          </ButtonLink>
-        </div>
-        <p className="mt-4 body text-sm max-w-3xl text-ink/80">
-          The consultation helps determine whether Arc&apos;s structured approach is a good match for your goals.
-        </p>
-        <p className="mt-2 body text-sm max-w-3xl text-ink/80">
-          Standard session fee: ${siteContent.standardSessionFee} ({siteContent.sessionLength}).
-        </p>
-        <p className="mt-4 body text-sm max-w-3xl text-ink/75">
-          Core offer: ongoing psychotherapy. Optional structured model-building is available when clinically useful.
-        </p>
-        <figure className="arc-image-mask mt-10 overflow-hidden border border-stone/90 bg-surface shadow-card">
+      <section className="home-hero" aria-labelledby="home-hero-heading">
+        <div className="home-hero-media" aria-hidden="true">
           <Image
-            src="/hero-architecture.svg"
-            width={1200}
-            height={800}
+            src="/images/hero/home-hero-austin-rooftop.jpg"
+            alt=""
+            fill
             priority
-            alt="Abstract architectural forms in warm neutral tones representing structure and flexibility."
-            className="h-auto w-full"
+            className="object-cover object-center"
           />
-        </figure>
-      </section>
+        </div>
+        <div className="home-hero-tone" aria-hidden="true" />
+        <div className="container-wrap home-hero-inner py-16 md:py-24">
+          <p className="label home-hero-kicker">{siteContent.brandName}</p>
+          <h1 id="home-hero-heading" className="h1 mt-3 max-w-4xl text-white">
+            Therapy for adults whose lives are being run by perfectionism, overcontrol, or the aftermath of rigid religion.
+          </h1>
+          <p className="body-lg mt-5 max-w-3xl text-white/90">You can explain your patterns.</p>
+          <p className="body-lg max-w-3xl text-white/90">You are still exhausted.</p>
+          <p className="body-lg max-w-3xl text-white/90">You are still over-functioning.</p>
+          <p className="mt-4 body max-w-3xl text-white/95">If insight alone fixed things, you&apos;d already be done.</p>
+          <p className="mt-3 body max-w-3xl text-white/90">I don&apos;t do &quot;small talk&quot; therapy. We focus on what changes in your real week, not just what sounds good in session.</p>
 
-      <section className="container-wrap mt-4">
-        <article className="card">
-          <h2 className="h3">Location and Access</h2>
-          <p className="mt-3 body">Downtown Round Rock, Texas</p>
-          <p className="body">Serving North Austin, Cedar Park, Georgetown, and surrounding communities</p>
-          <p className="body">Telehealth across Texas</p>
-        </article>
-      </section>
-
-      <section className="container-wrap mt-16 grid gap-8 md:grid-cols-2">
-        <article className="card">
-          <h2 className="h2">You might be a good fit if:</h2>
-          <ul className="mt-5 space-y-3 body">
-            {siteContent.home.fitSignals.map((signal) => (
-              <li key={signal}>• {signal}</li>
-            ))}
-          </ul>
-        </article>
-        <article className="card">
-          <h2 className="h2">How this works</h2>
-          <ol className="mt-5 space-y-3 body">
-            {siteContent.home.steps.map((step, index) => (
-              <li key={step}>
-                {index + 1}. {step}
-              </li>
-            ))}
-          </ol>
-          <p className="mt-5 body text-sm text-ink/75">
-            Sessions are conversational but structured: we define patterns, test changes, and review what actually shifts between sessions.
-          </p>
-          <div className="mt-5">
-            <ButtonLink href="/work-with-me" variant="secondary">
-              Learn how Arc works
-            </ButtonLink>
-          </div>
-        </article>
-      </section>
-
-      <section className="container-wrap mt-12 grid gap-5 md:grid-cols-2">
-        <article className="card">
-          <h2 className="h2">Who Arc Is For</h2>
-          <ul className="mt-4 space-y-2 body">
-            <li>• High-functioning adults experiencing internal rigidity</li>
-            <li>• Clients interested in conceptual clarity</li>
-            <li>• People navigating perfectionism, overcontrol, or religious harm</li>
-            <li>• Adults comfortable with private-pay psychotherapy</li>
-          </ul>
-        </article>
-        <article className="card">
-          <h2 className="h2">When Arc May Not Be the Best Fit</h2>
-          <ul className="mt-4 space-y-2 body">
-            <li>• Crisis stabilization</li>
-            <li>• Insurance-based therapy</li>
-            <li>• Short-term coaching</li>
-            <li>• Symptom-checklist style treatment</li>
-          </ul>
-        </article>
-      </section>
-
-      <section className="container-wrap mt-16">
-        <h2 className="h2">Start here</h2>
-        <p className="mt-3 body max-w-2xl">
-          If you prefer to understand the ideas behind Arc first, begin with the concept hubs below, then explore the frameworks and essays.
-        </p>
-        <Link href="/start-here" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Start here
-        </Link>
-        <div className="mt-6 grid gap-5 md:grid-cols-3">
-          {siteContent.home.conceptLinks.map((concept) => (
-            <Link key={concept.href} href={concept.href} className="card focus-ring block transition hover:border-sage/50">
-              <h3 className="h3">{concept.title}</h3>
-              <p className="mt-3 body">{concept.description}</p>
+          <div className="mt-8 flex flex-wrap gap-5">
+            <Link href={siteContent.bookingUrl} className="focus-ring no-link-style home-hero-primary-link">
+              Schedule consult
             </Link>
-          ))}
+            <Link href="/contact" className="focus-ring no-link-style home-hero-secondary-link">
+              Contact
+            </Link>
+          </div>
+
+          <p className="mt-4 body text-sm max-w-3xl text-white/78">
+            Downtown Round Rock, Texas. Telehealth across Texas.
+          </p>
+          <p className="mt-1 body text-sm max-w-3xl text-white/78">${siteContent.standardSessionFee} per 50–55 minute session.</p>
         </div>
       </section>
 
-      <section className="container-wrap mt-16 grid gap-5 md:grid-cols-2">
-        <article className="card">
-          <h2 className="h2">Ideas</h2>
-          <Link href="/ideas" className="focus-ring mt-3 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Explore the ideas library
-          </Link>
-          <div className="mt-5 space-y-4">
-            {featuredEssays.map((essay) => (
-              <div key={essay.slug} className="border-b border-stone/60 pb-4 last:border-none last:pb-0">
-                <h3 className="h3 text-xl">
-                  <Link href={`/ideas/${essay.slug}`} className="focus-ring hover:text-sage">
-                    {essay.title}
-                  </Link>
-                </h3>
-                <p className="mt-2 body">{essay.description}</p>
-                <p className="mt-2 text-xs uppercase tracking-[0.11em] text-sage">{essay.tags.join(" • ")}</p>
-                <p className="mt-2 text-sm text-ink/70">
-                  {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </article>
-
-        <article className="card framework-diagram">
-          <h2 className="h2">Frameworks</h2>
-          <Link href="/frameworks" className="focus-ring mt-3 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Explore frameworks
-          </Link>
-          <div className="mt-5 space-y-4">
-            {featuredFrameworks.map((framework) => (
-              <div key={framework.slug} className="border-b border-stone/60 pb-4 last:border-none last:pb-0">
-                <h3 className="h3 text-xl">
-                  <Link href={`/frameworks/${framework.slug}`} className="focus-ring hover:text-sage">
-                    {framework.name}
-                  </Link>
-                </h3>
-                <p className="mt-2 body">{framework.definition}</p>
-              </div>
-            ))}
-          </div>
-        </article>
+      <section className="container-wrap mt-14">
+        <h2 className="h2 max-w-4xl">If this is your life</h2>
+        <ul className="mt-5 space-y-3 body editorial-measure">
+          <li>• You over-prepare, over-research, and still second-guess basic decisions.</li>
+          <li>• You rewrite messages, rehearse conversations, and track every possible mistake.</li>
+          <li>• You can get through the day just fine. You just do not have much range left by the end of it.</li>
+          <li>• People rely on you because you are competent. You are getting tired of the cost.</li>
+          <li>• You left a rigid or shaming religious system, but fear and guilt still run more of your decisions than you&apos;d like.</li>
+          <li>• You are not looking for a place to talk in circles for 50 minutes.</li>
+        </ul>
       </section>
 
-      <section className="container-wrap mt-16">
-        <article className="card">
-          <h2 className="h2">Speaking & Systems Work</h2>
-          <p className="mt-3 body max-w-3xl">
-            Arc contributes to professional conversations through TAMFT presentations, clinical AI workflow design, and advocacy work focused on responsible, structured mental health systems.
-          </p>
-          <p className="mt-3 body max-w-3xl">
-            Recent work includes a 2026 TAMFT conference presentation: Parts, Politics, and Presence.
-          </p>
-        </article>
+      <section className="container-wrap mt-12">
+        <div className="editorial-list">
+          <article className="editorial-item">
+            <h2 className="h2">Values in practice</h2>
+            <p className="mt-3 body editorial-measure">
+              Therapy should not require you to defend your body, identity, family, or basic humanity before the real work can begin.
+            </p>
+            <ul className="mt-4 space-y-2 body text-sm editorial-measure">
+              <li>• LGBTQ+ affirming: your identity is not up for debate.</li>
+              <li>• HAES-aligned: body size is not treated as a moral issue or treatment target.</li>
+              <li>• Neurodiversity-affirming: communication, pacing, and structure can be adjusted to fit your brain.</li>
+              <li>• Immigrant and cross-cultural realities are treated as real context, not side notes.</li>
+              <li>• When power, culture, or systems are shaping the problem, we say that plainly.</li>
+            </ul>
+          </article>
+          <article className="editorial-item">
+            <h2 className="h2">How Arc works</h2>
+            <ul className="mt-5 space-y-3 body editorial-measure">
+              <li>• Consult: we decide if this is a good clinical fit.</li>
+              <li>• Ongoing therapy: we figure out what keeps repeating, try something different, and pay attention to what actually changes.</li>
+              <li>• Adjustment: we keep what helps. We stop pretending the rest is useful.</li>
+            </ul>
+            <p className="mt-5 body text-sm text-ink/75">No vague weekly recap.</p>
+          </article>
+          <article className="editorial-item">
+            <h2 className="h2">When Arc is not the right first step</h2>
+            <p className="mt-3 body editorial-measure">
+              Arc is usually not the best first stop for:
+            </p>
+            <ul className="mt-4 space-y-2 body">
+              <li>• Crisis stabilization</li>
+              <li>• Insurance-based care</li>
+              <li>• Brief coaching</li>
+              <li>• Checklist-only symptom treatment</li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <section className="container-wrap mt-16 mb-20">
-        <h2 className="h2">FAQ</h2>
-        <div className="mt-6 space-y-4">
-          {siteContent.home.faq.map((item) => (
-            <article key={item.question} className="card">
-              <h3 className="h3 text-xl">{item.question}</h3>
-              <p className="mt-3 body">{item.answer}</p>
-            </article>
-          ))}
+        <h2 className="h2">Prefer to read before booking?</h2>
+        <p className="mt-3 body max-w-2xl">Start with one page: perfectionism, overcontrol, or religious harm.</p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link href="/perfectionism" className="focus-ring text-sm font-medium text-ink/80 underline-offset-4 hover:text-sage-dark hover:underline">
+            Perfectionism
+          </Link>
+          <Link href="/overcontrol" className="focus-ring text-sm font-medium text-ink/80 underline-offset-4 hover:text-sage-dark hover:underline">
+            Overcontrol
+          </Link>
+          <Link href="/religious-harm" className="focus-ring text-sm font-medium text-ink/80 underline-offset-4 hover:text-sage-dark hover:underline">
+            Religious harm
+          </Link>
         </div>
       </section>
-
-      <Script
-        id="home-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
     </>
   );
 }

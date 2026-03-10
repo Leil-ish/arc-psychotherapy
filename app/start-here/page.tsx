@@ -1,90 +1,116 @@
-import type { Route } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
-import { formatEssayDate, getEssayBySlugs, getReadingTimeMinutes } from "@/src/content/ideas";
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
   title: "Start Here | Round Rock, TX",
   description:
-    "Structured psychotherapy for high-achieving adults navigating perfectionism, rigidity, and religious harm. Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas.",
+    "Therapy with clear structure for high-achieving adults navigating perfectionism, rigidity, and religious harm. Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas.",
   path: "/start-here"
 });
 
 export default function StartHerePage() {
-  const recommended = getEssayBySlugs(siteContent.startHereEssays);
-
   return (
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Start Here</h1>
-      <p className="body-lg mt-5 max-w-4xl">
-        Arc&apos;s conceptual approach is definition-first and systems-informed: we clarify control strategies, belief structures, and adaptive flexibility before making behavioral changes.
-      </p>
-      <p className="body mt-3 max-w-4xl">
-        This page provides a structured starting point for understanding Arc&apos;s approach before beginning therapy.
-      </p>
+      <p className="body-lg mt-5 max-w-4xl">You can explain your patterns and still feel stuck.</p>
+      <p className="body-lg max-w-4xl">Start there.</p>
+      <p className="body mt-4 max-w-4xl">You do not need to read everything. Pick the section that matches your life right now and begin there.</p>
       <p className="body mt-3 max-w-4xl">
         {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.
       </p>
-      <Link href="/definitions" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-        Core concepts
-      </Link>
+      <figure className="mt-8">
+        <div className="arc-image-mask overflow-hidden">
+          <Image
+            src="/images/austin-local/rooftop-edge-city.jpg"
+            alt="Rooftop edge and city buildings in warm evening light."
+            width={6000}
+            height={4000}
+            className="h-[14rem] w-full object-cover object-bottom md:h-[20rem]"
+            sizes="(min-width: 1024px) 72rem, 100vw"
+          />
+        </div>
+      </figure>
 
       <section className="mt-12">
-        <h2 className="h2">Concept Hubs</h2>
+        <h2 className="h2">Start here if...</h2>
         <div className="mt-5 grid gap-5 md:grid-cols-3">
-          {siteContent.home.conceptLinks.map((concept) => (
-            <article key={concept.href} className="card">
-              <h3 className="h3 text-xl">
-                <Link href={concept.href as Route} className="focus-ring hover:text-sage">
-                  {concept.title}
-                </Link>
-              </h3>
-              <p className="mt-3 body">{concept.description}</p>
-            </article>
-          ))}
+          <article className="card">
+            <h3 className="h3">
+              <Link href="/perfectionism" className="focus-ring hover:text-sage">
+                Perfectionism
+              </Link>
+            </h3>
+            <p className="mt-3 body">
+              Read this first if your standards are high, your work is strong, and your life keeps getting narrower.
+            </p>
+          </article>
+          <article className="card">
+            <h3 className="h3">
+              <Link href="/overcontrol" className="focus-ring hover:text-sage">
+                Overcontrol
+              </Link>
+            </h3>
+            <p className="mt-3 body">
+              Read this first if you can perform under pressure and still feel rigid, tired, or shut down by the end of the day.
+            </p>
+          </article>
+          <article className="card">
+            <h3 className="h3">
+              <Link href="/religious-harm" className="focus-ring hover:text-sage">
+                Religious harm
+              </Link>
+            </h3>
+            <p className="mt-3 body">
+              Read this first if you left a rigid or shaming faith system and fear or guilt still runs more of your decisions than you want.
+            </p>
+          </article>
         </div>
       </section>
 
       <section className="mt-14">
-        <h2 className="h2">Frameworks</h2>
-        <p className="body mt-3 max-w-3xl">
-          Arc uses named conceptual models to keep treatment explicit, paced, and testable across sessions.
-        </p>
-        <Link href="/frameworks" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Frameworks index
-        </Link>
-        <Link href="/definitions" className="focus-ring ml-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Core concepts
-        </Link>
-      </section>
-
-      <section className="mt-14">
-        <h2 className="h2">Recommended Essays</h2>
+        <h2 className="h2">If you want one short read</h2>
         <div className="mt-5 grid gap-5 md:grid-cols-3">
-          {recommended.map((essay) => (
-            <article key={essay.slug} className="card">
-              <h3 className="h3 text-xl">
-                <Link href={`/ideas/${essay.slug}` as Route} className="focus-ring hover:text-sage">
-                  {essay.title}
-                </Link>
-              </h3>
-              <p className="mt-3 body">{essay.description}</p>
-              <p className="mt-3 text-sm text-ink/70">
-                {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
-              </p>
-            </article>
-          ))}
+          <article className="card">
+            <h3 className="h3">
+              <Link href="/ideas/perfectionism-structural-problem" className="focus-ring hover:text-sage">
+                Perfectionism as a Structural Problem
+              </Link>
+            </h3>
+            <p className="mt-3 body">Read this first if mindset advice has not changed the pattern.</p>
+          </article>
+          <article className="card">
+            <h3 className="h3">
+              <Link href="/ideas/adjacent-possible" className="focus-ring hover:text-sage">
+                The Adjacent Possible
+              </Link>
+            </h3>
+            <p className="mt-3 body">Read this first if every decision feels all-or-nothing.</p>
+          </article>
+          <article className="card">
+            <h3 className="h3">
+              <Link href="/ideas/leaving-faith-losing-gravity" className="focus-ring hover:text-sage">
+                When Leaving a Faith System Feels Like Losing Gravity
+              </Link>
+            </h3>
+            <p className="mt-3 body">Read this first if post-faith life feels disorienting, not freeing.</p>
+          </article>
         </div>
       </section>
 
       <section className="mt-14 card">
-        <h2 className="h2">How Arc works</h2>
-        <p className="body mt-3 max-w-3xl">
-          Treatment begins with consult, then a defined arc of structured psychotherapy. Optional structured model-building is available when it supports clinical goals; standard therapy remains available on its own.
+        <h2 className="h2">How Arc works (short version)</h2>
+        <h3 className="h3 mt-5">Consult</h3>
+        <p className="body mt-2 max-w-3xl">We decide if this is a good clinical fit.</p>
+        <h3 className="h3 mt-5">Ongoing therapy</h3>
+        <p className="body mt-2 max-w-3xl">
+          We figure out what keeps repeating, try something different, and pay attention to what actually changes.
         </p>
-        <Link href="/work-with-me" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Learn how Arc works
+        <h3 className="h3 mt-5">Adjustment</h3>
+        <p className="body mt-2 max-w-3xl">We keep what helps. We stop pretending the rest is useful.</p>
+        <Link href="/work-with-me" className="focus-ring no-link-style inline-link mt-5 inline-block">
+          Read more about how I work.
         </Link>
       </section>
     </section>

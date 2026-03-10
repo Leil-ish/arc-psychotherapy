@@ -3,16 +3,16 @@ import { siteConfig } from "@/lib/content";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-20 border-t border-stone/90 bg-surface/65 py-12">
-      <div className="container-wrap grid gap-10 md:grid-cols-3">
-        <div>
+    <footer className="mt-24 border-t border-stone/85 bg-surface/58 py-14">
+      <div className="container-wrap grid gap-10 md:grid-cols-12">
+        <div className="md:col-span-4">
           <p className="h3">{siteConfig.brand}</p>
           <p className="mt-2 body text-sm">{siteConfig.legalEntityNote}</p>
           <p className="mt-4 text-sm font-semibold tracking-[0.04em] text-ink/85">{siteConfig.credentialsLine}</p>
           <p className="body text-sm text-ink/80">{siteConfig.credentials[0]}</p>
           <p className="mt-4 body text-sm">{siteConfig.locationSummaryLine}</p>
         </div>
-        <div>
+        <div className="md:col-span-4">
           <p className="label">Office</p>
           <p className="mt-2 body">{siteConfig.addressLine1}</p>
           <p className="body">{siteConfig.cityStateZip}</p>
@@ -20,7 +20,7 @@ export function SiteFooter() {
             Open map
           </Link>
         </div>
-        <div>
+        <div className="md:col-span-4">
           <p className="label">Contact</p>
           <p className="mt-2 body">Call {siteConfig.phone}</p>
           <p className="body">Email {siteConfig.email}</p>

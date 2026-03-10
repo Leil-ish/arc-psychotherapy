@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "FAQ | Round Rock, TX",
   description:
-    "Frequently asked questions about structured psychotherapy in Downtown Round Rock, serving North Austin and surrounding communities, with telehealth across Texas.",
+    "Frequently asked questions about therapy in Downtown Round Rock, serving North Austin and surrounding communities, with telehealth across Texas.",
   path: "/faq"
 });
 
@@ -15,11 +15,11 @@ const faqs = [
   },
   {
     q: "Is this play therapy?",
-    a: "No. This is adult psychotherapy using structured model-building as a focused experiential tool inside treatment."
+    a: "No. This is adult therapy using structured model-building as a focused experiential tool inside treatment."
   },
   {
     q: "Is structured model-building part of the track?",
-    a: "Yes. The track can use a medium-to-large model set as part of a clinically guided arc of sessions."
+    a: "Yes. The track can use a medium-to-large model set as part of a guided arc of sessions."
   },
   {
     q: "Do I keep the set?",

@@ -69,7 +69,7 @@ export function SimpleMarkdown({ body }: { body: string }) {
       {nodes.map((node, index) => {
         if (node.type === "h2") {
           return (
-            <h2 key={`${index}-${node.content}`} className="font-serif text-2xl leading-tight text-ink md:text-3xl">
+            <h2 key={`${index}-${node.content}`} className="h2">
               {node.content}
             </h2>
           );
@@ -77,7 +77,7 @@ export function SimpleMarkdown({ body }: { body: string }) {
 
         if (node.type === "h3") {
           return (
-            <h3 key={`${index}-${node.content}`} className="font-serif text-xl leading-tight text-ink md:text-2xl">
+            <h3 key={`${index}-${node.content}`} className="h3">
               {node.content}
             </h3>
           );

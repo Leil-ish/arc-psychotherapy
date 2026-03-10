@@ -33,7 +33,7 @@ export function FaqBlock({
       <div className="mt-6 space-y-4">
         {items.map((item) => (
           <article key={item.question} className="card">
-            <h3 className="h3 text-xl">{item.question}</h3>
+            <h3 className="h3">{item.question}</h3>
             <p className="mt-3 body">{item.answer}</p>
           </article>
         ))}

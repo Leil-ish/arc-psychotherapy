@@ -6,16 +6,16 @@ export const siteContent = {
   bookingUrl: "/contact#consult-request",
   contactEndpoint: "/api/contact",
   email: "hello@arc-psychotherapy.com",
-  phone: "(512) 555-0148",
+  phone: "(512) 710-9966",
   authorDisplayName: "Leila Anderson, LMFT-S",
   positioningStatementShort:
-    "Arc Psychotherapy provides structured psychotherapy for high-achieving adults navigating perfectionism, overcontrol, and religious harm.",
+    "Arc Psychotherapy is for adults who look competent and feel wrung out.",
   positioningStatementLong:
-    "Arc Psychotherapy offers structured psychotherapy for high-achieving adults navigating perfectionism, rigidity/overcontrol, and religious harm (spiritual trauma). The work is framework-led, collaborative, and designed for people who want conceptual clarity with practical integration. Clinical direction draws from executive leadership in high-acuity settings, program design with process-tracking discipline, and systems-level professional service. Care is based in Downtown Round Rock, serving North Austin and surrounding communities, with telehealth across Texas.",
+    "Most people who come to Arc can explain exactly why they do what they do. They still repeat it when stress spikes. They over-function, over-prepare, and clean up everyone else's mess while their own life gets smaller. Therapy here is direct, structured, and built to change what happens between sessions.",
   credentialsLine: "Leila Anderson, LMFT-S",
   authorityHighlights: [
     "Executive clinical leadership in residential dual-diagnosis and high-acuity environments, including crisis and level-of-care assessment.",
-    "Program design and measurable process-tracking orientation, with emphasis on structured treatment planning.",
+    "Program design and measurable process-tracking orientation, with emphasis on practical treatment planning.",
     "Systems-level exposure to criminal justice and diversion-adjacent behavioral health workflows.",
     "State professional leadership through TAMFT board and education committee service."
   ],
@@ -58,14 +58,14 @@ export const siteContent = {
     "Pflugerville"
   ],
   heroTagline:
-    "Psychotherapy for high-achieving adults navigating perfectionism, rigidity, and religious harm.",
+    "Therapy for adults tired of over-functioning, perfectionism, and religious harm.",
   standardSessionFee: 200,
   sessionLength: "50–55 minutes",
   clinician: {
     name: "Leila Anderson",
     credentials: "LMFT-S",
     shortBio:
-      "Leila Anderson, LMFT-S, provides structured psychotherapy for adults with high external functioning and high internal strain.",
+      "Leila Anderson, LMFT-S, works with adults who look fine on paper and feel stuck in real life.",
     shortBioSecondary:
       "Full bio, training details, and licensure information can be inserted here."
   },
@@ -83,22 +83,22 @@ export const siteContent = {
   ],
   home: {
     subhead:
-      "Structured psychotherapy for high-achieving adults navigating perfectionism, rigidity, and religious harm.",
+      "You understand your patterns. They still run too much of your life.",
     secondaryLine:
-      "Private-pay care for adults whose external competence masks high internal strain.",
+      "You are the reliable one. It is getting expensive.",
     locationLine:
       "Downtown Round Rock, Texas",
     fitSignals: [
-      "You are competent at work, but your internal world feels overmanaged and brittle.",
-      "You do not need vague reassurance; you want a method you can think with.",
-      "You notice control protects you, but also narrows your life.",
-      "Religious harm shaped your nervous system, identity, or relationship to authority.",
-      "You want clear structure without losing depth."
+      "You are competent at work and depleted at home.",
+      "You do not want generic reassurance. You want treatment that moves.",
+      "Control keeps you functional and keeps your life small.",
+      "Religious harm still shows up in fear, shame, and authority stress.",
+      "Insight is not enough anymore."
     ],
     steps: [
       "Consult",
       "Clarify goals",
-      "Structured work",
+      "Focused work",
       "Integration",
       "Next steps"
     ],
@@ -107,19 +107,19 @@ export const siteContent = {
         href: "/perfectionism",
         title: "Perfectionism",
         description:
-          "Perfectionism is a control strategy, not a personality trait. We define how it narrows options and how to build flexible standards."
+          "Your standards are high and your life keeps getting tighter. This page helps you separate excellence from fear-driven control."
       },
       {
         href: "/religious-harm",
         title: "Religious Harm",
         description:
-          "Religious harm refers to psychological injury from coercive or shaming religious systems. Treatment restores agency, language, and integration."
+          "Rigid or shaming faith systems still shape your fear, identity, and decisions. This page helps you name it clearly."
       },
       {
         href: "/overcontrol",
         title: "Overcontrol",
         description:
-          "Overcontrol is chronic inhibition in service of certainty. Therapy targets adaptability without collapsing structure."
+          "Being reliable became a full-time job. This page explains overcontrol and how to get range back without blowing up your life."
       }
     ],
     featuredIdeas: [
@@ -138,7 +138,7 @@ export const siteContent = {
       {
         title: "The cost of always being the stable one",
         summary:
-          "Why high-functioning adults lose spontaneity and how structured therapy restores range.",
+          "Why high-functioning adults lose spontaneity and how clear, focused therapy helps restore range.",
         tags: ["Overcontrol", "Anxiety"]
       }
     ],
@@ -146,17 +146,17 @@ export const siteContent = {
       {
         name: "Arc Mapping",
         definition:
-          "A session-by-session map that links stress patterns, protective strategies, and intentional behavior shifts."
+          "A session-by-session map that links stress patterns, protective strategies, and intentional shifts."
       },
       {
         name: "Control Gradient",
         definition:
-          "A way to scale flexibility in small, measurable steps rather than swinging between rigidity and collapse."
+          "A way to build flexibility in small, measurable steps rather than swinging between rigidity and collapse."
       },
       {
         name: "Belief Deconstruction Grid",
         definition:
-          "A structured method for sorting inherited beliefs into retained, revised, and released categories."
+          "A practical method for sorting inherited beliefs into retained, revised, and released categories."
       }
     ],
     faq: [
@@ -166,9 +166,9 @@ export const siteContent = {
           "Arc Psychotherapy is private-pay. A superbill may be provided for out-of-network reimbursement."
       },
       {
-        question: "What do you mean by structured psychotherapy?",
+        question: "What do you mean by therapy with clear structure?",
         answer:
-          "Structured psychotherapy means sessions follow a clear conceptual model with explicit goals, methods, and integration steps."
+          "It means sessions have a clear plan: we define patterns, choose specific targets, test changes, and review what shifts between sessions."
       },
       {
         question: "Is the structured model-building option required?",
@@ -185,10 +185,10 @@ export const siteContent = {
   constructive: {
     title: "Structured Model-Building (Optional)",
     subtitle:
-      "A tactile method used within structured psychotherapy for clients who benefit from externalizing patterns.",
+      "A tactile method used within ongoing therapy for clients who benefit from making patterns visible.",
     opening: [
-      "Structured model-building is an optional packaged pathway within Arc's broader psychotherapy framework. It is used when clients benefit from making abstract patterns visible and workable in real time.",
-      "Most clients begin with core psychotherapy. This pathway is offered when it supports treatment goals related to perfectionism, rigidity/overcontrol, or religious harm."
+      "Structured model-building is an optional packaged track within Arc's broader therapy approach. It is used when clients benefit from making abstract patterns visible and workable in real time.",
+      "Most clients begin with core therapy. This track is offered when it supports treatment goals related to perfectionism, rigidity/overcontrol, or religious harm."
     ],
     whyItHelps: [
       "Externalization: patterns move from internal pressure to observable process.",
@@ -239,7 +239,7 @@ export const siteContent = {
       {
         question: "Is this evidence-based?",
         answer:
-          "The core treatment remains structured psychotherapy. Model-building is used as a guided experiential tool to support established processes such as externalization, reflection, and integration."
+          "The core treatment remains talk therapy with a clear plan. Model-building is used as a guided experiential tool to support externalization, reflection, and integration."
       },
       {
         question: "What if I am not creative?",
@@ -269,10 +269,10 @@ export const siteContent = {
       {
         question: "Can this be used for religious harm work?",
         answer:
-          "When appropriate, yes. It can support reconstruction of meaning, authority, and identity within a structured treatment plan."
+          "When appropriate, yes. It can support reconstruction of meaning, authority, and identity within a clear treatment plan."
       }
     ],
     curious:
-      "The theoretical rationale is practical: externalization reduces cognitive fusion, metaphor helps pattern recognition, pacing improves regulation, and uncertainty tolerance supports behavioral flexibility."
+      "The rationale is straightforward: externalization creates perspective, metaphor helps pattern recognition, pacing improves regulation, and uncertainty tolerance supports behavior change."
   }
 } as const;

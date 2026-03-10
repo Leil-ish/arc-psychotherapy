@@ -8,7 +8,7 @@ export function Testimonials() {
         {testimonialPlaceholders.map((item) => (
           <blockquote key={item.quote} className="card">
             <p className="body">{item.quote}</p>
-            <cite className="mt-4 block text-xs uppercase tracking-[0.12em] text-ink/70 not-italic">
+            <cite className="label mt-4 block not-italic">
               {item.label}
             </cite>
           </blockquote>

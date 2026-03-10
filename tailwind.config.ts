@@ -24,10 +24,10 @@ const config: Config = {
         serif: ["var(--font-serif)", "serif"]
       },
       boxShadow: {
-        card: "0 8px 24px rgba(31, 37, 35, 0.06)"
+        card: "0 18px 44px rgba(24, 31, 30, 0.11)"
       },
       maxWidth: {
-        content: "74rem"
+        content: "78rem"
       }
     }
   },

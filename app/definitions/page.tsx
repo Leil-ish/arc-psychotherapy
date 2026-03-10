@@ -32,7 +32,7 @@ const definitions: DefinitionEntry[] = [
   {
     term: "Overcontrol",
     definition:
-      "Overcontrol refers to chronic inhibition and rigidity used to maintain certainty and reduce perceived threat. It often presents as external competence with narrowing internal range and adaptability.",
+      "Overcontrol refers to chronic inhibition and rigidity used to maintain certainty and reduce perceived threat. It often presents as external competence with a narrowing internal range.",
     frameworks: [
       { label: "Control Gradient", href: "/frameworks/control-gradient" },
       { label: "Pattern Externalization", href: "/frameworks/pattern-externalization" }
@@ -57,7 +57,7 @@ const definitions: DefinitionEntry[] = [
   {
     term: "Control gradient",
     definition:
-      "Control gradient is a structured way to scale flexibility in measured increments rather than all-or-nothing shifts. It allows adaptive change while preserving values and role responsibilities.",
+      "Control gradient is a step-by-step way to scale flexibility rather than swinging between all-or-nothing shifts. It allows change while preserving values and role responsibilities.",
     frameworks: [
       { label: "Control Gradient", href: "/frameworks/control-gradient" },
       { label: "Uncertainty Capacity", href: "/frameworks/uncertainty-capacity" }
@@ -81,7 +81,7 @@ const definitions: DefinitionEntry[] = [
   {
     term: "Uncertainty capacity",
     definition:
-      "Uncertainty capacity is the ability to act coherently without premature certainty. It develops through bounded experiments and post-decision integration rather than exhaustive control.",
+      "Uncertainty capacity is the ability to act with coherence without rushing to certainty. It develops through bounded experiments and post-decision reflection rather than exhaustive control.",
     frameworks: [
       { label: "Uncertainty Capacity", href: "/frameworks/uncertainty-capacity" },
       { label: "Control Gradient", href: "/frameworks/control-gradient" }
@@ -107,7 +107,7 @@ const definitions: DefinitionEntry[] = [
 export const metadata = pageMetadata({
   title: "Core Concepts | Round Rock, TX",
   description:
-    "Core psychological definitions used in Arc psychotherapy for perfectionism, overcontrol, religious harm, belief systems, and adaptive flexibility. Downtown Round Rock, Texas, with telehealth across Texas.",
+    "Core psychological definitions used in Arc psychotherapy for perfectionism, overcontrol, religious harm, belief systems, and flexibility. Downtown Round Rock, Texas, with telehealth across Texas.",
   path: "/definitions"
 });
 
@@ -116,7 +116,7 @@ export default function DefinitionsPage() {
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Core Concepts</h1>
       <p className="body-lg mt-5 max-w-4xl">
-        Arc uses precise definitions to clarify treatment targets, align language, and reduce ambiguity in psychotherapy work.
+        Arc uses precise definitions so treatment targets are clear, language is shared, and the work is easier to follow.
       </p>
       <p className="body mt-3 max-w-4xl">
         {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.
@@ -125,14 +125,14 @@ export default function DefinitionsPage() {
       <div className="mt-10 space-y-5">
         {definitions.map((entry) => (
           <article key={entry.term} className="card">
-            <h2 className="h3 text-xl">{entry.term}</h2>
+            <h2 className="h3">{entry.term}</h2>
             <p className="mt-3 body max-w-3xl">{entry.definition}</p>
 
             <div className="mt-4">
               <p className="label">Related frameworks</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {entry.frameworks.map((link) => (
-                  <Link key={`${entry.term}-${link.href}`} href={link.href as Route} className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
+                  <Link key={`${entry.term}-${link.href}`} href={link.href as Route} className="focus-ring no-link-style chip-link">
                     {link.label}
                   </Link>
                 ))}
@@ -143,7 +143,7 @@ export default function DefinitionsPage() {
               <p className="label">Related essays</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {entry.essays.map((link) => (
-                  <Link key={`${entry.term}-${link.href}`} href={link.href as Route} className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
+                  <Link key={`${entry.term}-${link.href}`} href={link.href as Route} className="focus-ring no-link-style chip-link">
                     {link.label}
                   </Link>
                 ))}

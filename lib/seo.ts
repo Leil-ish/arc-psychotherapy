@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/content";
 
+const socialImagePath = "/images/social-og/og-austin-dusk.jpg";
+const socialImageUrl = `${siteConfig.siteUrl}${socialImagePath}`;
+
 export function pageMetadata({
   title,
   description,
@@ -21,12 +24,21 @@ export function pageMetadata({
       url: canonical,
       type: "website",
       siteName: siteConfig.brand,
-      locale: "en_US"
+      locale: "en_US",
+      images: [
+        {
+          url: socialImagePath,
+          width: 1200,
+          height: 675,
+          alt: "Austin skyline at dusk"
+        }
+      ]
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description
+      description,
+      images: [socialImagePath]
     }
   };
 }
@@ -37,7 +49,7 @@ export function professionalServiceSchema() {
     "@type": ["ProfessionalService", "LocalBusiness"],
     name: siteConfig.brand,
     url: siteConfig.siteUrl,
-    image: `${siteConfig.siteUrl}/hero-architecture.svg`,
+    image: socialImageUrl,
     telephone: siteConfig.phone,
     email: siteConfig.email,
     address: {

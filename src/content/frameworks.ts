@@ -19,7 +19,7 @@ export const frameworks: Framework[] = [
     name: "Arc Mapping",
     slug: "arc-mapping",
     definition:
-      "Arc Mapping is a session-to-session structure that links triggers, protective strategies, and chosen behavioral shifts.",
+      "Arc Mapping is a session-to-session map that links triggers, protective strategies, and chosen behavior shifts.",
     whyItMatters: [
       "Prevents treatment from drifting into insight without implementation.",
       "Clarifies what changes and what stays stable across an arc.",
@@ -40,7 +40,7 @@ export const frameworks: Framework[] = [
       { label: "Perfectionism as a Structural Problem", href: "/ideas/perfectionism-structural-problem" }
     ],
     faq: [
-      { question: "Is Arc Mapping rigid?", answer: "No. It is structured, but it adapts to clinical data over time." },
+      { question: "Is Arc Mapping rigid?", answer: "No. It has clear structure, but it adapts as clinical data changes." },
       { question: "Can Arc Mapping be used in telehealth?", answer: "Yes, when goals and tracking are clear and clinically appropriate." },
       { question: "Does Arc Mapping replace relational work?", answer: "No. It organizes relational and behavioral work into one coherent sequence." }
     ]
@@ -49,7 +49,7 @@ export const frameworks: Framework[] = [
     name: "Control Gradient",
     slug: "control-gradient",
     definition:
-      "Control Gradient scales flexibility in deliberate increments to reduce all-or-nothing adaptation.",
+      "Control Gradient scales flexibility in deliberate increments to reduce all-or-nothing reactions.",
     whyItMatters: [
       "Builds tolerance without forcing abrupt exposure.",
       "Creates measurable shifts for high-control clients.",
@@ -70,7 +70,7 @@ export const frameworks: Framework[] = [
       { label: "The Adjacent Possible", href: "/ideas/adjacent-possible" }
     ],
     faq: [
-      { question: "Is this just exposure?", answer: "It can include exposure elements, but the emphasis is on structured flexibility scaling." },
+      { question: "Is this just exposure?", answer: "It can include exposure elements, but the emphasis is on flexibility built in small, planned steps." },
       { question: "What if change feels unsafe?", answer: "The gradient is adjusted so challenge remains tolerable and clinically useful." },
       { question: "Who benefits most?", answer: "Clients with strong overcontrol and perfectionistic threat prediction patterns." }
     ]
@@ -109,7 +109,7 @@ export const frameworks: Framework[] = [
     name: "Pattern Externalization",
     slug: "pattern-externalization",
     definition:
-      "Pattern Externalization moves internal loops into observable language, sequence, or task structure.",
+      "Pattern Externalization moves internal loops into observable language, sequence, or task format.",
     whyItMatters: [
       "Improves precision when clients feel flooded or fused with the problem.",
       "Supports collaborative analysis without self-attack.",
@@ -139,7 +139,7 @@ export const frameworks: Framework[] = [
     name: "Uncertainty Capacity",
     slug: "uncertainty-capacity",
     definition:
-      "Uncertainty Capacity is the ability to act coherently without premature certainty.",
+      "Uncertainty Capacity is the ability to act in line with your values without rushing to certainty.",
     whyItMatters: [
       "Reduces compulsive decision loops.",
       "Supports meaningful risk-taking with structure.",
@@ -160,7 +160,7 @@ export const frameworks: Framework[] = [
       { label: "Perfectionism", href: "/perfectionism" }
     ],
     faq: [
-      { question: "Is uncertainty tolerance passive?", answer: "No. It is active, structured engagement under incomplete information." },
+      { question: "Is uncertainty tolerance passive?", answer: "No. It is active engagement under incomplete information." },
       { question: "Can this lower standards?", answer: "Not when framed around values and clear decision rules." },
       { question: "How fast can capacity change?", answer: "Usually through repeated small trials, not single breakthrough events." }
     ]

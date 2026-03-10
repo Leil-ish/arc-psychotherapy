@@ -17,9 +17,9 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const styles =
     variant === "primary"
-      ? "no-link-style bg-sage text-white hover:bg-sage-dark"
-      : "no-link-style border border-sage bg-transparent text-sage hover:border-sage-dark hover:bg-sage/10 hover:text-sage-dark";
-  const className = `focus-ring inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition ${styles}`;
+      ? "no-link-style border border-sage/95 bg-sage text-white hover:border-sage-dark hover:bg-sage-dark"
+      : "no-link-style border border-sage/80 bg-transparent text-sage hover:border-sage-dark hover:bg-sage/10 hover:text-sage-dark";
+  const className = `focus-ring inline-flex items-center justify-center rounded-[2px] px-5 py-2.5 text-sm font-medium tracking-[0.01em] transition-colors duration-200 ${styles}`;
 
   if (external) {
     return (

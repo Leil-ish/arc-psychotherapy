@@ -20,9 +20,9 @@ type ConceptLink = {
 };
 
 const conceptByTag: Partial<Record<IdeaTag, ConceptLink>> = {
-  Perfectionism: { href: "/perfectionism", label: "Perfectionism concept hub" },
-  Overcontrol: { href: "/overcontrol", label: "Overcontrol concept hub" },
-  "Religious Harm": { href: "/religious-harm", label: "Religious harm concept hub" }
+  Perfectionism: { href: "/perfectionism", label: "Perfectionism page" },
+  Overcontrol: { href: "/overcontrol", label: "Overcontrol page" },
+  "Religious Harm": { href: "/religious-harm", label: "Religious harm page" }
 };
 
 function conceptLinksForTags(tags: IdeaTag[]) {
@@ -115,24 +115,24 @@ export default async function IdeaEssayPage({
       </section>
 
       <section className="card mt-10">
-        <h2 className="h3">Related orientation links</h2>
+        <h2 className="h3">Related links</h2>
         <div className="mt-4 flex flex-wrap gap-2">
           {essay.related.map((link) => (
-            <Link key={link.href} href={link.href as Route} className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
+            <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
               {link.label}
             </Link>
           ))}
-          <Link href="/frameworks" className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
+          <Link href="/frameworks" className="focus-ring no-link-style chip-link">
             Frameworks index
           </Link>
-          <Link href="/start-here" className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
-            Start Here orientation page
+          <Link href="/start-here" className="focus-ring no-link-style chip-link">
+            Start Here
           </Link>
-          <Link href="/work-with-me" className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
+          <Link href="/work-with-me" className="focus-ring no-link-style chip-link">
             Work With Me
           </Link>
           {conceptLinks.map((link) => (
-            <Link key={link.href} href={link.href as Route} className="focus-ring rounded-full border border-stone px-3 py-2 text-sm hover:border-sage/40">
+            <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
               {link.label}
             </Link>
           ))}
@@ -145,7 +145,7 @@ export default async function IdeaEssayPage({
           <div className="mt-5 grid gap-5 md:grid-cols-2">
             {related.map((item) => (
               <article key={item.slug} className="card">
-                <h3 className="h3 text-xl">
+                <h3 className="h3">
                   <Link href={`/ideas/${item.slug}` as Route} className="focus-ring hover:text-sage">
                     {item.title}
                   </Link>
@@ -160,7 +160,7 @@ export default async function IdeaEssayPage({
       <section className="card mt-12 bg-ink text-white">
         <h2 className="h3">If this resonates, here is how Arc works.</h2>
         <p className="mt-3 text-white/85">
-          Arc uses structured psychotherapy to translate concepts into practical behavior change with clear pacing and integration.
+          Arc uses therapy with clear structure to translate ideas into practical behavior change between sessions.
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
           <ButtonLink href="/work-with-me" variant="secondary">

@@ -1,19 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Route } from "next";
 import { pageMetadata } from "@/lib/seo";
 import {
-  formatEssayDate,
   getAllEssays,
-  getEssayBySlugs,
-  getReadingTimeMinutes,
   type IdeaTag
 } from "@/src/content/ideas";
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
-  title: "Ideas Library | Round Rock, TX",
+  title: "Ideas | Round Rock, TX",
   description:
-    "Definition-first essays on perfectionism, overcontrol, religious harm, and meaning from Arc Psychotherapy in Downtown Round Rock, serving North Austin and surrounding communities, with telehealth across Texas.",
+    "Short, practical reads on perfectionism, overcontrol, religious harm, and meaning from Arc Psychotherapy in Downtown Round Rock, with telehealth across Texas.",
   path: "/ideas"
 });
 
@@ -35,124 +33,107 @@ export default async function IdeasPage({
     ? essays.filter((essay) => essay.tags.includes(topicFilter))
     : essays;
 
-  const startHere = getEssayBySlugs(siteContent.startHereEssays);
-  const featured = getEssayBySlugs(siteContent.featuredEssays);
-
   return (
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Ideas</h1>
-      <p className="body-lg mt-5 max-w-3xl">
-        Ideas is Arc&apos;s curated editorial library: concise definitions, frameworks, and applied essays for high-functioning adults.
+      <p className="body-lg mt-5 max-w-4xl">Read this if you want clearer language for what keeps repeating in your life.</p>
+      <p className="body mt-4 max-w-4xl">
+        These essays are short and practical. They help you name the pattern, understand the cost, and try a different move in real life.
       </p>
-      <p className="body mt-3 max-w-3xl">
-        Start with the recommended sequence below, then browse by topic. Each piece links to concept hubs, frameworks, and practical next steps.
+      <p className="body mt-3 max-w-4xl">
+        If you are trying to figure out whether this work fits, this page is a good place to start.
       </p>
-      <div className="mt-4 flex flex-wrap gap-3">
-        <Link href="/start-here" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Start here
-        </Link>
-        <Link href="/definitions" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Core concepts
-        </Link>
-        <Link href="/perfectionism" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Perfectionism hub
-        </Link>
-        <Link href="/overcontrol" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Overcontrol hub
-        </Link>
-        <Link href="/religious-harm" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Religious harm hub
-        </Link>
-        <Link href="/work-with-me" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Learn how Arc works
-        </Link>
-      </div>
-
-      <div className="card mt-8">
-        <h2 className="h3">Recommended starting essays</h2>
-        <div className="mt-4 grid gap-4 md:grid-cols-3">
-          {startHere.map((essay) => (
-            <Link key={essay.slug} href={`/ideas/${essay.slug}` as Route} className="focus-ring rounded-xl border border-stone/70 bg-sand/60 p-4 transition hover:border-sage/40">
-              <p className="text-sm font-semibold text-ink">{essay.title}</p>
-              <p className="mt-2 text-sm text-ink/80">{essay.description}</p>
-              <p className="mt-2 text-sm text-ink/70">
-                {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
-              </p>
-            </Link>
-          ))}
+      <figure className="mt-8">
+        <div className="arc-image-mask overflow-hidden">
+          <Image
+            src="/images/architectural-details/concrete-shadow-lines.jpg"
+            alt="Concrete surface with sharp angled shadows."
+            width={3575}
+            height={2384}
+            className="h-[14rem] w-full object-cover md:h-[20rem]"
+            sizes="(min-width: 1024px) 72rem, 100vw"
+          />
         </div>
-      </div>
+      </figure>
 
-      <div className="mt-10">
-        <h2 className="h2">Topics</h2>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <Link
-            href="/ideas"
-            className={`focus-ring rounded-full border px-4 py-2 text-sm ${
-              !topicFilter ? "border-sage bg-sage text-white" : "border-stone text-ink/85"
-            }`}
-          >
-            All
-          </Link>
-          {siteContent.primaryTopics.map((topic) => (
-            <Link
-              key={topic}
-              href={{ pathname: "/ideas", query: { topic } }}
-              className={`focus-ring rounded-full border px-4 py-2 text-sm ${
-                topicFilter === topic ? "border-sage bg-sage text-white" : "border-stone text-ink/85"
-              }`}
-            >
-              {topic}
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-10">
-        <h2 className="h2">Featured essays</h2>
+      <section className="mt-12">
+        <h2 className="h2">Start with one</h2>
         <div className="mt-5 grid gap-5 md:grid-cols-3">
-          {featured.map((essay) => (
-            <article key={essay.slug} className="card">
-              <h3 className="h3 text-xl">
-                <Link href={`/ideas/${essay.slug}` as Route} className="focus-ring hover:text-sage">
-                  {essay.title}
-                </Link>
-              </h3>
-              <p className="mt-3 body">{essay.description}</p>
-              <p className="mt-3 text-xs uppercase tracking-[0.11em] text-sage">{essay.tags.join(" • ")}</p>
-              <p className="mt-2 text-sm text-ink/70">
-                {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
-              </p>
-            </article>
-          ))}
+          <article className="card">
+            <h3 className="h3">
+              <Link href="/ideas/perfectionism-structural-problem" className="focus-ring hover:text-sage">
+                Perfectionism as a Structural Problem
+              </Link>
+            </h3>
+            <p className="mt-3 body">If mindset advice has not changed much, start here.</p>
+          </article>
+          <article className="card">
+            <h3 className="h3">
+              <Link href="/ideas/adjacent-possible" className="focus-ring hover:text-sage">
+                The Adjacent Possible
+              </Link>
+            </h3>
+            <p className="mt-3 body">If decisions keep collapsing into all-or-nothing, start here.</p>
+          </article>
+          <article className="card">
+            <h3 className="h3">
+              <Link href="/ideas/leaving-faith-losing-gravity" className="focus-ring hover:text-sage">
+                When Leaving a Faith System Feels Like Losing Gravity
+              </Link>
+            </h3>
+            <p className="mt-3 body">If post-faith life feels disorienting, start here.</p>
+          </article>
         </div>
-      </div>
+      </section>
 
-      <div className="mt-12">
-        <h2 className="h2">Library</h2>
-        <div className="mt-5 grid gap-5 md:grid-cols-2">
+      <section className="mt-14">
+        <h2 className="h2">Or browse by topic</h2>
+        <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 body text-sm">
+          {siteContent.primaryTopics.map((topic) => (
+            <span key={topic} className="inline-flex items-center gap-3">
+              {topic !== siteContent.primaryTopics[0] ? <span className="text-ink/35">•</span> : null}
+              <Link
+                href={{ pathname: "/ideas", query: { topic } }}
+                className={`focus-ring no-link-style inline-link ${topicFilter === topic ? "font-semibold text-sage" : ""}`}
+              >
+                {topic}
+              </Link>
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-14">
+        <h2 className="h2">All essays</h2>
+        <p className="mt-3 body max-w-3xl">
+          Short reads on perfectionism, overcontrol, religious harm, and meaning. Pick the one that sounds most familiar.
+        </p>
+        <div className="editorial-list mt-6">
           {filteredEssays.map((essay) => (
-            <article key={essay.slug} className="card">
-              <h3 className="h3 text-xl">
+            <article key={essay.slug} className="editorial-item">
+              <h3 className="h3">
                 <Link href={`/ideas/${essay.slug}` as Route} className="focus-ring hover:text-sage">
                   {essay.title}
                 </Link>
               </h3>
-              <p className="mt-3 body">{essay.description}</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {essay.tags.map((tag) => (
-                  <span key={tag} className="rounded-full border border-stone px-2 py-1 text-xs text-ink/80">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <p className="mt-3 text-sm text-ink/70">
-                {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
-              </p>
+              <p className="mt-4 body editorial-measure">{essay.description}</p>
             </article>
           ))}
         </div>
-      </div>
+      </section>
+
+      <section className="mt-14 mb-6">
+        <p className="body max-w-4xl">
+          If you read one or two pieces and think, “Yes, that is exactly it,” the next step is simple:{" "}
+          <Link href="/work-with-me" className="focus-ring no-link-style inline-link font-semibold text-sage">
+            read how I work
+          </Link>{" "}
+          or{" "}
+          <Link href={siteContent.bookingUrl} className="focus-ring no-link-style inline-link font-semibold text-sage">
+            schedule a consult
+          </Link>.
+        </p>
+      </section>
     </section>
   );
 }

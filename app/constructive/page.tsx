@@ -133,7 +133,7 @@ export default function ConstructivePage() {
         <div className="mt-6 space-y-4">
           {constructive.faq.map((item) => (
             <article key={item.question} className="card">
-              <h3 className="h3 text-xl">{item.question}</h3>
+              <h3 className="h3">{item.question}</h3>
               <p className="mt-3 body">{item.answer}</p>
             </article>
           ))}
@@ -142,7 +142,7 @@ export default function ConstructivePage() {
 
       <section className="container-wrap mt-10">
         <details className="card">
-          <summary className="focus-ring cursor-pointer text-sm font-semibold uppercase tracking-[0.12em] text-sage">
+          <summary className="focus-ring cursor-pointer text-sm font-semibold text-sage">
             For the curious
           </summary>
           <p className="mt-4 body">{constructive.curious}</p>

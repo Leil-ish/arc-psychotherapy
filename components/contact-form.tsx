@@ -58,19 +58,19 @@ export function ContactForm() {
         <label className="text-sm font-medium text-ink/90" htmlFor="name">
           Name
         </label>
-        <input id="name" name="name" autoComplete="name" required className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5" />
+        <input id="name" name="name" autoComplete="name" required className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5" />
 
         <label className="text-sm font-medium text-ink/90" htmlFor="email">
           Email
         </label>
-        <input id="email" name="email" type="email" autoComplete="email" required className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5" />
+        <input id="email" name="email" type="email" autoComplete="email" required className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5" />
 
         <label className="text-sm font-medium text-ink/90" htmlFor="phone">
           Phone (optional)
         </label>
-        <input id="phone" name="phone" autoComplete="tel" className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5" />
+        <input id="phone" name="phone" autoComplete="tel" className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5" />
 
-        <fieldset className="rounded-xl border border-stone bg-sand p-4">
+        <fieldset className="rounded-[2px] border border-stone bg-sand/80 p-4">
           <legend className="text-sm font-medium text-ink/90">Consult scheduling preference</legend>
           <div className="mt-3 grid gap-3">
             <label className="flex items-start gap-2 text-sm">
@@ -105,7 +105,7 @@ export function ContactForm() {
           rows={4}
           required={consultPreference === "share-availability"}
           placeholder="Example: Tuesdays 10am-1pm, Thursdays after 3pm (Central Time)"
-          className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5"
+          className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5"
         />
         <p className="body -mt-2 text-sm">
           {consultPreference === "share-availability"
@@ -120,7 +120,7 @@ export function ContactForm() {
           id="preferredContactMethod"
           name="preferredContactMethod"
           defaultValue="email"
-          className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5"
+          className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5"
         >
           <option value="email">Email</option>
           <option value="phone">Phone</option>
@@ -130,9 +130,13 @@ export function ContactForm() {
         <label className="text-sm font-medium text-ink/90" htmlFor="message">
           Brief reason for reaching out (non-sensitive)
         </label>
-        <textarea id="message" name="message" rows={5} required className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5" />
+        <textarea id="message" name="message" rows={5} required className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5" />
       </div>
-      <button type="submit" className="focus-ring mt-6 rounded-full bg-sage px-6 py-3.5 text-sm font-semibold text-white hover:bg-sage-dark disabled:opacity-60" disabled={status === "submitting"}>
+      <button
+        type="submit"
+        className="focus-ring mt-6 inline-flex items-center justify-center rounded-[2px] border border-sage/95 bg-sage px-5 py-2.5 text-sm font-medium tracking-[0.01em] text-white transition-colors duration-200 hover:border-sage-dark hover:bg-sage-dark disabled:opacity-60"
+        disabled={status === "submitting"}
+      >
         {status === "submitting" ? "Sending..." : "Send request"}
       </button>
       <div aria-live="polite">
