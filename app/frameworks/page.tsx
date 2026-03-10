@@ -48,7 +48,7 @@ export default function FrameworksPage() {
       </div>
       <div className="mt-8 space-y-4">
         {frameworks.map((framework) => (
-          <article key={framework.slug} className="card">
+          <article key={framework.slug} className="card framework-diagram">
             <h2 className="h3">
               <Link href={`/frameworks/${framework.slug}` as Route} className="focus-ring hover:text-sage">
                 {framework.name}

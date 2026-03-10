@@ -17,9 +17,9 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const styles =
     variant === "primary"
-      ? "bg-sage text-white hover:bg-sage/90"
-      : "border border-sage text-sage hover:bg-sage/5";
-  const className = `focus-ring inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition ${styles}`;
+      ? "no-link-style bg-sage text-white hover:bg-sage-dark"
+      : "no-link-style border border-sage bg-transparent text-sage hover:border-sage-dark hover:bg-sage/10 hover:text-sage-dark";
+  const className = `focus-ring inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition ${styles}`;
 
   if (external) {
     return (

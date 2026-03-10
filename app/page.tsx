@@ -56,7 +56,7 @@ export default function HomePage() {
         <p className="mt-4 body text-sm max-w-3xl text-ink/75">
           Core offer: ongoing psychotherapy. Optional structured model-building is available when clinically useful.
         </p>
-        <figure className="mt-10 overflow-hidden rounded-3xl border border-stone/70 bg-white shadow-card">
+        <figure className="arc-image-mask mt-10 overflow-hidden border border-stone/90 bg-surface shadow-card">
           <Image
             src="/hero-architecture.svg"
             width={1200}
@@ -169,7 +169,7 @@ export default function HomePage() {
           </div>
         </article>
 
-        <article className="card">
+        <article className="card framework-diagram">
           <h2 className="h2">Frameworks</h2>
           <Link href="/frameworks" className="focus-ring mt-3 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
             Explore frameworks

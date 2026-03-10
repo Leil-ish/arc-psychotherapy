@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans">
-        <a href="#main-content" className="focus-ring sr-only absolute left-3 top-3 rounded bg-white px-3 py-2 text-sm font-semibold focus:not-sr-only">
+        <a href="#main-content" className="focus-ring sr-only absolute left-3 top-3 rounded-xl bg-surface px-3 py-2 text-sm font-semibold text-sage focus:not-sr-only">
           Skip to main content
         </a>
         <SiteHeader />

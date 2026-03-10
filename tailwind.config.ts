@@ -9,18 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#1f2724",
-        sand: "#f4f1ea",
-        stone: "#ddd7cc",
-        sage: "#365449",
-        clay: "#8d5f4a"
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        sand: "rgb(var(--color-bg) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        sage: "rgb(var(--color-accent) / <alpha-value>)",
+        "sage-dark": "rgb(var(--color-accent-hover) / <alpha-value>)",
+        stone: "rgb(var(--color-border) / <alpha-value>)",
+        olive: "rgb(var(--color-olive-secondary) / <alpha-value>)",
+        clay: "rgb(var(--color-olive-secondary) / <alpha-value>)"
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         serif: ["var(--font-serif)", "serif"]
       },
       boxShadow: {
-        card: "0 6px 24px rgba(24, 31, 28, 0.08)"
+        card: "0 8px 24px rgba(31, 37, 35, 0.06)"
       },
       maxWidth: {
         content: "74rem"

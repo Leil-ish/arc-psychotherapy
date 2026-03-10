@@ -6,10 +6,23 @@
   color-scheme: light;
   --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", sans-serif;
   --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  --color-bg: 245 241 235;
+  --color-surface: 236 230 221;
+  --color-ink: 31 37 35;
+  --color-muted: 94 102 95;
+  --color-accent: 46 76 63;
+  --color-accent-hover: 31 59 48;
+  --color-border: 221 214 204;
+  --color-olive-secondary: 107 124 94;
 }
 
 body {
-  @apply bg-sand text-ink antialiased;
+  @apply bg-sand text-[18px] text-ink antialiased;
+  background-image:
+    radial-gradient(circle at 16% 14%, rgb(var(--color-ink) / 0.018) 0, transparent 30%),
+    radial-gradient(circle at 84% 86%, rgb(var(--color-accent) / 0.02) 0, transparent 35%),
+    linear-gradient(180deg, rgb(var(--color-bg)) 0%, rgb(var(--color-surface) / 0.4) 100%);
+  background-attachment: fixed;
 }
 
 .container-wrap {
@@ -17,33 +30,83 @@ body {
 }
 
 .h1 {
-  @apply font-serif text-4xl leading-tight md:text-6xl;
+  @apply font-serif text-5xl leading-[1.14] md:text-7xl;
 }
 
 .h2 {
-  @apply font-serif text-3xl leading-tight md:text-4xl;
+  @apply font-serif text-3xl leading-[1.22] md:text-5xl;
 }
 
 .h3 {
-  @apply font-serif text-2xl leading-tight;
+  @apply font-serif text-2xl leading-[1.25];
 }
 
 .body-lg {
-  @apply text-lg leading-relaxed text-ink/85;
+  @apply leading-relaxed text-ink/85;
 }
 
 .body {
-  @apply leading-relaxed text-ink/80;
+  @apply leading-relaxed text-ink/85;
 }
 
 .label {
-  @apply text-xs font-semibold uppercase tracking-[0.14em] text-sage;
+  @apply text-xs font-semibold uppercase tracking-[0.14em] text-muted;
 }
 
 .card {
-  @apply rounded-2xl border border-stone/70 bg-white p-6 shadow-card;
+  @apply rounded-2xl border border-stone/90 bg-surface p-6 shadow-card;
 }
 
 .focus-ring {
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage focus-visible:ring-offset-2;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage focus-visible:ring-offset-2 focus-visible:ring-offset-sand;
+}
+
+a:not(.no-link-style) {
+  @apply text-sage transition-colors duration-200;
+  text-decoration: none;
+}
+
+a:not(.no-link-style):hover {
+  @apply text-sage-dark underline underline-offset-4;
+}
+
+main > section,
+.container-wrap > section {
+  position: relative;
+}
+
+main > section + section::before,
+.container-wrap > section + section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -1.35rem;
+  transform: translateX(-50%);
+  width: min(84vw, 68rem);
+  height: 1.1rem;
+  border-top: 1px solid rgb(var(--color-border) / 0.95);
+  border-radius: 9999px 9999px 0 0;
+  pointer-events: none;
+}
+
+.arc-image-mask {
+  border-radius: 1rem 1rem 2.6rem 2.6rem / 1rem 1rem 1.9rem 1.9rem;
+}
+
+.framework-diagram {
+  position: relative;
+  overflow: hidden;
+}
+
+.framework-diagram::after {
+  content: "";
+  position: absolute;
+  right: -1.25rem;
+  top: -1.25rem;
+  width: 7rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  border: 1px solid rgb(var(--color-accent) / 0.12);
+  box-shadow: 0 0 0 10px rgb(var(--color-accent) / 0.04), 0 0 0 22px rgb(var(--color-accent) / 0.02);
+  pointer-events: none;
 }

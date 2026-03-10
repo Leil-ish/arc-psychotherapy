@@ -59,7 +59,7 @@ export default async function FrameworkDetailPage({
       </section>
 
       <section className="container-wrap grid gap-5 md:grid-cols-2">
-        <article className="card">
+        <article className="card framework-diagram">
           <h2 className="h2">How it shows up</h2>
           <ul className="mt-4 space-y-2 body">
             {framework.howItShowsUp.map((item) => (
@@ -67,7 +67,7 @@ export default async function FrameworkDetailPage({
             ))}
           </ul>
         </article>
-        <article className="card">
+        <article className="card framework-diagram">
           <h2 className="h2">What helps</h2>
           <ul className="mt-4 space-y-2 body">
             {framework.whatHelps.map((item) => (

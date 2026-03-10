@@ -55,23 +55,23 @@ export function ContactForm() {
       <p className="mt-2 body text-sm">Please do not include sensitive clinical details (PHI) in this form.</p>
       <p className="mt-2 body text-sm">If you are in immediate danger, call 911. For mental health crisis support, call or text 988.</p>
       <div className="mt-5 grid gap-4">
-        <label className="text-sm font-medium" htmlFor="name">
+        <label className="text-sm font-medium text-ink/90" htmlFor="name">
           Name
         </label>
-        <input id="name" name="name" autoComplete="name" required className="focus-ring rounded-lg border border-stone bg-white px-4 py-2" />
+        <input id="name" name="name" autoComplete="name" required className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5" />
 
-        <label className="text-sm font-medium" htmlFor="email">
+        <label className="text-sm font-medium text-ink/90" htmlFor="email">
           Email
         </label>
-        <input id="email" name="email" type="email" autoComplete="email" required className="focus-ring rounded-lg border border-stone bg-white px-4 py-2" />
+        <input id="email" name="email" type="email" autoComplete="email" required className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5" />
 
-        <label className="text-sm font-medium" htmlFor="phone">
+        <label className="text-sm font-medium text-ink/90" htmlFor="phone">
           Phone (optional)
         </label>
-        <input id="phone" name="phone" autoComplete="tel" className="focus-ring rounded-lg border border-stone bg-white px-4 py-2" />
+        <input id="phone" name="phone" autoComplete="tel" className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5" />
 
-        <fieldset className="rounded-lg border border-stone bg-white p-4">
-          <legend className="text-sm font-medium">Consult scheduling preference</legend>
+        <fieldset className="rounded-xl border border-stone bg-sand p-4">
+          <legend className="text-sm font-medium text-ink/90">Consult scheduling preference</legend>
           <div className="mt-3 grid gap-3">
             <label className="flex items-start gap-2 text-sm">
               <input
@@ -96,7 +96,7 @@ export function ContactForm() {
           </div>
         </fieldset>
 
-        <label className="text-sm font-medium" htmlFor="availability">
+        <label className="text-sm font-medium text-ink/90" htmlFor="availability">
           Availability
         </label>
         <textarea
@@ -105,7 +105,7 @@ export function ContactForm() {
           rows={4}
           required={consultPreference === "share-availability"}
           placeholder="Example: Tuesdays 10am-1pm, Thursdays after 3pm (Central Time)"
-          className="focus-ring rounded-lg border border-stone bg-white px-4 py-2"
+          className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5"
         />
         <p className="body -mt-2 text-sm">
           {consultPreference === "share-availability"
@@ -113,31 +113,31 @@ export function ContactForm() {
             : "Optional. You can leave this blank if you want Arc to send available times first."}
         </p>
 
-        <label className="text-sm font-medium" htmlFor="preferredContactMethod">
+        <label className="text-sm font-medium text-ink/90" htmlFor="preferredContactMethod">
           Preferred contact method
         </label>
         <select
           id="preferredContactMethod"
           name="preferredContactMethod"
           defaultValue="email"
-          className="focus-ring rounded-lg border border-stone bg-white px-4 py-2"
+          className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5"
         >
           <option value="email">Email</option>
           <option value="phone">Phone</option>
           <option value="either">Either</option>
         </select>
 
-        <label className="text-sm font-medium" htmlFor="message">
+        <label className="text-sm font-medium text-ink/90" htmlFor="message">
           Brief reason for reaching out (non-sensitive)
         </label>
-        <textarea id="message" name="message" rows={5} required className="focus-ring rounded-lg border border-stone bg-white px-4 py-2" />
+        <textarea id="message" name="message" rows={5} required className="focus-ring rounded-xl border border-stone bg-sand px-4 py-2.5" />
       </div>
-      <button type="submit" className="focus-ring mt-6 rounded-full bg-sage px-5 py-3 text-sm font-semibold text-white hover:bg-sage/90 disabled:opacity-60" disabled={status === "submitting"}>
+      <button type="submit" className="focus-ring mt-6 rounded-full bg-sage px-6 py-3.5 text-sm font-semibold text-white hover:bg-sage-dark disabled:opacity-60" disabled={status === "submitting"}>
         {status === "submitting" ? "Sending..." : "Send request"}
       </button>
       <div aria-live="polite">
         {status === "success" && <p className="mt-3 text-sm text-sage">Request sent. We will follow up within 1-2 business days.</p>}
-        {status === "error" && <p className="mt-3 text-sm text-clay">Please complete required fields and try again. You can also call or email directly.</p>}
+        {status === "error" && <p className="mt-3 text-sm text-muted">Please complete required fields and try again. You can also call or email directly.</p>}
       </div>
     </form>
   );
