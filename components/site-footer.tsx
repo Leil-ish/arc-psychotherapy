@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/content";
 
@@ -6,7 +7,13 @@ export function SiteFooter() {
     <footer className="mt-24 border-t border-stone/85 bg-surface/58 py-14">
       <div className="container-wrap grid gap-10 md:grid-cols-12">
         <div className="md:col-span-4">
-          <p className="h3">{siteConfig.brand}</p>
+          <Image
+            src="/brand/logo-wordmark-light.png"
+            alt={siteConfig.brand}
+            width={1800}
+            height={320}
+            className="h-auto w-[15rem] max-w-full"
+          />
           <p className="mt-2 body text-sm">{siteConfig.legalEntityNote}</p>
           <p className="mt-4 text-sm font-semibold tracking-[0.04em] text-ink/85">{siteConfig.credentialsLine}</p>
           <p className="body text-sm text-ink/80">{siteConfig.credentials[0]}</p>

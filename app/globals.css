@@ -274,18 +274,21 @@ main > section + section::after {
 }
 
 .site-masthead-brand {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-top: 0.4rem;
-  font-family: var(--font-serif), serif;
-  font-size: clamp(2rem, 2.8vw, 2.55rem);
-  line-height: 1;
-  letter-spacing: -0.012em;
-  color: rgb(var(--color-ink) / 0.97);
   text-decoration: none;
 }
 
 .site-masthead-brand:hover {
-  color: rgb(var(--color-accent-hover));
+  opacity: 0.86;
+}
+
+.site-masthead-logo {
+  display: block;
+  width: clamp(13.5rem, 27vw, 20rem);
+  height: auto;
+  opacity: 0.96;
 }
 
 .site-masthead-consult {
@@ -447,7 +450,11 @@ main > section + section::after {
   }
 
   .site-masthead-brand {
-    font-size: clamp(1.75rem, 8vw, 2.2rem);
+    margin-top: 0.25rem;
+  }
+
+  .site-masthead-logo {
+    width: clamp(11.5rem, 60vw, 16rem);
   }
 
   .site-masthead-nav {

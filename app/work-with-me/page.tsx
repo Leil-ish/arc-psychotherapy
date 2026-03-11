@@ -24,11 +24,11 @@ export default function WorkWithMePage() {
       <figure className="mt-8">
         <div className="arc-image-mask overflow-hidden">
           <Image
-            src="/images/architectural-details/arched-concrete-facade.jpg"
-            alt="Arched concrete facade with repeating architectural rhythm."
-            width={3830}
-            height={5745}
-            className="h-[14rem] w-full object-cover object-bottom md:h-[20rem]"
+            src="/images/austin-local/austin-skyline-bridge-sunset.jpg"
+            alt="Austin skyline and bridges at dusk."
+            width={4000}
+            height={2250}
+            className="h-[14rem] w-full object-cover object-center md:h-[20rem]"
             sizes="(min-width: 1024px) 72rem, 100vw"
           />
         </div>

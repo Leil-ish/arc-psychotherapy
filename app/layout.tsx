@@ -14,6 +14,15 @@ export const metadata: Metadata = {
   },
   description:
     "Private-pay therapy with clear structure in Downtown Round Rock, Texas for adults navigating perfectionism, rigidity/overcontrol, and religious harm. Serving North Austin and surrounding communities, with telehealth across Texas.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    other: [{ rel: "manifest", url: "/site.webmanifest" }]
+  },
   robots: {
     index: true,
     follow: true

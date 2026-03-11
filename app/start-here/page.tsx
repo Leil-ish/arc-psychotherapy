@@ -27,7 +27,7 @@ export default function StartHerePage() {
             alt="Rooftop edge and city buildings in warm evening light."
             width={6000}
             height={4000}
-            className="h-[14rem] w-full object-cover object-bottom md:h-[20rem]"
+            className="h-[14rem] w-full object-cover object-top md:h-[20rem]"
             sizes="(min-width: 1024px) 72rem, 100vw"
           />
         </div>

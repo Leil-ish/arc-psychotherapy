@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navItems, siteConfig } from "@/lib/content";
 
@@ -9,7 +10,15 @@ export function SiteHeader() {
           <div>
             <p className="label">Round Rock + Telehealth Texas</p>
             <Link href="/" className="focus-ring no-link-style site-masthead-brand">
-              {siteConfig.brand}
+              <Image
+                src="/brand/logo-wordmark-transparent-hires.png"
+                alt=""
+                width={1578}
+                height={287}
+                className="site-masthead-logo"
+                priority
+              />
+              <span className="sr-only">{siteConfig.brand}</span>
             </Link>
           </div>
           <Link href={siteConfig.bookingUrl} className="focus-ring no-link-style site-masthead-consult">
