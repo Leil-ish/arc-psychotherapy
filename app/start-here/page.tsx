@@ -1,117 +1,142 @@
 import Image from "next/image";
 import Link from "next/link";
-import { pageMetadata } from "@/lib/seo";
-import { siteContent } from "@/src/content/site";
+import type { Route } from "next";
+import { ButtonLink } from "@/components/button-link";
+import { SchemaScript } from "@/components/schema-script";
+import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
+import { homePage } from "@/src/content/marketing";
 
 export const metadata = pageMetadata({
   title: "Start Here | Round Rock, TX",
   description:
-    "Therapy with clear structure for high-achieving adults navigating perfectionism, rigidity, and religious harm. Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas.",
+    "Start here for therapy resources on perfectionism, overcontrol, and religious harm from Arc Psychotherapy in Downtown Round Rock, Texas.",
   path: "/start-here"
 });
+
+const intro = {
+  eyebrow: "Start Here",
+  title: "You do not need to read the whole site.",
+  lede: "Start with the issue that sounds most familiar.",
+  body: [
+    "If reading helps, pick one essay after that.",
+    "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
+  ]
+} as const;
 
 export default function StartHerePage() {
   return (
     <section className="container-wrap py-16 md:py-20">
-      <h1 className="h1">Start Here</h1>
-      <p className="body-lg mt-5 max-w-4xl">You can explain your patterns and still feel stuck.</p>
-      <p className="body-lg max-w-4xl">Start there.</p>
-      <p className="body mt-4 max-w-4xl">You do not need to read everything. Pick the section that matches your life right now and begin there.</p>
-      <p className="body mt-3 max-w-4xl">
-        {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.
-      </p>
-      <figure className="mt-8">
-        <div className="arc-image-mask overflow-hidden">
+      <SchemaScript
+        id="start-here-webpage-schema"
+        data={webPageSchema({
+          name: "Start Here",
+          description:
+            "Start here for therapy resources on perfectionism, overcontrol, and religious harm from Arc Psychotherapy in Downtown Round Rock, Texas.",
+          path: "/start-here",
+          type: "CollectionPage"
+        })}
+      />
+      <SchemaScript
+        id="start-here-breadcrumb-schema"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Start Here", path: "/start-here" }
+        ])}
+      />
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <p className="label">{intro.eyebrow}</p>
+          <h1 className="h1 mt-4">{intro.title}</h1>
+          <p className="hero-lede">{intro.lede}</p>
+          <div className="hero-support">
+            {intro.body.map((item) => (
+              <p key={item} className="body">
+                {item}
+              </p>
+            ))}
+          </div>
+          <div className="hero-actions">
+            <ButtonLink href="/contact">Contact</ButtonLink>
+            <ButtonLink href="/ideas" variant="secondary">
+              Writing
+            </ButtonLink>
+          </div>
+        </div>
+        <figure className="image-frame">
           <Image
             src="/images/austin-local/rooftop-edge-city.jpg"
-            alt="Rooftop edge and city buildings in warm evening light."
+            alt="Tight crop of Austin buildings and rooftop edges in hard evening light."
             width={6000}
             height={4000}
-            className="h-[14rem] w-full object-cover object-top md:h-[20rem]"
-            sizes="(min-width: 1024px) 72rem, 100vw"
+            className="h-full min-h-[18rem] w-full object-cover object-top"
+            sizes="(min-width: 1024px) 34rem, 100vw"
           />
-        </div>
-      </figure>
+        </figure>
+      </div>
 
-      <section className="mt-12">
-        <h2 className="h2">Start here if...</h2>
-        <div className="mt-5 grid gap-5 md:grid-cols-3">
-          <article className="card">
-            <h3 className="h3">
-              <Link href="/perfectionism" className="focus-ring hover:text-sage">
-                Perfectionism
-              </Link>
-            </h3>
-            <p className="mt-3 body">
-              Read this first if your standards are high, your work is strong, and your life keeps getting narrower.
-            </p>
-          </article>
-          <article className="card">
-            <h3 className="h3">
-              <Link href="/overcontrol" className="focus-ring hover:text-sage">
-                Overcontrol
-              </Link>
-            </h3>
-            <p className="mt-3 body">
-              Read this first if you can perform under pressure and still feel rigid, tired, or shut down by the end of the day.
-            </p>
-          </article>
-          <article className="card">
-            <h3 className="h3">
-              <Link href="/religious-harm" className="focus-ring hover:text-sage">
-                Religious harm
-              </Link>
-            </h3>
-            <p className="mt-3 body">
-              Read this first if you left a rigid or shaming faith system and fear or guilt still runs more of your decisions than you want.
-            </p>
-          </article>
+      <section className="section-gap">
+        <div className="anchor-block">
+          <p className="anchor-block__line">Pick one place to begin.</p>
         </div>
       </section>
 
-      <section className="mt-14">
-        <h2 className="h2">If you want one short read</h2>
-        <div className="mt-5 grid gap-5 md:grid-cols-3">
-          <article className="card">
-            <h3 className="h3">
-              <Link href="/ideas/perfectionism-structural-problem" className="focus-ring hover:text-sage">
-                Perfectionism as a Structural Problem
-              </Link>
-            </h3>
-            <p className="mt-3 body">Read this first if mindset advice has not changed the pattern.</p>
-          </article>
-          <article className="card">
-            <h3 className="h3">
-              <Link href="/ideas/adjacent-possible" className="focus-ring hover:text-sage">
-                The Adjacent Possible
-              </Link>
-            </h3>
-            <p className="mt-3 body">Read this first if every decision feels all-or-nothing.</p>
-          </article>
-          <article className="card">
-            <h3 className="h3">
-              <Link href="/ideas/leaving-faith-losing-gravity" className="focus-ring hover:text-sage">
-                When Leaving a Faith System Feels Like Losing Gravity
-              </Link>
-            </h3>
-            <p className="mt-3 body">Read this first if post-faith life feels disorienting, not freeing.</p>
-          </article>
+      <section className="section-gap">
+        <div className="section-heading">
+          <h2 className="h2">Pick an issue.</h2>
+        </div>
+        <div className="index-grid mt-6">
+          {homePage.focusAreas.map((item) => (
+            <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style index-card">
+              <h3 className="index-card__title">{item.title}</h3>
+              <p className="index-card__body body">{item.body}</p>
+            </Link>
+          ))}
         </div>
       </section>
 
-      <section className="mt-14 card">
-        <h2 className="h2">How Arc works (short version)</h2>
-        <h3 className="h3 mt-5">Consult</h3>
-        <p className="body mt-2 max-w-3xl">We decide if this is a good clinical fit.</p>
-        <h3 className="h3 mt-5">Ongoing therapy</h3>
-        <p className="body mt-2 max-w-3xl">
-          We figure out what keeps repeating, try something different, and pay attention to what actually changes.
-        </p>
-        <h3 className="h3 mt-5">Adjustment</h3>
-        <p className="body mt-2 max-w-3xl">We keep what helps. We stop pretending the rest is useful.</p>
-        <Link href="/work-with-me" className="focus-ring no-link-style inline-link mt-5 inline-block">
-          Read more about how I work.
-        </Link>
+      <section className="section-gap-lg">
+        <div className="section-heading">
+          <h2 className="h2">Read one essay first.</h2>
+        </div>
+        <div className="dense-index mt-6">
+          {homePage.writing.map((item) => (
+            <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style dense-index__row">
+              <div>
+                <h3 className="dense-index__title">{item.title}</h3>
+              </div>
+              <p className="dense-index__body body">{item.body}</p>
+              <span className="dense-index__arrow">Read</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-gap-lg">
+        <div className="split-band">
+          <article className="split-panel">
+            <p className="label">Therapy</p>
+            <h2 className="h2">What therapy looks like.</h2>
+            <ul className="split-panel__list body">
+              <li>Start with a consult.</li>
+              <li>Look closely at what keeps happening.</li>
+              <li>Try one change and see what happens during the week.</li>
+              <li>Keep what helps.</li>
+            </ul>
+          </article>
+          <article className="split-panel">
+            <p className="label">Next</p>
+            <h2 className="h2">Then read about therapy or get in touch.</h2>
+            <p className="body">
+              If one issue page already sounds familiar, start there. If you want to know more about therapy, read the approach page.
+            </p>
+            <div className="hero-actions">
+              <ButtonLink href="/work-with-me">Approach</ButtonLink>
+              <ButtonLink href="/contact" variant="secondary">
+                Contact
+              </ButtonLink>
+            </div>
+          </article>
+        </div>
       </section>
     </section>
   );

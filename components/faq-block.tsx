@@ -1,4 +1,4 @@
-import Script from "next/script";
+import { SchemaScript } from "@/components/schema-script";
 
 export type FaqItem = {
   question: string;
@@ -28,23 +28,20 @@ export function FaqBlock({
   };
 
   return (
-    <section className="container-wrap mt-14">
-      <h2 className="h2">{heading}</h2>
-      <div className="mt-6 space-y-4">
+    <section className="container-wrap section-gap-lg">
+      <div className="section-heading">
+        <p className="label">Questions</p>
+        <h2 className="h2">{heading}</h2>
+      </div>
+      <div className="faq-list">
         {items.map((item) => (
-          <article key={item.question} className="card">
+          <article key={item.question} className="faq-row">
             <h3 className="h3">{item.question}</h3>
             <p className="mt-3 body">{item.answer}</p>
           </article>
         ))}
       </div>
-      {schemaId ? (
-        <Script
-          id={schemaId}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ) : null}
+      {schemaId ? <SchemaScript id={schemaId} data={schema} /> : null}
     </section>
   );
 }

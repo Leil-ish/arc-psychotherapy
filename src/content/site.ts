@@ -7,6 +7,9 @@ export const siteContent = {
   contactEndpoint: "/api/contact",
   email: "hello@arc-psychotherapy.com",
   phone: "(512) 710-9966",
+  sameAs: [
+    "https://www.linkedin.com/in/leilaanderson/"
+  ],
   authorDisplayName: "Leila Anderson, LMFT-S",
   positioningStatementShort:
     "Arc Psychotherapy is for adults who look competent and feel wrung out.",

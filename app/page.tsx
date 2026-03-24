@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { pageMetadata } from "@/lib/seo";
+import type { Route } from "next";
+import { ButtonLink } from "@/components/button-link";
+import { SchemaScript } from "@/components/schema-script";
+import { pageMetadata, webPageSchema } from "@/lib/seo";
+import { homePage, servicesPage } from "@/src/content/marketing";
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
@@ -10,111 +14,208 @@ export const metadata = pageMetadata({
   path: "/"
 });
 
+const intro = {
+  eyebrow: "Private-pay psychotherapy",
+  title: "You can understand the problem and still feel stuck.",
+  lede: "Therapy for adults dealing with perfectionism, overcontrol, and religious harm.",
+  body: [
+    "Other people rely on you.",
+    "You are tired of how much effort it takes to stay this steady.",
+    "You can explain the problem clearly. You still find yourself doing the same thing when you are stressed.",
+    "If insight alone fixed it, you would already be done."
+  ]
+} as const;
+
+const signs = {
+  eyebrow: "Common Signs",
+  title: "Some version of this is usually going on.",
+  items: [
+    "You spend too much time preparing, researching, or replaying decisions.",
+    "You look fine from the outside and feel wrung out by the end of the day.",
+    "People rely on you, and you are getting tired of what that costs.",
+    "You left a rigid or shaming religious environment, but fear and guilt still shape too many decisions."
+  ]
+} as const;
+
+const notFirstStep = {
+  eyebrow: "Not The Right First Step",
+  items: [
+    "Crisis stabilization",
+    "Insurance-based care",
+    "Checklist-only symptom treatment",
+    "Brief coaching framed as therapy"
+  ]
+} as const;
+
+const therapySteps = [
+  {
+    title: "Start with a consult.",
+    body: "We talk through what is going on, what you want help with, and the practical details."
+  },
+  {
+    title: "Get specific.",
+    body: "We look closely at what keeps happening, what sets it off, and what keeps it going."
+  },
+  {
+    title: "Try something different.",
+    body: "Then we pay attention to what changes during the week."
+  }
+] as const;
+
 export default function HomePage() {
   return (
     <>
-      <section className="home-hero" aria-labelledby="home-hero-heading">
-        <div className="home-hero-media" aria-hidden="true">
+      <SchemaScript
+        id="home-webpage-schema"
+        data={webPageSchema({
+          name: "Arc Psychotherapy",
+          description:
+            "Private-pay psychotherapy in Downtown Round Rock, Texas for adults dealing with perfectionism, overcontrol, and religious harm, with telehealth across Texas.",
+          path: "/"
+        })}
+      />
+      <section className="hero-stage" aria-labelledby="home-hero-heading">
+        <div className="hero-stage__media" aria-hidden="true">
           <Image
-            src="/images/hero/home-hero-austin-rooftop.jpg"
+            src="/images/architectural-details/facade-black-grid.jpg"
             alt=""
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-center grayscale-image"
+            sizes="100vw"
           />
         </div>
-        <div className="home-hero-tone" aria-hidden="true" />
-        <div className="container-wrap home-hero-inner py-16 md:py-24">
-          <p className="label home-hero-kicker">{siteContent.brandName}</p>
-          <h1 id="home-hero-heading" className="h1 mt-3 max-w-4xl text-white">
-            Therapy for adults whose lives are being run by perfectionism, overcontrol, or the aftermath of rigid religion.
-          </h1>
-          <p className="body-lg mt-5 max-w-3xl text-white/90">You can explain your patterns.</p>
-          <p className="body-lg max-w-3xl text-white/90">You are still exhausted.</p>
-          <p className="body-lg max-w-3xl text-white/90">You are still over-functioning.</p>
-          <p className="mt-4 body max-w-3xl text-white/95">If insight alone fixed things, you&apos;d already be done.</p>
-          <p className="mt-3 body max-w-3xl text-white/90">I don&apos;t do &quot;small talk&quot; therapy. We focus on what changes in your real week, not just what sounds good in session.</p>
-
-          <div className="mt-8 flex flex-wrap gap-5">
-            <Link href={siteContent.bookingUrl} className="focus-ring no-link-style home-hero-primary-link">
-              Schedule consult
-            </Link>
-            <Link href="/contact" className="focus-ring no-link-style home-hero-secondary-link">
-              Contact
-            </Link>
+        <div className="hero-stage__overlay" aria-hidden="true" />
+        <div className="container-wrap hero-stage__inner">
+          <div className="hero-stage__copy">
+            <p className="label">{intro.eyebrow}</p>
+            <h1 id="home-hero-heading" className="h1 hero-stage__title mt-4">{intro.title}</h1>
+            <p className="hero-lede">{intro.lede}</p>
+            <div className="hero-support">
+              {intro.body.map((item) => (
+                <p key={item} className="body">
+                  {item}
+                </p>
+              ))}
+            </div>
+            <div className="hero-actions">
+              <ButtonLink href="/start-here">Start Here</ButtonLink>
+              <ButtonLink href="/contact" variant="secondary">
+                Contact
+              </ButtonLink>
+            </div>
           </div>
-
-          <p className="mt-4 body text-sm max-w-3xl text-white/78">
-            Downtown Round Rock, Texas. Telehealth across Texas.
-          </p>
-          <p className="mt-1 body text-sm max-w-3xl text-white/78">${siteContent.standardSessionFee} per 50–55 minute session.</p>
+          <aside className="hero-stage__meta">
+            <div className="meta-block">
+              <p className="label">Location</p>
+              <p className="body">{siteContent.primaryLocation}</p>
+              <p className="body">{siteContent.telehealthRegion}</p>
+            </div>
+            <div className="meta-block">
+              <p className="label">Rate</p>
+              <p className="body">${siteContent.standardSessionFee} per {siteContent.sessionLength}.</p>
+              <p className="body">Private-pay practice.</p>
+            </div>
+            <div className="meta-block">
+              <p className="label">How It Works</p>
+              <div className="process-steps" aria-label="Process">
+                <span className="process-steps__item">Consult</span>
+                <span className="process-steps__item">See what keeps happening</span>
+                <span className="process-steps__item">Try something different</span>
+                <span className="process-steps__item">Keep what helps</span>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section className="container-wrap mt-14">
-        <h2 className="h2 max-w-4xl">If this is your life</h2>
-        <ul className="mt-5 space-y-3 body editorial-measure">
-          <li>• You over-prepare, over-research, and still second-guess basic decisions.</li>
-          <li>• You rewrite messages, rehearse conversations, and track every possible mistake.</li>
-          <li>• You can get through the day just fine. You just do not have much range left by the end of it.</li>
-          <li>• People rely on you because you are competent. You are getting tired of the cost.</li>
-          <li>• You left a rigid or shaming religious system, but fear and guilt still run more of your decisions than you&apos;d like.</li>
-          <li>• You are not looking for a place to talk in circles for 50 minutes.</li>
-        </ul>
-      </section>
-
-      <section className="container-wrap mt-12">
-        <div className="editorial-list">
-          <article className="editorial-item">
-            <h2 className="h2">Values in practice</h2>
-            <p className="mt-3 body editorial-measure">
-              Therapy should not require you to defend your body, identity, family, or basic humanity before the real work can begin.
-            </p>
-            <ul className="mt-4 space-y-2 body text-sm editorial-measure">
-              <li>• LGBTQ+ affirming: your identity is not up for debate.</li>
-              <li>• HAES-aligned: body size is not treated as a moral issue or treatment target.</li>
-              <li>• Neurodiversity-affirming: communication, pacing, and structure can be adjusted to fit your brain.</li>
-              <li>• Immigrant and cross-cultural realities are treated as real context, not side notes.</li>
-              <li>• When power, culture, or systems are shaping the problem, we say that plainly.</li>
-            </ul>
-          </article>
-          <article className="editorial-item">
-            <h2 className="h2">How Arc works</h2>
-            <ul className="mt-5 space-y-3 body editorial-measure">
-              <li>• Consult: we decide if this is a good clinical fit.</li>
-              <li>• Ongoing therapy: we figure out what keeps repeating, try something different, and pay attention to what actually changes.</li>
-              <li>• Adjustment: we keep what helps. We stop pretending the rest is useful.</li>
-            </ul>
-            <p className="mt-5 body text-sm text-ink/75">No vague weekly recap.</p>
-          </article>
-          <article className="editorial-item">
-            <h2 className="h2">When Arc is not the right first step</h2>
-            <p className="mt-3 body editorial-measure">
-              Arc is usually not the best first stop for:
-            </p>
-            <ul className="mt-4 space-y-2 body">
-              <li>• Crisis stabilization</li>
-              <li>• Insurance-based care</li>
-              <li>• Brief coaching</li>
-              <li>• Checklist-only symptom treatment</li>
-            </ul>
-          </article>
+      <section className="section-gap full-bleed-band full-bleed-band--dark">
+        <div className="container-wrap">
+          <div className="home-stance">
+            <article className="home-stance__primary">
+              <p className="label">{signs.eyebrow}</p>
+              <h2 className="home-stance__title">{signs.title}</h2>
+              <ul className="split-panel__list body">
+                {signs.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <aside className="home-stance__aside">
+              <p className="label">{notFirstStep.eyebrow}</p>
+              <ul className="split-panel__list body">
+                {notFirstStep.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </aside>
+          </div>
         </div>
       </section>
 
-      <section className="container-wrap mt-16 mb-20">
-        <h2 className="h2">Prefer to read before booking?</h2>
-        <p className="mt-3 body max-w-2xl">Start with one page: perfectionism, overcontrol, or religious harm.</p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <Link href="/perfectionism" className="focus-ring text-sm font-medium text-ink/80 underline-offset-4 hover:text-sage-dark hover:underline">
-            Perfectionism
-          </Link>
-          <Link href="/overcontrol" className="focus-ring text-sm font-medium text-ink/80 underline-offset-4 hover:text-sage-dark hover:underline">
-            Overcontrol
-          </Link>
-          <Link href="/religious-harm" className="focus-ring text-sm font-medium text-ink/80 underline-offset-4 hover:text-sage-dark hover:underline">
-            Religious harm
-          </Link>
+      <section className="section-gap-lg full-bleed-band full-bleed-band--clay">
+        <div className="container-wrap">
+        <div className="section-heading">
+          <h2 className="h2">Pick the issue that sounds most familiar.</h2>
+        </div>
+          <div className="index-grid mt-6">
+            {homePage.focusAreas.map((item) => (
+              <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style index-card">
+                <h3 className="index-card__title">{item.title}</h3>
+                <p className="index-card__body body">{item.body}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="container-wrap section-gap-lg">
+        <div className="section-heading">
+          <h2 className="h2">What therapy is like.</h2>
+        </div>
+        <div className="dense-index mt-6">
+          {therapySteps.map((item) => (
+            <Link key={item.title} href={"/work-with-me" as Route} className="focus-ring no-link-style dense-index__row">
+              <div>
+                <h3 className="dense-index__title">{item.title}</h3>
+              </div>
+              <p className="dense-index__body body">{item.body}</p>
+              <span className="dense-index__arrow">Read</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-wrap section-gap-lg pb-12">
+        <div className="section-heading">
+          <h2 className="h2">Read before you book.</h2>
+        </div>
+        <div className="dense-index mt-6">
+          {homePage.writing.map((item) => (
+            <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style dense-index__row">
+              <div>
+                <h3 className="dense-index__title">{item.title}</h3>
+              </div>
+              <p className="dense-index__body body">{item.body}</p>
+              <span className="dense-index__arrow">Read</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-wrap section-gap-lg pb-12">
+        <div className="section-heading">
+          <h2 className="h2">Also available: supervision and consultation.</h2>
+        </div>
+        <div className="index-grid mt-6 index-grid--two-up">
+          {servicesPage.routes
+            .filter((item) => item.href !== "/work-with-me")
+            .map((item) => (
+              <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style index-card">
+                <h3 className="index-card__title">{item.title}</h3>
+                <p className="index-card__body body">{item.body}</p>
+              </Link>
+            ))}
         </div>
       </section>
     </>

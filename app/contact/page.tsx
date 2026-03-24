@@ -1,53 +1,161 @@
-import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
+import { SchemaScript } from "@/components/schema-script";
 import { siteConfig } from "@/lib/content";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Contact | Round Rock, TX",
   description:
-    "Contact Arc Psychotherapy for therapy in Downtown Round Rock, serving North Austin and surrounding communities, with telehealth across Texas.",
+    "Contact Arc Psychotherapy about therapy, supervision, or consultation from Round Rock, Texas.",
   path: "/contact"
 });
+
+const intro = {
+  eyebrow: "Contact",
+  title: "Get in touch.",
+  lede: "Use this form for therapy, supervision, or consultation.",
+  body: [
+    "Please do not include sensitive clinical details in the form.",
+    "If you are in immediate danger, call 911. For mental health crisis support, call or text 988."
+  ]
+} as const;
+
+const consultFacts = [
+  "Standard session fee: $200 for 50-55 minutes.",
+  "Private-pay practice. Superbills may be available for out-of-network reimbursement.",
+  "Telehealth is available across Texas when appropriate for care needs and clinical fit.",
+  "Arc replies to contact requests within 1-2 business days."
+] as const;
+
+const policyFacts = [
+  "24-hour cancellation policy. Late cancellations or no-shows may be billed in full.",
+  "Payment is due at the time of service.",
+  "Three-dimensional model building is optional and only used when it supports the work."
+] as const;
+
+const questions = [
+  {
+    question: "Do you take insurance?",
+    answer: "Arc is private-pay. A superbill may be available for out-of-network reimbursement."
+  },
+  {
+    question: "Do you offer telehealth?",
+    answer: "Yes. Telehealth is available for Texas residents when clinically appropriate."
+  },
+  {
+    question: "Is three-dimensional model building required?",
+    answer: "No. It is optional and used only when it helps."
+  },
+  {
+    question: "What happens in the consult?",
+    answer: "We talk through what is going on, what you want help with, and the practical details."
+  }
+] as const;
 
 export default function ContactPage() {
   return (
     <section className="container-wrap py-16 md:py-20">
-      <h1 className="h1">Contact</h1>
-      <p className="body-lg mt-5 max-w-3xl">
-        Request a consult and choose your scheduling preference: share your availability or ask Arc to reach out with available times.
-      </p>
-      <p className="mt-3 body max-w-3xl">
-        If you are the one who keeps it together for everyone else and you are tired, this is a reasonable place to start.
-      </p>
-      <p className="mt-3 body max-w-3xl text-sm text-ink/80">
-        Please do not include sensitive clinical details (PHI) in this form.
-      </p>
-      <p className="mt-3 body max-w-3xl">{siteConfig.locationSummaryLine}</p>
-      <figure className="mt-8">
-        <div className="arc-image-mask overflow-hidden">
-          <Image
-            src="/images/austin-local/office-exterior-round-rock.jpg"
-            alt="Arc office exterior on West Main Street in Round Rock."
-            width={1200}
-            height={675}
-            className="h-[15rem] w-full object-cover md:h-[21rem]"
-            sizes="(min-width: 1024px) 72rem, 100vw"
-          />
+      <SchemaScript
+        id="contact-webpage-schema"
+        data={webPageSchema({
+          name: "Contact Arc Psychotherapy",
+          description:
+            "Contact Arc Psychotherapy in Round Rock, Texas about therapy, supervision, or consultation with Leila Anderson, LMFT-S.",
+          path: "/contact",
+          type: "ContactPage"
+        })}
+      />
+      <SchemaScript
+        id="contact-breadcrumb-schema"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" }
+        ])}
+      />
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <p className="label">{intro.eyebrow}</p>
+          <h1 className="h1 mt-4">{intro.title}</h1>
+          <p className="hero-lede">{intro.lede}</p>
+          <div className="hero-support">
+            {intro.body.map((item) => (
+              <p key={item} className="body">
+                {item}
+              </p>
+            ))}
+          </div>
         </div>
-      </figure>
-      <div id="consult-request" className="mt-8 space-y-8 scroll-mt-24">
-        <ContactForm />
-        <aside className="card">
-          <p className="label">Direct contact</p>
-          <p className="mt-3 body">Call: {siteConfig.phone}</p>
-          <p className="body">Email: {siteConfig.email}</p>
-          <p className="mt-5 body">Office: {siteConfig.addressLine1}, {siteConfig.cityStateZip}</p>
-          <p className="mt-5 body text-sm">
-            If you are in immediate danger, call 911. For mental health crisis support, call or text 988.
-          </p>
+        <aside className="hero-meta">
+          <div className="meta-block">
+            <p className="label">Direct Contact</p>
+            <p className="body">
+              <a href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}>{siteConfig.phone}</a>
+            </p>
+            <p className="body">
+              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+            </p>
+          </div>
+          <div className="meta-block">
+            <p className="label">Office</p>
+            <p className="body">{siteConfig.addressLine1}</p>
+            <p className="body">{siteConfig.cityStateZip}</p>
+          </div>
+          <div className="meta-block">
+            <p className="label">Response Time</p>
+            <p className="body">Arc replies to inquiries within 1-2 business days.</p>
+          </div>
         </aside>
       </div>
+
+      <section id="consult-request" className="section-gap-lg scroll-mt-24">
+        <div className="split-band">
+          <div>
+            <ContactForm />
+          </div>
+          <aside className="split-panel">
+            <p className="label">Before We Talk</p>
+            <h2 className="h2">Basic details.</h2>
+            <ul className="split-panel__list body">
+              {consultFacts.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section className="section-gap-lg">
+        <div className="split-band">
+          <article id="fees" className="split-panel scroll-mt-24">
+            <p className="label">Fees & Policies</p>
+            <h2 className="h2">Fees and policies.</h2>
+            <p className="label pt-2">Fees</p>
+            <ul className="split-panel__list body">
+              {consultFacts.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="label pt-4">Policies</p>
+            <ul className="split-panel__list body">
+              {policyFacts.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+          <article id="questions" className="split-panel scroll-mt-24">
+            <p className="label">Questions</p>
+            <h2 className="h2">Common questions.</h2>
+            <div className="faq-list">
+              {questions.map((item) => (
+                <div key={item.question} className="faq-row">
+                  <h3 className="h3">{item.question}</h3>
+                  <p className="body mt-3">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
     </section>
   );
 }

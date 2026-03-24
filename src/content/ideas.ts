@@ -130,7 +130,7 @@ The goal is not anti-faith identity. The goal is coherent agency.
     related: [
       { label: "Religious Harm", href: "/religious-harm" },
       { label: "Belief Deconstruction Grid", href: "/frameworks/belief-deconstruction-grid" },
-      { label: "Ideas Library", href: "/ideas" }
+      { label: "Writing", href: "/ideas" }
     ]
   }
 ];

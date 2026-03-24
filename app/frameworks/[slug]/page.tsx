@@ -1,7 +1,10 @@
 import type { Metadata, Route } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ButtonLink } from "@/components/button-link";
 import { FaqBlock } from "@/components/faq-block";
+import { SchemaScript } from "@/components/schema-script";
+import { breadcrumbSchema, webPageSchema } from "@/lib/seo";
 import { getFrameworkBySlug, frameworks } from "@/src/content/frameworks";
 import { siteContent } from "@/src/content/site";
 
@@ -34,7 +37,21 @@ export async function generateMetadata({
       url,
       type: "article",
       siteName: siteContent.brandName,
-      locale: "en_US"
+      locale: "en_US",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 675,
+          alt: "Arc Psychotherapy wordmark on a dark field"
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: framework.definition,
+      images: ["/opengraph-image"]
     }
   };
 }
@@ -53,46 +70,80 @@ export default async function FrameworkDetailPage({
 
   return (
     <>
+      <SchemaScript
+        id={`framework-webpage-schema-${framework.slug}`}
+        data={webPageSchema({
+          name: framework.name,
+          description: framework.definition,
+          path: `/frameworks/${framework.slug}`
+        })}
+      />
+      <SchemaScript
+        id={`framework-breadcrumb-schema-${framework.slug}`}
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Frameworks", path: "/frameworks" },
+          { name: framework.name, path: `/frameworks/${framework.slug}` }
+        ])}
+      />
       <section className="container-wrap py-16 md:py-20">
-        <h1 className="editorial-header">{framework.name}</h1>
-        <p className="body-lg mt-5 editorial-measure">{framework.definition}</p>
+        <div className="hero-copy">
+          <p className="label">Framework</p>
+          <h1 className="h1 mt-4">{framework.name}</h1>
+          <p className="hero-lede max-w-3xl">{framework.definition}</p>
+        </div>
       </section>
 
-      <section className="container-wrap editorial-section">
-        <h2 className="h2">How this framework is used</h2>
-        <div className="editorial-list mt-6">
-          <article className="editorial-item">
-            <h3 className="h3">How it shows up</h3>
-            <ul className="mt-5 space-y-2 body editorial-measure">
-              {framework.howItShowsUp.map((item) => (
-                <li key={item}>• {item}</li>
+      <section className="container-wrap section-gap">
+        <div className="split-band">
+          <article className="split-panel">
+            <p className="label">Why It Matters</p>
+            <h2 className="h2">Why this tool exists.</h2>
+            <ul className="split-panel__list body">
+              {framework.whyItMatters.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
-          <article className="editorial-item">
-            <h3 className="h3">What helps</h3>
-            <ul className="mt-5 space-y-2 body editorial-measure">
-              {framework.whatHelps.map((item) => (
-                <li key={item}>• {item}</li>
+          <article className="split-panel">
+            <p className="label">How It Shows Up</p>
+            <h2 className="h2">When it becomes useful.</h2>
+            <ul className="split-panel__list body">
+              {framework.howItShowsUp.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
         </div>
       </section>
 
-      <section className="container-wrap editorial-section">
-        <h2 className="h2">Related</h2>
-        <div className="editorial-list mt-5">
-          <div className="editorial-item-tight flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
-            {framework.relatedLinks.map((link, index) => (
-              <span key={link.href} className="inline-flex items-center gap-3">
-                {index > 0 ? <span className="text-ink/35">•</span> : null}
-                <Link href={link.href as Route} className="focus-ring underline-offset-4 hover:underline">
+      <section className="container-wrap section-gap-lg">
+        <div className="split-band">
+          <article className="split-panel">
+            <p className="label">What Helps</p>
+            <h2 className="h2">How the tool gets used.</h2>
+            <ul className="split-panel__list body">
+              {framework.whatHelps.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+          <article className="split-panel">
+            <p className="label">Related</p>
+            <h2 className="h2">Nearby pages.</h2>
+            <div className="flex flex-wrap gap-2">
+              {framework.relatedLinks.map((link) => (
+                <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
                   {link.label}
                 </Link>
-              </span>
-            ))}
-          </div>
+              ))}
+            </div>
+            <div className="hero-actions">
+              <ButtonLink href="/frameworks" variant="secondary">
+                Framework Index
+              </ButtonLink>
+            </div>
+          </article>
         </div>
       </section>
 

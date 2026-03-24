@@ -50,30 +50,29 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="card" noValidate>
-      <p className="label">Contact form</p>
-      <p className="mt-2 body text-sm">Please do not include sensitive clinical details (PHI) in this form.</p>
-      <p className="mt-2 body text-sm">If you are in immediate danger, call 911. For mental health crisis support, call or text 988.</p>
-      <div className="mt-5 grid gap-4">
-        <label className="text-sm font-medium text-ink/90" htmlFor="name">
+    <form onSubmit={onSubmit} className="form-panel" noValidate>
+      <p className="label">Consult request</p>
+      <p className="form-panel__note">Please do not include sensitive clinical details (PHI) in this form.</p>
+      <div className="form-grid">
+        <label className="field-label" htmlFor="name">
           Name
         </label>
-        <input id="name" name="name" autoComplete="name" required className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5" />
+        <input id="name" name="name" autoComplete="name" required className="focus-ring field-input" />
 
-        <label className="text-sm font-medium text-ink/90" htmlFor="email">
+        <label className="field-label" htmlFor="email">
           Email
         </label>
-        <input id="email" name="email" type="email" autoComplete="email" required className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5" />
+        <input id="email" name="email" type="email" autoComplete="email" required className="focus-ring field-input" />
 
-        <label className="text-sm font-medium text-ink/90" htmlFor="phone">
+        <label className="field-label" htmlFor="phone">
           Phone (optional)
         </label>
-        <input id="phone" name="phone" autoComplete="tel" className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5" />
+        <input id="phone" name="phone" autoComplete="tel" className="focus-ring field-input" />
 
-        <fieldset className="rounded-[2px] border border-stone bg-sand/80 p-4">
-          <legend className="text-sm font-medium text-ink/90">Consult scheduling preference</legend>
-          <div className="mt-3 grid gap-3">
-            <label className="flex items-start gap-2 text-sm">
+        <fieldset className="form-choice">
+          <legend className="field-label">Consult scheduling preference</legend>
+          <div className="form-choice__rows">
+            <label className="form-choice__row">
               <input
                 type="radio"
                 name="consultPreference"
@@ -83,7 +82,7 @@ export function ContactForm() {
               />
               <span>I&apos;ll share my availability below.</span>
             </label>
-            <label className="flex items-start gap-2 text-sm">
+            <label className="form-choice__row">
               <input
                 type="radio"
                 name="consultPreference"
@@ -96,7 +95,7 @@ export function ContactForm() {
           </div>
         </fieldset>
 
-        <label className="text-sm font-medium text-ink/90" htmlFor="availability">
+        <label className="field-label" htmlFor="availability">
           Availability
         </label>
         <textarea
@@ -105,43 +104,43 @@ export function ContactForm() {
           rows={4}
           required={consultPreference === "share-availability"}
           placeholder="Example: Tuesdays 10am-1pm, Thursdays after 3pm (Central Time)"
-          className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5"
+          className="focus-ring field-input field-input--textarea"
         />
-        <p className="body -mt-2 text-sm">
+        <p className="form-panel__hint">
           {consultPreference === "share-availability"
             ? "Required for this option."
             : "Optional. You can leave this blank if you want Arc to send available times first."}
         </p>
 
-        <label className="text-sm font-medium text-ink/90" htmlFor="preferredContactMethod">
+        <label className="field-label" htmlFor="preferredContactMethod">
           Preferred contact method
         </label>
         <select
           id="preferredContactMethod"
           name="preferredContactMethod"
           defaultValue="email"
-          className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5"
+          className="focus-ring field-input"
         >
           <option value="email">Email</option>
           <option value="phone">Phone</option>
           <option value="either">Either</option>
         </select>
 
-        <label className="text-sm font-medium text-ink/90" htmlFor="message">
+        <label className="field-label" htmlFor="message">
           Brief reason for reaching out (non-sensitive)
         </label>
-        <textarea id="message" name="message" rows={5} required className="focus-ring rounded-[2px] border border-stone bg-sand/80 px-4 py-2.5" />
+        <textarea id="message" name="message" rows={5} required className="focus-ring field-input field-input--textarea" />
       </div>
       <button
         type="submit"
-        className="focus-ring mt-6 inline-flex items-center justify-center rounded-[2px] border border-sage/95 bg-sage px-5 py-2.5 text-sm font-medium tracking-[0.01em] text-white transition-colors duration-200 hover:border-sage-dark hover:bg-sage-dark disabled:opacity-60"
+        className="focus-ring button button--primary mt-8 disabled:opacity-60"
         disabled={status === "submitting"}
       >
         {status === "submitting" ? "Sending..." : "Send request"}
       </button>
       <div aria-live="polite">
-        {status === "success" && <p className="mt-3 text-sm text-sage">Request sent. We will follow up within 1-2 business days.</p>}
-        {status === "error" && <p className="mt-3 text-sm text-muted">Please complete required fields and try again. You can also call or email directly.</p>}
+        {status === "success" && <p className="form-panel__status form-panel__status--success">Request sent. We will follow up within 1-2 business days.</p>}
+        {status === "error" && <p className="form-panel__status">Please complete required fields and try again. You can also call or email directly.</p>}
       </div>
     </form>
   );

@@ -1,50 +1,58 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BrandMark } from "@/components/brand-mark";
 import { siteConfig } from "@/lib/content";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-stone/85 bg-surface/58 py-14">
-      <div className="container-wrap grid gap-10 md:grid-cols-12">
-        <div className="md:col-span-4">
-          <Image
-            src="/brand/logo-wordmark-light.png"
-            alt={siteConfig.brand}
-            width={1800}
-            height={320}
-            className="h-auto w-[15rem] max-w-full"
-          />
-          <p className="mt-2 body text-sm">{siteConfig.legalEntityNote}</p>
-          <p className="mt-4 text-sm font-semibold tracking-[0.04em] text-ink/85">{siteConfig.credentialsLine}</p>
-          <p className="body text-sm text-ink/80">{siteConfig.credentials[0]}</p>
-          <p className="mt-4 body text-sm">{siteConfig.locationSummaryLine}</p>
+    <footer className="site-footer">
+      <div className="container-wrap site-footer__grid">
+        <div className="site-footer__block">
+          <BrandMark variant="footer" />
+          <p className="site-footer__note">{siteConfig.legalEntityNote}</p>
+          <p className="site-footer__meta">{siteConfig.credentialsLine}</p>
+          <p className="site-footer__meta site-footer__meta--muted">{siteConfig.credentials[0]}</p>
+          <p className="site-footer__meta site-footer__meta--muted">{siteConfig.locationSummaryLine}</p>
+          <div className="site-footer__legal">
+            <Link className="focus-ring no-link-style site-footer__link" href="/work-with-me">
+              Approach
+            </Link>
+            <Link className="focus-ring no-link-style site-footer__link" href="/supervision">
+              Supervision
+            </Link>
+            <Link className="focus-ring no-link-style site-footer__link" href="/consultation">
+              Consultation
+            </Link>
+            <Link className="focus-ring no-link-style site-footer__link" href="/ideas">
+              Writing
+            </Link>
+          </div>
         </div>
-        <div className="md:col-span-4">
+        <div className="site-footer__block">
           <p className="label">Office</p>
-          <p className="mt-2 body">{siteConfig.addressLine1}</p>
-          <p className="body">{siteConfig.cityStateZip}</p>
-          <Link href={siteConfig.mapUrl} target="_blank" rel="noopener noreferrer" className="focus-ring mt-3 inline-block text-sm font-semibold">
+          <p className="site-footer__line">{siteConfig.addressLine1}</p>
+          <p className="site-footer__line">{siteConfig.cityStateZip}</p>
+          <Link href={siteConfig.mapUrl} target="_blank" rel="noopener noreferrer" className="focus-ring no-link-style site-footer__link">
             Open map
           </Link>
         </div>
-        <div className="md:col-span-4">
+        <div className="site-footer__block">
           <p className="label">Contact</p>
-          <p className="mt-2 body">Call {siteConfig.phone}</p>
-          <p className="body">Email {siteConfig.email}</p>
-          <div className="mt-4 space-y-1 text-sm text-muted">
-            <Link className="focus-ring no-link-style block text-sage/90 underline-offset-4 hover:text-sage-dark hover:underline" href="/privacy">
+          <p className="site-footer__line">Call {siteConfig.phone}</p>
+          <p className="site-footer__line">Email {siteConfig.email}</p>
+          <div className="site-footer__legal">
+            <Link className="focus-ring no-link-style site-footer__link" href="/privacy">
               Privacy Policy
             </Link>
-            <Link className="focus-ring no-link-style block text-sage/90 underline-offset-4 hover:text-sage-dark hover:underline" href="/terms">
+            <Link className="focus-ring no-link-style site-footer__link" href="/terms">
               Terms
             </Link>
-            <Link className="focus-ring no-link-style block text-sage/90 underline-offset-4 hover:text-sage-dark hover:underline" href="/good-faith-estimate">
+            <Link className="focus-ring no-link-style site-footer__link" href="/good-faith-estimate">
               Good Faith Estimate
             </Link>
-            <Link className="focus-ring no-link-style block text-sage/90 underline-offset-4 hover:text-sage-dark hover:underline" href="/consumer-protection">
+            <Link className="focus-ring no-link-style site-footer__link" href="/consumer-protection">
               Consumer Protection
             </Link>
-            <Link className="focus-ring no-link-style block text-sage/90 underline-offset-4 hover:text-sage-dark hover:underline" href="/accessibility">
+            <Link className="focus-ring no-link-style site-footer__link" href="/accessibility">
               Accessibility Statement
             </Link>
           </div>

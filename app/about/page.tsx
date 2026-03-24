@@ -1,151 +1,214 @@
 import Image from "next/image";
-import Link from "next/link";
-import { pageMetadata } from "@/lib/seo";
+import { ButtonLink } from "@/components/button-link";
+import { SchemaScript } from "@/components/schema-script";
+import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
   title: "About Leila Anderson, LMFT-S | Round Rock, TX",
   description:
-    "About Arc Psychotherapy in Downtown Round Rock: therapy for perfectionism, overcontrol, and religious harm with Leila Anderson, LMFT-S. Serving North Austin and surrounding communities, with telehealth across Texas.",
+    "About Leila Anderson, LMFT-S and Arc Psychotherapy in Downtown Round Rock, Texas.",
   path: "/about"
 });
 
-const speakingContexts = [
-  "TAMFT professional education and leadership forums",
-  "TAAP and behavioral health training events",
-  "Regional agency and group practice CEU trainings",
-  "Interdisciplinary systems and policy-facing mental health panels"
-];
+const intro = {
+  eyebrow: "About",
+  title: "I work with adults who understand the problem and still feel stuck.",
+  lede: "The work is direct, practical, and meant to help something change outside the session.",
+  body: [
+    "I work mostly with perfectionism, overcontrol, religious harm, and chronic over-responsibility.",
+    "If you are thoughtful, self-aware, and tired of repeating the same thing under stress, that is the kind of work I do."
+  ]
+} as const;
 
 const goodFit = [
-  "Thoughtful, capable adults who function well externally and feel stretched thin internally",
-  "People untangling perfectionism, overcontrol, and chronic over-responsibility",
-  "Clients sorting religious harm, authority conflict, or post-faith identity strain",
-  "People who want therapy that is practical and deep, not vague or formulaic"
-];
+  "Insight has not changed enough on its own.",
+  "You are dealing with perfectionism, overcontrol, chronic over-responsibility, or the aftermath of rigid religion.",
+  "You want therapy that is direct and concrete."
+] as const;
 
 const notBestFit = [
-  "Work focused on immediate shortcuts or symptom promises",
-  "Clients looking only for checklist-style symptom management",
-  "Situations requiring emergency or crisis response outside outpatient scope"
-];
+  "Very open-ended therapy with little direction.",
+  "Crisis stabilization or emergency response.",
+  "A strong need for certainty or formulas from therapy."
+] as const;
+
+const valuesInPractice = [
+  "LGBTQ+ affirming means identity is not treated as pathology or debate.",
+  "HAES-aligned means body size is not treated as a moral issue or a treatment target.",
+  "Neurodiversity-affirming means communication, pacing, and problem-solving do not have to follow one narrow standard.",
+  "Cross-cultural respect means language, migration, family obligation, religion, race, and mixed-context identity are treated as real context, not side notes."
+] as const;
+
+const authority = [
+  "Executive clinical leadership in residential dual-diagnosis and high-acuity settings, including crisis and level-of-care assessment.",
+  "Program design and treatment planning with a strong bias toward what is actually useful.",
+  "State professional leadership through TAMFT board and education committee service."
+] as const;
+
+const speaking = [
+  "TAMFT professional education and leadership forums",
+  "TAAP and behavioral health training events",
+  "Regional agency and group practice trainings"
+] as const;
 
 export default function AboutPage() {
   return (
     <section className="container-wrap py-16 md:py-20">
-      <h1 className="h1">About</h1>
-      <p className="mt-5 body-lg max-w-4xl">{siteContent.positioningStatementLong}</p>
-      <p className="mt-3 body max-w-4xl">If you are good at analysis but still feel stuck, you are in the right place.</p>
-      <p className="mt-3 text-sm font-semibold tracking-[0.06em] text-ink/80">{siteContent.credentialsLine}</p>
-      <figure className="mt-8 max-w-sm">
-        <div className="arc-image-mask overflow-hidden">
+      <SchemaScript
+        id="about-webpage-schema"
+        data={webPageSchema({
+          name: "About Leila Anderson, LMFT-S",
+          description:
+            "About Leila Anderson, LMFT-S and Arc Psychotherapy in Downtown Round Rock, Texas.",
+          path: "/about",
+          type: "AboutPage"
+        })}
+      />
+      <SchemaScript
+        id="about-breadcrumb-schema"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" }
+        ])}
+      />
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <p className="label">{intro.eyebrow}</p>
+          <h1 className="h1 mt-4">{intro.title}</h1>
+          <p className="hero-lede">{intro.lede}</p>
+          <div className="hero-support">
+            {intro.body.map((item) => (
+              <p key={item} className="body">
+                {item}
+              </p>
+            ))}
+            <p className="label pt-2">{siteContent.credentialsLine}</p>
+          </div>
+          <div className="hero-actions">
+            <ButtonLink href="/work-with-me">Approach</ButtonLink>
+            <ButtonLink href="/contact" variant="secondary">
+              Contact
+            </ButtonLink>
+          </div>
+        </div>
+        <figure className="image-frame image-frame--portrait">
           <Image
             src="/images/portrait/leila-headshot.jpg"
             alt="Leila Anderson"
             width={800}
             height={800}
-            className="h-auto w-full object-cover"
-            sizes="(min-width: 768px) 22rem, 72vw"
+            className="grayscale-image h-full w-full object-cover"
+            sizes="(min-width: 1024px) 28rem, 100vw"
           />
-        </div>
-      </figure>
+        </figure>
+      </div>
 
-      <section className="mt-12 card">
-        <h2 className="h2">How therapy feels here</h2>
-        <p className="mt-4 body">
-          You won&apos;t be asked to prove how self-aware you are. We use what you already understand, then test changes that fit real life.
-        </p>
-        <p className="mt-3 body">
-          I sometimes use simple models to help us see what is actually happening, especially when everything feels tangled.
-        </p>
-      </section>
-
-      <section className="mt-12 card">
-        <h2 className="h2">What you should not have to defend in therapy</h2>
-        <p className="mt-3 body max-w-3xl">
-          You shouldn&apos;t have to spend therapy defending your body, identity, family, or basic humanity.
-        </p>
-        <ul className="mt-4 space-y-2 body">
-          <li>• LGBTQ+ clients are affirmed without debate.</li>
-          <li>• Health at Every Size aligned: body size is not treated as a morality or compliance problem.</li>
-          <li>• Neurodiversity-affirming care respects differences in processing, attention, and communication.</li>
-          <li>• Immigrant and cross-cultural experiences are treated as central context, not side notes.</li>
-          <li>• Cultural and systemic forces are named directly when they shape mental health.</li>
-        </ul>
-      </section>
-
-      <section className="mt-12 card">
-        <h2 className="h2">Background that informs the work</h2>
-        <ul className="mt-4 space-y-2 body">
-          {siteContent.authorityHighlights.map((item) => (
-            <li key={item}>• {item}</li>
-          ))}
-          <li>• Ongoing focus on how language, authority, and meaning shape lived distress.</li>
-        </ul>
-      </section>
-
-      <section className="mt-12 card">
-        <h2 className="h2">Speaking & training</h2>
-        <ul className="mt-4 space-y-2 body">
-          {speakingContexts.map((item) => (
-            <li key={item}>• {item}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mt-12 grid gap-5 md:grid-cols-2">
-        <article className="card">
-          <h2 className="h2">Who I work well with</h2>
-          <ul className="mt-4 space-y-2 body">
-            {goodFit.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </article>
-
-        <article className="card">
-          <h2 className="h2">Not the best fit</h2>
-          <ul className="mt-4 space-y-2 body">
-            {notBestFit.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </article>
-      </section>
-
-      <section className="mt-12 card">
-        <h2 className="h2">Continue reading</h2>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <Link href="/start-here" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Start here
-          </Link>
-          <Link href="/frameworks" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Frameworks
-          </Link>
-          <Link href="/ideas" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Ideas
-          </Link>
-          <Link href="/perfectionism" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Perfectionism
-          </Link>
-          <Link href="/overcontrol" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Overcontrol
-          </Link>
-          <Link href="/religious-harm" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Religious harm
-          </Link>
+      <section className="section-gap">
+        <div className="anchor-block">
+          <p className="anchor-block__line">Insight matters. It just is not enough by itself.</p>
         </div>
       </section>
 
-      <section className="mt-12 card">
-        <h2 className="h2">If this resonates, here&apos;s the next step</h2>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <Link href="/work-with-me" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Learn how Arc works
-          </Link>
-          <Link href="/contact" className="focus-ring text-sm font-semibold text-sage underline-offset-4 hover:underline">
-            Contact
-          </Link>
+      <section className="section-gap">
+        <div className="split-band">
+          <article className="split-panel">
+            <p className="label">How I Work</p>
+            <h2 className="h2">I want therapy to be useful.</h2>
+            <p className="body">
+              I am direct, but I am not interested in being harsh. The point is to help, not to perform honesty.
+            </p>
+            <p className="body">
+              We look at what keeps happening, what sets it off, and what changes between sessions. If a framework helps, I will use it. If it does not, I will not keep it around.
+            </p>
+          </article>
+          <article className="split-panel">
+            <p className="label">Background</p>
+            <h2 className="h2">What shapes the way I work.</h2>
+            <p className="body">
+              I was raised in Uganda, and I do not think culture is background information. Language, family obligation, religion, migration, and mixed-context identity often shape the problem itself.
+            </p>
+            <p className="body">
+              I have also spent years in high-acuity and systems-facing settings. That tends to make a person practical. I care more about whether something helps than whether it sounds impressive.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section-gap-lg">
+        <div className="split-band">
+          <article className="split-panel">
+            <p className="label">Values</p>
+            <h2 className="h2">What that means in practice.</h2>
+            <ul className="split-panel__list body">
+              {valuesInPractice.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="body">
+              Therapy should not require you to defend your body, identity, family, or basic humanity before the work can begin.
+            </p>
+          </article>
+          <article className="split-panel">
+            <p className="label">Professional Context</p>
+            <h2 className="h2">The public side of the work.</h2>
+            <ul className="split-panel__list body">
+              {authority.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <ul className="split-panel__list body">
+              {speaking.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className="section-gap-lg pb-8">
+        <div className="split-band">
+          <article className="split-panel">
+            <p className="label">Who This Helps</p>
+            <h2 className="h2">This is usually a good fit when:</h2>
+            <ul className="split-panel__list body">
+              {goodFit.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="label pt-4">Usually Not The First Step</p>
+            <ul className="split-panel__list body">
+              {notBestFit.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+          <article className="split-panel">
+            <p className="label">Briefly, As A Person</p>
+            <h2 className="h2">A little context.</h2>
+            <p className="body">
+              I am married, have three kids, and spend a decent amount of my non-clinical life with puzzles, gardening, hiking, and good coffee.
+            </p>
+            <p className="body">
+              I also worked as a barista for five years, which taught me a lot about paying attention to people.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section-gap-lg pb-8">
+        <div className="route-divider">
+          <p className="label">Next</p>
+          <h2 className="h2 mt-3">Read about therapy or contact me.</h2>
+          <div className="hero-actions">
+            <ButtonLink href="/work-with-me">Approach</ButtonLink>
+            <ButtonLink href="/start-here" variant="secondary">
+              Start Here
+            </ButtonLink>
+            <ButtonLink href="/contact" variant="secondary">
+              Contact
+            </ButtonLink>
+          </div>
         </div>
       </section>
     </section>

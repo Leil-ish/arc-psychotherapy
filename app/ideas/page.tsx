@@ -1,23 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Route } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { ButtonLink } from "@/components/button-link";
+import { SchemaScript } from "@/components/schema-script";
+import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
 import {
   getAllEssays,
+  formatEssayDate,
   type IdeaTag
 } from "@/src/content/ideas";
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
-  title: "Ideas | Round Rock, TX",
+  title: "Writing | Round Rock, TX",
   description:
-    "Short, practical reads on perfectionism, overcontrol, religious harm, and meaning from Arc Psychotherapy in Downtown Round Rock, with telehealth across Texas.",
+    "Short, practical essays on perfectionism, overcontrol, religious harm, and meaning from Arc Psychotherapy in Downtown Round Rock, Texas.",
   path: "/ideas"
 });
 
 function isIdeaTag(value: string): value is IdeaTag {
   return siteContent.primaryTopics.includes(value as IdeaTag);
 }
+
+const intro = {
+  title: "Short essays on perfectionism, overcontrol, religious harm, and meaning.",
+  lede: "Read here if you want to know how I think before you book.",
+  body:
+    "These essays are brief and practical. They are here to help you understand the problem more clearly and decide whether this approach makes sense for you."
+} as const;
 
 export default async function IdeasPage({
   searchParams
@@ -35,104 +44,99 @@ export default async function IdeasPage({
 
   return (
     <section className="container-wrap py-16 md:py-20">
-      <h1 className="h1">Ideas</h1>
-      <p className="body-lg mt-5 max-w-4xl">Read this if you want clearer language for what keeps repeating in your life.</p>
-      <p className="body mt-4 max-w-4xl">
-        These essays are short and practical. They help you name the pattern, understand the cost, and try a different move in real life.
-      </p>
-      <p className="body mt-3 max-w-4xl">
-        If you are trying to figure out whether this work fits, this page is a good place to start.
-      </p>
-      <figure className="mt-8">
-        <div className="arc-image-mask overflow-hidden">
+      <SchemaScript
+        id="ideas-webpage-schema"
+        data={webPageSchema({
+          name: "Writing",
+          description:
+            "Short, practical essays on perfectionism, overcontrol, religious harm, and meaning from Arc Psychotherapy in Downtown Round Rock, Texas.",
+          path: "/ideas",
+          type: "CollectionPage"
+        })}
+      />
+      <SchemaScript
+        id="ideas-breadcrumb-schema"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Writing", path: "/ideas" }
+        ])}
+      />
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <p className="label">Writing</p>
+          <h1 className="h1 mt-4">{intro.title}</h1>
+          <p className="hero-lede">{intro.lede}</p>
+          <div className="hero-support">
+            <p className="body">{intro.body}</p>
+          </div>
+        </div>
+        <figure className="image-frame">
           <Image
             src="/images/architectural-details/concrete-shadow-lines.jpg"
-            alt="Concrete surface with sharp angled shadows."
+            alt="Concrete surface cut by sharp diagonal shadows."
             width={3575}
             height={2384}
-            className="h-[14rem] w-full object-cover md:h-[20rem]"
-            sizes="(min-width: 1024px) 72rem, 100vw"
+            className="h-full min-h-[18rem] w-full object-cover"
+            sizes="(min-width: 1024px) 34rem, 100vw"
           />
-        </div>
-      </figure>
+        </figure>
+      </div>
 
-      <section className="mt-12">
-        <h2 className="h2">Start with one</h2>
-        <div className="mt-5 grid gap-5 md:grid-cols-3">
-          <article className="card">
-            <h3 className="h3">
-              <Link href="/ideas/perfectionism-structural-problem" className="focus-ring hover:text-sage">
-                Perfectionism as a Structural Problem
-              </Link>
-            </h3>
-            <p className="mt-3 body">If mindset advice has not changed much, start here.</p>
-          </article>
-          <article className="card">
-            <h3 className="h3">
-              <Link href="/ideas/adjacent-possible" className="focus-ring hover:text-sage">
-                The Adjacent Possible
-              </Link>
-            </h3>
-            <p className="mt-3 body">If decisions keep collapsing into all-or-nothing, start here.</p>
-          </article>
-          <article className="card">
-            <h3 className="h3">
-              <Link href="/ideas/leaving-faith-losing-gravity" className="focus-ring hover:text-sage">
-                When Leaving a Faith System Feels Like Losing Gravity
-              </Link>
-            </h3>
-            <p className="mt-3 body">If post-faith life feels disorienting, start here.</p>
-          </article>
+      <section className="section-gap">
+        <div className="anchor-block">
+          <p className="anchor-block__line">You do not need to read everything.</p>
         </div>
       </section>
 
-      <section className="mt-14">
-        <h2 className="h2">Or browse by topic</h2>
-        <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 body text-sm">
-          {siteContent.primaryTopics.map((topic) => (
-            <span key={topic} className="inline-flex items-center gap-3">
-              {topic !== siteContent.primaryTopics[0] ? <span className="text-ink/35">•</span> : null}
-              <Link
-                href={{ pathname: "/ideas", query: { topic } }}
-                className={`focus-ring no-link-style inline-link ${topicFilter === topic ? "font-semibold text-sage" : ""}`}
-              >
-                {topic}
-              </Link>
-            </span>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-14">
-        <h2 className="h2">All essays</h2>
-        <p className="mt-3 body max-w-3xl">
-          Short reads on perfectionism, overcontrol, religious harm, and meaning. Pick the one that sounds most familiar.
-        </p>
-        <div className="editorial-list mt-6">
-          {filteredEssays.map((essay) => (
-            <article key={essay.slug} className="editorial-item">
-              <h3 className="h3">
-                <Link href={`/ideas/${essay.slug}` as Route} className="focus-ring hover:text-sage">
-                  {essay.title}
+      <section className="section-gap-lg">
+        <div className="route-divider">
+          <p className="label">Browse By Topic</p>
+          <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 body text-sm">
+            {siteContent.primaryTopics.map((topic) => (
+              <span key={topic} className="inline-flex items-center gap-3">
+                {topic !== siteContent.primaryTopics[0] ? <span className="text-ink/35">•</span> : null}
+                <Link
+                  href={{ pathname: "/ideas", query: { topic } }}
+                  className={`focus-ring no-link-style inline-link ${topicFilter === topic ? "font-semibold text-sage" : ""}`}
+                >
+                  {topic}
                 </Link>
-              </h3>
-              <p className="mt-4 body editorial-measure">{essay.description}</p>
-            </article>
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-gap-lg">
+        <div className="section-heading">
+          <p className="label">{topicFilter ? `Filtered: ${topicFilter}` : "All Essays"}</p>
+          <h2 className="h2">Pick one.</h2>
+        </div>
+        <div className="dense-index mt-6">
+          {filteredEssays.map((essay) => (
+            <Link key={essay.slug} href={`/ideas/${essay.slug}`} className="focus-ring no-link-style dense-index__row">
+              <div>
+                <p className="label">{formatEssayDate(essay.date)}</p>
+                <h3 className="dense-index__title mt-3">{essay.title}</h3>
+              </div>
+              <p className="dense-index__body body">{essay.description}</p>
+              <span className="dense-index__arrow">Read</span>
+            </Link>
           ))}
         </div>
       </section>
 
-      <section className="mt-14 mb-6">
-        <p className="body max-w-4xl">
-          If you read one or two pieces and think, “Yes, that is exactly it,” the next step is simple:{" "}
-          <Link href="/work-with-me" className="focus-ring no-link-style inline-link font-semibold text-sage">
-            read how I work
-          </Link>{" "}
-          or{" "}
-          <Link href={siteContent.bookingUrl} className="focus-ring no-link-style inline-link font-semibold text-sage">
-            schedule a consult
-          </Link>.
-        </p>
+      <section className="section-gap-lg pb-8">
+        <div className="route-divider">
+          <p className="label">Next</p>
+          <h2 className="h2 mt-3">Then read about therapy or contact me.</h2>
+          <div className="hero-actions">
+            <ButtonLink href="/work-with-me">Approach</ButtonLink>
+            <ButtonLink href={siteContent.bookingUrl} variant="secondary">
+              Contact
+            </ButtonLink>
+          </div>
+        </div>
       </section>
     </section>
   );

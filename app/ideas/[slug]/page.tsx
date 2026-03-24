@@ -1,9 +1,10 @@
 import type { Metadata, Route } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/button-link";
+import { SchemaScript } from "@/components/schema-script";
 import { SimpleMarkdown } from "@/components/simple-markdown";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 import {
   formatEssayDate,
   getAllEssays,
@@ -47,23 +48,38 @@ export async function generateMetadata({
 
   if (!essay) {
     return {
-      title: "Ideas"
+      title: "Writing"
     };
   }
 
   const url = `${siteContent.siteUrl}/ideas/${essay.slug}`;
+  const title = `${essay.title} | Writing`;
 
   return {
-    title: `${essay.title} | Ideas`,
+    title,
     description: essay.description,
     alternates: { canonical: url },
     openGraph: {
-      title: `${essay.title} | Ideas`,
+      title,
       description: essay.description,
       url,
       type: "article",
       siteName: siteContent.brandName,
-      locale: "en_US"
+      locale: "en_US",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 675,
+          alt: "Arc Psychotherapy wordmark on a dark field"
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: essay.description,
+      images: ["/opengraph-image"]
     }
   };
 }
@@ -83,100 +99,108 @@ export default async function IdeaEssayPage({
   const related = getRelatedEssays(essay, 2);
   const conceptLinks = conceptLinksForTags(essay.tags);
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: essay.title,
-    datePublished: essay.date,
-    author: {
-      "@type": "Person",
-      name: siteContent.authorDisplayName
-    },
-    description: essay.description,
-    mainEntityOfPage: `${siteContent.siteUrl}/ideas/${essay.slug}`
-  };
-
   return (
     <article className="container-wrap py-16 md:py-20">
-      <p className="label">Ideas</p>
-      <h1 className="h1 mt-3 max-w-4xl">{essay.title}</h1>
-      <p className="mt-4 body max-w-3xl text-ink/85">{essay.description}</p>
-      <p className="mt-3 text-sm text-ink/70">
-        {getReadingTimeMinutes(essay.body)} min read • {formatEssayDate(essay.date)}
-      </p>
-
-      <section className="card mt-8">
-        <p className="label">Key idea</p>
-        <p className="mt-3 body">{essay.keyIdea}</p>
-      </section>
-
-      <section className="mt-10 max-w-3xl">
-        <SimpleMarkdown body={essay.body} />
-      </section>
-
-      <section className="card mt-10">
-        <h2 className="h3">Related links</h2>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {essay.related.map((link) => (
-            <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
-              {link.label}
-            </Link>
-          ))}
-          <Link href="/frameworks" className="focus-ring no-link-style chip-link">
-            Frameworks index
-          </Link>
-          <Link href="/start-here" className="focus-ring no-link-style chip-link">
-            Start Here
-          </Link>
-          <Link href="/work-with-me" className="focus-ring no-link-style chip-link">
-            Work With Me
-          </Link>
-          {conceptLinks.map((link) => (
-            <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {related.length > 0 ? (
-        <section className="mt-10">
-          <h2 className="h2">Related reading</h2>
-          <div className="mt-5 grid gap-5 md:grid-cols-2">
-            {related.map((item) => (
-              <article key={item.slug} className="card">
-                <h3 className="h3">
-                  <Link href={`/ideas/${item.slug}` as Route} className="focus-ring hover:text-sage">
-                    {item.title}
-                  </Link>
-                </h3>
-                <p className="mt-2 body">{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-      ) : null}
-
-      <section className="card mt-12 bg-ink text-white">
-        <h2 className="h3">If this resonates, here is how Arc works.</h2>
-        <p className="mt-3 text-white/85">
-          Arc uses therapy with clear structure to translate ideas into practical behavior change between sessions.
-        </p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <ButtonLink href="/work-with-me" variant="secondary">
-            Learn how Arc works
-          </ButtonLink>
-          <ButtonLink href={siteContent.bookingUrl}>
-            Schedule consult
-          </ButtonLink>
-        </div>
-      </section>
-
-      <Script
+      <SchemaScript
         id={`article-schema-${essay.slug}`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        data={articleSchema({
+          headline: essay.title,
+          description: essay.description,
+          path: `/ideas/${essay.slug}`,
+          datePublished: essay.date
+        })}
       />
+      <SchemaScript
+        id={`idea-breadcrumb-schema-${essay.slug}`}
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Writing", path: "/ideas" },
+          { name: essay.title, path: `/ideas/${essay.slug}` }
+        ])}
+      />
+      <div className="article-shell">
+        <p className="label">Writing</p>
+        <h1 className="h1 mt-4 max-w-5xl">{essay.title}</h1>
+        <p className="hero-lede max-w-3xl">{essay.description}</p>
+        <div className="article-meta mt-6">
+          <span>{formatEssayDate(essay.date)}</span>
+          <span>{getReadingTimeMinutes(essay.body)} min read</span>
+          <span>{essay.tags.join(" / ")}</span>
+        </div>
+        <section className="article-keyidea">
+          <p className="label">Key Idea</p>
+          <p className="body mt-3">{essay.keyIdea}</p>
+        </section>
+        <section className="article-body">
+          <SimpleMarkdown body={essay.body} />
+        </section>
+      </div>
+
+      <section className="section-gap">
+        <div className="split-band">
+          <article className="split-panel">
+            <p className="label">Related Links</p>
+            <h2 className="h2">Keep the thread going.</h2>
+            <div className="flex flex-wrap gap-2">
+              {essay.related.map((link) => (
+                <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
+                  {link.label}
+                </Link>
+              ))}
+              <Link href="/frameworks" className="focus-ring no-link-style chip-link">
+                Frameworks Index
+              </Link>
+              <Link href="/start-here" className="focus-ring no-link-style chip-link">
+                Start Here
+              </Link>
+              <Link href="/work-with-me" className="focus-ring no-link-style chip-link">
+                Approach
+              </Link>
+              {conceptLinks.map((link) => (
+                <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </article>
+          <article className="split-panel">
+            <p className="label">Related Reading</p>
+            <h2 className="h2">Two nearby pieces.</h2>
+            {related.length > 0 ? (
+              <div className="dense-index">
+                {related.map((item) => (
+                  <Link key={item.slug} href={`/ideas/${item.slug}` as Route} className="focus-ring no-link-style dense-index__row">
+                    <div>
+                      <p className="label">{formatEssayDate(item.date)}</p>
+                      <h3 className="dense-index__title mt-3">{item.title}</h3>
+                    </div>
+                    <p className="dense-index__body body">{item.description}</p>
+                    <span className="dense-index__arrow">Read</span>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <p className="body">This essay currently stands on its own.</p>
+            )}
+          </article>
+        </div>
+      </section>
+
+      <section className="section-gap-lg pb-8">
+        <div className="route-divider">
+          <p className="label">Next Move</p>
+          <h2 className="h2 mt-3">Read about therapy or get in touch.</h2>
+          <p className="body mt-3 max-w-3xl">
+            If you want to know how therapy works, read the approach page. If you want to ask about a consult, use the contact page.
+          </p>
+          <div className="hero-actions">
+            <ButtonLink href="/work-with-me">Approach</ButtonLink>
+            <ButtonLink href={siteContent.bookingUrl} variant="secondary">
+              Contact
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
     </article>
   );
 }

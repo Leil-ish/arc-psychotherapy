@@ -11,7 +11,7 @@ export const metadata = pageMetadata({
 const faqs = [
   {
     q: "Is the structured model-building option required?",
-    a: "No. Standard therapy is available on its own. The track is optional and selected only when clinically appropriate and aligned with your goals."
+    a: "No. Standard therapy stands on its own. The track is optional and used only when it helps the work."
   },
   {
     q: "Is this play therapy?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Do you offer telehealth?",
-    a: "Yes, telehealth is available for Texas residents when appropriate for care needs and clinical fit."
+    a: "Yes. Telehealth is available for Texas residents when it makes clinical sense."
   },
   {
     q: "Do you accept insurance?",

@@ -10,6 +10,7 @@ export const siteConfig = {
   contactEndpoint: siteContent.contactEndpoint,
   email: siteContent.email,
   phone: siteContent.phone,
+  sameAs: siteContent.sameAs,
   addressLine1: siteContent.location.addressLine1,
   cityStateZip: `${siteContent.location.city}, ${siteContent.location.state} ${siteContent.location.postalCode}`,
   mapUrl: siteContent.location.mapUrl,
@@ -45,11 +46,12 @@ export const primaryIssues = siteContent.issues;
 export const howItWorks = siteContent.home.steps;
 
 export const navItems = [
-  { href: "/", label: "Home" },
   { href: "/start-here", label: "Start Here" },
-  { href: "/ideas", label: "Ideas" },
-  { href: "/frameworks", label: "Frameworks" },
-  { href: "/work-with-me", label: "Work With Me" },
+  { href: "/work-with-me", label: "Approach" },
+  { href: "/supervision", label: "Supervision" },
+  { href: "/consultation", label: "Consultation" },
+  { href: "/ideas", label: "Writing" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" }
 ] as const;
 

@@ -1,10 +1,7 @@
-import type { Route } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { FaqBlock } from "@/components/faq-block";
-import { pageMetadata } from "@/lib/seo";
+import { ConceptPageTemplate } from "@/components/concept-page-template";
+import { SchemaScript } from "@/components/schema-script";
+import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
 import { getConceptBySlug } from "@/src/content/concepts";
-import { siteContent } from "@/src/content/site";
 
 const hub = getConceptBySlug("religious-harm");
 
@@ -20,86 +17,28 @@ export default function ReligiousHarmPage() {
 
   return (
     <>
-      <section className="container-wrap py-16 md:py-20">
-        <h1 className="h1">{hub.title}</h1>
-        <div className="mt-5 space-y-3 max-w-3xl">
-          {hub.definition.map((item) => (
-            <p key={item} className="body">
-              {item}
-            </p>
-          ))}
-        </div>
-        <p className="mt-3 body max-w-3xl">If this feels familiar, it makes sense. This page helps you name the pattern and what actually supports recovery.</p>
-        <p className="mt-3 body text-sm text-ink/75">
-          {siteContent.primaryLocation} • {siteContent.secondaryLocation} • {siteContent.telehealthRegion}
-        </p>
-        <Link href="/start-here" className="focus-ring mt-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Start Here
-        </Link>
-        <Link href="/work-with-me" className="focus-ring ml-4 inline-block text-sm font-semibold text-sage underline-offset-4 hover:underline">
-          Work With Me
-        </Link>
-        <figure className="mt-8">
-          <div className="arc-image-mask overflow-hidden">
-            <Image
-              src="/images/texture/plaster-gold-shadow.jpg"
-              alt="Warm plaster wall with layered shadows."
-              width={3500}
-              height={2333}
-              className="h-[14rem] w-full object-cover md:h-[20rem]"
-              sizes="(min-width: 1024px) 72rem, 100vw"
-            />
-          </div>
-        </figure>
-      </section>
-
-      <FaqBlock heading="Common questions about religious harm" items={hub.faq} schemaId="religious-harm-faq" />
-
-      <section className="container-wrap grid gap-5 md:grid-cols-2">
-        <article className="card">
-          <h2 className="h2">Common presentations</h2>
-          <ul className="mt-4 space-y-2 body">{hub.commonPresentations.map((item) => <li key={item}>• {item}</li>)}</ul>
-        </article>
-        <article className="card">
-          <h2 className="h2">What people often try (and why it stalls)</h2>
-          <ul className="mt-4 space-y-2 body">{hub.whatDoesNotWork.map((item) => <li key={item}>• {item}</li>)}</ul>
-        </article>
-      </section>
-
-      <section className="container-wrap mt-12 grid gap-5 md:grid-cols-2">
-        <article className="card">
-          <h2 className="h2">What helps</h2>
-          <ul className="mt-4 space-y-2 body">{hub.whatHelps.map((item) => <li key={item}>• {item}</li>)}</ul>
-        </article>
-        <article className="card">
-          <h2 className="h2">How therapy helps</h2>
-          <p className="mt-4 body">{hub.arcApproach}</p>
-        </article>
-      </section>
-
-      <section className="container-wrap mt-12 grid gap-5 md:grid-cols-2">
-        <article className="card">
-          <h2 className="h3">Related essays</h2>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {hub.relatedEssays.map((link) => (
-              <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </article>
-        <article className="card">
-          <h2 className="h3">Related frameworks</h2>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {hub.relatedFrameworks.map((link) => (
-              <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </article>
-      </section>
-
+      <SchemaScript
+        id="religious-harm-webpage-schema"
+        data={webPageSchema({
+          name: hub.title,
+          description:
+            "Guide to religious harm from Arc Psychotherapy in Downtown Round Rock, Texas, with telehealth across Texas.",
+          path: "/religious-harm"
+        })}
+      />
+      <SchemaScript
+        id="religious-harm-breadcrumb-schema"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Religious Harm", path: "/religious-harm" }
+        ])}
+      />
+      <ConceptPageTemplate
+        hub={hub}
+        imageSrc="/images/architectural-details/concrete-shadow-lines.jpg"
+        imageAlt="Concrete wall with severe angled shadows."
+        resonanceLine="If this feels familiar, the work is not about replacing one rigid system with another. It is about rebuilding agency."
+      />
     </>
   );
 }

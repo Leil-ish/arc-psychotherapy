@@ -1,54 +1,68 @@
-import { SectionCta } from "@/components/section-cta";
-import { primaryIssues } from "@/lib/content";
-import { pageMetadata } from "@/lib/seo";
+import type { Route } from "next";
+import Link from "next/link";
+import { ButtonLink } from "@/components/button-link";
+import { SchemaScript } from "@/components/schema-script";
+import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
+import { servicesPage } from "@/src/content/marketing";
 
 export const metadata = pageMetadata({
-  title: "Services",
+  title: "Work",
   description:
-    "Therapy services for adults in Downtown Round Rock, serving North Austin and surrounding communities, with telehealth across Texas. Includes ongoing therapy and an optional structured model-building option.",
+    "Arc offers private-pay therapy, clinical supervision, and consultation from Round Rock, Texas.",
   path: "/services"
 });
 
 export default function ServicesPage() {
   return (
-    <>
-      <section className="container-wrap py-16 md:py-20">
-        <h1 className="h1">Services for adults seeking focused, private-pay care</h1>
-        <p className="body-lg mt-6 max-w-3xl">
-          Services include ongoing therapy and the optional structured model-building option. Care is available in Downtown Round Rock and via telehealth for Texas residents.
-        </p>
-      </section>
-
-      <section className="container-wrap grid gap-5 md:grid-cols-2">
-        <article className="card">
-          <p className="h3">Ongoing therapy</p>
-          <p className="mt-3 body">
-            Weekly or biweekly sessions for emotional processing, pattern change, and aligned decision-making.
-          </p>
-        </article>
-        <article className="card">
-          <p className="h3">Structured model-building option</p>
-          <p className="mt-3 body">
-            A premium option using structured model-building across defined sessions. It is adult therapy, not play therapy, and includes active reflection and integration.
-          </p>
-        </article>
-      </section>
-
-      <section className="container-wrap mt-14">
-        <h2 className="h2">Common concerns addressed</h2>
-        <ul className="mt-5 grid gap-3 md:grid-cols-2 body">
-          {primaryIssues.map((item) => (
-            <li key={item} className="card">
-              {item}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <SectionCta
-        title="Not sure which service fits?"
-        body="Use the consult to decide pace and treatment structure before committing to a package."
+    <section className="container-wrap py-16 md:py-20">
+      <SchemaScript
+        id="services-webpage-schema"
+        data={webPageSchema({
+          name: "Work",
+          description:
+            "Arc offers private-pay therapy, LMFT supervision, and consultation from Round Rock, Texas.",
+          path: "/services",
+          type: "CollectionPage"
+        })}
       />
-    </>
+      <SchemaScript
+        id="services-breadcrumb-schema"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Work", path: "/services" }
+        ])}
+      />
+      <div className="hero-copy">
+        <p className="label">{servicesPage.intro.eyebrow}</p>
+        <h1 className="h1 mt-4">{servicesPage.intro.title}</h1>
+        <p className="hero-lede">{servicesPage.intro.lede}</p>
+        <div className="hero-support">
+          {servicesPage.intro.body?.map((item) => (
+            <p key={item} className="body">
+              {item}
+            </p>
+          ))}
+        </div>
+        <div className="hero-actions">
+          {servicesPage.intro.actions?.map((action) => (
+            <ButtonLink key={action.href} href={action.href as Route} variant={action.variant}>
+              {action.label}
+            </ButtonLink>
+          ))}
+        </div>
+      </div>
+
+      <section className="section-gap">
+        <div className="index-grid">
+          {servicesPage.routes.map((item) => (
+            <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style index-card">
+              <p className="label">{item.eyebrow}</p>
+              <h2 className="index-card__title">{item.title}</h2>
+              <p className="index-card__body body">{item.body}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </section>
   );
 }

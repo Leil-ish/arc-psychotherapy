@@ -159,10 +159,10 @@ export default function ConstructivePage() {
             Frameworks
           </ButtonLink>
           <ButtonLink href="/ideas" variant="secondary">
-            Ideas
+            Writing
           </ButtonLink>
           <ButtonLink href="/work-with-me" variant="secondary">
-            Learn how Arc works
+            Approach
           </ButtonLink>
         </div>
       </section>

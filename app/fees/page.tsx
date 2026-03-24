@@ -17,6 +17,9 @@ export default function FeesPage() {
         <p className="body-lg mt-6 max-w-3xl">
           Private-pay practice. Superbills may be available upon request for out-of-network reimbursement.
         </p>
+        <p className="body mt-3 max-w-3xl">
+          Therapy costs money. The problems it prevents usually cost more.
+        </p>
       </section>
 
       <section className="container-wrap grid gap-5 md:grid-cols-3">

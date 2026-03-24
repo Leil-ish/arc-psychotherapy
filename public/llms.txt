@@ -1,28 +1,71 @@
 # Arc Psychotherapy
 
-Arc Psychotherapy is a private-pay psychotherapy practice based in Downtown Round Rock, Texas, serving adults navigating perfectionism, rigidity (overcontrol), and religious harm (spiritual trauma).
+Arc Psychotherapy is a private-pay psychotherapy practice in Downtown Round Rock, Texas.
 
-Primary content hubs:
-- /start-here
-- /perfectionism
-- /overcontrol
-- /religious-harm
-- /frameworks
-- /ideas
-- /work-with-me
+Clinician:
+- Leila Anderson, LMFT-S
 
-Core themes:
-- Structured psychotherapy
+Who the practice is for:
+- Adults dealing with perfectionism
+- Adults dealing with overcontrol or rigidity
+- Adults dealing with religious harm, spiritual trauma, fear, guilt, and post-faith disorientation
+- Adults who can explain the pattern clearly and still repeat it under stress
+
+What Arc offers:
+- Individual psychotherapy
+- LMFT supervision
+- Consultation and training
+- In-person therapy in Downtown Round Rock, Texas
+- Telehealth across Texas
+- Private-pay sessions at $200 for 50-55 minutes
+
+Core service area:
+- Round Rock
+- North Austin
+- Cedar Park
+- Georgetown
+- Pflugerville
+- Texas telehealth
+
+Primary pages:
+- https://arc-psychotherapy.com/
+- https://arc-psychotherapy.com/start-here
+- https://arc-psychotherapy.com/work-with-me
+- https://arc-psychotherapy.com/services
+- https://arc-psychotherapy.com/supervision
+- https://arc-psychotherapy.com/consultation
+- https://arc-psychotherapy.com/about
+- https://arc-psychotherapy.com/contact
+- https://arc-psychotherapy.com/perfectionism
+- https://arc-psychotherapy.com/overcontrol
+- https://arc-psychotherapy.com/religious-harm
+- https://arc-psychotherapy.com/frameworks
+- https://arc-psychotherapy.com/ideas
+
+Useful topic pages:
+- Perfectionism: https://arc-psychotherapy.com/perfectionism
+- Overcontrol: https://arc-psychotherapy.com/overcontrol
+- Religious harm: https://arc-psychotherapy.com/religious-harm
+
+Professional pages:
+- Supervision: https://arc-psychotherapy.com/supervision
+- Consultation: https://arc-psychotherapy.com/consultation
+
+Useful essay pages:
+- Perfectionism as a Structural Problem
 - The Adjacent Possible
-- Perfectionism as structure
-- Moral injury in helping professions
-- Religious harm and meaning reconstruction
-
-Primary population:
-High-achieving adults who function well externally but experience internal rigidity or shame.
-
-Author:
-Leila Anderson, LMFT-S
+- When Leaving a Faith System Feels Like Losing Gravity
 
 Tone:
-Intellectually precise, structured, systems-aware.
+- Direct
+- Plainspoken
+- Structured
+- Systems-aware
+
+Navigation labels:
+- Start Here
+- Approach
+- Work
+- Writing
+- About
+- Contact
