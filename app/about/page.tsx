@@ -13,11 +13,11 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "About",
-  title: "I work with adults who understand the problem and still feel stuck.",
-  lede: "The work is direct, practical, and meant to help something change outside the session.",
+  title: "I am Leila Anderson, LMFT-S.",
+  lede: "I work with adults dealing with perfectionism, overcontrol, religious harm, and chronic over-responsibility.",
   body: [
-    "I work mostly with perfectionism, overcontrol, religious harm, and chronic over-responsibility.",
-    "If you are thoughtful, self-aware, and tired of repeating the same thing under stress, that is the kind of work I do."
+    "People usually end up here because they understand the problem and are tired of repeating it.",
+    "My style is direct, practical, and kind. The point is to help something change outside the session."
   ]
 } as const;
 
@@ -105,31 +105,25 @@ export default function AboutPage() {
       </div>
 
       <section className="section-gap">
-        <div className="anchor-block">
-          <p className="anchor-block__line">Insight matters. It just is not enough by itself.</p>
-        </div>
-      </section>
-
-      <section className="section-gap">
         <div className="split-band">
           <article className="split-panel">
             <p className="label">How I Work</p>
             <h2 className="h2">I want therapy to be useful.</h2>
             <p className="body">
-              I am direct, but I am not interested in being harsh. The point is to help, not to perform honesty.
+              My style is direct, practical, and compassionate. I want therapy to be honest without being harsh.
             </p>
             <p className="body">
-              We look at what keeps happening, what sets it off, and what changes between sessions. If a framework helps, I will use it. If it does not, I will not keep it around.
+              We look at the parts of life where effort and insight have not been enough. If a framework helps us understand that more clearly, I will use it. If not, I will not use it just to sound sophisticated.
             </p>
           </article>
           <article className="split-panel">
             <p className="label">Background</p>
             <h2 className="h2">What shapes the way I work.</h2>
             <p className="body">
-              I was raised in Uganda, and I do not think culture is background information. Language, family obligation, religion, migration, and mixed-context identity often shape the problem itself.
+              I was raised in Uganda, and that shaped the lens I bring to this work. I pay attention to culture, language, family obligation, religion, migration, and mixed-context identity because they often shape how a problem is lived.
             </p>
             <p className="body">
-              I have also spent years in high-acuity and systems-facing settings. That tends to make a person practical. I care more about whether something helps than whether it sounds impressive.
+              I have also spent years in high-acuity and systems-facing settings. That background made me practical. I care about whether something helps.
             </p>
           </article>
         </div>

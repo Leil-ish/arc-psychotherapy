@@ -12,8 +12,8 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Contact",
-  title: "Get in touch.",
-  lede: "Use this form for therapy, supervision, or consultation.",
+  title: "Use this page to ask about therapy, supervision, or consultation.",
+  lede: "You can use the form, call, or email. I reply within 1-2 business days.",
   body: [
     "Please do not include sensitive clinical details in the form.",
     "If you are in immediate danger, call 911. For mental health crisis support, call or text 988."
@@ -24,7 +24,7 @@ const consultFacts = [
   "Standard session fee: $200 for 50-55 minutes.",
   "Private-pay practice. Superbills may be available for out-of-network reimbursement.",
   "Telehealth is available across Texas when appropriate for care needs and clinical fit.",
-  "Arc replies to contact requests within 1-2 business days."
+  "I reply to contact requests within 1-2 business days."
 ] as const;
 
 const policyFacts = [
@@ -36,7 +36,7 @@ const policyFacts = [
 const questions = [
   {
     question: "Do you take insurance?",
-    answer: "Arc is private-pay. A superbill may be available for out-of-network reimbursement."
+    answer: "I am private-pay. A superbill may be available for out-of-network reimbursement."
   },
   {
     question: "Do you offer telehealth?",
@@ -102,7 +102,7 @@ export default function ContactPage() {
           </div>
           <div className="meta-block">
             <p className="label">Response Time</p>
-            <p className="body">Arc replies to inquiries within 1-2 business days.</p>
+            <p className="body">I reply to inquiries within 1-2 business days.</p>
           </div>
         </aside>
       </div>

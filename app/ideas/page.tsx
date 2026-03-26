@@ -22,10 +22,10 @@ function isIdeaTag(value: string): value is IdeaTag {
 }
 
 const intro = {
-  title: "Short essays on perfectionism, overcontrol, religious harm, and meaning.",
-  lede: "Read here if you want to know how I think before you book.",
+  title: "Read here if you want to know how I think before you book.",
+  lede: "These essays cover perfectionism, overcontrol, religious harm, and meaning.",
   body:
-    "These essays are brief and practical. They are here to help you understand the problem more clearly and decide whether this approach makes sense for you."
+    "They are short, practical, and meant to help you decide whether this approach makes sense for you."
 } as const;
 
 export default async function IdeasPage({
@@ -82,12 +82,6 @@ export default async function IdeasPage({
         </figure>
       </div>
 
-      <section className="section-gap">
-        <div className="anchor-block">
-          <p className="anchor-block__line">You do not need to read everything.</p>
-        </div>
-      </section>
-
       <section className="section-gap-lg">
         <div className="route-divider">
           <p className="label">Browse By Topic</p>
@@ -110,7 +104,7 @@ export default async function IdeasPage({
       <section className="section-gap-lg">
         <div className="section-heading">
           <p className="label">{topicFilter ? `Filtered: ${topicFilter}` : "All Essays"}</p>
-          <h2 className="h2">Pick one.</h2>
+          <h2 className="h2">Read one essay first.</h2>
         </div>
         <div className="dense-index mt-6">
           {filteredEssays.map((essay) => (

@@ -16,19 +16,18 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Private-pay psychotherapy",
-  title: "You can understand the problem and still feel stuck.",
-  lede: "Therapy for adults dealing with perfectionism, overcontrol, and religious harm.",
+  title: "Therapy for adults dealing with perfectionism, overcontrol, and religious harm.",
+  lede: "This is for people who understand themselves fairly well and still feel stuck in the same places.",
   body: [
-    "Other people rely on you.",
-    "You are tired of how much effort it takes to stay this steady.",
-    "You can explain the problem clearly. You still find yourself doing the same thing when you are stressed.",
+    "People rely on you, and it takes more out of you than it used to.",
+    "You may know exactly why you do what you do and still not know how to make it different.",
     "If insight alone fixed it, you would already be done."
   ]
 } as const;
 
-const signs = {
-  eyebrow: "Common Signs",
-  title: "Some version of this is usually going on.",
+const fitSection = {
+  eyebrow: "Wondering if this is the right fit for you?",
+  title: "People who do well here are usually dealing with some combination of these problems:",
   items: [
     "You spend too much time preparing, researching, or replaying decisions.",
     "You look fine from the outside and feel wrung out by the end of the day.",
@@ -38,7 +37,7 @@ const signs = {
 } as const;
 
 const notFirstStep = {
-  eyebrow: "Not The Right First Step",
+  eyebrow: "This may not be the right first stop if you need:",
   items: [
     "Crisis stabilization",
     "Insurance-based care",
@@ -50,15 +49,15 @@ const notFirstStep = {
 const therapySteps = [
   {
     title: "Start with a consult.",
-    body: "We talk through what is going on, what you want help with, and the practical details."
+    body: "We talk through what is going on, what you want help with, and whether this feels like a good fit."
   },
   {
-    title: "Get specific.",
-    body: "We look closely at what keeps happening, what sets it off, and what keeps it going."
+    title: "Look at where things are not shifting.",
+    body: "We look closely at the places where effort, insight, or self-control have not been enough."
   },
   {
-    title: "Try something different.",
-    body: "Then we pay attention to what changes during the week."
+    title: "Work toward change.",
+    body: "That can include depth work, practical changes, and paying attention to what shifts between sessions."
   }
 ] as const;
 
@@ -120,9 +119,9 @@ export default function HomePage() {
               <p className="label">How It Works</p>
               <div className="process-steps" aria-label="Process">
                 <span className="process-steps__item">Consult</span>
-                <span className="process-steps__item">See what keeps happening</span>
-                <span className="process-steps__item">Try something different</span>
-                <span className="process-steps__item">Keep what helps</span>
+                <span className="process-steps__item">Understand the problem</span>
+                <span className="process-steps__item">Work on it in session and during the week</span>
+                <span className="process-steps__item">Adjust as needed</span>
               </div>
             </div>
           </aside>
@@ -133,10 +132,10 @@ export default function HomePage() {
         <div className="container-wrap">
           <div className="home-stance">
             <article className="home-stance__primary">
-              <p className="label">{signs.eyebrow}</p>
-              <h2 className="home-stance__title">{signs.title}</h2>
-              <ul className="split-panel__list body">
-                {signs.items.map((item) => (
+              <p className="label">{fitSection.eyebrow}</p>
+              <h2 className="home-stance__title">{fitSection.title}</h2>
+              <ul className="split-panel__list body mt-6">
+                {fitSection.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>

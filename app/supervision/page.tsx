@@ -12,11 +12,11 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Supervision",
-  title: "Supervision for associates who want to think clearly and practice well.",
-  lede: "This is for LMFT Associates who want direct feedback, better case thinking, and steadier ethics.",
+  title: "LMFT supervision for associates who want direct feedback and better clinical thinking.",
+  lede: "This is for associates who want more than signatures and hours.",
   body: [
-    "I am not interested in box-checking supervision.",
-    "I want you to become clearer, more confident, and more responsible in your work."
+    "We work on case formulation, ethics, countertransference, and treatment decisions.",
+    "The goal is to help you think more clearly, work more responsibly, and trust your own judgment."
   ]
 } as const;
 
@@ -102,12 +102,6 @@ export default function SupervisionPage() {
           </div>
         </aside>
       </div>
-
-      <section className="section-gap">
-        <div className="anchor-block">
-          <p className="anchor-block__line">Supervision should help you do better work.</p>
-        </div>
-      </section>
 
       <section className="section-gap">
         <div className="split-band">

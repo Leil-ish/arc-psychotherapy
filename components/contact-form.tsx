@@ -109,7 +109,7 @@ export function ContactForm() {
         <p className="form-panel__hint">
           {consultPreference === "share-availability"
             ? "Required for this option."
-            : "Optional. You can leave this blank if you want Arc to send available times first."}
+            : "Optional. You can leave this blank if you want me to send available times first."}
         </p>
 
         <label className="field-label" htmlFor="preferredContactMethod">

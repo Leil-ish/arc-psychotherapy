@@ -11,10 +11,10 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Consultation",
-  title: "Consultation for teams that need clearer thinking and better systems.",
-  lede: "I work with organizations, treatment teams, and leadership groups that are working hard and still getting stuck.",
+  title: "Consultation for treatment programs, teams, and leaders.",
+  lede: "I help when people are working hard and the same problems keep coming back.",
   body: [
-    "Sometimes the problem is not effort. It is the way the work is set up.",
+    "Sometimes the problem is not effort. It is the way the work is organized.",
     "Consultation can focus on program design, staff training, leadership, shame and trauma treatment, or treatment culture."
   ]
 } as const;
@@ -102,12 +102,6 @@ export default function ConsultationPage() {
       </div>
 
       <section className="section-gap">
-        <div className="anchor-block">
-          <p className="anchor-block__line">When the same problem keeps returning, it is usually worth looking at the system around it.</p>
-        </div>
-      </section>
-
-      <section className="section-gap">
         <div className="dense-index">
           {services.map((item) => (
             <div key={item.title} className="dense-index__row">
@@ -116,7 +110,6 @@ export default function ConsultationPage() {
                 <h2 className="dense-index__title mt-3">{item.title}</h2>
               </div>
               <p className="dense-index__body body">{item.body}</p>
-              <span className="dense-index__arrow">Scope</span>
             </div>
           ))}
         </div>

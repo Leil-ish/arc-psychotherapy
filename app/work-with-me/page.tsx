@@ -14,12 +14,12 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Approach",
-  title: "This is practical therapy.",
+  title: "Here is what therapy looks like with me.",
   lede:
-    "It is for people who understand themselves fairly well and are tired of staying stuck anyway.",
+    "This is direct, practical therapy for people who want more than insight alone.",
   body: [
-    "We are not going to spend months circling the same problem in slightly better language.",
-    "We look at what keeps happening, what sets it off, what makes it harder to change, and what helps."
+    "We spend time understanding what is going on, where it comes from, and why it keeps repeating.",
+    "Then we work toward changes you can notice in your actual life, not just in the room."
   ]
 } as const;
 
@@ -129,12 +129,6 @@ export default function WorkWithMePage() {
         </div>
       </section>
 
-      <section className="section-gap">
-        <div className="anchor-block">
-          <p className="anchor-block__line">You should be able to tell what you are doing and why.</p>
-        </div>
-      </section>
-
       <section className="section-gap-lg">
         <div className="dense-index mt-6">
           {process.map((item) => (
@@ -215,7 +209,7 @@ export default function WorkWithMePage() {
         <div className="split-band">
           <article className="split-panel">
             <p className="label">Before You Book</p>
-            <h2 className="h2">If you want to read first, keep it simple.</h2>
+            <h2 className="h2">If you want to read first.</h2>
             <p className="body">
               Start with the issue page that sounds most familiar. After that, read one essay or one framework if you want more.
             </p>
@@ -233,9 +227,9 @@ export default function WorkWithMePage() {
           </article>
           <article className="split-panel">
             <p className="label">Format</p>
-            <h2 className="h2">You work with one therapist the whole time.</h2>
+            <h2 className="h2">What the work looks like.</h2>
             <p className="body">
-              Private-pay therapy with Leila from consult onward. Model-building is optional and used only when it helps.
+              Private-pay therapy with Leila in Downtown Round Rock or by telehealth across Texas. Model-building is optional and used only when it helps.
             </p>
           </article>
         </div>

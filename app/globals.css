@@ -417,6 +417,17 @@ a:not(.no-link-style):hover {
   gap: 0.5rem;
 }
 
+.site-footer__brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-footer__brand-image {
+  display: block;
+  width: clamp(13rem, 22vw, 18rem);
+  height: auto;
+}
+
 .site-footer__note,
 .site-footer__line,
 .site-footer__meta {

@@ -15,10 +15,10 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Start Here",
-  title: "You do not need to read the whole site.",
-  lede: "Start with the issue that sounds most familiar.",
+  title: "If you want the short version of the site, this is it.",
+  lede: "Most people look at one issue, then read about therapy or one essay if they want more context.",
   body: [
-    "If reading helps, pick one essay after that.",
+    "The issue sections cover the main problems I work with. The approach section explains what therapy is like. The essays give you a sense of how I think.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;
@@ -75,14 +75,8 @@ export default function StartHerePage() {
       </div>
 
       <section className="section-gap">
-        <div className="anchor-block">
-          <p className="anchor-block__line">Pick one place to begin.</p>
-        </div>
-      </section>
-
-      <section className="section-gap">
         <div className="section-heading">
-          <h2 className="h2">Pick an issue.</h2>
+          <h2 className="h2">The main issues I work with.</h2>
         </div>
         <div className="index-grid mt-6">
           {homePage.focusAreas.map((item) => (
@@ -96,7 +90,7 @@ export default function StartHerePage() {
 
       <section className="section-gap-lg">
         <div className="section-heading">
-          <h2 className="h2">Read one essay first.</h2>
+          <h2 className="h2">If you want to read something first.</h2>
         </div>
         <div className="dense-index mt-6">
           {homePage.writing.map((item) => (
@@ -115,19 +109,19 @@ export default function StartHerePage() {
         <div className="split-band">
           <article className="split-panel">
             <p className="label">Therapy</p>
-            <h2 className="h2">What therapy looks like.</h2>
+            <h2 className="h2">What therapy looks like here.</h2>
             <ul className="split-panel__list body">
               <li>Start with a consult.</li>
-              <li>Look closely at what keeps happening.</li>
-              <li>Try one change and see what happens during the week.</li>
-              <li>Keep what helps.</li>
+              <li>Spend time understanding the problem.</li>
+              <li>Work on it in session and during the week.</li>
+              <li>Adjust as needed.</li>
             </ul>
           </article>
           <article className="split-panel">
             <p className="label">Next</p>
-            <h2 className="h2">Then read about therapy or get in touch.</h2>
+            <h2 className="h2">If you want to keep going.</h2>
             <p className="body">
-              If one issue page already sounds familiar, start there. If you want to know more about therapy, read the approach page.
+              If one issue already sounds familiar, that is probably the best place to spend your time. If you want a clearer picture of therapy, the approach page is the next thing to read.
             </p>
             <div className="hero-actions">
               <ButtonLink href="/work-with-me">Approach</ButtonLink>
