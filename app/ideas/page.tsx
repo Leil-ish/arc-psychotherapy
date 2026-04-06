@@ -82,21 +82,23 @@ export default async function IdeasPage({
         </figure>
       </div>
 
-      <section className="section-gap-lg">
-        <div className="route-divider">
-          <p className="label">Browse By Topic</p>
-          <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 body text-sm">
-            {siteContent.primaryTopics.map((topic) => (
-              <span key={topic} className="inline-flex items-center gap-3">
-                {topic !== siteContent.primaryTopics[0] ? <span className="text-ink/35">•</span> : null}
-                <Link
-                  href={{ pathname: "/ideas", query: { topic } }}
-                  className={`focus-ring no-link-style inline-link ${topicFilter === topic ? "font-semibold text-sage" : ""}`}
-                >
-                  {topic}
-                </Link>
-              </span>
-            ))}
+      <section className="section-gap-lg full-bleed-band full-bleed-band--ultramarine">
+        <div className="container-wrap">
+          <div className="route-divider route-divider--ultramarine">
+            <p className="label">Browse By Topic</p>
+            <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 body text-sm">
+              {siteContent.primaryTopics.map((topic) => (
+                <span key={topic} className="inline-flex items-center gap-3">
+                  {topic !== siteContent.primaryTopics[0] ? <span className="text-white/35">•</span> : null}
+                  <Link
+                    href={{ pathname: "/ideas", query: { topic } }}
+                    className={`focus-ring no-link-style inline-link ${topicFilter === topic ? "inline-link--active" : ""}`}
+                  >
+                    {topic}
+                  </Link>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

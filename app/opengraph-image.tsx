@@ -16,8 +16,8 @@ export default function OpenGraphImage() {
           height: "100%",
           display: "flex",
           justifyContent: "space-between",
-          background: "#0a0e0f",
-          color: "#fffdf7",
+          background: "#012622",
+          color: "#f6f2f8",
           padding: "56px 64px",
           fontFamily: "sans-serif"
         }}
@@ -30,48 +30,44 @@ export default function OpenGraphImage() {
                 display: "flex",
                 width: 76,
                 height: 76,
-                background: "#995531"
+                background: "#ECE5F0",
+                borderRadius: 18
               }}
             >
               <div
                 style={{
                   position: "absolute",
-                  left: "18%",
-                  right: "18%",
-                  top: "18%",
-                  height: "7%",
-                  background: "#fffdf7"
+                  left: "21%",
+                  right: "21%",
+                  top: "15%",
+                  bottom: "16%",
+                  borderTopLeftRadius: "999px",
+                  borderTopRightRadius: "999px",
+                  borderStyle: "solid",
+                  borderColor: "#59114D",
+                  borderWidth: "10px 10px 0 10px"
                 }}
               />
               <div
                 style={{
                   position: "absolute",
-                  left: "18%",
+                  left: "35%",
+                  right: "35%",
                   bottom: "16%",
-                  width: "7%",
-                  height: "54%",
-                  background: "#fffdf7"
-                }}
-              />
-              <div
-                style={{
-                  position: "absolute",
-                  right: "18%",
-                  bottom: "16%",
-                  width: "7%",
-                  height: "54%",
-                  background: "#fffdf7"
+                  height: "6%",
+                  background: "#E98A15",
+                  borderRadius: "999px"
                 }}
               />
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-              <div style={{ fontFamily: "serif", fontSize: 64, letterSpacing: "-0.05em", lineHeight: 0.84 }}>ARC</div>
+              <div style={{ fontFamily: "serif", fontSize: 64, letterSpacing: "-0.05em", lineHeight: 0.84 }}>Arc</div>
               <div
                 style={{
                   fontSize: 20,
                   letterSpacing: "0.28em",
                   textTransform: "uppercase",
-                  color: "rgba(255, 253, 247, 0.72)"
+                  color: "rgba(233, 138, 21, 0.9)"
                 }}
               >
                 Psychotherapy
@@ -90,38 +86,34 @@ export default function OpenGraphImage() {
             display: "flex",
             width: 252,
             height: 252,
-            background: "#995531",
+            background: "#ECE5F0",
+            borderRadius: 52,
             marginTop: 10,
           }}
         >
           <div
             style={{
               position: "absolute",
-              left: "18%",
-              right: "18%",
-              top: "18%",
-              height: "7%",
-              background: "#fffdf7"
+              left: "21%",
+              right: "21%",
+              top: "15%",
+              bottom: "16%",
+              borderTopLeftRadius: "999px",
+              borderTopRightRadius: "999px",
+              borderStyle: "solid",
+              borderColor: "#59114D",
+              borderWidth: "26px 26px 0 26px"
             }}
           />
           <div
             style={{
               position: "absolute",
-              left: "18%",
+              left: "35%",
+              right: "35%",
               bottom: "16%",
-              width: "7%",
-              height: "54%",
-              background: "#fffdf7"
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              right: "18%",
-              bottom: "16%",
-              width: "7%",
-              height: "54%",
-              background: "#fffdf7"
+              height: "6%",
+              background: "#E98A15",
+              borderRadius: "999px"
             }}
           />
         </div>

@@ -113,7 +113,7 @@ export default function WorkWithMePage() {
       </div>
 
       <section className="section-gap">
-        <div className="hero-meta">
+        <div className="hero-meta hero-meta--citron">
           <div className="meta-block">
             <p className="label">Location</p>
             <p className="body">{siteConfig.locationSummaryLine}</p>
@@ -129,7 +129,8 @@ export default function WorkWithMePage() {
         </div>
       </section>
 
-      <section className="section-gap-lg">
+      <section className="section-gap-lg full-bleed-band full-bleed-band--surface">
+        <div className="container-wrap">
         <div className="dense-index mt-6">
           {process.map((item) => (
             <div key={item.title} className="dense-index__row">
@@ -142,10 +143,12 @@ export default function WorkWithMePage() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
-      <section className="section-gap-lg">
-        <div className="split-band">
+      <section className="section-gap-lg full-bleed-band full-bleed-band--ultramarine">
+        <div className="container-wrap">
+        <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">Values</p>
             <h2 className="h2">You should not have to argue for your own humanity before the work can begin.</h2>
@@ -171,9 +174,10 @@ export default function WorkWithMePage() {
             </ul>
           </article>
         </div>
+        </div>
       </section>
 
-      <section id="structured-model-building" className="section-gap-lg full-bleed-band full-bleed-band--clay scroll-mt-24">
+      <section id="structured-model-building" className="section-gap-lg full-bleed-band full-bleed-band--dark scroll-mt-24">
         <div className="container-wrap">
           <div className="feature-stage">
             <article className="feature-stage__lead">
@@ -206,10 +210,10 @@ export default function WorkWithMePage() {
       </section>
 
       <section className="section-gap-lg">
-        <div className="split-band">
+        <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">Before You Book</p>
-            <h2 className="h2">If you want to read first.</h2>
+            <h2 className="h2">Read first.</h2>
             <p className="body">
               Start with the issue page that sounds most familiar. After that, read one essay or one framework if you want more.
             </p>

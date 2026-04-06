@@ -83,7 +83,7 @@ export default function SupervisionPage() {
             </ButtonLink>
           </div>
         </div>
-        <aside className="hero-meta">
+        <aside className="hero-meta hero-meta--ultramarine">
           <div className="meta-block">
             <p className="label">For</p>
             <p className="body">LMFT Associates in Texas who want more than box-checking.</p>
@@ -104,7 +104,7 @@ export default function SupervisionPage() {
       </div>
 
       <section className="section-gap">
-        <div className="split-band">
+        <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">Good Fit</p>
             <h2 className="h2">Who this is for.</h2>
@@ -126,8 +126,9 @@ export default function SupervisionPage() {
         </div>
       </section>
 
-      <section className="section-gap-lg">
-        <div className="split-band">
+      <section className="section-gap-lg full-bleed-band full-bleed-band--ultramarine">
+        <div className="container-wrap">
+          <div className="split-band">
           <article className="split-panel">
             <p className="label">What We Work On</p>
             <h2 className="h2">What we work on.</h2>
@@ -146,6 +147,7 @@ export default function SupervisionPage() {
               ))}
             </ul>
           </article>
+          </div>
         </div>
       </section>
 

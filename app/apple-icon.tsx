@@ -17,7 +17,7 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#0a0e0f",
+          background: "#012622",
           padding: "28px"
         }}
       >
@@ -27,37 +27,33 @@ export default function AppleIcon() {
             display: "flex",
             width: "100%",
             height: "100%",
-            background: "#995531"
+            background: "#ECE5F0",
+            borderRadius: "24px"
           }}
         >
           <div
             style={{
               position: "absolute",
-              left: "18%",
-              right: "18%",
-              top: "18%",
-              height: "7%",
-              background: "#fffdf7"
+              left: "21%",
+              right: "21%",
+              top: "15%",
+              bottom: "16%",
+              borderTopLeftRadius: "999px",
+              borderTopRightRadius: "999px",
+              borderStyle: "solid",
+              borderColor: "#59114D",
+              borderWidth: "12px 12px 0 12px"
             }}
           />
           <div
             style={{
               position: "absolute",
-              left: "18%",
+              left: "35%",
+              right: "35%",
               bottom: "16%",
-              width: "7%",
-              height: "54%",
-              background: "#fffdf7"
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              right: "18%",
-              bottom: "16%",
-              width: "7%",
-              height: "54%",
-              background: "#fffdf7"
+              height: "6%",
+              background: "#E98A15",
+              borderRadius: "999px"
             }}
           />
         </div>

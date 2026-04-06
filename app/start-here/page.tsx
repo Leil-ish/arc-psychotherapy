@@ -16,9 +16,9 @@ export const metadata = pageMetadata({
 const intro = {
   eyebrow: "Start Here",
   title: "If you want the short version of the site, this is it.",
-  lede: "Most people look at one issue, then read about therapy or one essay if they want more context.",
+  lede: "Start with the issue that sounds most familiar.",
   body: [
-    "The issue sections cover the main problems I work with. The approach section explains what therapy is like. The essays give you a sense of how I think.",
+    "The issue pages cover the main problems I work with. The approach page explains what therapy is like. The essays show how I think.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;
@@ -74,23 +74,25 @@ export default function StartHerePage() {
         </figure>
       </div>
 
-      <section className="section-gap">
-        <div className="section-heading">
-          <h2 className="h2">The main issues I work with.</h2>
-        </div>
-        <div className="index-grid mt-6">
-          {homePage.focusAreas.map((item) => (
-            <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style index-card">
-              <h3 className="index-card__title">{item.title}</h3>
-              <p className="index-card__body body">{item.body}</p>
-            </Link>
-          ))}
+      <section className="section-gap full-bleed-band full-bleed-band--ultramarine">
+        <div className="container-wrap">
+          <div className="section-heading section-heading--sans">
+            <h2 className="h2">The main issues I work with.</h2>
+          </div>
+          <div className="index-grid mt-6">
+            {homePage.focusAreas.map((item) => (
+              <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style index-card">
+                <h3 className="index-card__title">{item.title}</h3>
+                <p className="index-card__body body">{item.body}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="section-gap-lg">
         <div className="section-heading">
-          <h2 className="h2">If you want to read something first.</h2>
+          <h2 className="h2">Read an essay.</h2>
         </div>
         <div className="dense-index mt-6">
           {homePage.writing.map((item) => (
@@ -105,8 +107,9 @@ export default function StartHerePage() {
         </div>
       </section>
 
-      <section className="section-gap-lg">
-        <div className="split-band">
+      <section className="section-gap-lg full-bleed-band full-bleed-band--surface">
+        <div className="container-wrap">
+        <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">Therapy</p>
             <h2 className="h2">What therapy looks like here.</h2>
@@ -119,9 +122,9 @@ export default function StartHerePage() {
           </article>
           <article className="split-panel">
             <p className="label">Next</p>
-            <h2 className="h2">If you want to keep going.</h2>
+            <h2 className="h2">Keep going.</h2>
             <p className="body">
-              If one issue already sounds familiar, that is probably the best place to spend your time. If you want a clearer picture of therapy, the approach page is the next thing to read.
+              If one issue already sounds familiar, start there. If you want a clearer picture of therapy, read the approach page next.
             </p>
             <div className="hero-actions">
               <ButtonLink href="/work-with-me">Approach</ButtonLink>
@@ -130,6 +133,7 @@ export default function StartHerePage() {
               </ButtonLink>
             </div>
           </article>
+        </div>
         </div>
       </section>
     </section>

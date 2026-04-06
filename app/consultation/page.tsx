@@ -85,7 +85,7 @@ export default function ConsultationPage() {
             <ButtonLink href="/contact">Contact</ButtonLink>
           </div>
         </div>
-        <aside className="hero-meta">
+        <aside className="hero-meta hero-meta--ultramarine">
           <div className="meta-block">
             <p className="label">Best For</p>
             <p className="body">Clinical programs, treatment teams, and leadership groups that need better systems.</p>
@@ -101,8 +101,9 @@ export default function ConsultationPage() {
         </aside>
       </div>
 
-      <section className="section-gap">
-        <div className="dense-index">
+      <section className="section-gap full-bleed-band full-bleed-band--ultramarine">
+        <div className="container-wrap">
+          <div className="dense-index">
           {services.map((item) => (
             <div key={item.title} className="dense-index__row">
               <div>
@@ -112,11 +113,12 @@ export default function ConsultationPage() {
               <p className="dense-index__body body">{item.body}</p>
             </div>
           ))}
+          </div>
         </div>
       </section>
 
       <section className="section-gap-lg">
-        <div className="split-band">
+        <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">Good Use Cases</p>
             <h2 className="h2">Where this helps.</h2>

@@ -61,6 +61,13 @@ const therapySteps = [
   }
 ] as const;
 
+const practiceStance = [
+  "LGBTQ+ affirming. Identity is not treated as pathology or debate.",
+  "HAES-aligned. Body size is not treated as a moral issue or a treatment target.",
+  "Neurodiversity-affirming. Different minds, pacing, and communication do not have to follow one narrow standard.",
+  "Social context matters. Race, migration, religion, family obligation, and power are part of the clinical picture."
+] as const;
+
 export default function HomePage() {
   return (
     <>
@@ -128,7 +135,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-gap full-bleed-band full-bleed-band--dark">
+      <section className="section-gap full-bleed-band full-bleed-band--citron">
         <div className="container-wrap">
           <div className="home-stance">
             <article className="home-stance__primary">
@@ -152,11 +159,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-gap-lg full-bleed-band full-bleed-band--clay">
+      <section className="section-gap-lg full-bleed-band full-bleed-band--surface">
         <div className="container-wrap">
-        <div className="section-heading">
-          <h2 className="h2">Pick the issue that sounds most familiar.</h2>
-        </div>
           <div className="index-grid mt-6">
             {homePage.focusAreas.map((item) => (
               <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style index-card">
@@ -165,23 +169,35 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+          <div className="route-divider route-divider--sans mt-12">
+            <h2 className="h2">Affirming in practice.</h2>
+          </div>
+          <div className="info-grid mt-6">
+            {practiceStance.map((item) => (
+              <div key={item} className="info-list">
+                <p className="body">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="container-wrap section-gap-lg">
-        <div className="section-heading">
-          <h2 className="h2">What therapy is like.</h2>
-        </div>
-        <div className="dense-index mt-6">
-          {therapySteps.map((item) => (
-            <Link key={item.title} href={"/work-with-me" as Route} className="focus-ring no-link-style dense-index__row">
-              <div>
-                <h3 className="dense-index__title">{item.title}</h3>
-              </div>
-              <p className="dense-index__body body">{item.body}</p>
-              <span className="dense-index__arrow">Read</span>
-            </Link>
-          ))}
+      <section className="section-gap-lg full-bleed-band full-bleed-band--ultramarine">
+        <div className="container-wrap">
+          <div className="section-heading">
+            <h2 className="h2">What therapy is like.</h2>
+          </div>
+          <div className="dense-index mt-6">
+            {therapySteps.map((item) => (
+              <Link key={item.title} href={"/work-with-me" as Route} className="focus-ring no-link-style dense-index__row">
+                <div>
+                  <h3 className="dense-index__title">{item.title}</h3>
+                </div>
+                <p className="dense-index__body body">{item.body}</p>
+                <span className="dense-index__arrow">Read</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -202,19 +218,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-wrap section-gap-lg pb-12">
-        <div className="section-heading">
-          <h2 className="h2">Also available: supervision and consultation.</h2>
-        </div>
-        <div className="index-grid mt-6 index-grid--two-up">
-          {servicesPage.routes
-            .filter((item) => item.href !== "/work-with-me")
-            .map((item) => (
-              <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style index-card">
-                <h3 className="index-card__title">{item.title}</h3>
-                <p className="index-card__body body">{item.body}</p>
-              </Link>
-            ))}
+      <section className="section-gap-lg full-bleed-band full-bleed-band--dark">
+        <div className="container-wrap pb-12">
+          <div className="services-highlight">
+            <div className="services-highlight__intro">
+              <p className="label">For clinicians and organizations</p>
+              <h2 className="h2">Supervision and consultation.</h2>
+            </div>
+            <div className="services-highlight__grid">
+              {servicesPage.routes
+                .filter((item) => item.href !== "/work-with-me")
+                .map((item) => (
+                  <Link key={item.href} href={item.href as Route} className="focus-ring no-link-style services-highlight__card">
+                    <p className="label">{item.eyebrow}</p>
+                    <h3 className="services-highlight__title">{item.title}</h3>
+                    <p className="services-highlight__body body">{item.body}</p>
+                    <span className="services-highlight__arrow">Open</span>
+                  </Link>
+                ))}
+            </div>
+          </div>
         </div>
       </section>
     </>

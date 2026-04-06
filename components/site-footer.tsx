@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BrandMark } from "@/components/brand-mark";
 import { siteConfig } from "@/lib/content";
 
 export function SiteFooter() {
@@ -7,16 +7,9 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="container-wrap site-footer__grid">
         <div className="site-footer__block">
-          <Link href="/" className="focus-ring no-link-style site-footer__brand" aria-label="Arc Psychotherapy home">
-            <Image
-              src="/brand/logo-wordmark-transparent-hires.png"
-              alt="Arc Psychotherapy"
-              width={1080}
-              height={208}
-              className="site-footer__brand-image"
-              sizes="(min-width: 768px) 18rem, 14rem"
-            />
-          </Link>
+          <div className="site-footer__brand">
+            <BrandMark variant="footer" />
+          </div>
           <p className="site-footer__note">{siteConfig.legalEntityNote}</p>
           <p className="site-footer__meta">{siteConfig.credentialsLine}</p>
           <p className="site-footer__meta site-footer__meta--muted">{siteConfig.credentials[0]}</p>
@@ -46,8 +39,16 @@ export function SiteFooter() {
         </div>
         <div className="site-footer__block">
           <p className="label">Contact</p>
-          <p className="site-footer__line">Call {siteConfig.phone}</p>
-          <p className="site-footer__line">Email {siteConfig.email}</p>
+          <div className="site-footer__subsection">
+            <p className="site-footer__meta">General Inquiries</p>
+            <p className="site-footer__line">Call {siteConfig.phone}</p>
+            <p className="site-footer__line">Email {siteConfig.email}</p>
+          </div>
+          <div className="site-footer__subsection">
+            <p className="site-footer__meta">Practice</p>
+            <p className="site-footer__line">{siteConfig.brand}</p>
+            <p className="site-footer__line">{siteConfig.siteUrl.replace(/^https?:\/\//, "")}</p>
+          </div>
           <div className="site-footer__legal">
             <Link className="focus-ring no-link-style site-footer__link" href="/privacy">
               Privacy Policy

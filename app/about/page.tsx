@@ -104,8 +104,9 @@ export default function AboutPage() {
         </figure>
       </div>
 
-      <section className="section-gap">
-        <div className="split-band">
+      <section className="section-gap full-bleed-band full-bleed-band--surface">
+        <div className="container-wrap">
+        <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">How I Work</p>
             <h2 className="h2">I want therapy to be useful.</h2>
@@ -127,10 +128,12 @@ export default function AboutPage() {
             </p>
           </article>
         </div>
+        </div>
       </section>
 
-      <section className="section-gap-lg">
-        <div className="split-band">
+      <section className="section-gap-lg full-bleed-band full-bleed-band--dark">
+        <div className="container-wrap">
+          <div className="split-band">
           <article className="split-panel">
             <p className="label">Values</p>
             <h2 className="h2">What that means in practice.</h2>
@@ -157,11 +160,12 @@ export default function AboutPage() {
               ))}
             </ul>
           </article>
+          </div>
         </div>
       </section>
 
       <section className="section-gap-lg pb-8">
-        <div className="split-band">
+        <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">Who This Helps</p>
             <h2 className="h2">This is usually a good fit when:</h2>
