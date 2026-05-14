@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
 const intro = {
   eyebrow: "Start Here",
   title: "If you want the short version of the site, this is it.",
-  lede: "Start with the issue that sounds most familiar.",
+  lede: "Three issues, the approach, and a few essays.",
   body: [
     "The issue pages cover the main problems I work with. The approach page explains what therapy is like. The essays show how I think.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
@@ -92,7 +92,7 @@ export default function StartHerePage() {
 
       <section className="section-gap-lg">
         <div className="section-heading">
-          <h2 className="h2">Read an essay.</h2>
+          <h2 className="h2">Three essays.</h2>
         </div>
         <div className="dense-index mt-6">
           {homePage.writing.map((item) => (
@@ -122,7 +122,7 @@ export default function StartHerePage() {
           </article>
           <article className="split-panel">
             <p className="label">Next</p>
-            <h2 className="h2">Keep going.</h2>
+            <h2 className="h2">From here.</h2>
             <p className="body">
               If one issue already sounds familiar, start there. If you want a clearer picture of therapy, read the approach page next.
             </p>

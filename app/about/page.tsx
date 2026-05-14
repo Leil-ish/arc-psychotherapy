@@ -17,7 +17,7 @@ const intro = {
   lede: "Most people who arrive here already understand themselves well. They're tired of the part insight hasn't fixed.",
   body: [
     "People usually end up here because they understand the problem and are tired of repeating it.",
-    "My style is direct, practical, and kind. The point is to help something change outside the session."
+    "My style is direct and practical. The point is to help something change outside the session."
   ]
 } as const;
 
@@ -194,7 +194,7 @@ export default function AboutPage() {
       <section className="section-gap-lg pb-8">
         <div className="route-divider">
           <p className="label">Next</p>
-          <h2 className="h2 mt-3">Read about therapy or contact me.</h2>
+          <h2 className="h2 mt-3">What comes next.</h2>
           <div className="hero-actions">
             <ButtonLink href="/work-with-me">Approach</ButtonLink>
             <ButtonLink href="/start-here" variant="secondary">

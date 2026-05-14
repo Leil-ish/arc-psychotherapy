@@ -104,7 +104,7 @@ export function ConceptPageTemplate({
         <div className="split-band">
           <article className="split-panel">
             <p className="label">Related Essays</p>
-            <h2 className="h2">Read one short piece.</h2>
+            <h2 className="h2">Related writing.</h2>
             <div className="flex flex-wrap gap-2">
               {hub.relatedEssays.map((link) => (
                 <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">

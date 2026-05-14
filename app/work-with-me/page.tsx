@@ -210,7 +210,7 @@ export default function WorkWithMePage() {
         <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">Before You Book</p>
-            <h2 className="h2">Read first.</h2>
+            <h2 className="h2">Worth reading before reaching out.</h2>
             <p className="body">
               Start with the issue page that sounds most familiar. After that, read one essay or one framework if you want more.
             </p>
