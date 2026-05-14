@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Approach",
-  title: "Here is what therapy looks like with me.",
+  title: "What therapy looks like when insight alone has not been enough.",
   lede:
     "This is direct, practical therapy for people who want more than insight alone.",
   body: [
@@ -201,9 +201,6 @@ export default function WorkWithMePage() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <p className="feature-stage__note">
-                Optional within ongoing therapy, and used when it helps make the problem easier to see.
-              </p>
             </aside>
           </div>
         </div>

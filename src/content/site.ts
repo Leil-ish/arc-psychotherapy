@@ -68,9 +68,7 @@ export const siteContent = {
     name: "Leila Anderson",
     credentials: "LMFT-S",
     shortBio:
-      "Leila Anderson, LMFT-S, works with adults who look fine on paper and feel stuck in real life.",
-    shortBioSecondary:
-      "Full bio, training details, and licensure information can be inserted here."
+      "Leila Anderson, LMFT-S, works with adults who look fine on paper and feel stuck in real life."
   },
   modelBuildingLabel: "Structured model-building option",
   credentials: [
@@ -186,12 +184,12 @@ export const siteContent = {
     ]
   },
   constructive: {
-    title: "Structured Model-Building (Optional)",
+    title: "Structured Model-Building",
     subtitle:
-      "A tactile method used within ongoing therapy for clients who benefit from making patterns visible.",
+      "Some people think better in three dimensions. When a problem is organized in physical space — sequence visible, structure literal — what takes months to discuss can take one session to see.",
     opening: [
-      "Structured model-building is an optional packaged track within Arc's broader therapy approach. It is used when clients benefit from making abstract patterns visible and workable in real time.",
-      "Most clients begin with core therapy. This track is offered when it supports treatment goals related to perfectionism, rigidity/overcontrol, or religious harm."
+      "This is a structured method for clients who need to see the problem before they can work with it. It is used within ongoing therapy when it supports the work.",
+      "The method applies most directly to perfectionism, rigidity/overcontrol, and religious harm — places where the pattern is clear in conversation but hasn't shifted in behavior."
     ],
     whyItHelps: [
       "Externalization: patterns move from internal pressure to observable process.",
@@ -235,36 +233,6 @@ export const siteContent = {
     },
     faq: [
       {
-        question: "Is this required?",
-        answer:
-          "No. Standard therapy is always available. Structured model-building is optional and selected only when clinically useful."
-      },
-      {
-        question: "Is this evidence-based?",
-        answer:
-          "The core treatment remains talk therapy with a clear plan. Model-building is used as a guided experiential tool to support externalization, reflection, and integration."
-      },
-      {
-        question: "What if I am not creative?",
-        answer:
-          "Creativity is not the target. The work focuses on sequence, pattern awareness, and decision-making under pressure."
-      },
-      {
-        question: "Can we do this via telehealth?",
-        answer:
-          "In some cases, yes. Telehealth use depends on logistics, clinical fit, and whether the format can be delivered with adequate structure."
-      },
-      {
-        question: "Do I keep what we build?",
-        answer:
-          "Yes. Completed materials are yours to keep. Included materials are built into package pricing."
-      },
-      {
-        question: "What if I do not finish?",
-        answer:
-          "Not finishing can itself provide useful data for treatment. We review what interrupted the process and decide whether to continue, adapt, or shift formats."
-      },
-      {
         question: "How does this relate to perfectionism and overcontrol?",
         answer:
           "The format makes control strategies visible in session and allows direct work on flexibility, tolerance, and pacing."
@@ -273,6 +241,36 @@ export const siteContent = {
         question: "Can this be used for religious harm work?",
         answer:
           "When appropriate, yes. It can support reconstruction of meaning, authority, and identity within a clear treatment plan."
+      },
+      {
+        question: "What if I am not creative?",
+        answer:
+          "Creativity is not the target. The work focuses on sequence, pattern awareness, and decision-making under pressure."
+      },
+      {
+        question: "What if I do not finish?",
+        answer:
+          "Not finishing can itself provide useful data for treatment. We review what interrupted the process and decide whether to continue, adapt, or shift formats."
+      },
+      {
+        question: "Do I keep what we build?",
+        answer:
+          "Yes. Completed materials are yours to keep. Included materials are built into package pricing."
+      },
+      {
+        question: "Can we do this via telehealth?",
+        answer:
+          "In some cases, yes. Telehealth use depends on logistics, clinical fit, and whether the format can be delivered with adequate structure."
+      },
+      {
+        question: "Is this evidence-based?",
+        answer:
+          "The core treatment remains talk therapy with a clear plan. Model-building is used as a guided experiential tool to support externalization, reflection, and integration."
+      },
+      {
+        question: "Is this required?",
+        answer:
+          "No. Standard therapy is always available. This track is selected only when it supports the work."
       }
     ],
     curious:

@@ -7,9 +7,9 @@ import { siteContent } from "@/src/content/site";
 const constructive = siteContent.constructive;
 
 export const metadata = pageMetadata({
-  title: "Structured model-building therapy (optional) | Round Rock, TX",
+  title: "Structured Model-Building | Round Rock, TX",
   description:
-    "Optional structured model-building therapy in Downtown Round Rock for adults navigating perfectionism and rigidity. Serving North Austin and surrounding communities, with telehealth across Texas.",
+    "Structured model-building therapy in Downtown Round Rock for adults navigating perfectionism and rigidity. Serving North Austin and surrounding communities, with telehealth across Texas.",
   path: "/constructive"
 });
 
@@ -38,6 +38,7 @@ export default function ConstructivePage() {
               {paragraph}
             </p>
           ))}
+          <p className="body">{constructive.curious}</p>
         </div>
         <p className="mt-4 body text-sm text-ink/75">
           Standard therapy remains available at ${siteContent.standardSessionFee} per session ({siteContent.sessionLength}).
@@ -104,7 +105,7 @@ export default function ConstructivePage() {
       </section>
 
       <section className="container-wrap mt-14">
-        <h2 className="h2">Track packages (optional)</h2>
+        <h2 className="h2">Track packages</h2>
         <p className="mt-3 body max-w-3xl">
           Package pricing includes sessions plus materials up to the listed allowance.
         </p>
@@ -138,15 +139,6 @@ export default function ConstructivePage() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="container-wrap mt-10">
-        <details className="card">
-          <summary className="focus-ring cursor-pointer text-sm font-semibold text-sage">
-            For the curious
-          </summary>
-          <p className="mt-4 body">{constructive.curious}</p>
-        </details>
       </section>
 
       <section className="container-wrap mt-10 mb-20">

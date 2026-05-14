@@ -862,6 +862,8 @@ a:not(.no-link-style):hover {
   background: rgb(var(--color-clay));
 }
 
+/* NOTE: despite the name, this renders --color-amaranth (deep purple), not citron (amber).
+   Used for the home "fit" band. The class name is a historical artifact — rename in a future pass. */
 .full-bleed-band--citron {
   background: rgb(var(--color-amaranth));
 }

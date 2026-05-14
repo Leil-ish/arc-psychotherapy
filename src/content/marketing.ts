@@ -316,7 +316,7 @@ export const servicesPage = {
   intro: {
     eyebrow: "Work",
     title: "Therapy, supervision, and consultation.",
-    lede: "Arc includes therapy, supervision, and consultation.",
+    lede: "The work is direct regardless of whether you are a client, an associate, or a clinical team.",
     body: [
       "The common thread is the same: get specific about the problem, work directly, and focus on what is actually useful."
     ],
