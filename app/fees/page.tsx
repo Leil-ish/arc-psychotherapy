@@ -1,6 +1,7 @@
 import { SectionCta } from "@/components/section-cta";
 import { pricing } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
+import { contactPage } from "@/src/content/marketing";
 
 export const metadata = pageMetadata({
   title: "Fees & Policies | Round Rock, TX",
@@ -44,9 +45,11 @@ export default function FeesPage() {
         <article className="card">
           <p className="h3">Policy highlights</p>
           <ul className="mt-4 space-y-2 body">
-            <li>1. 24-hour cancellation policy. Late cancellations or no-shows may be billed in full.</li>
-            <li>2. Do not include PHI in contact form submissions.</li>
-            <li>3. Crisis care is not provided via email or form messaging. Call 988 or 911 in emergencies.</li>
+            {contactPage.policyFacts.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+            <li>Do not include protected health information (PHI) in contact form submissions.</li>
+            <li>Crisis care is not provided via email or form messaging. Call 988 or 911 in emergencies.</li>
           </ul>
         </article>
         <article className="card">

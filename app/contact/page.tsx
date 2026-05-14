@@ -2,6 +2,7 @@ import { ContactForm } from "@/components/contact-form";
 import { SchemaScript } from "@/components/schema-script";
 import { siteConfig } from "@/lib/content";
 import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
+import { contactPage } from "@/src/content/marketing";
 
 export const metadata = pageMetadata({
   title: "Contact | Round Rock, TX",
@@ -19,38 +20,6 @@ const intro = {
     "If you are in immediate danger, call 911. For mental health crisis support, call or text 988."
   ]
 } as const;
-
-const consultFacts = [
-  "Standard session fee: $200 for 50-55 minutes.",
-  "Private-pay practice. Superbills may be available for out-of-network reimbursement.",
-  "Telehealth is available across Texas when appropriate for care needs and clinical fit.",
-  "I reply to contact requests within 1-2 business days."
-] as const;
-
-const policyFacts = [
-  "24-hour cancellation policy. Late cancellations or no-shows may be billed in full.",
-  "Payment is due at the time of service.",
-  "Three-dimensional model building is optional and only used when it supports the work."
-] as const;
-
-const questions = [
-  {
-    question: "Do you take insurance?",
-    answer: "I am private-pay. A superbill may be available for out-of-network reimbursement."
-  },
-  {
-    question: "Do you offer telehealth?",
-    answer: "Yes. Telehealth is available for Texas residents when clinically appropriate."
-  },
-  {
-    question: "Is three-dimensional model building required?",
-    answer: "No. It is optional and used only when it helps."
-  },
-  {
-    question: "What happens in the consult?",
-    answer: "We talk through what is going on, what you want help with, and the practical details."
-  }
-] as const;
 
 export default function ContactPage() {
   return (
@@ -116,7 +85,7 @@ export default function ContactPage() {
             <p className="label">Before We Talk</p>
             <h2 className="h2">Basic details.</h2>
             <ul className="split-panel__list body">
-              {consultFacts.map((item) => (
+              {contactPage.consultFacts.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -131,13 +100,13 @@ export default function ContactPage() {
             <h2 className="h2">Fees and policies.</h2>
             <p className="label pt-2">Fees</p>
             <ul className="split-panel__list body">
-              {consultFacts.map((item) => (
+              {contactPage.consultFacts.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
             <p className="label pt-4">Policies</p>
             <ul className="split-panel__list body">
-              {policyFacts.map((item) => (
+              {contactPage.policyFacts.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -146,7 +115,7 @@ export default function ContactPage() {
             <p className="label">Questions</p>
             <h2 className="h2">Common questions.</h2>
             <div className="faq-list">
-              {questions.map((item) => (
+              {contactPage.questions.map((item) => (
                 <div key={item.question} className="faq-row">
                   <h3 className="h3">{item.question}</h3>
                   <p className="body mt-3">{item.answer}</p>

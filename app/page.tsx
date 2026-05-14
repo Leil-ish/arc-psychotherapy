@@ -31,7 +31,6 @@ const fitSection = {
   items: [
     "You spend too much time preparing, researching, or replaying decisions.",
     "You look fine from the outside and feel wrung out by the end of the day.",
-    "People rely on you, and you are getting tired of what that costs.",
     "You left a rigid or shaming religious environment, but fear and guilt still shape too many decisions."
   ]
 } as const;
@@ -57,7 +56,7 @@ const therapySteps = [
   },
   {
     title: "Work toward change.",
-    body: "That can include depth work, practical changes, and paying attention to what shifts between sessions."
+    body: "That can mean going back to where the pattern started, testing different responses during the week, and tracking what actually changes."
   }
 ] as const;
 

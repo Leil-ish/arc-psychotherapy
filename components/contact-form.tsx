@@ -30,7 +30,8 @@ export function ContactForm() {
       consultPreference: selectedPreference,
       availability: availability || null,
       preferredContactMethod: formData.get("preferredContactMethod"),
-      message: formData.get("message")
+      message: formData.get("message"),
+      website: formData.get("website") // honeypot
     };
 
     try {
@@ -51,6 +52,8 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="form-panel" noValidate>
+      {/* Honeypot — hidden from users, filled by bots */}
+      <input type="text" name="website" autoComplete="off" tabIndex={-1} aria-hidden="true" style={{ display: "none" }} />
       <p className="label">Consult request</p>
       <p className="form-panel__note">Please do not include sensitive clinical details (PHI) in this form.</p>
       <div className="form-grid">

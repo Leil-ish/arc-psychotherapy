@@ -26,8 +26,8 @@ export default function ConsumerProtectionPage() {
         </p>
         <p className="mt-3 body">
           Send a written request by email to{" "}
-          <a className="focus-ring font-semibold text-sage underline-offset-4 hover:underline" href="mailto:leilacanderson@gmail.com">
-            leilacanderson@gmail.com
+          <a className="focus-ring font-semibold text-accent underline-offset-4 hover:underline" href="mailto:hello@arc-psychotherapy.com">
+            hello@arc-psychotherapy.com
           </a>{" "}
           with the subject line &quot;Medical Records Request&quot; to request a release of information form.
         </p>
@@ -46,7 +46,7 @@ export default function ConsumerProtectionPage() {
             href="https://bhec.texas.gov/contact/index.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="focus-ring font-semibold text-sage underline-offset-4 hover:underline"
+            className="focus-ring font-semibold text-accent underline-offset-4 hover:underline"
           >
             Texas Behavioral Health Executive Council - Contact Us
           </Link>
@@ -63,7 +63,7 @@ export default function ConsumerProtectionPage() {
             href="https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint"
             target="_blank"
             rel="noopener noreferrer"
-            className="focus-ring font-semibold text-sage underline-offset-4 hover:underline"
+            className="focus-ring font-semibold text-accent underline-offset-4 hover:underline"
           >
             Texas Attorney General - Consumer Protection Division
           </Link>
@@ -90,7 +90,7 @@ export default function ConsumerProtectionPage() {
             href="https://www.cms.gov/nosurprises"
             target="_blank"
             rel="noopener noreferrer"
-            className="focus-ring font-semibold text-sage underline-offset-4 hover:underline"
+            className="focus-ring font-semibold text-accent underline-offset-4 hover:underline"
           >
             www.cms.gov/nosurprises
           </Link>

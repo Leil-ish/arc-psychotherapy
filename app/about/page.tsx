@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
 const intro = {
   eyebrow: "About",
   title: "I am Leila Anderson, LMFT-S.",
-  lede: "I work with adults dealing with perfectionism, overcontrol, religious harm, and chronic over-responsibility.",
+  lede: "Most people who arrive here already understand themselves well. They're tired of the part insight hasn't fixed.",
   body: [
     "People usually end up here because they understand the problem and are tired of repeating it.",
     "My style is direct, practical, and kind. The point is to help something change outside the session."
@@ -109,9 +109,9 @@ export default function AboutPage() {
         <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">How I Work</p>
-            <h2 className="h2">I want therapy to be useful.</h2>
+            <h2 className="h2">I am looking for the place where effort has stopped working.</h2>
             <p className="body">
-              My style is direct, practical, and compassionate. I want therapy to be honest without being harsh.
+              My style is direct and practical. I'll be honest about what I see and about what isn't shifting yet.
             </p>
             <p className="body">
               We look at the parts of life where effort and insight have not been enough. If a framework helps us understand that more clearly, I will use it. If not, I will not use it just to sound sophisticated.
@@ -186,9 +186,6 @@ export default function AboutPage() {
             <h2 className="h2">A little context.</h2>
             <p className="body">
               I am married, have three kids, and spend a decent amount of my non-clinical life with puzzles, gardening, hiking, and good coffee.
-            </p>
-            <p className="body">
-              I also worked as a barista for five years, which taught me a lot about paying attention to people.
             </p>
           </article>
         </div>

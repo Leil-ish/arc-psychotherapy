@@ -6,7 +6,7 @@ import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
 import { servicesPage } from "@/src/content/marketing";
 
 export const metadata = pageMetadata({
-  title: "Work",
+  title: "Therapy, Supervision & Consultation | Round Rock, TX",
   description:
     "Arc offers private-pay therapy, clinical supervision, and consultation from Round Rock, Texas.",
   path: "/services"

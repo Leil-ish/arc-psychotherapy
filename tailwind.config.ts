@@ -13,11 +13,10 @@ const config: Config = {
         sand: "rgb(var(--color-bg) / <alpha-value>)",
         surface: "rgb(var(--color-surface) / <alpha-value>)",
         muted: "rgb(var(--color-muted) / <alpha-value>)",
-        sage: "rgb(var(--color-accent) / <alpha-value>)",
-        "sage-dark": "rgb(var(--color-accent-hover) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        "accent-dark": "rgb(var(--color-accent-hover) / <alpha-value>)",
         stone: "rgb(var(--color-border) / <alpha-value>)",
-        olive: "rgb(var(--color-olive-secondary) / <alpha-value>)",
-        clay: "rgb(var(--color-olive-secondary) / <alpha-value>)"
+        clay: "rgb(var(--color-clay) / <alpha-value>)"
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
