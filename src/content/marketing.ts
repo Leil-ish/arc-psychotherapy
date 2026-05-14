@@ -140,9 +140,9 @@ export const startHerePage = {
   intro: {
     eyebrow: "Start Here",
     title: "You do not need to read everything.",
-    lede: "Use this page to decide where to begin.",
+    lede: "Three issues, one approach, and a few essays.",
     body: [
-      "Pick the issue that sounds most familiar.",
+      "The issue pages cover what I work on.",
       "If reading helps, start with one essay after that."
     ],
     actions: [

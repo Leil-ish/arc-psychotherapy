@@ -202,7 +202,7 @@ export default function HomePage() {
 
       <section className="container-wrap section-gap-lg pb-12">
         <div className="section-heading">
-          <h2 className="h2">Read before you book.</h2>
+          <h2 className="h2">Worth reading first.</h2>
         </div>
         <div className="dense-index mt-6">
           {homePage.writing.map((item) => (
