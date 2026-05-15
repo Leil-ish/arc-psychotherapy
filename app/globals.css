@@ -900,17 +900,23 @@ a:not(.no-link-style):hover {
 .full-bleed-band--dark .h3,
 .full-bleed-band--dark .index-card__title,
 .full-bleed-band--dark .dense-index__title,
-.full-bleed-band--dark .feature-stage__title,
-.full-bleed-band--dark .feature-stage__detail .h2 {
+.full-bleed-band--dark .feature-stage__title {
   color: rgb(var(--color-surface));
 }
 
 .full-bleed-band--dark .index-card__body,
 .full-bleed-band--dark .dense-index__body,
-.full-bleed-band--dark .dense-index__arrow,
-.full-bleed-band--dark .feature-stage__detail .body,
-.full-bleed-band--dark .feature-stage__detail p:not(.label) {
+.full-bleed-band--dark .dense-index__arrow {
   color: rgb(var(--color-surface) / 0.82);
+}
+
+/* feature-stage__detail always has a surface (light) background — keep text dark
+   even when the surrounding band is dark */
+.full-bleed-band--dark .feature-stage__detail .body,
+.full-bleed-band--dark .feature-stage__detail p:not(.label),
+.full-bleed-band--dark .feature-stage__detail li,
+.full-bleed-band--dark .feature-stage__detail .h2 {
+  color: rgb(var(--color-ink));
 }
 
 .full-bleed-band--dark .inline-link,
@@ -985,6 +991,27 @@ a:not(.no-link-style):hover {
 .full-bleed-band--ultramarine .split-panel__list li::before,
 .full-bleed-band--ultramarine .bullet-list li::before,
 .full-bleed-band--ultramarine .body-list li::before {
+  background: rgb(var(--color-citron));
+}
+
+/* dark band: default amaranth bullet is near-invisible on ink background */
+.full-bleed-band--dark .split-panel__list li::before,
+.full-bleed-band--dark .bullet-list li::before,
+.full-bleed-band--dark .body-list li::before {
+  background: rgb(var(--color-surface) / 0.6);
+}
+
+/* exception: feature-stage__detail has a light background — restore amaranth */
+.full-bleed-band--dark .feature-stage__detail .split-panel__list li::before,
+.full-bleed-band--dark .feature-stage__detail .bullet-list li::before {
+  background: rgb(var(--color-amaranth));
+}
+
+/* citron band: its background is actually --color-amaranth, so default
+   amaranth bullets are invisible — use citron (amber) instead */
+.full-bleed-band--citron .split-panel__list li::before,
+.full-bleed-band--citron .bullet-list li::before,
+.full-bleed-band--citron .body-list li::before {
   background: rgb(var(--color-citron));
 }
 
