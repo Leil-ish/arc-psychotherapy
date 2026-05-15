@@ -184,11 +184,11 @@ export const siteContent = {
     ]
   },
   constructive: {
-    title: "Structured Model-Building",
+    title: "Building the Problem",
     subtitle:
-      "Some people think better in three dimensions. When a problem is organized in physical space — sequence visible, structure literal — what takes months to discuss can take one session to see.",
+      "In some sessions, we build. Using LEGO brick sets as a structured clinical tool, we construct the problem in physical space — sequence visible, relationships literal — so what stays abstract in conversation becomes something you can see and rearrange.",
     opening: [
-      "This is a structured method for clients who need to see the problem before they can work with it. It is used within ongoing therapy when it supports the work.",
+      "The bricks are not the point. The point is that some patterns — perfectionism, overcontrol, the shape of a system that harmed you — are easier to work on once they exist outside your head.",
       "The method applies most directly to perfectionism, rigidity/overcontrol, and religious harm — places where the pattern is clear in conversation but hasn't shifted in behavior."
     ],
     whyItHelps: [

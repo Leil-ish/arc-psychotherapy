@@ -182,11 +182,11 @@ export default function WorkWithMePage() {
           <div className="feature-stage">
             <article className="feature-stage__lead">
               <p className="label">Optional Method</p>
-              <h2 className="feature-stage__title">Three-dimensional model building.</h2>
+              <h2 className="feature-stage__title">Some sessions, we build.</h2>
               <p className="body">
-                Sometimes it helps to build the problem in physical form. It can make relationships, constraints, and choices easier to see.
+                Using LEGO brick sets as a structured clinical tool, we build the problem — the pattern, the system, the belief structure — so it exists outside your head and can be worked on directly.
               </p>
-              <p className="body">{constructive.subtitle}</p>
+              <p className="body">{constructive.opening[0]}</p>
               <div className="hero-actions">
                 <ButtonLink href="/constructive">Learn More</ButtonLink>
                 <ButtonLink href="/contact" variant="secondary">
