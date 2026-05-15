@@ -20,7 +20,7 @@ const intro = {
   lede: "This is for people who understand themselves fairly well and still feel stuck in the same places.",
   body: [
     "People rely on you, and it takes more out of you than it used to.",
-    "You may know exactly why you do what you do and still not know how to make it different.",
+    "You may know exactly why you do what you do. That usually doesn't close the gap — it just means you can watch yourself do the thing anyway.",
     "If insight alone fixed it, you would already be done."
   ]
 } as const;

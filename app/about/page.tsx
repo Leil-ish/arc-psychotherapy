@@ -185,7 +185,7 @@ export default function AboutPage() {
             <p className="label">Briefly, As A Person</p>
             <h2 className="h2">A little context.</h2>
             <p className="body">
-              I am married, have three kids, and spend a decent amount of my non-clinical life with puzzles, gardening, hiking, and good coffee.
+              I am married with three kids. Outside of work I read, hike, and maintain a complicated relationship with keeping my house in order.
             </p>
           </article>
         </div>

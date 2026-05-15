@@ -51,7 +51,7 @@ const values = [
 const goodFit = [
   "You want therapy that is direct and concrete.",
   "You are dealing with perfectionism, overcontrol, religious harm, or chronic over-responsibility.",
-  "You already understand a lot about yourself and want help changing what keeps happening."
+  "You are tired of sounding insightful while nothing important changes."
 ] as const;
 
 const notFit = [

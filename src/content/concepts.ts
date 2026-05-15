@@ -22,7 +22,7 @@ export const conceptHubs: ConceptHub[] = [
     title: "Perfectionism",
     definition: [
       "Perfectionism is a control strategy that links worth, threat prediction, and behavioral rigidity.",
-      "It can look impressive from the outside while creating shame, constraint, and constant mental load on the inside.",
+      "People around you see competence. You see everything you almost got wrong.",
       "This is not a character flaw. It is usually an old survival strategy that now costs too much."
     ],
     commonPresentations: [
