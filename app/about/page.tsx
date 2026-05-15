@@ -113,7 +113,7 @@ export default function AboutPage() {
               What I&apos;m looking for is the place where your coping strategy became the problem — where what helped you manage something hard is now the thing keeping you stuck. That shift usually happens gradually enough that it&apos;s hard to see from the inside.
             </p>
             <p className="body">
-              I&apos;ll tell you what I see. Sometimes that&apos;s useful, and sometimes you spend twenty minutes explaining why I&apos;ve gotten it wrong — which, honestly, is also part of the work.
+              I&apos;ll tell you what I see. When I&apos;ve gotten it wrong, you&apos;ll usually know before I do — and that&apos;s useful too.
             </p>
           </article>
           <article className="split-panel">
