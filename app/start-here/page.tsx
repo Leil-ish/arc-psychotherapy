@@ -15,10 +15,10 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Start Here",
-  title: "If you want the short version of the site, this is it.",
-  lede: "This page pulls together the issue guides, the approach, and a few essays that show how I think about the work.",
+  title: "How to figure out if this is the right fit.",
+  lede: "The three issues I work with, the approach, and a few essays — the shortest path to deciding whether to reach out.",
   body: [
-    "The issue pages cover perfectionism, overcontrol, and religious harm — the three things I work with most. The approach page explains what therapy actually looks like. The essays show how I reason about all of it, and they tend to give people a clearer sense of fit than anything else on the site.",
+    "The issue pages are the fastest way to check fit — the approach page explains what therapy actually looks like, and the essays tend to give people a clearer picture of the practice than a bio page usually does.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;
@@ -107,33 +107,19 @@ export default function StartHerePage() {
         </div>
       </section>
 
-      <section className="section-gap-lg full-bleed-band full-bleed-band--surface">
-        <div className="container-wrap">
-        <div className="split-band split-band--open">
-          <article className="split-panel">
-            <p className="label">Therapy</p>
-            <h2 className="h2">What therapy looks like here.</h2>
-            <ul className="split-panel__list body">
-              <li>Start with a consult.</li>
-              <li>Spend time understanding the problem.</li>
-              <li>Work on it in session and during the week.</li>
-              <li>Adjust as needed.</li>
-            </ul>
-          </article>
-          <article className="split-panel">
-            <p className="label">Next</p>
-            <h2 className="h2">From here.</h2>
-            <p className="body">
-              If one issue already sounds familiar, start there. If you want a clearer picture of therapy, read the approach page next.
-            </p>
-            <div className="hero-actions">
-              <ButtonLink href="/work-with-me">Approach</ButtonLink>
-              <ButtonLink href="/contact" variant="secondary">
-                Contact
-              </ButtonLink>
-            </div>
-          </article>
-        </div>
+      <section className="section-gap-lg pb-8">
+        <div className="route-divider">
+          <p className="label">From here</p>
+          <h2 className="h2 mt-3">If something sounds familiar, that is where to start.</h2>
+          <p className="body mt-3 max-w-3xl">
+            The issue pages go deeper. If you want a clearer picture of what therapy looks like, the approach page is the next stop.
+          </p>
+          <div className="hero-actions">
+            <ButtonLink href="/work-with-me">Approach</ButtonLink>
+            <ButtonLink href="/contact" variant="secondary">
+              Contact
+            </ButtonLink>
+          </div>
         </div>
       </section>
     </section>

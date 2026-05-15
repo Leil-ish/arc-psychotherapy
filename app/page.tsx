@@ -20,14 +20,14 @@ const intro = {
   lede: "This is for people who understand themselves fairly well and still feel stuck in the same places.",
   body: [
     "People rely on you, and it takes more out of you than it used to.",
-    "You may know exactly why you do what you do and still not know how to make it different.",
+    "You may know exactly why you do what you do. That usually doesn't close the gap — it just means you can watch yourself do the thing anyway.",
     "If insight alone fixed it, you would already be done."
   ]
 } as const;
 
 const fitSection = {
-  eyebrow: "Wondering if this is the right fit for you?",
-  title: "People who do well here are usually dealing with some combination of these problems:",
+  eyebrow: "Is this the right fit?",
+  title: "Here is what the problem usually looks like:",
   items: [
     "You spend too much time preparing, researching, or replaying decisions.",
     "You look fine from the outside and feel wrung out by the end of the day.",
@@ -55,7 +55,7 @@ const therapySteps = [
     body: "We look closely at the places where effort, insight, or self-control have not been enough."
   },
   {
-    title: "Work toward change.",
+    title: "Test something different.",
     body: "That can mean going back to where the pattern started, testing different responses during the week, and tracking what actually changes."
   }
 ] as const;
@@ -169,7 +169,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="route-divider route-divider--sans mt-12">
-            <h2 className="h2">Affirming in practice.</h2>
+            <h2 className="h2">What you won't have to defend.</h2>
           </div>
           <div className="info-grid mt-6">
             {practiceStance.map((item) => (

@@ -57,7 +57,7 @@ export const homePage = {
   } satisfies MarketingIntro,
   fit: {
     eyebrow: "Common Signs",
-    title: "This is the kind of problem I mean.",
+    title: "Here is what it usually looks like:",
     items: [
       "You spend too much time preparing, researching, or replaying decisions.",
       "People rely on you, and it takes more effort than anyone sees.",
@@ -177,7 +177,7 @@ export const approachPage = {
   intro: {
     eyebrow: "Approach",
     title: "How therapy works.",
-    lede: "For people who look fine on paper and are tired of being run by fear, control, guilt, or exhaustion.",
+    lede: "For people who are good at the thing that is making them worse.",
     body: [
       "The sessions are direct, practical, and focused on what changes outside the room."
     ],

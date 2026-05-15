@@ -503,7 +503,6 @@ a:not(.no-link-style):hover {
 .section-heading {
   display: grid;
   gap: 0.45rem;
-  max-width: 38rem;
 }
 
 .hero-grid {

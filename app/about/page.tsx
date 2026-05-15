@@ -16,8 +16,8 @@ const intro = {
   title: "I am Leila Anderson, LMFT-S.",
   lede: "Most people who arrive here already understand themselves well. They're tired of the part insight hasn't fixed.",
   body: [
-    "People usually end up here because they understand the problem and are tired of repeating it.",
-    "My style is direct and practical. The point is to help something change outside the session."
+    "The work here is direct and private-pay — one clinician from the first session.",
+    "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;
 
@@ -185,7 +185,7 @@ export default function AboutPage() {
             <p className="label">Briefly, As A Person</p>
             <h2 className="h2">A little context.</h2>
             <p className="body">
-              I am married, have three kids, and spend a decent amount of my non-clinical life with puzzles, gardening, hiking, and good coffee.
+              I am married with three kids. Outside of work I read, hike, and maintain a complicated relationship with keeping my house in order.
             </p>
           </article>
         </div>

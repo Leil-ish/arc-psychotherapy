@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Contact",
-  title: "Use this page to ask about therapy, supervision, or consultation.",
+  title: "Questions and consult requests.",
   lede: "You can use the form, call, or email. I reply within 1-2 business days.",
   body: [
     "Please do not include sensitive clinical details in the form.",
@@ -82,47 +82,27 @@ export default function ContactPage() {
             <ContactForm />
           </div>
           <aside className="split-panel">
-            <p className="label">Before We Talk</p>
-            <h2 className="h2">Basic details.</h2>
-            <ul className="split-panel__list body">
-              {contactPage.consultFacts.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
+            <p className="label">Before reaching out</p>
+            <ul className="split-panel__list body mt-4">
+              <li>Standard session fee is $200 for 50–55 minutes.</li>
+              <li>Private-pay practice. Superbills may be available for out-of-network reimbursement.</li>
+              <li>Telehealth available across Texas when clinically appropriate.</li>
+              <li>24-hour cancellation policy. Late cancellations or no-shows may be billed in full.</li>
             </ul>
           </aside>
         </div>
       </section>
 
-      <section className="section-gap-lg">
-        <div className="split-band">
-          <article id="fees" className="split-panel scroll-mt-24">
-            <p className="label">Fees & Policies</p>
-            <h2 className="h2">Fees and policies.</h2>
-            <p className="label pt-2">Fees</p>
-            <ul className="split-panel__list body">
-              {contactPage.consultFacts.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p className="label pt-4">Policies</p>
-            <ul className="split-panel__list body">
-              {contactPage.policyFacts.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article id="questions" className="split-panel scroll-mt-24">
-            <p className="label">Questions</p>
-            <h2 className="h2">Common questions.</h2>
-            <div className="faq-list">
-              {contactPage.questions.map((item) => (
-                <div key={item.question} className="faq-row">
-                  <h3 className="h3">{item.question}</h3>
-                  <p className="body mt-3">{item.answer}</p>
-                </div>
-              ))}
+      <section id="questions" className="section-gap-lg scroll-mt-24">
+        <p className="label">Questions</p>
+        <h2 className="h2 mt-2">Common questions.</h2>
+        <div className="faq-list mt-6">
+          {contactPage.questions.map((item) => (
+            <div key={item.question} className="faq-row">
+              <h3 className="h3">{item.question}</h3>
+              <p className="body mt-3">{item.answer}</p>
             </div>
-          </article>
+          ))}
         </div>
       </section>
     </section>
