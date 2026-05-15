@@ -94,10 +94,6 @@ export default function ConsultationPage() {
             <p className="label">Topics</p>
             <p className="body">Program design, training, shame and trauma treatment, leadership, and treatment culture.</p>
           </div>
-          <div className="meta-block">
-            <p className="label">Style</p>
-            <p className="body">Direct, practical, and specific.</p>
-          </div>
         </aside>
       </div>
 

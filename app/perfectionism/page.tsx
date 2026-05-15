@@ -37,7 +37,7 @@ export default function PerfectionismPage() {
         hub={hub}
         imageSrc="/images/architectural-details/facade-black-grid.jpg"
         imageAlt="Dark geometric building facade."
-        resonanceLine="If this sounds like you, the goal is not lower standards. It is more range."
+        resonanceLine="The goal is not lower standards. It is more range."
       />
     </>
   );
