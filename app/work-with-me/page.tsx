@@ -50,7 +50,7 @@ const values = [
 
 const goodFit = [
   "You want therapy that is direct and concrete.",
-  "You are dealing with perfectionism, overcontrol, religious harm, or chronic over-responsibility.",
+  "You are dealing with perfectionism, overcontrol, religious harm, chronic over-responsibility, or the general experience of being high-achieving and privately exhausted.",
   "You are tired of sounding insightful while nothing important changes."
 ] as const;
 

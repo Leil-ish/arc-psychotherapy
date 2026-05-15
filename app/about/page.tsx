@@ -16,7 +16,7 @@ const intro = {
   title: "I am Leila Anderson, LMFT-S.",
   lede: "Most people who arrive here already understand themselves well. They're tired of the part insight hasn't fixed.",
   body: [
-    "The work here is direct and private-pay — one clinician from the first session.",
+    "The practice is private-pay. Standard fee is $200 for 50–55 minutes.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;
