@@ -16,9 +16,9 @@ export const metadata = pageMetadata({
 const intro = {
   eyebrow: "Start Here",
   title: "If you want the short version of the site, this is it.",
-  lede: "Three issues, the approach, and a few essays.",
+  lede: "This page pulls together the issue guides, the approach, and a few essays that show how I think about the work.",
   body: [
-    "The issue pages cover the main problems I work with. The approach page explains what therapy is like. The essays show how I think.",
+    "The issue pages cover perfectionism, overcontrol, and religious harm — the three things I work with most. The approach page explains what therapy actually looks like. The essays show how I reason about all of it, and they tend to give people a clearer sense of fit than anything else on the site.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;
