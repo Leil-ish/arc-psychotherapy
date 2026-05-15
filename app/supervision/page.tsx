@@ -130,8 +130,7 @@ export default function SupervisionPage() {
         <div className="container-wrap">
           <div className="split-band">
           <article className="split-panel">
-            <p className="label">What We Work On</p>
-            <h2 className="h2">What we work on.</h2>
+            <h2 className="h2">Cases, ethics, and where you get stuck.</h2>
             <ul className="split-panel__list body">
               {topics.map((item) => (
                 <li key={item}>{item}</li>
@@ -140,7 +139,7 @@ export default function SupervisionPage() {
           </article>
           <article className="split-panel">
             <p className="label">Context</p>
-            <h2 className="h2">Why I teach it this way.</h2>
+            <h2 className="h2">What made me practical.</h2>
             <ul className="split-panel__list body">
               {credibility.map((item) => (
                 <li key={item}>{item}</li>

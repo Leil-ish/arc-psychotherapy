@@ -107,33 +107,19 @@ export default function StartHerePage() {
         </div>
       </section>
 
-      <section className="section-gap-lg full-bleed-band full-bleed-band--surface">
-        <div className="container-wrap">
-        <div className="split-band split-band--open">
-          <article className="split-panel">
-            <p className="label">Therapy</p>
-            <h2 className="h2">What therapy looks like here.</h2>
-            <ul className="split-panel__list body">
-              <li>Start with a consult.</li>
-              <li>Spend time understanding the problem.</li>
-              <li>Work on it in session and during the week.</li>
-              <li>Adjust as needed.</li>
-            </ul>
-          </article>
-          <article className="split-panel">
-            <p className="label">Next</p>
-            <h2 className="h2">From here.</h2>
-            <p className="body">
-              If one issue already sounds familiar, start there. If you want a clearer picture of therapy, read the approach page next.
-            </p>
-            <div className="hero-actions">
-              <ButtonLink href="/work-with-me">Approach</ButtonLink>
-              <ButtonLink href="/contact" variant="secondary">
-                Contact
-              </ButtonLink>
-            </div>
-          </article>
-        </div>
+      <section className="section-gap-lg pb-8">
+        <div className="route-divider">
+          <p className="label">From here</p>
+          <h2 className="h2 mt-3">If something sounds familiar, that is where to start.</h2>
+          <p className="body mt-3 max-w-3xl">
+            The issue pages go deeper. If you want a clearer picture of what therapy looks like, the approach page is the next stop.
+          </p>
+          <div className="hero-actions">
+            <ButtonLink href="/work-with-me">Approach</ButtonLink>
+            <ButtonLink href="/contact" variant="secondary">
+              Contact
+            </ButtonLink>
+          </div>
         </div>
       </section>
     </section>
