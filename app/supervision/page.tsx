@@ -16,7 +16,7 @@ const intro = {
   lede: "This is for associates who want more than signatures and hours.",
   body: [
     "We work on case formulation, ethics, countertransference, and treatment decisions.",
-    "The goal is to help you think more clearly, work more responsibly, and trust your own judgment."
+    "The feedback is direct. If something is getting in the way of the work — countertransference, fear, over-accommodation — we'll name it."
   ]
 } as const;
 

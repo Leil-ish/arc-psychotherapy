@@ -31,6 +31,7 @@ const fitSection = {
   items: [
     "You spend too much time preparing, researching, or replaying decisions.",
     "You look fine from the outside and feel wrung out by the end of the day.",
+    "You don't take up much space, and you're not entirely sure that was a choice.",
     "You left a rigid or shaming religious environment, but fear and guilt still shape too many decisions."
   ]
 } as const;

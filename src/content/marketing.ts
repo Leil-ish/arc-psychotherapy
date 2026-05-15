@@ -62,6 +62,7 @@ export const homePage = {
       "You spend too much time preparing, researching, or replaying decisions.",
       "People rely on you, and it takes more effort than anyone sees.",
       "You understand what the issue is and still go back to the same habits when you are stressed.",
+      "You don't take up much space, and you're not entirely sure that was a choice.",
       "You left a rigid or shaming religious environment, but fear and guilt still shape too many decisions."
     ]
   } satisfies MarketingCluster,

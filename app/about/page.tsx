@@ -16,7 +16,6 @@ const intro = {
   title: "I am Leila Anderson, LMFT-S.",
   lede: "Most people who arrive here already understand themselves well. They're tired of the part insight hasn't fixed.",
   body: [
-    "The work here is direct and private-pay — one clinician from the first session.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;
@@ -109,22 +108,22 @@ export default function AboutPage() {
         <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">How I Work</p>
-            <h2 className="h2">I am looking for the place where effort has stopped working.</h2>
+            <h2 className="h2">Where we usually start.</h2>
             <p className="body">
-              My style is direct and practical. I'll be honest about what I see and about what isn't shifting yet.
+              What I&apos;m looking for is the place where your coping strategy became the problem — where what helped you manage something hard is now the thing keeping you stuck. That shift usually happens gradually enough that it&apos;s hard to see from the inside.
             </p>
             <p className="body">
-              We look at the parts of life where effort and insight have not been enough. If a framework helps us understand that more clearly, I will use it. If not, I will not use it just to sound sophisticated.
+              I&apos;ll tell you what I see. When I&apos;ve gotten it wrong, you&apos;ll usually know before I do — and that&apos;s useful too.
             </p>
           </article>
           <article className="split-panel">
             <p className="label">Background</p>
             <h2 className="h2">What shapes the way I work.</h2>
             <p className="body">
-              I was raised in Uganda, and that shaped the lens I bring to this work. I pay attention to culture, language, family obligation, religion, migration, and mixed-context identity because they often shape how a problem is lived.
+              I grew up in Uganda. This comes up in my work more than you might expect — not because I make it a topic, but because growing up between cultures tends to make you notice the things people assume are universal. How authority functions. Who gets to have needs. What belonging costs. Those questions come up constantly in clinical work.
             </p>
             <p className="body">
-              I have also spent years in high-acuity and systems-facing settings. That background made me practical. I care about whether something helps.
+              I&apos;ve also spent a lot of time in settings that don&apos;t look like private practice — residential treatment, crisis work, systems built to run under pressure. What I took from that period was mostly an allergy to things that sound good but don&apos;t actually help.
             </p>
           </article>
         </div>
