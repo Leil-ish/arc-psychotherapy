@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
 const intro = {
   eyebrow: "Start Here",
   title: "How to figure out if this is the right fit.",
-  lede: "The three issues I work with, the approach, and a few essays — the shortest path to deciding whether to reach out.",
+  lede: "The three issues I work with, the approach, and some writing — the shortest path to deciding whether to reach out.",
   body: [
     "The issue pages are the fastest way to check fit — the approach page explains what therapy actually looks like, and the essays tend to give people a clearer picture of the practice than a bio page usually does.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
@@ -92,7 +92,7 @@ export default function StartHerePage() {
 
       <section className="section-gap-lg">
         <div className="section-heading">
-          <h2 className="h2">Three essays.</h2>
+          <h2 className="h2">Worth reading first.</h2>
         </div>
         <div className="dense-index mt-6">
           {homePage.writing.map((item) => (
@@ -104,6 +104,9 @@ export default function StartHerePage() {
               <span className="dense-index__arrow">Read</span>
             </Link>
           ))}
+        </div>
+        <div className="mt-6">
+          <ButtonLink href="/ideas" variant="secondary">All writing</ButtonLink>
         </div>
       </section>
 

@@ -201,6 +201,33 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-gap-lg full-bleed-band full-bleed-band--surface">
+        <div className="container-wrap">
+          <div className="split-band split-band--open">
+            <article className="split-panel">
+              <p className="label">Optional Method</p>
+              <h2 className="h2">Some sessions, we build.</h2>
+              <p className="body">
+                Using LEGO brick sets as a structured clinical tool, some clients work through perfectionism, overcontrol, or religious harm by constructing the pattern in physical space rather than only discussing it.
+              </p>
+              <div className="hero-actions">
+                <ButtonLink href="/constructive" variant="secondary">
+                  How it works
+                </ButtonLink>
+              </div>
+            </article>
+            <article className="split-panel">
+              <p className="label">When It Helps</p>
+              <ul className="split-panel__list body">
+                <li>The pattern is clear in conversation but hasn&apos;t shifted in behavior.</li>
+                <li>Abstract problems become easier to work on when they have a physical form.</li>
+                <li>You think better when you can see structure rather than only hold it in your head.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="container-wrap section-gap-lg pb-12">
         <div className="section-heading">
           <h2 className="h2">Worth reading first.</h2>

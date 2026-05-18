@@ -7,7 +7,7 @@ import { siteContent } from "@/src/content/site";
 const constructive = siteContent.constructive;
 
 export const metadata = pageMetadata({
-  title: "Structured Model-Building | Round Rock, TX",
+  title: "Building the Problem | Round Rock, TX",
   description:
     "Structured model-building therapy in Downtown Round Rock for adults navigating perfectionism and rigidity. Serving North Austin and surrounding communities, with telehealth across Texas.",
   path: "/constructive"
