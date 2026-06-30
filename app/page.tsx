@@ -17,10 +17,10 @@ export const metadata = pageMetadata({
 const intro = {
   eyebrow: "Private-pay psychotherapy",
   title: "Therapy for adults dealing with perfectionism, overcontrol, and religious harm.",
-  lede: "This is for people who understand themselves fairly well and still feel stuck in the same places.",
+  lede: "This is for people who understand themselves well and still feel stuck in the same places.",
   body: [
     "People rely on you, and it takes more out of you than it used to.",
-    "You may know exactly why you do what you do. That usually doesn't close the gap — it just means you can watch yourself do the thing anyway.",
+    "You may know exactly why you do what you do. That knowledge doesn't always close the gap — sometimes it just means you can watch yourself do it anyway.",
     "If insight alone fixed it, you would already be done."
   ]
 } as const;

@@ -130,7 +130,7 @@ export function ContactForm() {
         </select>
 
         <label className="field-label" htmlFor="message">
-          Brief reason for reaching out (non-sensitive)
+          What brings you here
         </label>
         <textarea id="message" name="message" rows={5} required className="focus-ring field-input field-input--textarea" />
       </div>
@@ -142,7 +142,7 @@ export function ContactForm() {
         {status === "submitting" ? "Sending..." : "Send request"}
       </button>
       <div aria-live="polite">
-        {status === "success" && <p className="form-panel__status form-panel__status--success">Request sent. We will follow up within 1-2 business days.</p>}
+        {status === "success" && <p className="form-panel__status form-panel__status--success">Request sent. I&apos;ll follow up within 1–2 business days.</p>}
         {status === "error" && <p className="form-panel__status">Please complete required fields and try again. You can also call or email directly.</p>}
       </div>
     </form>

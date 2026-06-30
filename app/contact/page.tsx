@@ -11,17 +11,8 @@ export const metadata = pageMetadata({
   path: "/contact"
 });
 
-const intro = {
-  eyebrow: "Contact",
-  title: "Questions and consult requests.",
-  lede: "You can use the form, call, or email. I reply within 1-2 business days.",
-  body: [
-    "Please do not include sensitive clinical details in the form.",
-    "If you are in immediate danger, call 911. For mental health crisis support, call or text 988."
-  ]
-} as const;
-
 export default function ContactPage() {
+  const intro = contactPage.intro;
   return (
     <section className="container-wrap py-16 md:py-20">
       <SchemaScript

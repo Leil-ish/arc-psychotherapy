@@ -67,7 +67,7 @@ export const homePage = {
     ]
   } satisfies MarketingCluster,
   notFirstStep: {
-    eyebrow: "Not What Arc Is For",
+    eyebrow: "A note on scope:",
     items: [
       "Crisis stabilization",
       "Insurance-based care",
@@ -140,7 +140,7 @@ export const homePage = {
 export const startHerePage = {
   intro: {
     eyebrow: "Start Here",
-    title: "You do not need to read everything.",
+    title: "Here's where to start.",
     lede: "Three issues, one approach, and a few essays.",
     body: [
       "The issue pages cover what I work on.",
@@ -379,10 +379,10 @@ export const aboutPage = {
 export const contactPage = {
   intro: {
     eyebrow: "Contact",
-    title: "Get in touch.",
-    lede: "Use this form for therapy, supervision, or consultation.",
+    title: "Questions and consult requests.",
+    lede: "You can use the form, call, or email. I reply within 1-2 business days.",
     body: [
-      "Please do not include sensitive clinical details (PHI) in this form.",
+      "You can ask about availability, fees, or fit — no clinical detail needed to start a conversation.",
       "If you are in immediate danger, call 911. For mental health crisis support, call or text 988."
     ]
   } satisfies MarketingIntro,

@@ -16,7 +16,7 @@ const intro = {
   eyebrow: "Approach",
   title: "What therapy looks like when insight alone has not been enough.",
   lede:
-    "This is direct, practical therapy for people who want more than insight alone.",
+    "Therapy that is specific enough to change something outside the session.",
   body: [
     "We spend time understanding what is going on, where it comes from, and why it keeps repeating.",
     "Then we work toward changes you can notice in your actual life, not just in the room."
@@ -37,7 +37,7 @@ const process = [
   {
     step: "Adjustment",
     title: "Keep what helps.",
-    body: "If something is useful, we keep it. If it is not, we do not keep pretending."
+    body: "If something is useful, we keep it. If it isn't working, we say so and change course."
   }
 ] as const;
 
