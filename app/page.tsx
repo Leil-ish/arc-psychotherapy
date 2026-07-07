@@ -22,7 +22,7 @@ const intro = {
     "People rely on you, and it takes more out of you than it used to.",
     "You may know exactly why you do what you do. That knowledge doesn't always close the gap — sometimes it just means you can watch yourself do it anyway.",
     "If insight alone fixed it, you would already be done.",
-    "Most of the people I work with are queer, neurodivergent, fat, post-religious, or some combination. If that's you, you're not an edge case here."
+    "Most of the people I work with are queer, neurodivergent, fat, post-religious, or some combination. If that's you, you're who this practice is for."
   ]
 } as const;
 
@@ -66,7 +66,8 @@ const practiceStance = [
   "Queer and trans affirming: identity is a fact of the work, not a debate inside it.",
   "Fat positive and HAES-aligned: body size is not a moral issue, and weight loss is not a treatment target.",
   "Neurodivergent-affirming: no masking required. Different pacing, processing, and communication are how we work, not problems to fix.",
-  "Social context matters: race, migration, religion, family obligation, and power are part of the clinical picture."
+  "Anti-racist and decolonial: racism and systemic oppression are treated as real causes of distress, not personal defects.",
+  "Social context matters: migration, religion, family obligation, and power are part of the clinical picture."
 ] as const;
 
 export default function HomePage() {
