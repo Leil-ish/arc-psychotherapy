@@ -66,7 +66,7 @@ const practiceStance = [
   "Queer and trans affirming: identity is a fact of the work, not a debate inside it.",
   "Fat positive and HAES-aligned: body size is not a moral issue, and weight loss is not a treatment target.",
   "Neurodivergent-affirming: no masking required. Different pacing, processing, and communication are how we work, not problems to fix.",
-  "Anti-racist and decolonial: racism and systemic oppression are treated as real causes of distress, not personal defects.",
+  "Anti-racist and decolonial.",
   "Social context matters: migration, religion, family obligation, and power are part of the clinical picture."
 ] as const;
 
