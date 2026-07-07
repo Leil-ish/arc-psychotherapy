@@ -63,11 +63,11 @@ const therapySteps = [
 ] as const;
 
 const practiceStance = [
-  "Queer and trans affirming: identity is a fact of the work, not a debate inside it.",
-  "Fat positive and HAES-aligned: body size is not a moral issue, and weight loss is not a treatment target.",
-  "Neurodivergent-affirming: no masking required. Different pacing, processing, and communication are how we work, not problems to fix.",
+  "Queer and trans affirming.",
+  "Fat positive and HAES-aligned.",
+  "Neurodivergent-affirming. No masking required.",
   "Anti-racist and decolonial.",
-  "Social context matters: migration, religion, family obligation, and power are part of the clinical picture."
+  "Migration, religion, family obligation, and power are part of the clinical picture."
 ] as const;
 
 export default function HomePage() {
