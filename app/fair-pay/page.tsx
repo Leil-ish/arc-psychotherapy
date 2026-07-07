@@ -41,9 +41,9 @@ export default function FairPayPage() {
             owner carrying the business.
           </p>
           <p className="body">
-            For fully licensed clinicians, it starts from a post-overhead benchmark and raises it when the
-            structure is generating healthier surplus. For associates, it starts lower and moves closer to the
-            fully licensed benchmark when surplus is stronger.
+            For fully licensed clinicians, W-2 arrangements are benchmarked from a 50/50 post-overhead split and
+            1099 arrangements from 60/40, rising as the structure generates healthier surplus. For associates,
+            the benchmark starts lower and moves closer to the fully licensed target when surplus is stronger.
           </p>
         </div>
       </div>
