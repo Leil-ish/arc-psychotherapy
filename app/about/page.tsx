@@ -45,11 +45,6 @@ const authority = [
   "State professional leadership through TAMFT board and education committee service."
 ] as const;
 
-const speaking = [
-  "TAMFT professional education and leadership forums",
-  "TAAP and behavioral health training events",
-  "Regional agency and group practice trainings"
-] as const;
 
 export default function AboutPage() {
   return (
@@ -153,58 +148,29 @@ export default function AboutPage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <ul className="split-panel__list body">
-              {speaking.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
           </article>
           </div>
         </div>
       </section>
 
       <section className="section-gap-lg pb-8">
-        <div className="split-band split-band--open">
-          <article className="split-panel">
-            <p className="label">Who This Helps</p>
-            <h2 className="h2">This is usually a good fit when:</h2>
-            <ul className="split-panel__list body">
-              {goodFit.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p className="label pt-4">Usually Not The First Step</p>
-            <ul className="split-panel__list body">
-              {notBestFit.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="split-panel">
-            <p className="label">Briefly, As A Person</p>
-            <h2 className="h2">A little context.</h2>
-            <p className="body">
-              I am married with three kids. Outside of work I read, hike, and maintain a complicated relationship with keeping my house in order.
-            </p>
-          </article>
-        </div>
+        <article>
+          <p className="label">Who This Helps</p>
+          <h2 className="h2 mt-2">This is usually a good fit when:</h2>
+          <ul className="split-panel__list body mt-4">
+            {goodFit.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="label pt-6">Usually Not The First Step</p>
+          <ul className="split-panel__list body mt-2">
+            {notBestFit.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
       </section>
 
-      <section className="section-gap-lg pb-8">
-        <div className="route-divider">
-          <p className="label">Next</p>
-          <h2 className="h2 mt-3">What comes next.</h2>
-          <div className="hero-actions">
-            <ButtonLink href="/work-with-me">Approach</ButtonLink>
-            <ButtonLink href="/start-here" variant="secondary">
-              Start Here
-            </ButtonLink>
-            <ButtonLink href="/contact" variant="secondary">
-              Contact
-            </ButtonLink>
-          </div>
-        </div>
-      </section>
     </section>
   );
 }

@@ -206,35 +206,6 @@ export default function WorkWithMePage() {
         </div>
       </section>
 
-      <section className="section-gap-lg">
-        <div className="split-band split-band--open">
-          <article className="split-panel">
-            <p className="label">Before You Book</p>
-            <h2 className="h2">Worth reading before reaching out.</h2>
-            <p className="body">
-              Start with the issue page that sounds most familiar. After that, read one essay or one framework if you want more.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <ButtonLink href="/start-here" variant="secondary">
-                Start Here
-              </ButtonLink>
-              <ButtonLink href="/ideas" variant="secondary">
-                Writing
-              </ButtonLink>
-              <ButtonLink href="/frameworks" variant="secondary">
-                Frameworks
-              </ButtonLink>
-            </div>
-          </article>
-          <article className="split-panel">
-            <p className="label">Format</p>
-            <h2 className="h2">What the work looks like.</h2>
-            <p className="body">
-              Private-pay therapy with Leila in Downtown Round Rock or by telehealth across Texas. Model-building is optional and used only when it helps.
-            </p>
-          </article>
-        </div>
-      </section>
     </section>
   );
 }
