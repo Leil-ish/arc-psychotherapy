@@ -140,7 +140,7 @@ export default function HomePage() {
       <section className="section-gap full-bleed-band full-bleed-band--dark">
         <div className="container-wrap">
           <div className="section-heading section-heading--sans">
-            <h2 className="h2">What you won&apos;t have to defend.</h2>
+            <h2 className="h2">Where I stand.</h2>
           </div>
           <div className="info-grid mt-6">
             {practiceStance.map((item) => (

@@ -137,7 +137,7 @@ export default function AboutPage() {
           <div className="split-band">
           <article className="split-panel">
             <p className="label">Values</p>
-            <h2 className="h2">What that means in practice.</h2>
+            <h2 className="h2">Where I stand.</h2>
             <ul className="split-panel__list body">
               {valuesInPractice.map((item) => (
                 <li key={item}>{item}</li>
