@@ -10,18 +10,7 @@ export const siteContent = {
   sameAs: [
     "https://www.linkedin.com/in/leilaanderson/"
   ],
-  authorDisplayName: "Leila Anderson, LMFT-S",
-  positioningStatementShort:
-    "Arc Psychotherapy is for adults who look competent and feel wrung out.",
-  positioningStatementLong:
-    "Most people who come to Arc can explain exactly why they do what they do. They still repeat it when stress spikes. They over-function, over-prepare, and clean up everyone else's mess while their own life gets smaller. Therapy here is direct, structured, and built to change what happens between sessions.",
   credentialsLine: "Leila Anderson, LMFT-S",
-  authorityHighlights: [
-    "Executive clinical leadership in residential dual-diagnosis and high-acuity environments, including crisis and level-of-care assessment.",
-    "Program design and measurable process-tracking orientation, with emphasis on practical treatment planning.",
-    "Systems-level exposure to criminal justice and diversion-adjacent behavioral health workflows.",
-    "State professional leadership through TAMFT board and education committee service."
-  ],
   primaryTopics: [
     "Perfectionism",
     "Overcontrol",
@@ -29,16 +18,6 @@ export const siteContent = {
     "Meaning",
     "Systems",
     "Practice"
-  ],
-  startHereEssays: [
-    "perfectionism-structural-problem",
-    "adjacent-possible",
-    "leaving-faith-losing-gravity"
-  ],
-  featuredEssays: [
-    "adjacent-possible",
-    "perfectionism-structural-problem",
-    "leaving-faith-losing-gravity"
   ],
   primaryLocation: "Downtown Round Rock, Texas",
   secondaryLocation: "Serving North Austin and surrounding communities",
@@ -52,7 +31,6 @@ export const siteContent = {
       "https://www.google.com/maps/search/?api=1&query=309+W+Main+Round+Rock+TX+78664"
   },
   telehealthRegion: "Telehealth across Texas",
-  telehealthLine: "Telehealth across Texas",
   serviceAreas: [
     "Round Rock",
     "North Austin",
@@ -60,129 +38,11 @@ export const siteContent = {
     "Georgetown",
     "Pflugerville"
   ],
-  heroTagline:
-    "Therapy for adults tired of over-functioning, perfectionism, and religious harm.",
   standardSessionFee: 200,
   sessionLength: "50–55 minutes",
-  clinician: {
-    name: "Leila Anderson",
-    credentials: "LMFT-S",
-    shortBio:
-      "Leila Anderson, LMFT-S, works with adults who look fine on paper and feel stuck in real life."
-  },
-  modelBuildingLabel: "Structured model-building option",
   credentials: [
     "Licensed Marriage and Family Therapist – Texas"
   ],
-  issues: [
-    "Perfectionism and self-criticism",
-    "Rigidity and overcontrol",
-    "Anxiety under high responsibility",
-    "Religious harm and spiritual trauma",
-    "Identity transitions and shame",
-    "Grief and meaning-making"
-  ],
-  home: {
-    subhead:
-      "You understand your patterns. They still run too much of your life.",
-    secondaryLine:
-      "You are the reliable one. It is getting expensive.",
-    locationLine:
-      "Downtown Round Rock, Texas",
-    fitSignals: [
-      "You are competent at work and depleted at home.",
-      "You do not want generic reassurance. You want treatment that moves.",
-      "Control keeps you functional and keeps your life small.",
-      "Religious harm still shows up in fear, shame, and authority stress.",
-      "Insight is not enough anymore."
-    ],
-    steps: [
-      "Consult",
-      "Clarify goals",
-      "Focused work",
-      "Integration",
-      "Next steps"
-    ],
-    conceptLinks: [
-      {
-        href: "/perfectionism",
-        title: "Perfectionism",
-        description:
-          "Your standards are high and your life keeps getting tighter. This page helps you separate excellence from fear-driven control."
-      },
-      {
-        href: "/religious-harm",
-        title: "Religious Harm",
-        description:
-          "Rigid or shaming faith systems still shape your fear, identity, and decisions. This page helps you name it clearly."
-      },
-      {
-        href: "/overcontrol",
-        title: "Overcontrol",
-        description:
-          "Being reliable became a full-time job. This page explains overcontrol and how to get range back without blowing up your life."
-      }
-    ],
-    featuredIdeas: [
-      {
-        title: "When discipline turns into self-surveillance",
-        summary:
-          "A framework for distinguishing values-based consistency from fear-based control.",
-        tags: ["Perfectionism", "Identity"]
-      },
-      {
-        title: "After certainty: rebuilding thought after religious harm",
-        summary:
-          "How to separate conviction, fear, and belonging during post-religious reconstruction.",
-        tags: ["Religious harm", "Meaning"]
-      },
-      {
-        title: "The cost of always being the stable one",
-        summary:
-          "Why high-functioning adults lose spontaneity and how clear, focused therapy helps restore range.",
-        tags: ["Overcontrol", "Anxiety"]
-      }
-    ],
-    frameworks: [
-      {
-        name: "Arc Mapping",
-        definition:
-          "A session-by-session map that links stress patterns, protective strategies, and intentional shifts."
-      },
-      {
-        name: "Control Gradient",
-        definition:
-          "A way to build flexibility in small, measurable steps rather than swinging between rigidity and collapse."
-      },
-      {
-        name: "Belief Deconstruction Grid",
-        definition:
-          "A practical method for sorting inherited beliefs into retained, revised, and released categories."
-      }
-    ],
-    faq: [
-      {
-        question: "Do you take insurance?",
-        answer:
-          "Arc Psychotherapy is private-pay. A superbill may be provided for out-of-network reimbursement."
-      },
-      {
-        question: "What do you mean by therapy with clear structure?",
-        answer:
-          "It means sessions have a clear plan: we define patterns, choose specific targets, test changes, and review what shifts between sessions."
-      },
-      {
-        question: "Is the structured model-building option required?",
-        answer:
-          "No. It is optional and only used when it supports your treatment goals."
-      },
-      {
-        question: "Do you offer telehealth in Texas?",
-        answer:
-          "Yes. Telehealth is available for Texas residents where clinically appropriate."
-      }
-    ]
-  },
   constructive: {
     title: "Building the Problem",
     subtitle:
@@ -274,6 +134,6 @@ export const siteContent = {
       }
     ],
     curious:
-      "The rationale is straightforward: externalization creates perspective, metaphor helps pattern recognition, pacing improves regulation, and uncertainty tolerance supports behavior change."
+      "The rationale is simple: patterns are easier to change when you can see them, and harder to argue with when they are sitting on the table."
   }
 } as const;

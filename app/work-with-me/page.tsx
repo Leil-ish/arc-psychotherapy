@@ -16,10 +16,10 @@ const intro = {
   eyebrow: "Approach",
   title: "What therapy looks like when insight alone has not been enough.",
   lede:
-    "This is direct, practical therapy for people who want more than insight alone.",
+    "Therapy that is specific enough to change something outside the session.",
   body: [
-    "We spend time understanding what is going on, where it comes from, and why it keeps repeating.",
-    "Then we work toward changes you can notice in your actual life, not just in the room."
+    "I don't do small-talk therapy. We get specific about what keeps happening, where it started, and what keeps it in place.",
+    "Then we work on it until your body believes what your mind already knows — change you can notice in your actual week, not just in the room."
   ]
 } as const;
 
@@ -37,7 +37,7 @@ const process = [
   {
     step: "Adjustment",
     title: "Keep what helps.",
-    body: "If something is useful, we keep it. If it is not, we do not keep pretending."
+    body: "If something is useful, we keep it. If it isn't working, we say so and change course."
   }
 ] as const;
 
@@ -125,6 +125,7 @@ export default function WorkWithMePage() {
           <div className="meta-block">
             <p className="label">Format</p>
             <p className="body">Private-pay psychotherapy with one therapist from consult onward.</p>
+            <p className="body">In office in Downtown Round Rock, by telehealth across Texas, or walk-and-talk at nearby parks and trails.</p>
           </div>
         </div>
       </section>
@@ -206,35 +207,6 @@ export default function WorkWithMePage() {
         </div>
       </section>
 
-      <section className="section-gap-lg">
-        <div className="split-band split-band--open">
-          <article className="split-panel">
-            <p className="label">Before You Book</p>
-            <h2 className="h2">Worth reading before reaching out.</h2>
-            <p className="body">
-              Start with the issue page that sounds most familiar. After that, read one essay or one framework if you want more.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <ButtonLink href="/start-here" variant="secondary">
-                Start Here
-              </ButtonLink>
-              <ButtonLink href="/ideas" variant="secondary">
-                Writing
-              </ButtonLink>
-              <ButtonLink href="/frameworks" variant="secondary">
-                Frameworks
-              </ButtonLink>
-            </div>
-          </article>
-          <article className="split-panel">
-            <p className="label">Format</p>
-            <h2 className="h2">What the work looks like.</h2>
-            <p className="body">
-              Private-pay therapy with Leila in Downtown Round Rock or by telehealth across Texas. Model-building is optional and used only when it helps.
-            </p>
-          </article>
-        </div>
-      </section>
     </section>
   );
 }

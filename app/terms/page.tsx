@@ -14,9 +14,9 @@ export default function TermsPage() {
       <h1 className="h1">Terms of Use</h1>
       <div className="mt-6 space-y-6 body max-w-3xl">
         <section className="card">
-          <h2 className="h3">No therapeutic relationship</h2>
+          <h2 className="h3">About this website</h2>
           <p className="mt-3 body">
-            Use of this website does not establish a therapeutic relationship between you and Arc Psychotherapy or Leila Anderson, LMFT-S. A therapeutic relationship is established only through a signed informed consent agreement entered into after a clinical consultation.
+            These terms cover how this site works and what to expect from it. Viewing or using this site doesn&apos;t create a therapeutic relationship — that only begins with a signed consent agreement after a clinical consultation.
           </p>
         </section>
 

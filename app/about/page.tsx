@@ -45,11 +45,6 @@ const authority = [
   "State professional leadership through TAMFT board and education committee service."
 ] as const;
 
-const speaking = [
-  "TAMFT professional education and leadership forums",
-  "TAAP and behavioral health training events",
-  "Regional agency and group practice trainings"
-] as const;
 
 export default function AboutPage() {
   return (
@@ -123,7 +118,13 @@ export default function AboutPage() {
               I grew up in Uganda. This comes up in my work more than you might expect — not because I make it a topic, but because growing up between cultures tends to make you notice the things people assume are universal. How authority functions. Who gets to have needs. What belonging costs. Those questions come up constantly in clinical work.
             </p>
             <p className="body">
+              I also know from the inside what it costs to untangle a life from systems — religious, family, corporate — that reward shrinking. Outgrowing your environment comes with its own specific grief, and I know it from both sides of the room.
+            </p>
+            <p className="body">
               I&apos;ve also spent a lot of time in settings that don&apos;t look like private practice — residential treatment, crisis work, systems built to run under pressure. What I took from that period was mostly an allergy to things that sound good but don&apos;t actually help.
+            </p>
+            <p className="body">
+              Outside of work: married, three kids, a lot of reading and hiking, and a long-running d&eacute;tente with household clutter.
             </p>
           </article>
         </div>
@@ -153,58 +154,29 @@ export default function AboutPage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <ul className="split-panel__list body">
-              {speaking.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
           </article>
           </div>
         </div>
       </section>
 
       <section className="section-gap-lg pb-8">
-        <div className="split-band split-band--open">
-          <article className="split-panel">
-            <p className="label">Who This Helps</p>
-            <h2 className="h2">This is usually a good fit when:</h2>
-            <ul className="split-panel__list body">
-              {goodFit.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p className="label pt-4">Usually Not The First Step</p>
-            <ul className="split-panel__list body">
-              {notBestFit.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="split-panel">
-            <p className="label">Briefly, As A Person</p>
-            <h2 className="h2">A little context.</h2>
-            <p className="body">
-              I am married with three kids. Outside of work I read, hike, and maintain a complicated relationship with keeping my house in order.
-            </p>
-          </article>
-        </div>
+        <article>
+          <p className="label">Who This Helps</p>
+          <h2 className="h2 mt-2">This is usually a good fit when:</h2>
+          <ul className="split-panel__list body mt-4">
+            {goodFit.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="label pt-6">Usually Not The First Step</p>
+          <ul className="split-panel__list body mt-2">
+            {notBestFit.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
       </section>
 
-      <section className="section-gap-lg pb-8">
-        <div className="route-divider">
-          <p className="label">Next</p>
-          <h2 className="h2 mt-3">What comes next.</h2>
-          <div className="hero-actions">
-            <ButtonLink href="/work-with-me">Approach</ButtonLink>
-            <ButtonLink href="/start-here" variant="secondary">
-              Start Here
-            </ButtonLink>
-            <ButtonLink href="/contact" variant="secondary">
-              Contact
-            </ButtonLink>
-          </div>
-        </div>
-      </section>
     </section>
   );
 }

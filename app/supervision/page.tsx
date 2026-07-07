@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ButtonLink } from "@/components/button-link";
 import { SchemaScript } from "@/components/schema-script";
 import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
@@ -39,11 +38,6 @@ const topics = [
   "Authority, boundaries, documentation, and decision-making"
 ] as const;
 
-const credibility = [
-  "TAMFT Board Member-at-Large and Chair of the Education Committee",
-  "Frequent presenter on trauma, shame, supervision, and interpersonal ethics",
-  "Leadership across residential dual-diagnosis, crisis assessment, and systems-facing behavioral health settings"
-] as const;
 
 export default function SupervisionPage() {
   return (
@@ -78,15 +72,15 @@ export default function SupervisionPage() {
           </div>
           <div className="hero-actions">
             <ButtonLink href="/contact">Contact</ButtonLink>
-            <ButtonLink href="/consultation" variant="secondary">
-              Consultation
+            <ButtonLink href="/fair-pay" variant="secondary">
+              Fair Pay Calculator
             </ButtonLink>
           </div>
         </div>
         <aside className="hero-meta hero-meta--ultramarine">
           <div className="meta-block">
             <p className="label">For</p>
-            <p className="body">LMFT Associates in Texas who want more than box-checking.</p>
+            <p className="body">LMFT Associates in Texas.</p>
           </div>
           <div className="meta-block">
             <p className="label">Focus</p>
@@ -128,7 +122,6 @@ export default function SupervisionPage() {
 
       <section className="section-gap-lg full-bleed-band full-bleed-band--ultramarine">
         <div className="container-wrap">
-          <div className="split-band">
           <article className="split-panel">
             <h2 className="h2">Cases, ethics, and where you get stuck.</h2>
             <ul className="split-panel__list body">
@@ -137,30 +130,6 @@ export default function SupervisionPage() {
               ))}
             </ul>
           </article>
-          <article className="split-panel">
-            <p className="label">Context</p>
-            <h2 className="h2">What made me practical.</h2>
-            <ul className="split-panel__list body">
-              {credibility.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-gap-lg pb-8">
-        <div className="route-divider">
-          <p className="label">Next Step</p>
-          <h2 className="h2 mt-3">Ask about supervision.</h2>
-          <p className="body mt-3 max-w-3xl">We can talk briefly about what you need and whether this would be useful.</p>
-          <div className="hero-actions">
-            <ButtonLink href="/contact">Contact</ButtonLink>
-            <Link href="/consultation" className="focus-ring no-link-style button button--secondary">
-              Consultation
-            </Link>
-          </div>
         </div>
       </section>
     </section>

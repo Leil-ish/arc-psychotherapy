@@ -36,7 +36,7 @@ export default function PrivacyPage() {
         <section className="card">
           <h2 className="h3">HIPAA notice</h2>
           <p className="mt-3 body">
-            This website is not a HIPAA-covered electronic health record system. Clinical records and communications that constitute protected health information (PHI) are handled through the practice's secure client portal and clinical documentation systems, not through this website.
+            This website is not a HIPAA-covered electronic health record system. Clinical records and communications that constitute protected health information (PHI) are handled through the practice&apos;s secure client portal and clinical documentation systems, not through this website.
           </p>
         </section>
 

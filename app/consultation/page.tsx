@@ -88,7 +88,7 @@ export default function ConsultationPage() {
         <aside className="hero-meta hero-meta--ultramarine">
           <div className="meta-block">
             <p className="label">Best For</p>
-            <p className="body">Clinical programs, treatment teams, and leadership groups that need better systems.</p>
+            <p className="body">Clinical programs, treatment teams, and leaders who want a culture that doesn&apos;t rely on burnout as a feature.</p>
           </div>
           <div className="meta-block">
             <p className="label">Topics</p>
