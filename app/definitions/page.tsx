@@ -116,7 +116,7 @@ export default function DefinitionsPage() {
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Core Concepts</h1>
       <p className="body-lg mt-5 max-w-4xl">
-        Arc uses precise definitions so treatment targets are clear, language is shared, and the work is easier to follow.
+        Words get slippery in therapy. These are the definitions I actually work from, so when we name a treatment target we both mean the same thing by it.
       </p>
       <p className="body mt-3 max-w-4xl">
         {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.

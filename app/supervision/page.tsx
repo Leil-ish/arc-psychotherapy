@@ -80,7 +80,7 @@ export default function SupervisionPage() {
         <aside className="hero-meta hero-meta--ultramarine">
           <div className="meta-block">
             <p className="label">For</p>
-            <p className="body">LMFT Associates in Texas who want more than box-checking.</p>
+            <p className="body">LMFT Associates in Texas.</p>
           </div>
           <div className="meta-block">
             <p className="label">Focus</p>

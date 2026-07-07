@@ -18,8 +18,8 @@ const intro = {
   lede:
     "Therapy that is specific enough to change something outside the session.",
   body: [
-    "We spend time understanding what is going on, where it comes from, and why it keeps repeating.",
-    "Then we work toward changes you can notice in your actual life, not just in the room."
+    "I don't do small-talk therapy. We get specific about what keeps happening, where it started, and what keeps it in place.",
+    "Then we work on it until your body believes what your mind already knows — change you can notice in your actual week, not just in the room."
   ]
 } as const;
 

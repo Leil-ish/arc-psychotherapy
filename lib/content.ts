@@ -41,10 +41,6 @@ export const pricing = {
   }
 } as const;
 
-export const primaryIssues = siteContent.issues;
-
-export const howItWorks = siteContent.home.steps;
-
 export const navItems = [
   { href: "/start-here", label: "Start Here" },
   { href: "/work-with-me", label: "Approach" },
@@ -53,19 +49,6 @@ export const navItems = [
   { href: "/ideas", label: "Writing" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" }
-] as const;
-
-export const testimonialPlaceholders = [
-  {
-    quote:
-      "Client feedback (de-identified): This is a placeholder quote block. Replace with consented, compliant language.",
-    label: "Client feedback (de-identified)"
-  },
-  {
-    quote:
-      "Client feedback (de-identified): Add brief process-centered reflections without promising outcomes.",
-    label: "Client feedback (de-identified)"
-  }
 ] as const;
 
 export const frameworkLinks = frameworks.map((framework) => ({

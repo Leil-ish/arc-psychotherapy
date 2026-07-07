@@ -16,8 +16,8 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Private-pay psychotherapy",
-  title: "Therapy for adults dealing with perfectionism, overcontrol, and religious harm.",
-  lede: "This is for people who understand themselves well and still feel stuck in the same places.",
+  title: "You can't out-think this.",
+  lede: "Therapy for adults dealing with perfectionism, overcontrol, and religious harm — people who understand themselves well and are still stuck in the same places.",
   body: [
     "People rely on you, and it takes more out of you than it used to.",
     "You may know exactly why you do what you do. That knowledge doesn't always close the gap — sometimes it just means you can watch yourself do it anyway.",
@@ -170,7 +170,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="route-divider route-divider--sans mt-12">
-            <h2 className="h2">What you won't have to defend.</h2>
+            <h2 className="h2">What you won&apos;t have to defend.</h2>
           </div>
           <div className="info-grid mt-6">
             {practiceStance.map((item) => (

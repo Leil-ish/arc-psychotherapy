@@ -118,7 +118,13 @@ export default function AboutPage() {
               I grew up in Uganda. This comes up in my work more than you might expect — not because I make it a topic, but because growing up between cultures tends to make you notice the things people assume are universal. How authority functions. Who gets to have needs. What belonging costs. Those questions come up constantly in clinical work.
             </p>
             <p className="body">
+              I also know from the inside what it costs to untangle a life from systems — religious, family, corporate — that reward shrinking. Outgrowing your environment comes with its own specific grief, and I know it from both sides of the room.
+            </p>
+            <p className="body">
               I&apos;ve also spent a lot of time in settings that don&apos;t look like private practice — residential treatment, crisis work, systems built to run under pressure. What I took from that period was mostly an allergy to things that sound good but don&apos;t actually help.
+            </p>
+            <p className="body">
+              Outside of work: married, three kids, a lot of reading and hiking, and a long-running d&eacute;tente with household clutter.
             </p>
           </article>
         </div>
