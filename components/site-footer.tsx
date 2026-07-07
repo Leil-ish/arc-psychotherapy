@@ -24,6 +24,9 @@ export function SiteFooter() {
             <Link className="focus-ring no-link-style site-footer__link" href="/consultation">
               Consultation
             </Link>
+            <Link className="focus-ring no-link-style site-footer__link" href="/fair-pay">
+              Fair Pay Calculator
+            </Link>
             <Link className="focus-ring no-link-style site-footer__link" href="/ideas">
               Writing
             </Link>

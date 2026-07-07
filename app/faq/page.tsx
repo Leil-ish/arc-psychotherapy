@@ -32,8 +32,12 @@ const faqs = [
     a: "Yes. Telehealth is available for Texas residents when it makes clinical sense."
   },
   {
+    q: "Do you offer walk-and-talk sessions?",
+    a: "Yes. Weather and clinical fit permitting, sessions can happen on foot at parks and trails around Round Rock and North Austin. Some people think better in motion, and some conversations are easier side by side than face to face."
+  },
+  {
     q: "Do you accept insurance?",
-    a: "The practice is private-pay. A superbill may be available for out-of-network reimbursement."
+    a: "No — the practice is private-pay. I can provide a superbill for out-of-network reimbursement, and services like Mentaya or Thrizer can automate the claims if you'd rather skip the paperwork."
   },
   {
     q: "What is the model-building track?",

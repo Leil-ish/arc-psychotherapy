@@ -125,6 +125,7 @@ export default function WorkWithMePage() {
           <div className="meta-block">
             <p className="label">Format</p>
             <p className="body">Private-pay psychotherapy with one therapist from consult onward.</p>
+            <p className="body">In office in Downtown Round Rock, by telehealth across Texas, or walk-and-talk at nearby parks and trails.</p>
           </div>
         </div>
       </section>

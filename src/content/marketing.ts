@@ -116,7 +116,7 @@ export const contactPage = {
   questions: [
     {
       question: "Do you take insurance?",
-      answer: "No — the practice is private-pay. I can provide a superbill for out-of-network reimbursement."
+      answer: "No — the practice is private-pay. I can provide a superbill for out-of-network reimbursement, and services like Mentaya or Thrizer can automate the claims."
     },
     {
       question: "Do you offer telehealth?",

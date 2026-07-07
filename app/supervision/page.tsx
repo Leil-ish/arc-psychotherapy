@@ -72,8 +72,8 @@ export default function SupervisionPage() {
           </div>
           <div className="hero-actions">
             <ButtonLink href="/contact">Contact</ButtonLink>
-            <ButtonLink href="/consultation" variant="secondary">
-              Consultation
+            <ButtonLink href="/fair-pay" variant="secondary">
+              Fair Pay Calculator
             </ButtonLink>
           </div>
         </div>
