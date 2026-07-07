@@ -31,7 +31,7 @@ const process = [
   },
   {
     step: "Therapy",
-    title: "Get specific.",
+    title: "Get specific about the pattern.",
     body: "We look closely at what happens during the week, not only at what you understand in session."
   },
   {

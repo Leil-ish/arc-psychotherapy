@@ -130,7 +130,7 @@ export default async function FrameworkDetailPage({
           </article>
           <article className="split-panel">
             <p className="label">Related</p>
-            <h2 className="h2">Nearby pages.</h2>
+            <h2 className="h2">Where this framework is used.</h2>
             <div className="flex flex-wrap gap-2">
               {framework.relatedLinks.map((link) => (
                 <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">

@@ -109,8 +109,8 @@ export default function SupervisionPage() {
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">Not The Goal</p>
-            <h2 className="h2">What this is not for.</h2>
+            <p className="label">Scope</p>
+            <h2 className="h2">Not the right fit if you&apos;re looking for:</h2>
             <ul className="split-panel__list body">
               {notFit.map((item) => (
                 <li key={item}>{item}</li>

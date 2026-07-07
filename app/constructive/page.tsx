@@ -87,7 +87,7 @@ export default function ConstructivePage() {
 
       <section className="container-wrap mt-14 grid gap-5 md:grid-cols-2">
         <article className="card">
-          <h2 className="h2">Good fit</h2>
+          <h2 className="h2">A good fit when:</h2>
           <ul className="mt-4 space-y-2 body">
             {constructive.fit.good.map((item) => (
               <li key={item}>• {item}</li>
@@ -95,7 +95,7 @@ export default function ConstructivePage() {
           </ul>
         </article>
         <article className="card">
-          <h2 className="h2">Not a fit</h2>
+          <h2 className="h2">Not the right tool when:</h2>
           <ul className="mt-4 space-y-2 body">
             {constructive.fit.notFit.map((item) => (
               <li key={item}>• {item}</li>
