@@ -10,7 +10,7 @@ import { siteContent } from "@/src/content/site";
 export const metadata = pageMetadata({
   title: "Therapy for perfectionism & religious harm | Round Rock, TX",
   description:
-    "Therapy with clear structure for high-achieving adults navigating perfectionism, rigidity, and religious harm. Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas.",
+    "Therapy with clear structure for high-achieving adults navigating perfectionism, rigidity, and religious harm. Queer, trans, neurodivergent, and fat affirming. Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas.",
   path: "/"
 });
 
@@ -21,7 +21,8 @@ const intro = {
   body: [
     "People rely on you, and it takes more out of you than it used to.",
     "You may know exactly why you do what you do. That knowledge doesn't always close the gap — sometimes it just means you can watch yourself do it anyway.",
-    "If insight alone fixed it, you would already be done."
+    "If insight alone fixed it, you would already be done.",
+    "Most of the people I work with are queer, neurodivergent, fat, post-religious, or some combination. If that's you, you're not an edge case here."
   ]
 } as const;
 
@@ -62,10 +63,10 @@ const therapySteps = [
 ] as const;
 
 const practiceStance = [
-  "LGBTQ+ affirming. Identity is not treated as pathology or debate.",
-  "HAES-aligned. Body size is not treated as a moral issue or a treatment target.",
-  "Neurodiversity-affirming. Different minds, pacing, and communication do not have to follow one narrow standard.",
-  "Social context matters. Race, migration, religion, family obligation, and power are part of the clinical picture."
+  "Queer and trans affirming: identity is a fact of the work, not a debate inside it.",
+  "Fat positive and HAES-aligned: body size is not a moral issue, and weight loss is not a treatment target.",
+  "Neurodivergent-affirming: no masking required. Different pacing, processing, and communication are how we work, not problems to fix.",
+  "Social context matters: race, migration, religion, family obligation, and power are part of the clinical picture."
 ] as const;
 
 export default function HomePage() {
@@ -135,6 +136,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-gap full-bleed-band full-bleed-band--dark">
+        <div className="container-wrap">
+          <div className="section-heading section-heading--sans">
+            <h2 className="h2">What you won&apos;t have to defend.</h2>
+          </div>
+          <div className="info-grid mt-6">
+            {practiceStance.map((item) => (
+              <div key={item} className="info-list">
+                <p className="body">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section-gap full-bleed-band full-bleed-band--citron">
         <div className="container-wrap">
           <div className="home-stance">
@@ -167,16 +183,6 @@ export default function HomePage() {
                 <h3 className="index-card__title">{item.title}</h3>
                 <p className="index-card__body body">{item.body}</p>
               </Link>
-            ))}
-          </div>
-          <div className="route-divider route-divider--sans mt-12">
-            <h2 className="h2">What you won&apos;t have to defend.</h2>
-          </div>
-          <div className="info-grid mt-6">
-            {practiceStance.map((item) => (
-              <div key={item} className="info-list">
-                <p className="body">{item}</p>
-              </div>
             ))}
           </div>
         </div>

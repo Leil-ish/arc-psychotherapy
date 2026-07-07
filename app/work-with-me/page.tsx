@@ -42,9 +42,9 @@ const process = [
 ] as const;
 
 const values = [
-  "LGBTQ+ affirming means identity is not treated as pathology or debate.",
-  "HAES-aligned means body size is not treated as a moral issue or a treatment target.",
-  "Neurodiversity-affirming means communication, pacing, and problem-solving do not have to follow one narrow standard.",
+  "Queer and trans affirming: identity is a fact of the work, not a debate inside it.",
+  "Fat positive and HAES-aligned: body size is not a moral issue, and weight loss is not a treatment target.",
+  "Neurodivergent-affirming: no masking required. Different pacing, processing, and communication are how we work, not problems to fix.",
   "Immigrant and cross-cultural realities are treated as real context, not side notes."
 ] as const;
 
