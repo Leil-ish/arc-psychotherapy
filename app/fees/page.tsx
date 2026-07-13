@@ -71,7 +71,7 @@ export default function FeesPage() {
         <article className="card">
           <p className="h3">Payment</p>
           <p className="mt-3 body">
-            Payment is due at the time of service. Model-building tracks are paid upfront or through an approved installment arrangement. Ask before scheduling if you want to talk through the numbers first.
+            Payment is due at the time of service. Focused LEGO therapy packages are paid upfront or through an approved installment arrangement. Ask before scheduling if you want to talk through the numbers first.
           </p>
         </article>
       </section>

@@ -98,7 +98,7 @@ export const specialties = {
       "Explaining the history clearly while feeling almost nothing—or everything at once.",
       "Feeling ashamed of reactions that once kept you safe."
     ],
-    approachTitle: "Paced, practical, and specific.",
+    approachTitle: "Starting with what is difficult now.",
     approach: [
       "We begin with what is making life difficult now: a relationship, a shutdown, a boundary, conflict, a work decision, or a reaction that suddenly became much larger than the room.",
       "My background in residential treatment, crisis work, and high-acuity care shaped a respect for both complexity and pacing. We do not need a complete timeline before the work can be useful."
@@ -214,7 +214,7 @@ export const specialties = {
       "Perfectionism built to compensate for misunderstanding or executive-function differences.",
       "Workplaces, families, schools, or religious systems that punished difference."
     ],
-    approachTitle: "Making the work fit your actual life.",
+    approachTitle: "What neurodivergent-affirming therapy can look like.",
     approach: [
       "We can use direct questions, clear summaries, written or visual organization, more processing time, and practical experiments adjusted to real life rather than moralized when they do not work.",
       "We also look at the environment: which expectations are workable, which are merely familiar, and where a communication problem belongs to a relationship rather than entirely to you."

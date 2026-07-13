@@ -97,7 +97,7 @@ export default async function FrameworkDetailPage({
       <section className="container-wrap section-gap">
         <div className="split-band">
           <article className="split-panel">
-            <h2 className="h2">What this helps us notice.</h2>
+            <h2 className="h2">What this can help you notice.</h2>
             <ul className="split-panel__list body">
               {framework.whyItMatters.map((item) => (
                 <li key={item}>{item}</li>
@@ -105,7 +105,7 @@ export default async function FrameworkDetailPage({
             </ul>
           </article>
           <article className="split-panel">
-            <h2 className="h2">When this becomes useful.</h2>
+            <h2 className="h2">When this is useful.</h2>
             <ul className="split-panel__list body">
               {framework.howItShowsUp.map((item) => (
                 <li key={item}>{item}</li>
@@ -118,7 +118,7 @@ export default async function FrameworkDetailPage({
       <section className="container-wrap section-gap-lg">
         <div className="split-band">
           <article className="split-panel">
-            <h2 className="h2">What we might try.</h2>
+            <h2 className="h2">What you might try.</h2>
             <ul className="split-panel__list body">
               {framework.whatHelps.map((item) => (
                 <li key={item}>{item}</li>
@@ -126,7 +126,7 @@ export default async function FrameworkDetailPage({
             </ul>
           </article>
           <article className="split-panel">
-            <h2 className="h2">Where this framework is used.</h2>
+            <h2 className="h2">Related pages.</h2>
             <div className="flex flex-wrap gap-2">
               {framework.relatedLinks.map((link) => (
                 <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">

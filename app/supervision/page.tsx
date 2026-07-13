@@ -107,7 +107,7 @@ export default function SupervisionPage() {
             </ul>
           </article>
           <article className="split-panel">
-            <h2 className="h2">Direct, specific, and rooted in the actual case.</h2>
+            <h2 className="h2">What supervision is like.</h2>
             <p className="body">We make room for the clinical question, the person in front of you, and the parts of your own response that may be shaping the work.</p>
           </article>
         </div>
@@ -116,7 +116,7 @@ export default function SupervisionPage() {
       <section className="section-gap-lg full-bleed-band full-bleed-band--ultramarine">
         <div className="container-wrap">
           <article className="split-panel">
-            <h2 className="h2">Cases, ethics, and the places where your usual strengths stop being enough.</h2>
+            <h2 className="h2">What we will work on.</h2>
             <ul className="split-panel__list body">
               {topics.map((item) => (
                 <li key={item}>{item}</li>

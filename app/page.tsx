@@ -90,7 +90,7 @@ export default function HomePage() {
             <p className="body mt-3">I pay attention to the ways race, migration, disability, religion, family obligation, class, and power shape a life—and the room we make to talk about it.</p>
           </div>
           <div className="section-heading mt-12">
-            <h2 className="h2">A few familiar problems.</h2>
+            <h2 className="h2">Therapy specialties.</h2>
           </div>
           <div className="index-grid mt-6">
             {homePage.focusAreas.map((item) => (

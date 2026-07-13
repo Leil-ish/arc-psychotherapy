@@ -52,8 +52,8 @@ const faqs = [
     a: "No. This is a private-pay practice. I can provide a superbill for out-of-network reimbursement. Mentaya and Thrizer are separate services that can help with claims if you do not want to handle that paperwork yourself."
   },
   {
-    q: "What is the model-building track?",
-    a: "Model-building puts a pattern into physical space when words alone are not getting us far enough. It is one way of doing therapy, alongside conversation, observation, and practical experiments. The dedicated page explains it in more detail."
+    q: "How does playing with LEGO fit into therapy?",
+    a: "Playing with LEGO puts a pattern into physical space when words alone are not getting us far enough. It is one option alongside conversation, observation, and practical experiments. The dedicated page explains it in more detail."
   }
 ];
 

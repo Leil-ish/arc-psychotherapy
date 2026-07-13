@@ -110,7 +110,7 @@ export const contactPage = {
   policyFacts: [
     "24-hour cancellation policy. Late cancellations or no-shows may be billed in full.",
     "Payment is due at time of service.",
-    "Structured model-building is optional and only used when it supports treatment goals."
+    "Playing with LEGO is optional and used only when it supports the work."
   ],
   questions: [
     {
@@ -122,8 +122,8 @@ export const contactPage = {
       answer: "Yes. Telehealth is available for Texas residents when clinically appropriate."
     },
     {
-      question: "Is structured model-building required?",
-      answer: "It is one way to work with a pattern when physical space helps us see it more clearly. Standard talk therapy is available too."
+      question: "Is LEGO part of every session?",
+      answer: "No. It is one way to work with a pattern when physical space helps us see it more clearly. Therapy can also be entirely conversational."
     },
     {
       question: "What happens after I reach out?",

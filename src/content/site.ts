@@ -51,7 +51,7 @@ export const siteContent = {
   constructive: {
     title: "The LEGO thing.",
     subtitle:
-      "We use LEGO in therapy because a pile of bricks can reveal a problem differently than another very smart conversation.",
+      "A pile of bricks can reveal a problem differently than another very smart conversation.",
     opening: [
       "LEGO is part of the point. A pattern gets easier to see once it has a shape: the people, rules, turning points, and impossible choices are all there on the table.",
       "It is especially useful when you can explain the problem perfectly and are still not sure where to begin."
@@ -98,7 +98,7 @@ export const siteContent = {
     },
     faq: [
       {
-        question: "How does this relate to perfectionism and overcontrol?",
+        question: "How does playing with LEGO fit into therapy?",
         answer:
           "It can make the sequence visible: what happens, what you try to control, and where the pattern tightens. That gives us something concrete to work with."
       },
@@ -130,7 +130,7 @@ export const siteContent = {
       {
         question: "What is the clinical basis for this?",
         answer:
-          "The core treatment is psychotherapy. Model-building is simply another way to reflect together and make a hard-to-see pattern more concrete."
+          "The core treatment is psychotherapy. LEGO is simply another way to reflect together and make a hard-to-see pattern more concrete."
       },
       {
         question: "Is this required?",

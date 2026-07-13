@@ -49,10 +49,10 @@ export default function GoodFaithEstimatePage() {
             <strong>Standard individual therapy session:</strong> ${pricing.standardSession.fee} per {pricing.standardSession.duration}
           </li>
           <li>
-            <strong>{pricing.constructiveTrack.arc6.label} (Structured Model-Building):</strong> ${pricing.constructiveTrack.arc6.fee} — {pricing.constructiveTrack.arc6.details}
+            <strong>{pricing.constructiveTrack.arc6.label} (LEGO therapy):</strong> ${pricing.constructiveTrack.arc6.fee} — {pricing.constructiveTrack.arc6.details}
           </li>
           <li>
-            <strong>{pricing.constructiveTrack.arc10.label} (Structured Model-Building):</strong> ${pricing.constructiveTrack.arc10.fee} — {pricing.constructiveTrack.arc10.details}
+            <strong>{pricing.constructiveTrack.arc10.label} (LEGO therapy):</strong> ${pricing.constructiveTrack.arc10.fee} — {pricing.constructiveTrack.arc10.details}
           </li>
         </ul>
         <p className="mt-3 body text-sm text-ink/75">

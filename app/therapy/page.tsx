@@ -53,7 +53,7 @@ export default function TherapyPage() {
         <div className="hero-copy">
           <p className="label">Private-pay individual psychotherapy for adults</p>
           <h1 className="h1 mt-4">Bring the complicated version.</h1>
-          <p className="hero-lede">Therapy in Round Rock and online across Texas for complex trauma, religious trauma and religious harm, perfectionism, overcontrol, neurodivergence, and the private rules that can make a life increasingly difficult to live inside.</p>
+          <p className="hero-lede">Individual therapy in Round Rock and online across Texas for complex trauma, religious trauma and religious harm, perfectionism, overcontrol, and neurodivergence.</p>
           <div className="hero-support">
             <p className="body">You may understand the problem extremely well. You may have explained it to yourself in several excellent ways. It may still be running the meeting.</p>
             <p className="body">Therapy here is direct, curious, systemic, and allowed to be funny.</p>
@@ -67,7 +67,7 @@ export default function TherapyPage() {
       <section className="section-gap full-bleed-band full-bleed-band--surface">
         <div className="container-wrap">
           <div className="section-heading">
-            <h2 className="h2">Some reasons people look for therapy.</h2>
+            <h2 className="h2">Therapy specialties.</h2>
           </div>
           <div className="index-grid mt-6">
             {specialtyCards.map(({ specialty, label, body }) => (

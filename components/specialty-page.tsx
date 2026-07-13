@@ -73,11 +73,11 @@ export function SpecialtyPage({ specialty }: { specialty: SpecialtyPage }) {
       <section className="container-wrap section-gap">
         <div className="split-band split-band--open">
           <article className="split-panel">
-            <h2 className="h2">How the practice is structured.</h2>
+            <h2 className="h2">The practical details.</h2>
             <p className="body">Private-pay individual therapy with one therapist from the first conversation onward. The standard fee is ${pricing.standardSession.fee} for {pricing.standardSession.duration}; reduced-fee spots are limited and availability varies. In person in {siteConfig.primaryLocation}, with telehealth across Texas.</p>
           </article>
           <article className="split-panel">
-            <h2 className="h2">About Leila.</h2>
+            <h2 className="h2">Who you will work with.</h2>
             <p className="body">Leila Anderson, LMFT-S, is a Texas Licensed Marriage and Family Therapist Supervisor with an MMFT from Abilene Christian University. Her background includes residential treatment, crisis care, executive clinical leadership, program design, and treatment planning.</p>
           </article>
         </div>

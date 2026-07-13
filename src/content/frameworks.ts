@@ -126,11 +126,11 @@ export const frameworks: Framework[] = [
       "Integrate results into future sessions."
     ],
     relatedLinks: [
-      { label: "Structured Model-Building (Optional)", href: "/constructive" },
+      { label: "Playing with LEGO (optional)", href: "/constructive" },
       { label: "Therapy for perfectionism and overcontrol", href: "/therapy/perfectionism-overcontrol" }
     ],
     faq: [
-      { question: "Is this only for structured model-building?", answer: "No. It can be done through language, diagrams, or other concrete formats." },
+      { question: "Is this only for playing with LEGO?", answer: "No. It can be done through language, diagrams, or other concrete formats." },
       { question: "Does externalization reduce emotional depth?", answer: "No. It often improves depth by reducing noise and increasing specificity." },
       { question: "When is it less useful?", answer: "When immediate stabilization needs are primary and cognitive load must stay low." }
     ]
