@@ -1,4 +1,3 @@
-import { SectionCta } from "@/components/section-cta";
 import { pricing } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import { contactPage } from "@/src/content/marketing";
@@ -63,11 +62,6 @@ export default function FeesPage() {
           </p>
         </article>
       </section>
-
-      <SectionCta
-        title="A question before you reach out is allowed."
-        body="Use the contact page to ask about current availability, payment, or whether a model-building track is relevant. You do not need to explain your whole situation first."
-      />
     </>
   );
 }

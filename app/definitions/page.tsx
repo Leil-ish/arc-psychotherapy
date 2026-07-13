@@ -19,7 +19,7 @@ const definitions: DefinitionEntry[] = [
   {
     term: "Perfectionism",
     definition:
-      "Perfectionism is what happens when a mistake starts carrying the weight of a verdict. The work is not to lower every standard; it is to separate values from the fear rule that has attached itself to them.",
+      "Perfectionism is what happens when a mistake starts carrying the weight of a verdict. Values and fear can get tangled together until every standard becomes a threat rule.",
     frameworks: [
       { label: "Arc Mapping", href: "/frameworks/arc-mapping" },
       { label: "Control Gradient", href: "/frameworks/control-gradient" }
@@ -45,7 +45,7 @@ const definitions: DefinitionEntry[] = [
   {
     term: "Religious harm",
     definition:
-      "Religious harm is what remains when a faith system used shame, fear, coercion, or authority in ways that injured you. The work is to rebuild agency without handing you a replacement certainty.",
+      "Religious harm is what remains when a faith system used shame, fear, coercion, or authority in ways that injured you. It can affect agency, belonging, and the ordinary act of making a choice.",
     frameworks: [
       { label: "Belief Deconstruction Grid", href: "/frameworks/belief-deconstruction-grid" },
       { label: "Meaning Reconstruction", href: "/frameworks/meaning-reconstruction" }
@@ -93,7 +93,7 @@ const definitions: DefinitionEntry[] = [
   {
     term: "Meaning reconstruction",
     definition:
-      "Meaning reconstruction is the slow work of rebuilding values, identity, and direction after a belief system or relationship has stopped making sense. The goal is not immediate replacement certainty.",
+      "Meaning reconstruction is the slow work of rebuilding values, identity, and direction after a belief system or relationship has stopped making sense.",
     frameworks: [
       { label: "Meaning Reconstruction", href: "/frameworks/meaning-reconstruction" },
       { label: "Belief Deconstruction Grid", href: "/frameworks/belief-deconstruction-grid" }
@@ -116,7 +116,7 @@ export default function DefinitionsPage() {
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Words I use carefully.</h1>
       <p className="body-lg mt-5 max-w-4xl">
-        If you have cycled through labels—anxiety, burnout, depression—and none of them quite fit, the problem may not have been named accurately enough yet. These are working definitions, not diagnoses or boxes to put yourself in. They give us a shared starting point for a more useful conversation.
+        These are working definitions for patterns that can be hard to name: perfectionism, overcontrol, religious harm, and the slow business of finding your footing again.
       </p>
       <p className="body mt-3 max-w-4xl">
         {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.

@@ -7,7 +7,6 @@ const siteLastUpdated = new Date("2026-03-17");
 
 const staticRoutes = [
   { path: "", priority: 1 },
-  { path: "/start-here", priority: 0.9 },
   { path: "/work-with-me", priority: 0.9 },
   { path: "/about", priority: 0.8 },
   { path: "/supervision", priority: 0.7 },

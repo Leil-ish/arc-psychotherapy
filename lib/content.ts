@@ -10,6 +10,7 @@ export const siteConfig = {
   contactEndpoint: siteContent.contactEndpoint,
   email: siteContent.email,
   phone: siteContent.phone,
+  substackUrl: siteContent.substackUrl,
   sameAs: siteContent.sameAs,
   addressLine1: siteContent.location.addressLine1,
   cityStateZip: `${siteContent.location.city}, ${siteContent.location.state} ${siteContent.location.postalCode}`,
@@ -42,7 +43,6 @@ export const pricing = {
 } as const;
 
 export const navItems = [
-  { href: "/start-here", label: "Start Here" },
   { href: "/work-with-me", label: "Approach" },
   { href: "/supervision", label: "Supervision" },
   { href: "/consultation", label: "Consultation" },

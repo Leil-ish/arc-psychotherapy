@@ -33,10 +33,9 @@ export default function FrameworksPage() {
       <div className="hero-copy">
         <p className="label">Working ideas</p>
         <h1 className="h1 mt-4">Useful names for things that are otherwise hard to see.</h1>
-        <p className="hero-lede">These are working ideas, not branded treatment steps and not homework you need to master before therapy can help.</p>
+        <p className="hero-lede">A few maps for patterns that are easier to work with once they have a name.</p>
         <div className="hero-support">
-          <p className="body">If one gives us a clearer view of the problem, we may use it. If it turns into a way to sound insightful without changing anything, it has failed its job.</p>
-          <p className="body">Start with the one that sounds familiar, or skip this page entirely.</p>
+          <p className="body">Some show up in therapy. Others are simply useful ways of naming something you have already noticed.</p>
         </div>
       </div>
 
@@ -45,8 +44,7 @@ export default function FrameworksPage() {
           {frameworks.map((framework) => (
             <Link key={framework.slug} href={`/frameworks/${framework.slug}`} className="focus-ring no-link-style dense-index__row">
               <div>
-                <p className="label">Working idea</p>
-                <h2 className="dense-index__title mt-3">{framework.name}</h2>
+                <h2 className="dense-index__title">{framework.name}</h2>
               </div>
               <div className="dense-index__body body">
                 <p>{framework.definition}</p>

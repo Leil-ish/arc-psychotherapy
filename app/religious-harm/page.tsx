@@ -37,7 +37,6 @@ export default function ReligiousHarmPage() {
         hub={hub}
         imageSrc="/images/architectural-details/concrete-shadow-lines.jpg"
         imageAlt="Concrete wall with severe angled shadows."
-        resonanceLine="The work is not about replacing one rigid system with another. It is about rebuilding agency."
       />
     </>
   );

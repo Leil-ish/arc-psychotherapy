@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
 const faqs = [
   {
     q: "What do sessions look like?",
-    a: "Sessions are 50–55 minutes. We talk about history, meaning, and relationships, but we also get concrete about the sequence that keeps repeating: what happens, what you predict, what you do next, and what it costs. Between sessions, you may notice or try things; there is no gold star for doing therapy “correctly.” We use what happens to guide the next session."
+    a: "Sessions are 50–55 minutes. We talk about history, meaning, and relationships, then get concrete about the sequence that keeps repeating: what happens, what you predict, what you do next, and what it costs. Between sessions, you may notice or try things; we use what happens to guide the next session."
   },
   {
     q: "How long does therapy typically take?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "What do you mean by 'direct and practical' therapy?",
-    a: "It means we do not mistake a good explanation for a change plan. We will define the problem clearly enough to know what we are working on, and we will keep checking whether the work is making a difference outside the room. Direct does not mean harsh, rushed, or certain about everything."
+    a: "A good explanation is useful, but it is not always a change plan. We define the problem clearly enough to work with it and keep checking whether the work is making a difference outside the room."
   },
   {
     q: "Do you work with medication providers?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: "What is the model-building track?",
-    a: "Model-building is an optional way of putting a pattern into physical space when words alone are not getting us far enough. It is not required, not a separate diagnosis, and not a replacement for therapy. The dedicated page explains it in more detail."
+    a: "Model-building puts a pattern into physical space when words alone are not getting us far enough. It is one way of doing therapy, alongside conversation, observation, and practical experiments. The dedicated page explains it in more detail."
   }
 ];
 

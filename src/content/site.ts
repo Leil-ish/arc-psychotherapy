@@ -7,8 +7,10 @@ export const siteContent = {
   contactEndpoint: "/api/contact",
   email: "hello@arc-psychotherapy.com",
   phone: "(512) 710-9966",
+  substackUrl: "https://leilaanderson.substack.com/",
   sameAs: [
-    "https://www.linkedin.com/in/leilaanderson/"
+    "https://www.linkedin.com/in/leilaanderson/",
+    "https://leilaanderson.substack.com/"
   ],
   credentialsLine: "Leila Anderson, LMFT-S",
   primaryTopics: [
@@ -44,37 +46,37 @@ export const siteContent = {
     "Licensed Marriage and Family Therapist – Texas"
   ],
   constructive: {
-    title: "Building the Problem",
+    title: "The LEGO thing.",
     subtitle:
-      "In some sessions, we build. LEGO sets give a pattern a physical form: the people, rules, turning points, and impossible choices can sit on the table instead of having to stay organized in your head.",
+      "We use LEGO in therapy because a pile of bricks can reveal a problem differently than another very smart conversation.",
     opening: [
-      "The bricks are not the point. The point is that some patterns—perfectionism, overcontrol, the shape of a system that harmed you—become easier to notice once they exist outside your head.",
-      "This is most useful when the pattern is clear in conversation but the usual insight has not changed what happens next."
+      "LEGO is part of the point. A pattern gets easier to see once it has a shape: the people, rules, turning points, and impossible choices are all there on the table.",
+      "It is especially useful when you can explain the problem perfectly and are still not sure where to begin."
     ],
     whyItHelps: [
-      "Externalization: a pattern becomes something you can look at instead of something you are trapped inside.",
-      "Sequence: you can see what comes first, what follows, and where there may actually be room to intervene.",
-      "Imperfection: a disruption is something to learn from, rather than proof you have failed the exercise.",
-      "Integration: meaning, behavior, and identity can be held together without turning the session into a lecture.",
-      "Pacing: having a shared structure can slow a fast, reactive problem down enough to see it."
+      "The pattern comes out of your head and onto the table, where we can both see it.",
+      "You can see what comes first, what follows, and where there is room to do something different.",
+      "When a build goes sideways, it usually tells us something interesting.",
+      "It can hold meaning, behavior, identity, and the genuinely weird parts of a story at the same time.",
+      "It slows a fast problem down enough to see it."
     ],
     sessionFlow: [
-      "Consult",
-      "Choose an arc",
-      "Build + reflect",
-      "Integration",
-      "Take-home"
+      "Talk it through",
+      "Choose a build",
+      "Build + talk",
+      "See what it shows",
+      "Take it home"
     ],
     fit: {
       good: [
-        "You want a concrete way to work with a control pattern, a relationship dynamic, or a belief system.",
-        "You are open to an experiential format without needing to be “creative” or good at LEGO.",
-        "You think more clearly when you can see a structure rather than only describe it."
+        "You want a concrete way to work with a control pattern, a relationship, or a belief system.",
+        "You are curious about trying something different, even if you are not “creative” or good at LEGO.",
+        "You think more clearly when you can see a structure instead of only describing it."
       ],
       notFit: [
         "You strongly prefer conversation-only therapy and have no interest in an experiential method.",
-        "You need acute crisis stabilization rather than a planned treatment arc.",
-        "You need immediate stabilization, or you are looking for a quick or guaranteed result."
+        "You need acute crisis stabilization.",
+        "You are looking for a quick or guaranteed result."
       ]
     },
     packages: {
@@ -95,22 +97,22 @@ export const siteContent = {
       {
         question: "How does this relate to perfectionism and overcontrol?",
         answer:
-          "It can make the sequence of a control strategy visible: what the rule is, what it is protecting, and where the pattern tightens. That gives us something concrete to work with."
+          "It can make the sequence visible: what happens, what you try to control, and where the pattern tightens. That gives us something concrete to work with."
       },
       {
         question: "Can this be used for religious harm work?",
         answer:
-          "Sometimes. It can help make inherited authority, rules, and belonging structures visible, especially when the problem is hard to explain without getting lost in abstractions."
+          "Sometimes. It can make inherited authority, rules, and belonging visible without getting lost in abstractions."
       },
       {
         question: "What if I am not creative?",
         answer:
-          "You do not need to be creative. This is not an art project. The work is about sequence, pattern awareness, and what happens when you have to make a choice under pressure."
+          "No LEGO experience or creative skill needed. The work is in the choices, the sequence, and what becomes visible while we build."
       },
       {
         question: "What if I do not finish?",
         answer:
-          "Not finishing is not a failure. We look at what got in the way, what that tells us, and whether to continue, adapt, or use a different format."
+          "Then we look at what got in the way, what that tells us, and whether to continue, adapt, or use a different format."
       },
       {
         question: "Do I keep what we build?",
@@ -125,15 +127,15 @@ export const siteContent = {
       {
         question: "What is the clinical basis for this?",
         answer:
-          "The core treatment is psychotherapy. Model-building is an experiential tool used to support reflection and make a hard-to-see pattern more concrete. It is not presented as a stand-alone cure or replacement for therapy."
+          "The core treatment is psychotherapy. Model-building is simply another way to reflect together and make a hard-to-see pattern more concrete."
       },
       {
         question: "Is this required?",
         answer:
-          "No. Standard therapy is always available. This track is selected only when it supports the work."
+          "It is one option within therapy, used when building something in physical space would be useful."
       }
     ],
     curious:
-      "The rationale is simple: a pattern is easier to work with when you can see its shape. It is also harder to let it hide behind a good explanation when it is sitting on the table."
+      "It is hard for a pattern to hide behind a very good explanation when it is sitting on the table."
   }
 } as const;

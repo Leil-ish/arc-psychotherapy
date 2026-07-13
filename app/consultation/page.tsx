@@ -14,7 +14,7 @@ const intro = {
   title: "Consultation for treatment programs, teams, and leaders.",
   lede: "I help when a team is working hard and the same problem keeps returning in a different outfit.",
   body: [
-    "Sometimes the problem is not effort, morale, or one difficult person. It is the way the work is organized: who holds authority, how decisions get made, where the process breaks, and what the system rewards.",
+    "Sometimes the problem lives in the way the work is organized: who holds authority, how decisions get made, where the process breaks, and what the system rewards.",
     "Consultation can focus on program design, staff training, leadership, treatment culture, and the clinical work of shame, trauma, and relationships."
   ]
 } as const;
@@ -88,7 +88,7 @@ export default function ConsultationPage() {
         <aside className="hero-meta hero-meta--ultramarine">
           <div className="meta-block">
             <p className="label">Best For</p>
-            <p className="body">Clinical programs, treatment teams, and leaders who want a culture that does not rely on burnout, fear, or professional theater as operating systems.</p>
+            <p className="body">Clinical programs, treatment teams, and leaders ready to look closely at culture, authority, and the systems people work inside.</p>
           </div>
           <div className="meta-block">
             <p className="label">Topics</p>
@@ -116,7 +116,6 @@ export default function ConsultationPage() {
       <section className="section-gap-lg">
         <div className="split-band split-band--open">
           <article className="split-panel">
-            <p className="label">Good Use Cases</p>
             <h2 className="h2">Where this helps.</h2>
             <ul className="split-panel__list body">
               {goodFor.map((item) => (
@@ -133,19 +132,6 @@ export default function ConsultationPage() {
               ))}
             </ul>
           </article>
-        </div>
-      </section>
-
-      <section className="section-gap-lg pb-8">
-        <div className="route-divider">
-          <p className="label">Next Step</p>
-          <h2 className="h2 mt-3">Ask about consultation.</h2>
-          <p className="body mt-3 max-w-3xl">
-            Reach out with a short description of the problem, who is involved, and what needs to work better. We can decide together whether a conversation, training, or longer consultation makes sense.
-          </p>
-          <div className="hero-actions">
-            <ButtonLink href="/contact">Contact</ButtonLink>
-          </div>
         </div>
       </section>
     </section>

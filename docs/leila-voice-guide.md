@@ -14,10 +14,12 @@ The voice is:
 - direct
 - intelligent
 - slightly dry
+- playful when the moment allows it
 - behaviorally specific
 - emotionally accurate
 - systems-aware without sounding academic
 - confident without performing authority
+- interested in the person, not just the pattern
 
 The voice is not:
 
@@ -27,6 +29,18 @@ The voice is not:
 - generic therapist marketing
 - concept-first for its own sake
 - LinkedIn thought-leadership voice
+- austere, corrective, or clinically severe
+- an authority figure explaining the reader to themself
+
+## The Person This Site Is Trying To Reach
+
+The best-fit client is often very smart, likely neurodivergent, shaped by complex trauma or rigid systems, and deeply suspicious of authority that claims certainty too quickly. They may be funny, intense, self-aware, contrarian, exhausted, or all of those at once.
+
+They do not need the site to explain that they are complicated. They need evidence that the therapist can enjoy complexity without turning it into a diagnosis, a personality brand, or a problem to be corrected.
+
+The site should leave them with this impression:
+
+> This person can keep up with me. She will take me seriously without becoming solemn. She is interested in who I actually am, not in making me easier to categorize.
 
 ## Core Stance
 
@@ -36,6 +50,8 @@ The voice is not:
 - Therapy is useful when it changes what happens in actual life.
 - Small, unglamorous movement is still real movement.
 - Nuance matters most where people are tempted by certainty.
+- Humor can be accurate. It does not make the hard thing less real.
+- The strange, vivid, inconvenient parts of a person are often the parts most worth knowing.
 
 ## Best Internal Test
 
@@ -43,6 +59,8 @@ Ask:
 
 - Does this sound like someone observing the actual shape of the problem?
 - Or does it sound like someone trying to sound wise?
+- Does this sound like a person the reader would want to spend an hour with?
+- Could this sentence be shorter without becoming flatter?
 
 If it sounds wise, cut it.
 
@@ -57,4 +75,4 @@ If it sounds wise, cut it.
 
 ## Working Rule
 
-If a concept cannot change what someone does next, trim it.
+If a concept cannot change what someone does next, trim it. If a sentence makes the reader feel evaluated, rewrite it.

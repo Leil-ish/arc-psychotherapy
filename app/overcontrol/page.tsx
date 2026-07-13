@@ -37,7 +37,6 @@ export default function OvercontrolPage() {
         hub={hub}
         imageSrc="/images/architectural-details/stair-shadow-blackwhite.jpg"
         imageAlt="Stair and wall in high-contrast shadow."
-        resonanceLine="You have probably already tried managing it harder. That is the part that keeps not working."
       />
     </>
   );

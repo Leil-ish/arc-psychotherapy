@@ -9,13 +9,11 @@ import { siteContent } from "@/src/content/site";
 export function ConceptPageTemplate({
   hub,
   imageSrc,
-  imageAlt,
-  resonanceLine
+  imageAlt
 }: {
   hub: ConceptHub;
   imageSrc: string;
   imageAlt: string;
-  resonanceLine: string;
 }) {
   const [definitionLead, ...definitionSupport] = hub.definition;
 
@@ -33,11 +31,10 @@ export function ConceptPageTemplate({
                   {item}
                 </p>
               ))}
-              <p className="body">{resonanceLine}</p>
               <p className="label pt-2">{siteContent.primaryLocation} • {siteContent.telehealthRegion}</p>
             </div>
             <div className="hero-actions">
-              <ButtonLink href="/start-here">Start Here</ButtonLink>
+              <ButtonLink href="/contact">Contact</ButtonLink>
               <ButtonLink href="/work-with-me" variant="secondary">
                 Approach
               </ButtonLink>
@@ -59,8 +56,8 @@ export function ConceptPageTemplate({
       <section className="container-wrap section-gap">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">Common Presentations</p>
-            <h2 className="h2">How it usually shows up.</h2>
+            <p className="label">This can look like</p>
+            <h2 className="h2">Some familiar versions of the problem.</h2>
             <ul className="split-panel__list body">
               {hub.commonPresentations.map((item) => (
                 <li key={item}>{item}</li>
@@ -68,8 +65,8 @@ export function ConceptPageTemplate({
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">What Stalls</p>
-            <h2 className="h2">What people often try first.</h2>
+            <p className="label">What people often try</p>
+            <h2 className="h2">Things that sound helpful and often are not.</h2>
             <ul className="split-panel__list body">
               {hub.whatDoesNotWork.map((item) => (
                 <li key={item}>{item}</li>
@@ -82,8 +79,8 @@ export function ConceptPageTemplate({
       <section className="container-wrap section-gap">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">What Helps</p>
-            <h2 className="h2">What starts to widen the range.</h2>
+            <p className="label">What can help</p>
+            <h2 className="h2">What can make some room.</h2>
             <ul className="split-panel__list body">
               {hub.whatHelps.map((item) => (
                 <li key={item}>{item}</li>
@@ -91,8 +88,8 @@ export function ConceptPageTemplate({
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">Therapy At Arc</p>
-            <h2 className="h2">How the work gets practical.</h2>
+            <p className="label">How I work with it</p>
+            <h2 className="h2">What therapy might look like.</h2>
             <p className="body">{hub.arcApproach}</p>
           </article>
         </div>

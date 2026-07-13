@@ -15,20 +15,14 @@ const intro = {
   lede: "For associates who want more than signatures, hours, and a vague sense that they are probably doing fine.",
   body: [
     "We work on case formulation, ethics, countertransference, and treatment decisions—the parts of clinical work that are usually more complicated than a modality acronym makes them sound.",
-    "I will give direct feedback. If fear, over-accommodation, certainty, or a value conflict is getting in the way of the work, we will name it without making it a character indictment."
+    "I give direct feedback about fear, over-accommodation, certainty, and value conflict when they are getting in the way of the work."
   ]
 } as const;
 
 const fit = [
   "You want supervision that is direct, specific, and grounded in the actual case.",
   "You want help making sense of countertransference, ethics, authority, and treatment decisions.",
-  "You want feedback that helps you grow rather than empty reassurance or a performance of certainty."
-] as const;
-
-const notFit = [
-  "Rubber-stamp supervision or a place to collect signatures.",
-  "A supervisory relationship with minimal challenge or accountability.",
-  "Canned language in place of clinical thinking."
+  "You want feedback that helps you grow and sharper language for the decisions you make."
 ] as const;
 
 const topics = [
@@ -100,7 +94,6 @@ export default function SupervisionPage() {
       <section className="section-gap">
         <div className="split-band split-band--open">
           <article className="split-panel">
-            <p className="label">Good Fit</p>
             <h2 className="h2">Who this is for.</h2>
             <ul className="split-panel__list body">
               {fit.map((item) => (
@@ -109,13 +102,9 @@ export default function SupervisionPage() {
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">Scope</p>
-            <h2 className="h2">Not the right fit if you&apos;re looking for:</h2>
-            <ul className="split-panel__list body">
-              {notFit.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            <p className="label">Format</p>
+            <h2 className="h2">Direct, specific, and rooted in the actual case.</h2>
+            <p className="body">We make room for the clinical question, the person in front of you, and the parts of your own response that may be shaping the work.</p>
           </article>
         </div>
       </section>

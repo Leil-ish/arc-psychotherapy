@@ -30,6 +30,14 @@ export function SiteFooter() {
             <Link className="focus-ring no-link-style site-footer__link" href="/ideas">
               Writing
             </Link>
+            <a
+              className="focus-ring no-link-style site-footer__link"
+              href={siteConfig.substackUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Mostly, Though on Substack
+            </a>
           </div>
         </div>
         <div className="site-footer__block">

@@ -26,19 +26,19 @@ export const homePage = {
       eyebrow: "Issue Guide",
       title: "Perfectionism",
       href: "/perfectionism",
-      body: "When every ordinary decision starts carrying the weight of a verdict."
+      body: "When getting it right has stopped feeling good."
     },
     {
       eyebrow: "Issue Guide",
       title: "Overcontrol",
       href: "/overcontrol",
-      body: "When being the reliable one has quietly become a very small life."
+      body: "When being the responsible one has left very little room to be a person."
     },
     {
       eyebrow: "Issue Guide",
       title: "Religious harm",
       href: "/religious-harm",
-      body: "When an old system still gets a vote in your body, relationships, and decisions."
+      body: "When you have left the structure, but it has not quite left you."
     }
   ] satisfies MarketingIndexItem[],
   writing: [
@@ -46,13 +46,13 @@ export const homePage = {
       eyebrow: "Essay",
       title: "Perfectionism as a Structural Problem",
       href: "/ideas/perfectionism-structural-problem",
-      body: "Why trying to think differently rarely changes a rule your whole life is organized around."
+      body: "Why getting very good at self-criticism does not make it any more useful."
     },
     {
       eyebrow: "Essay",
       title: "The Adjacent Possible",
       href: "/ideas/adjacent-possible",
-      body: "The difference between a future you can imagine and a step you can actually take."
+      body: "On the gap between what is possible and what is actually next."
     },
     {
       eyebrow: "Essay",
@@ -67,9 +67,9 @@ export const servicesPage = {
   intro: {
     eyebrow: "Work",
     title: "Therapy, supervision, and consultation.",
-    lede: "Different settings, same question: what is actually happening here, and what would make a difference?",
+    lede: "Different settings, same interest: people doing hard things inside complicated systems.",
     body: [
-      "I work with individual clients, associate therapists, and clinical teams. Each needs a different kind of help. None of them need more professional theater."
+      "I work with individual clients, associate therapists, and clinical teams. Each needs something different. The work should be useful in the room, not just impressive in a meeting."
     ],
     actions: [
       { label: "Therapy", href: "/work-with-me" },
@@ -81,19 +81,19 @@ export const servicesPage = {
       eyebrow: "Therapy",
       title: "Approach",
       href: "/work-with-me",
-      body: "Private-pay psychotherapy for adults whose insight has outpaced the change they want."
+      body: "Private-pay therapy for people who want to understand themselves and have a better Tuesday."
     },
     {
       eyebrow: "For Clinicians",
       title: "Supervision",
       href: "/supervision",
-      body: "Supervision for associates who want to think clearly, tolerate not knowing, and get real feedback."
+      body: "Supervision for associates who want real feedback, better questions, and room to become themselves as clinicians."
     },
     {
       eyebrow: "For Teams",
       title: "Consultation",
       href: "/consultation",
-      body: "Program, training, and leadership consultation for systems where effort is high and the same problems keep returning."
+      body: "Consultation for teams where people are working hard and the same problems keep coming back."
     }
   ] satisfies MarketingIndexItem[]
 } as const;
@@ -101,10 +101,9 @@ export const servicesPage = {
 export const contactPage = {
   intro: {
     eyebrow: "Contact",
-    title: "A short first conversation.",
-    lede: "Ask about availability, fees, or whether the work sounds like a fit. I reply within one to two business days.",
+    title: "Get in touch.",
+    lede: "Availability, fees, and whether we might work well together.",
     body: [
-      "You do not need to explain your whole history in a form. A name, a way to reach you, and a general sense of what you are looking for is enough.",
       "This site is not monitored for urgent needs. If you are in immediate danger, call 911. For mental health crisis support, call or text 988."
     ]
   } satisfies MarketingIntro,
@@ -124,11 +123,11 @@ export const contactPage = {
     },
     {
       question: "Is structured model-building required?",
-      answer: "No. It is optional and selected only when it supports the work."
+      answer: "It is one way to work with a pattern when physical space helps us see it more clearly. Standard talk therapy is available too."
     },
     {
       question: "What happens in the consult?",
-      answer: "We will talk briefly about what you are looking for, whether I am the right person to help, and the practical details. A consult is for deciding—not for proving that you need therapy badly enough."
+      answer: "We talk briefly about what you are looking for, whether I am the right person to help, and the practical details."
     }
   ]
 } as const;

@@ -1,7 +1,6 @@
 import type { Metadata, Route } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ButtonLink } from "@/components/button-link";
 import { SchemaScript } from "@/components/schema-script";
 import { SimpleMarkdown } from "@/components/simple-markdown";
 import { articleSchema, breadcrumbSchema } from "@/lib/seo";
@@ -139,7 +138,6 @@ export default async function IdeaEssayPage({
       <section className="section-gap">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">Related Links</p>
             <h2 className="h2">Related pages and frameworks.</h2>
             <div className="flex flex-wrap gap-2">
               {essay.related.map((link) => (
@@ -149,9 +147,6 @@ export default async function IdeaEssayPage({
               ))}
               <Link href="/frameworks" className="focus-ring no-link-style chip-link">
                 Working ideas
-              </Link>
-              <Link href="/start-here" className="focus-ring no-link-style chip-link">
-                Start Here
               </Link>
               <Link href="/work-with-me" className="focus-ring no-link-style chip-link">
                 Approach
@@ -164,7 +159,6 @@ export default async function IdeaEssayPage({
             </div>
           </article>
           <article className="split-panel">
-            <p className="label">Related Reading</p>
             <h2 className="h2">More on this topic.</h2>
             {related.length > 0 ? (
               <div className="dense-index">
@@ -183,22 +177,6 @@ export default async function IdeaEssayPage({
               <p className="body">This essay currently stands on its own.</p>
             )}
           </article>
-        </div>
-      </section>
-
-      <section className="section-gap-lg pb-8">
-        <div className="route-divider">
-          <p className="label">From here</p>
-          <h2 className="h2 mt-3">Read about therapy or ask a practical question.</h2>
-          <p className="body mt-3 max-w-3xl">
-            If you want to know how therapy works, read the approach page. If you want to ask about fit, availability, or fees, use the contact page.
-          </p>
-          <div className="hero-actions">
-            <ButtonLink href="/work-with-me">Approach</ButtonLink>
-            <ButtonLink href={siteContent.bookingUrl} variant="secondary">
-              Contact
-            </ButtonLink>
-          </div>
         </div>
       </section>
     </article>

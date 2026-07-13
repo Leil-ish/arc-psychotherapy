@@ -14,50 +14,42 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Approach",
-  title: "Therapy for the part after you understand why.",
-  lede: "Insight matters. It is just not always enough to alter a pattern that has been protecting you for years.",
+  title: "What it is like to work with me.",
+  lede: "Deep, practical, and allowed to be funny.",
   body: [
-    "We will talk about your history, but we will not treat history as an explanation that ends the conversation. We will also look at the moment the pattern turns on: the email you cannot send, the request you cannot make, the rule you follow even when you no longer believe it.",
-    "Then we test the smallest useful change. Not because small is inherently virtuous, but because a change that your life can actually absorb tells us more than a dramatic plan you cannot carry home."
+    "We start with the thing that brought you in and follow its threads: history, relationships, old rules, weirdly specific moments, whatever is actually there.",
+    "I ask good questions, have opinions, and occasionally point out that your very elegant explanation might be protecting something."
   ]
 } as const;
 
 const process = [
   {
-    step: "Consult",
-    title: "Start with a consult.",
-    body: "We talk through what you are looking for, whether I am the right person to help, and the practical details."
+    step: "First conversation",
+    title: "See whether it fits.",
+    body: "We talk about what you are looking for, the practical details, and whether the work makes sense for you."
   },
   {
     step: "Therapy",
-    title: "Map the actual sequence.",
-    body: "We get specific about what happens during the week: the trigger, the rule, the protective move, and the cost."
+    title: "Pull on a thread.",
+    body: "We start with the thing making life hard and see where it leads: history, relationships, old fears, weirdly specific moments."
   },
   {
-    step: "Adjustment",
-    title: "Keep revising the map.",
-    body: "We pay attention to what changes and what does not. If an approach is not useful, we say so and adjust it instead of pretending it is working."
+    step: "Over time",
+    title: "Keep what helps.",
+    body: "We notice what shifts, toss what does not, and keep working with what real life hands us."
   }
 ] as const;
 
-const values = [
-  "Queer and trans affirming.",
-  "Fat positive and HAES-aligned.",
-  "Neurodivergent-affirming. No masking required.",
-  "Anti-racist and decolonial.",
-  "Migration, religion, family obligation, and power are part of the clinical picture."
-] as const;
-
 const goodFit = [
-  "You want therapy that can hold complexity without becoming vague.",
-  "You are dealing with perfectionism, overcontrol, religious harm, chronic over-responsibility, or an old strategy that has begun taking up too much space.",
-  "You are tired of being articulate about your life and unable to change the part that hurts."
+  "You want a therapist who can keep up with a complicated mind.",
+  "You are dealing with perfectionism, overcontrol, religious harm, chronic over-responsibility, or a life that has become harder to live inside.",
+  "You want depth, challenge, and a real relationship with the person sitting across from you."
 ] as const;
 
 const notFit = [
   "Crisis stabilization or emergency response.",
   "Insurance-based care.",
-  "Therapy with no shared direction or a formula applied to everyone."
+  "A formula applied to everyone or a therapist who acts like they already know you."
 ] as const;
 
 export default function WorkWithMePage() {
@@ -140,7 +132,6 @@ export default function WorkWithMePage() {
                 <h3 className="dense-index__title mt-3">{item.title}</h3>
               </div>
               <p className="dense-index__body body">{item.body}</p>
-              <span className="dense-index__arrow">Step</span>
             </div>
           ))}
         </div>
@@ -152,15 +143,10 @@ export default function WorkWithMePage() {
         <div className="split-band split-band--open">
           <article className="split-panel">
             <p className="label">Values</p>
-            <h2 className="h2">You should not have to argue for your own humanity before the work can begin.</h2>
-            <ul className="split-panel__list body">
-              {values.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            <h2 className="h2">Context matters here.</h2>
+            <p className="body">My practice is queer-affirming, trans-affirming, fat-affirming, and neurodiversity-affirming. Race, migration, religion, family obligation, disability, and power shape a life; they come into the room with us.</p>
           </article>
           <article className="split-panel">
-            <p className="label">Who This Helps</p>
             <h2 className="h2">This is usually a good fit when:</h2>
             <ul className="split-panel__list body">
               {goodFit.map((item) => (
@@ -182,17 +168,14 @@ export default function WorkWithMePage() {
         <div className="container-wrap">
           <div className="feature-stage">
             <article className="feature-stage__lead">
-              <p className="label">Optional Method</p>
+              <p className="label">Optional Method: Playing with LEGO</p>
               <h2 className="feature-stage__title">Some sessions, we build.</h2>
               <p className="body">
-                Some clients use LEGO sets as a way of putting a pattern on the table—the people, rules, turning points, and impossible choices that are difficult to hold in their head all at once.
+                We use LEGO sets to build a family system, a belief structure, or the shape of an impossible decision in physical space. Then we can look at it together, move things around, and see what changes.
               </p>
               <p className="body">{constructive.opening[0]}</p>
               <div className="hero-actions">
                 <ButtonLink href="/constructive">Learn More</ButtonLink>
-                <ButtonLink href="/contact" variant="secondary">
-                  Contact
-                </ButtonLink>
               </div>
             </article>
             <aside className="feature-stage__detail">

@@ -21,29 +21,29 @@ export const conceptHubs: ConceptHub[] = [
     slug: "perfectionism",
     title: "Perfectionism",
     definition: [
-      "Perfectionism is what happens when an ordinary mistake starts carrying the weight of a verdict.",
-      "Other people see care, competence, and high standards. You see the email you should have worded differently, the decision that could still go wrong, and the version of yourself you were supposed to be by now.",
-      "The goal is not to stop caring. It is to separate what you genuinely value from the rule that says you must control every possible outcome."
+      "Perfectionism is not the same thing as having standards. It is the feeling that an ordinary mistake says something alarming about you.",
+      "It can make an email feel like a referendum, a decision feel dangerous, or rest feel suspicious.",
+      "Some standards are yours. Others have turned into a full-time threat-management job."
     ],
     commonPresentations: [
-      "Researching or preparing until action becomes harder, not easier",
-      "Delaying completion because the conditions never feel quite sufficient",
-      "Replaying an ordinary mistake long after everyone else has moved on",
-      "Doing very well by external measures while feeling less and less free inside your own life"
+      "An email takes forty minutes, then you reread it in bed",
+      "Starting is easy; finishing feels dangerous",
+      "A small mistake stays with you long after everyone else has moved on",
+      "You do well by external measures while feeling less and less free inside your own life"
     ],
     whatDoesNotWork: [
-      "Being told to “be kinder to yourself” without changing the situation that keeps triggering the rule",
-      "Making another rigid system for becoming less rigid",
-      "Treating standards as the problem, when the real problem is what happens when a standard becomes a threat"
+      "A prettier version of self-criticism dressed up as a productivity system",
+      "Being told to “be kinder to yourself” with no idea what that means on a Wednesday",
+      "Treating standards as the problem, when the problem is the terror of falling short"
     ],
     whatHelps: [
-      "Distinguish a value from the fear rule that has attached itself to it",
-      "Try small, visible imperfections that do not require blowing up your life to prove a point",
-      "Follow the sequence: what happened, what you predicted, what you did, and what it cost",
-      "Let the results—not the anxiety of the moment—inform the next decision"
+      "Separating a value from the fear that has attached itself to it",
+      "Trying small, visible imperfections without blowing up your life to prove a point",
+      "Following the sequence: what happened, what you predicted, what you did, and what it cost",
+      "Letting the result—not the panic of the moment—inform the next decision"
     ],
     arcApproach:
-      "In therapy, we get specific about the rule you are following, what it is protecting, and what it costs. Then we test changes that are close enough to your real life to teach us something.",
+      "We get curious about what perfectionism has been doing for you, where it is exhausting you, and what would make the next week a little less punishing.",
     faq: [
       {
         question: "What is perfectionism in psychology?",
@@ -79,29 +79,29 @@ export const conceptHubs: ConceptHub[] = [
     slug: "overcontrol",
     title: "Overcontrol",
     definition: [
-      "Overcontrol is what happens when being careful, competent, and contained becomes the only way you know how to be safe.",
-      "People may know you as steady and reliable. You may know the internal version: the bracing, the endless forecasting, the difficulty relaxing into a plan, a relationship, or a choice.",
-      "The goal is not chaos or forced vulnerability. It is a wider range of choices than the ones fear currently permits."
+      "Overcontrol is what happens when responsibility, restraint, and preparedness do too much of the work of keeping you safe.",
+      "Other people may know you as steady and reliable. You may know the internal version: the bracing, the forecasting, the difficulty relaxing into a plan, a relationship, or a choice.",
+      "The life gets larger when fear is no longer the only thing approving your options."
     ],
     commonPresentations: [
-      "Planning so rigidly that a small disruption can ruin the whole day",
-      "Delayed decisions because no option can be made sufficiently certain",
-      "Keeping emotion contained so carefully that intimacy starts to feel like a performance",
-      "Being the reliable one while privately feeling tight, brittle, or exhausted"
+      "A small disruption can ruin a carefully built day",
+      "You cannot decide because no option feels sufficiently certain",
+      "Intimacy starts to feel like a performance with very good emotional lighting",
+      "You are the reliable one and privately feel tight, brittle, or exhausted"
     ],
     whatDoesNotWork: [
-      "Treating control as a moral failure or a personality defect",
+      "Treating control as a personality defect",
       "Forcing a dramatic act of vulnerability before there is enough support for it",
-      "Doing a “challenge” without paying attention to what it taught you or what happened next"
+      "Doing a “challenge” and calling the anxiety it creates proof that it worked"
     ],
     whatHelps: [
       "Small experiments that create more choice without asking you to leap off a cliff",
-      "Putting the pattern into words, diagrams, or physical space so it is something you can examine rather than simply inhabit",
-      "Looking honestly at what happened after an experiment instead of letting one hard feeling become the conclusion",
+      "Putting the pattern into words, diagrams, or physical space so we can look at it together",
+      "Looking honestly at what happened instead of letting one hard feeling become the conclusion",
       "Decision rules that preserve your values while loosening fear’s monopoly on the outcome"
     ],
     arcApproach:
-      "We look at where control still serves you and where it has begun taking more than it gives back. Then we build range in steps your nervous system and actual life can tolerate.",
+      "We look at what control is doing for you and where it is starting to take more than it gives back. Then we make room for more options, one non-dramatic step at a time.",
     faq: [
       {
         question: "What is overcontrol in psychology?",
@@ -137,29 +137,29 @@ export const conceptHubs: ConceptHub[] = [
     slug: "religious-harm",
     title: "Religious Harm",
     definition: [
-      "Religious harm is what remains when a faith system used fear, shame, control, or authority in ways that injured you.",
-      "A person can leave, change their beliefs, or still have faith and find that the old system remains present: in a panic around dissent, a body that braces at the word “sin,” or a decision that feels dangerous for reasons that no longer make sense.",
-      "The work is not to hand you a new doctrine. It is to help you understand what you inherited, decide what still fits, and build a life that can tolerate your own authority."
+      "Religious harm is what remains when a faith system used fear, shame, control, or authority in ways that hurt you.",
+      "You can leave, change your beliefs, or still have faith and find that the old system remains: in a panic around dissent, a body that braces at the word “sin,” or a decision that feels dangerous for reasons you cannot quite explain.",
+      "I am not here to hand you a new doctrine. I am interested in what you inherited, what still fits, and how you want to live now."
     ],
     commonPresentations: [
-      "Shame that persists even when your current beliefs no longer support it",
-      "Fear, panic, or a sense of danger around disagreement and ambiguity",
-      "Difficulty trusting your own judgment without an authority figure to certify it",
-      "The disorienting loss of structure after leaving a faith community or changing your relationship to it"
+      "Shame that persists even when your beliefs have changed",
+      "Fear or panic around disagreement and ambiguity",
+      "Wanting an authority figure to certify that your judgment is okay",
+      "The strange grief of losing a community, language, or structure you also needed to leave"
     ],
     whatDoesNotWork: [
       "Replacing one rigid ideology with another and calling it freedom",
       "Reducing the whole problem to a disagreement about doctrine",
-      "Pressuring yourself into a new identity before you have had time to grieve or integrate what changed"
+      "Rushing yourself into a new identity before you have had time to grieve"
     ],
     whatHelps: [
       "Name the inherited rules, who enforced them, and where they still show up",
-      "Sort what you want to retain, revise, or release without making speed a virtue",
-      "Build practices and relationships that support consent, agency, and enough room to think",
-      "Make room for grief, relief, anger, meaning, and the slow work of becoming oriented again"
+      "Sort what you want to keep, revise, or release without making speed a virtue",
+      "Build practices and relationships with enough room to think",
+      "Make room for grief, relief, anger, meaning, and becoming oriented again"
     ],
     arcApproach:
-      "We map what you inherited, notice the places it still has power, and make room to decide what remains yours. There is no correct endpoint: people leave, stay, return, revise, or remain uncertain.",
+      "We notice what you inherited, where it still has power, and what you want to make your own. People leave, stay, return, revise, or remain uncertain.",
     faq: [
       {
         question: "What is religious harm?",

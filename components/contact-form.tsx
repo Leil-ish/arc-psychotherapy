@@ -54,8 +54,7 @@ export function ContactForm() {
     <form onSubmit={onSubmit} className="form-panel" noValidate>
       {/* Honeypot — hidden from users, filled by bots */}
       <input type="text" name="website" autoComplete="off" tabIndex={-1} aria-hidden="true" style={{ display: "none" }} />
-      <p className="label">Consult request</p>
-      <p className="form-panel__note">Please do not include sensitive clinical details, diagnoses, or a full history here. This form is only for starting the practical conversation.</p>
+      <p className="form-panel__note">For privacy, leave sensitive clinical details out of this form.</p>
       <div className="form-grid">
         <label className="field-label" htmlFor="name">
           Name
@@ -112,7 +111,7 @@ export function ContactForm() {
         <p className="form-panel__hint">
           {consultPreference === "share-availability"
             ? "Required for this option."
-            : "Optional. You can leave this blank if you want me to send available times first."}
+            : "Leave blank to receive available times first."}
         </p>
 
         <label className="field-label" htmlFor="preferredContactMethod">
@@ -130,7 +129,7 @@ export function ContactForm() {
         </select>
 
         <label className="field-label" htmlFor="message">
-          Anything useful for deciding whether to talk (optional)
+          Brief note (optional)
         </label>
         <textarea
           id="message"

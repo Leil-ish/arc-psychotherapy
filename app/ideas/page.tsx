@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ButtonLink } from "@/components/button-link";
 import { SchemaScript } from "@/components/schema-script";
 import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
 import {
@@ -25,7 +24,7 @@ const intro = {
   title: "Writing about the things that keep getting mistaken for personal failures.",
   lede: "Perfectionism, overcontrol, religious harm, and the systems around them.",
   body:
-    "These are not assignments and they are not disguised intake forms. They are a way to see how I think about a problem before deciding whether you want to talk."
+    "A few essays about perfectionism, religious harm, ordinary life, and the strange logic of being a person."
 } as const;
 
 export default async function IdeasPage({
@@ -105,8 +104,7 @@ export default async function IdeasPage({
 
       <section className="section-gap-lg">
         <div className="section-heading">
-          <p className="label">{topicFilter ? `Filtered: ${topicFilter}` : "All Essays"}</p>
-          <h2 className="h2">Every essay on the site.</h2>
+          <h2 className="h2">{topicFilter ?? "Essays"}</h2>
         </div>
         <div className="dense-index mt-6">
           {filteredEssays.map((essay) => (
@@ -122,18 +120,6 @@ export default async function IdeasPage({
         </div>
       </section>
 
-      <section className="section-gap-lg pb-8">
-        <div className="route-divider">
-          <p className="label">Next</p>
-          <h2 className="h2 mt-3">A reasonable next step.</h2>
-          <div className="hero-actions">
-            <ButtonLink href="/work-with-me">Approach</ButtonLink>
-            <ButtonLink href={siteContent.bookingUrl} variant="secondary">
-              Contact
-            </ButtonLink>
-          </div>
-        </div>
-      </section>
     </section>
   );
 }

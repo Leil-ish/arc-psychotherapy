@@ -7,17 +7,18 @@ import { siteContent } from "@/src/content/site";
 const constructive = siteContent.constructive;
 
 export const metadata = pageMetadata({
-  title: "Building the Problem | Round Rock, TX",
+  title: "The LEGO Thing | Round Rock, TX",
   description:
     "Structured model-building therapy in Downtown Round Rock for adults navigating perfectionism and rigidity. Serving North Austin and surrounding communities, with telehealth across Texas.",
   path: "/constructive"
 });
 
 export default function ConstructivePage() {
+  const faqItems = constructive.faq.slice(0, 3);
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: constructive.faq.map((item) => ({
+    mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {
@@ -40,15 +41,9 @@ export default function ConstructivePage() {
           ))}
           <p className="body">{constructive.curious}</p>
         </div>
-        <p className="mt-4 body text-sm text-ink/75">
-          Standard therapy remains available at ${siteContent.standardSessionFee} per session ({siteContent.sessionLength}).
-        </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <ButtonLink href={siteContent.bookingUrl}>
             Schedule consult
-          </ButtonLink>
-          <ButtonLink href="/contact" variant="secondary">
-            Contact
           </ButtonLink>
           <ButtonLink href="/work-with-me" variant="secondary">
             Learn how Arc works
@@ -71,7 +66,7 @@ export default function ConstructivePage() {
       </section>
 
       <section className="container-wrap mt-14">
-        <h2 className="h2">How sessions work</h2>
+        <h2 className="h2">A session might look like this</h2>
         <ol className="mt-5 grid gap-4 md:grid-cols-5 body">
           {constructive.sessionFlow.map((step, index) => (
             <li key={step} className="card">
@@ -81,34 +76,12 @@ export default function ConstructivePage() {
           ))}
         </ol>
         <p className="mt-5 body text-sm max-w-3xl">
-          Clients keep completed materials. Take-home materials are included in track pricing up to each package materials allowance.
+          You keep completed materials.
         </p>
-      </section>
-
-      <section className="container-wrap mt-14 grid gap-5 md:grid-cols-2">
-        <article className="card">
-          <h2 className="h2">A good fit when:</h2>
-          <ul className="mt-4 space-y-2 body">
-            {constructive.fit.good.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </article>
-        <article className="card">
-          <h2 className="h2">Not the right tool when:</h2>
-          <ul className="mt-4 space-y-2 body">
-            {constructive.fit.notFit.map((item) => (
-              <li key={item}>• {item}</li>
-            ))}
-          </ul>
-        </article>
       </section>
 
       <section className="container-wrap mt-14">
         <h2 className="h2">Track packages</h2>
-        <p className="mt-3 body max-w-3xl">
-          Package pricing includes sessions plus materials up to the listed allowance.
-        </p>
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           <article className="card">
             <h3 className="h3">{constructive.packages.trackPackageA.name}</h3>
@@ -132,30 +105,12 @@ export default function ConstructivePage() {
       <section className="container-wrap mt-14">
         <h2 className="h2">FAQ</h2>
         <div className="mt-6 space-y-4">
-          {constructive.faq.map((item) => (
+          {faqItems.map((item) => (
             <article key={item.question} className="card">
               <h3 className="h3">{item.question}</h3>
               <p className="mt-3 body">{item.answer}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="container-wrap mt-10 mb-20">
-        <h2 className="h2">Continue reading</h2>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <ButtonLink href="/start-here" variant="secondary">
-            Start here
-          </ButtonLink>
-          <ButtonLink href="/frameworks" variant="secondary">
-            Working ideas
-          </ButtonLink>
-          <ButtonLink href="/ideas" variant="secondary">
-            Writing
-          </ButtonLink>
-          <ButtonLink href="/work-with-me" variant="secondary">
-            Approach
-          </ButtonLink>
         </div>
       </section>
 

@@ -147,7 +147,6 @@ main {
 }
 
 .h1--subservice {
-  max-width: 13ch;
   font-size: clamp(2rem, 3.35vw, 3.2rem);
   line-height: 0.96;
 }
@@ -527,12 +526,15 @@ a:not(.no-link-style):hover {
 .hero-stage__media {
   position: absolute;
   inset: 0;
+  filter: sepia(0.14) saturate(1.16) hue-rotate(-7deg);
 }
 
 .hero-stage__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgb(var(--color-shadow) / 0.92) 0%, rgb(var(--color-shadow) / 0.76) 46%, rgb(var(--color-shadow) / 0.34) 100%);
+  background:
+    linear-gradient(90deg, rgb(var(--color-ink) / 0.84) 0%, rgb(var(--color-ink) / 0.63) 48%, rgb(var(--color-ink) / 0.18) 100%),
+    linear-gradient(118deg, rgb(var(--color-citron) / 0.25) 0%, rgb(var(--color-citron) / 0.1) 44%, rgb(var(--color-amaranth) / 0.16) 100%);
 }
 
 .hero-stage__inner {
@@ -597,18 +599,18 @@ a:not(.no-link-style):hover {
   display: grid;
   gap: 1rem;
   align-self: end;
-  background: rgb(var(--color-amaranth));
+  background: rgb(var(--color-surface) / 0.94);
   padding: 1.15rem 1.05rem;
   max-width: 20rem;
 }
 
 .hero-stage__meta .label {
-  color: rgb(var(--color-citron) / 0.88);
+  color: rgb(var(--color-amaranth));
 }
 
 .hero-stage__meta .body,
 .hero-stage__meta .meta-block p:last-child {
-  color: rgb(var(--color-surface) / 0.92);
+  color: rgb(var(--color-ink) / 0.88);
 }
 
 .hero-stage__meta .process-steps__item {
@@ -735,7 +737,6 @@ a:not(.no-link-style):hover {
 }
 
 .split-panel .h2 {
-  max-width: 12ch;
   line-height: 1;
 }
 
@@ -1044,6 +1045,20 @@ a:not(.no-link-style):hover {
   color: rgb(var(--color-citron));
 }
 
+.full-bleed-band--dark .button--secondary,
+.full-bleed-band--ultramarine .button--secondary {
+  background: transparent;
+  border-color: rgb(var(--color-surface) / 0.6);
+  color: rgb(var(--color-surface));
+}
+
+.full-bleed-band--dark .button--secondary:hover,
+.full-bleed-band--ultramarine .button--secondary:hover {
+  background: rgb(var(--color-surface));
+  border-color: rgb(var(--color-surface));
+  color: rgb(var(--color-ink));
+}
+
 .home-stance {
   display: grid;
   gap: 1.5rem 2rem;
@@ -1197,7 +1212,6 @@ a:not(.no-link-style):hover {
 }
 
 .feature-stage__title {
-  max-width: 12ch;
   font-family: var(--font-serif);
   font-size: clamp(2.3rem, 4vw, 4.2rem);
   line-height: 0.95;

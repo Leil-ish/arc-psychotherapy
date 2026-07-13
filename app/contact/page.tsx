@@ -34,8 +34,7 @@ export default function ContactPage() {
       />
       <div className="hero-grid">
         <div className="hero-copy">
-          <p className="label">{intro.eyebrow}</p>
-          <h1 className="h1 mt-4">{intro.title}</h1>
+          <h1 className="h1">{intro.title}</h1>
           <p className="hero-lede">{intro.lede}</p>
           <div className="hero-support">
             {intro.body.map((item) => (
@@ -73,8 +72,7 @@ export default function ContactPage() {
             <ContactForm />
           </div>
           <aside className="split-panel">
-            <p className="label">Before reaching out</p>
-            <ul className="split-panel__list body mt-4">
+            <ul className="split-panel__list body">
               <li>Standard session fee is $200 for 50–55 minutes.</li>
               <li>Private-pay practice. Superbills may be available for out-of-network reimbursement.</li>
               <li>Telehealth is available to Texas residents when clinically appropriate.</li>
@@ -85,8 +83,7 @@ export default function ContactPage() {
       </section>
 
       <section id="questions" className="section-gap-lg scroll-mt-24">
-        <p className="label">Questions</p>
-        <h2 className="h2 mt-2">Common questions.</h2>
+        <h2 className="h2">Questions.</h2>
         <div className="faq-list mt-6">
           {contactPage.questions.map((item) => (
             <div key={item.question} className="faq-row">
