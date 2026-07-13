@@ -43,9 +43,9 @@ export const pricing = {
 } as const;
 
 export const navItems = [
-  { href: "/work-with-me", label: "Approach" },
+  { href: "/therapy", label: "Therapy" },
   { href: "/supervision", label: "Supervision" },
-  { href: "/consultation", label: "Consultation" },
+  { href: "/consultation", label: "Programs & training" },
   { href: "/ideas", label: "Writing" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" }

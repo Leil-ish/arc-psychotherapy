@@ -13,6 +13,9 @@ export const siteContent = {
     "https://leilaanderson.substack.com/"
   ],
   credentialsLine: "Leila Anderson, LMFT-S",
+  degree: "Master of Marriage and Family Therapy (MMFT)",
+  degreeInstitution: "Abilene Christian University",
+  licenseNumber: "202709",
   primaryTopics: [
     "Perfectionism",
     "Overcontrol",

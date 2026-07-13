@@ -65,10 +65,7 @@ export default function SupervisionPage() {
             ))}
           </div>
           <div className="hero-actions">
-            <ButtonLink href="/contact">Contact</ButtonLink>
-            <ButtonLink href="/fair-pay" variant="secondary">
-              Fair Pay Calculator
-            </ButtonLink>
+            <ButtonLink href="/contact">Ask about supervision openings</ButtonLink>
           </div>
         </div>
         <aside className="hero-meta hero-meta--ultramarine">
@@ -86,7 +83,15 @@ export default function SupervisionPage() {
           </div>
           <div className="meta-block">
             <p className="label">Format</p>
-            <p className="body">Direct supervision with one supervisor who will tell you what she sees and explain her thinking.</p>
+            <p className="body">Mostly dyadic, with individual supervision as indicated and a group meeting once each month. Group includes space for associates to present practice innovations or teach the group something useful.</p>
+          </div>
+          <div className="meta-block">
+            <p className="label">Fee</p>
+            <p className="body">Pay what you can. Most supervisees pay $200–$400 per month; I make room for the life things that happen because supervision should not be a barrier to becoming a clinician.</p>
+          </div>
+          <div className="meta-block">
+            <p className="label">Openings</p>
+            <p className="body">I do not currently have openings, but several supervisees are rotating off soon. You are welcome to inquire.</p>
           </div>
         </aside>
       </div>
@@ -118,6 +123,11 @@ export default function SupervisionPage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+            <div className="hero-actions">
+              <ButtonLink href="/fair-pay" variant="secondary">
+                Fair Pay Calculator
+              </ButtonLink>
+            </div>
           </article>
         </div>
       </section>

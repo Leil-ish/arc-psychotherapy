@@ -139,6 +139,7 @@ export const conceptHubs: ConceptHub[] = [
     definition: [
       "Religious harm is what remains when a faith system used fear, shame, control, or authority in ways that hurt you.",
       "You can leave, change your beliefs, or still have faith and find that the old system remains: in a panic around dissent, a body that braces at the word “sin,” or a decision that feels dangerous for reasons you cannot quite explain.",
+      "Many people search for “religious trauma.” I often call it religious harm when the injury comes from a system that organized identity, belonging, and choice around fear or authority.",
       "I am not here to hand you a new doctrine. I am interested in what you inherited, what still fits, and how you want to live now."
     ],
     commonPresentations: [

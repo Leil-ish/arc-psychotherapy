@@ -12,6 +12,18 @@ export const metadata = pageMetadata({
 
 const faqs = [
   {
+    q: "Who is therapy for?",
+    a: "This is private-pay individual psychotherapy for adults. I work in person in Downtown Round Rock and by telehealth with Texas residents."
+  },
+  {
+    q: "What is the initial consultation?",
+    a: "It is a free, 30-minute video conversation. We talk about what you are looking for, whether the work makes sense, and the practical details."
+  },
+  {
+    q: "How often do clients meet?",
+    a: "Most clients begin weekly. Once we have a treatment plan and a sense of what helps, we can be flexible about frequency."
+  },
+  {
     q: "What do sessions look like?",
     a: "Sessions are 50–55 minutes. We talk about history, meaning, and relationships, then get concrete about the sequence that keeps repeating: what happens, what you predict, what you do next, and what it costs. Between sessions, you may notice or try things; we use what happens to guide the next session."
   },
@@ -33,7 +45,7 @@ const faqs = [
   },
   {
     q: "Do you offer walk-and-talk sessions?",
-    a: "Yes, when weather and clinical fit permit. Sessions can happen on foot at parks and trails around Round Rock and North Austin. Some people think better in motion; some conversations are easier side by side than face to face."
+    a: "Yes, when weather and clinical fit permit. Sessions can happen on foot at parks and trails around Round Rock and North Austin. Before we use that format, we consider the route, physical access, weather, and the privacy limitations of being outdoors."
   },
   {
     q: "Do you accept insurance?",

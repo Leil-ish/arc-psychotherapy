@@ -30,7 +30,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <Link href={siteConfig.bookingUrl} className="focus-ring no-link-style button button--secondary site-header__cta">
-          Consult
+          Ask about availability
         </Link>
       </div>
     </header>

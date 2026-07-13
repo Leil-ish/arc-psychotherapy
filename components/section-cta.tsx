@@ -9,7 +9,7 @@ export function SectionCta({ title, body }: { title: string; body: string }) {
         <p className="mt-3 max-w-2xl text-white/85">{body}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <ButtonLink href={siteConfig.bookingUrl}>
-            Schedule consult
+            Ask about availability
           </ButtonLink>
           <ButtonLink href="/contact" variant="secondary">
             Contact

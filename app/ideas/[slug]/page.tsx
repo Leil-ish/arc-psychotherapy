@@ -20,9 +20,9 @@ type ConceptLink = {
 };
 
 const conceptByTag: Partial<Record<IdeaTag, ConceptLink>> = {
-  Perfectionism: { href: "/perfectionism", label: "Perfectionism page" },
-  Overcontrol: { href: "/overcontrol", label: "Overcontrol page" },
-  "Religious Harm": { href: "/religious-harm", label: "Religious harm page" }
+  Perfectionism: { href: "/therapy/perfectionism-overcontrol", label: "Therapy for perfectionism and overcontrol" },
+  Overcontrol: { href: "/therapy/perfectionism-overcontrol", label: "Therapy for perfectionism and overcontrol" },
+  "Religious Harm": { href: "/therapy/religious-trauma", label: "Therapy for religious trauma and religious harm" }
 };
 
 function conceptLinksForTags(tags: IdeaTag[]) {
@@ -148,8 +148,8 @@ export default async function IdeaEssayPage({
               <Link href="/frameworks" className="focus-ring no-link-style chip-link">
                 Working ideas
               </Link>
-              <Link href="/work-with-me" className="focus-ring no-link-style chip-link">
-                Approach
+              <Link href="/therapy" className="focus-ring no-link-style chip-link">
+                Therapy
               </Link>
               {conceptLinks.map((link) => (
                 <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">

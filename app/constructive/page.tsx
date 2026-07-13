@@ -43,9 +43,9 @@ export default function ConstructivePage() {
         </div>
         <div className="mt-8 flex flex-wrap gap-3">
           <ButtonLink href={siteContent.bookingUrl}>
-            Schedule consult
+            Ask about therapy availability
           </ButtonLink>
-          <ButtonLink href="/work-with-me" variant="secondary">
+          <ButtonLink href="/therapy" variant="secondary">
             Learn how Arc works
           </ButtonLink>
         </div>
@@ -54,7 +54,7 @@ export default function ConstructivePage() {
       <section className="container-wrap mt-12">
         <h2 className="h2">Why it helps</h2>
         <p className="mt-3 body max-w-3xl">
-          The method supports targeted work on <Link href="/perfectionism" className="focus-ring underline-offset-4 hover:underline">perfectionism</Link>, <Link href="/overcontrol" className="focus-ring underline-offset-4 hover:underline">overcontrol</Link>, and constraints related to <Link href="/religious-harm" className="focus-ring underline-offset-4 hover:underline">religious harm</Link>.
+          The method supports targeted work on <Link href="/therapy/perfectionism-overcontrol" className="focus-ring underline-offset-4 hover:underline">perfectionism and overcontrol</Link>, and constraints related to <Link href="/therapy/religious-trauma" className="focus-ring underline-offset-4 hover:underline">religious trauma and religious harm</Link>.
         </p>
         <ul className="mt-5 grid gap-4 md:grid-cols-2 body">
           {constructive.whyItHelps.map((item) => (

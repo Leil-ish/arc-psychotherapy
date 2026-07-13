@@ -8,18 +8,18 @@ import { homePage } from "@/src/content/marketing";
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
-  title: "Therapy for perfectionism & religious harm | Round Rock, TX",
+  title: "Therapy for Perfectionism & Religious Trauma | Round Rock, TX",
   description:
-    "Therapy for perfectionism, overcontrol, and religious harm in Downtown Round Rock, Texas, with telehealth across Texas.",
+    "Individual therapy for adults navigating perfectionism, overcontrol, religious trauma, and religious harm in Round Rock, Texas, with telehealth across Texas.",
   path: "/"
 });
 
 const intro = {
-  eyebrow: "Private-pay psychotherapy",
+  eyebrow: "Private-pay individual psychotherapy for adults",
   title: "Bring the complicated version.",
-  lede: "Therapy for perfectionism, overcontrol, religious harm, and people with a well-developed allergy to being told what the answer is.",
+  lede: "In Round Rock and online across Texas, for perfectionism, overcontrol, religious trauma and religious harm, and the things you can explain well but have not been able to think your way out of.",
   body: [
-    "I work with smart, intense, skeptical people: the ones with a lot of context, a lot of questions, and a talent for noticing the weirdest thing in the room.",
+    "I am Leila Anderson, LMFT-S. I work with adults who notice context, contradiction, and power—and get frustrated when a problem is reduced to a simple technique.",
     "Therapy can be deep, useful, challenging, and funny."
   ]
 } as const;
@@ -32,7 +32,7 @@ export default function HomePage() {
         data={webPageSchema({
           name: "Arc Psychotherapy",
           description:
-            "Private-pay psychotherapy in Downtown Round Rock, Texas for adults dealing with perfectionism, overcontrol, and religious harm, with telehealth across Texas.",
+            "Private-pay psychotherapy in Downtown Round Rock, Texas for adults dealing with perfectionism, overcontrol, religious trauma, and religious harm, with telehealth across Texas.",
           path: "/"
         })}
       />
@@ -61,8 +61,8 @@ export default function HomePage() {
               ))}
             </div>
             <div className="hero-actions">
-              <ButtonLink href="/contact">Contact</ButtonLink>
-              <ButtonLink href="/work-with-me" variant="secondary">
+              <ButtonLink href="/contact">Ask about therapy availability</ButtonLink>
+              <ButtonLink href="/therapy" variant="secondary">
                 How therapy works
               </ButtonLink>
             </div>
@@ -164,7 +164,7 @@ export default function HomePage() {
             <h2 className="h2">Round Rock, Texas · Telehealth across Texas · $200 per session</h2>
             <div className="hero-actions">
               <ButtonLink href="/contact">Ask about availability</ButtonLink>
-              <ButtonLink href="/work-with-me" variant="secondary">Approach</ButtonLink>
+              <ButtonLink href="/therapy" variant="secondary">Therapy</ButtonLink>
             </div>
           </div>
         </div>

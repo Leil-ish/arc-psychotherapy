@@ -2,11 +2,13 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 type ConsultPreference = "share-availability" | "request-availability";
+type InquiryType = "therapy" | "supervision" | "consultation" | "other";
 
 function formatEmailBody(body: {
   name: string;
   email: string;
   phone?: string | null;
+  inquiryType: InquiryType;
   consultPreference: ConsultPreference;
   availability?: string | null;
   preferredContactMethod?: string;
@@ -16,6 +18,7 @@ function formatEmailBody(body: {
     `Name: ${body.name}`,
     `Email: ${body.email}`,
     body.phone ? `Phone: ${body.phone}` : null,
+    `Inquiry: ${body.inquiryType}`,
     `Preferred contact: ${body.preferredContactMethod ?? "email"}`,
     `Scheduling preference: ${body.consultPreference === "share-availability" ? "Sharing availability" : "Requesting available times"}`,
     body.availability ? `Availability: ${body.availability}` : null,
@@ -31,6 +34,7 @@ export async function POST(request: Request) {
     name?: string;
     email?: string;
     phone?: string | null;
+    inquiryType?: InquiryType;
     consultPreference?: ConsultPreference;
     availability?: string | null;
     preferredContactMethod?: "email" | "phone" | "either";
@@ -43,7 +47,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  if (!body?.name || !body?.email || !body?.consultPreference) {
+  if (!body?.name || !body?.email || !body?.inquiryType || !body?.consultPreference) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
@@ -52,6 +56,10 @@ export async function POST(request: Request) {
     body.consultPreference !== "request-availability"
   ) {
     return NextResponse.json({ error: "Invalid consult preference" }, { status: 400 });
+  }
+
+  if (!(["therapy", "supervision", "consultation", "other"] as const).includes(body.inquiryType)) {
+    return NextResponse.json({ error: "Invalid inquiry type" }, { status: 400 });
   }
 
   if (
@@ -73,11 +81,12 @@ export async function POST(request: Request) {
       from: "Arc Psychotherapy <noreply@arc-psychotherapy.com>",
       to: "hello@arc-psychotherapy.com",
       replyTo: body.email,
-      subject: `Consult request from ${body.name}`,
+      subject: `${body.inquiryType} inquiry from ${body.name}`,
       text: formatEmailBody({
         name: body.name,
         email: body.email,
         phone: body.phone,
+        inquiryType: body.inquiryType,
         consultPreference: body.consultPreference,
         availability: body.availability,
         preferredContactMethod: body.preferredContactMethod,

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.brand}`
   },
   description:
-    "Private-pay therapy with clear structure in Downtown Round Rock, Texas for adults navigating perfectionism, rigidity/overcontrol, and religious harm. Serving North Austin and surrounding communities, with telehealth across Texas.",
+    "Private-pay individual therapy in Downtown Round Rock, Texas for adults navigating complex trauma, perfectionism, overcontrol, religious trauma, religious harm, and neurodivergence. Serving North Austin and surrounding communities, with telehealth across Texas.",
   robots: {
     index: true,
     follow: true

@@ -36,7 +36,7 @@ export const frameworks: Framework[] = [
       "Review progress at predictable intervals."
     ],
     relatedLinks: [
-      { label: "Perfectionism", href: "/perfectionism" },
+      { label: "Therapy for perfectionism and overcontrol", href: "/therapy/perfectionism-overcontrol" },
       { label: "Perfectionism as a Structural Problem", href: "/ideas/perfectionism-structural-problem" }
     ],
     faq: [
@@ -66,7 +66,7 @@ export const frameworks: Framework[] = [
       "Increase gradient depth over time."
     ],
     relatedLinks: [
-      { label: "Overcontrol", href: "/overcontrol" },
+      { label: "Therapy for perfectionism and overcontrol", href: "/therapy/perfectionism-overcontrol" },
       { label: "The Adjacent Possible", href: "/ideas/adjacent-possible" }
     ],
     faq: [
@@ -96,7 +96,7 @@ export const frameworks: Framework[] = [
       "Build replacement practices gradually."
     ],
     relatedLinks: [
-      { label: "Religious Harm", href: "/religious-harm" },
+      { label: "Therapy for religious trauma and religious harm", href: "/therapy/religious-trauma" },
       { label: "When Leaving a Faith System Feels Like Losing Gravity", href: "/ideas/leaving-faith-losing-gravity" }
     ],
     faq: [
@@ -127,7 +127,7 @@ export const frameworks: Framework[] = [
     ],
     relatedLinks: [
       { label: "Structured Model-Building (Optional)", href: "/constructive" },
-      { label: "Overcontrol", href: "/overcontrol" }
+      { label: "Therapy for perfectionism and overcontrol", href: "/therapy/perfectionism-overcontrol" }
     ],
     faq: [
       { question: "Is this only for structured model-building?", answer: "No. It can be done through language, diagrams, or other concrete formats." },
@@ -157,7 +157,7 @@ export const frameworks: Framework[] = [
     ],
     relatedLinks: [
       { label: "The Adjacent Possible", href: "/ideas/adjacent-possible" },
-      { label: "Perfectionism", href: "/perfectionism" }
+      { label: "Therapy for perfectionism and overcontrol", href: "/therapy/perfectionism-overcontrol" }
     ],
     faq: [
       { question: "Is uncertainty tolerance passive?", answer: "No. It is active engagement under incomplete information." },
@@ -186,7 +186,7 @@ export const frameworks: Framework[] = [
       "Review identity shifts with narrative continuity."
     ],
     relatedLinks: [
-      { label: "Religious Harm", href: "/religious-harm" },
+      { label: "Therapy for religious trauma and religious harm", href: "/therapy/religious-trauma" },
       { label: "When Leaving a Faith System Feels Like Losing Gravity", href: "/ideas/leaving-faith-losing-gravity" }
     ],
     faq: [

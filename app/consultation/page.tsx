@@ -10,7 +10,7 @@ export const metadata = pageMetadata({
 });
 
 const intro = {
-  eyebrow: "Consultation",
+  eyebrow: "Programs & training",
   title: "Consultation for treatment programs, teams, and leaders.",
   lede: "I help when a team is working hard and the same problem keeps returning in a different outfit.",
   body: [
@@ -82,7 +82,7 @@ export default function ConsultationPage() {
             ))}
           </div>
           <div className="hero-actions">
-            <ButtonLink href="/contact">Contact</ButtonLink>
+            <ButtonLink href="/contact">Discuss a project</ButtonLink>
           </div>
         </div>
         <aside className="hero-meta hero-meta--ultramarine">
@@ -131,6 +131,19 @@ export default function ConsultationPage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className="section-gap">
+        <div className="split-band split-band--open">
+          <article className="split-panel">
+            <h2 className="h2">How an engagement starts.</h2>
+            <p className="body">Start with the problem you need to solve, who is involved, and what needs to work better. From there, we can decide whether a focused training, consultation, or a larger project makes sense.</p>
+          </article>
+          <article className="split-panel">
+            <h2 className="h2">Pricing.</h2>
+            <p className="body">Every engagement is priced to its scope. Nonprofits receive discounted pricing. Trainings are priced per attendee, with a cap so a useful roomful of people does not become financially absurd.</p>
           </article>
         </div>
       </section>

@@ -67,8 +67,7 @@ And separately: what is one step that is actually next to you today, whether or 
 The kitchen is possible. Start walking.
 `,
     related: [
-      { label: "Overcontrol", href: "/overcontrol" },
-      { label: "Perfectionism", href: "/perfectionism" },
+      { label: "Therapy for perfectionism and overcontrol", href: "/therapy/perfectionism-overcontrol" },
       { label: "Control Gradient", href: "/frameworks/control-gradient" }
     ]
   },
@@ -114,7 +113,7 @@ Not because visible imperfection is inherently good. Because the evidence matter
 The goal is not lower standards. It is a life in which standards serve you, rather than a life spent serving them.
 `,
     related: [
-      { label: "Perfectionism", href: "/perfectionism" },
+      { label: "Therapy for perfectionism and overcontrol", href: "/therapy/perfectionism-overcontrol" },
       { label: "Arc Mapping", href: "/frameworks/arc-mapping" },
       { label: "The Adjacent Possible", href: "/ideas/adjacent-possible" }
     ]
@@ -155,7 +154,7 @@ Rebuilding meaning is not a branding exercise. It happens through very ordinary 
 Those small acts do not resolve every question. They do begin to build a life that can hold questions without treating them as an emergency.
 `,
     related: [
-      { label: "Religious Harm", href: "/religious-harm" },
+      { label: "Therapy for religious trauma and religious harm", href: "/therapy/religious-trauma" },
       { label: "Belief Deconstruction Grid", href: "/frameworks/belief-deconstruction-grid" },
       { label: "Writing", href: "/ideas" }
     ]

@@ -33,9 +33,9 @@ const notBestFit = [
 ] as const;
 
 const authority = [
-  "Executive clinical leadership in residential dual-diagnosis and high-acuity settings, including crisis and level-of-care assessment.",
+  "Former executive clinical leader in residential dual-diagnosis and high-acuity treatment settings, including crisis and level-of-care assessment.",
   "Program design and treatment planning with a strong bias toward what is actually useful.",
-  "State professional leadership through TAMFT board and education committee service."
+  "TAMFT board and education committee service."
 ] as const;
 
 
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <p className="label pt-2">{siteContent.credentialsLine}</p>
           </div>
           <div className="hero-actions">
-            <ButtonLink href="/work-with-me">Approach</ButtonLink>
+            <ButtonLink href="/therapy">Therapy</ButtonLink>
             <ButtonLink href="/contact" variant="secondary">
               Contact
             </ButtonLink>
@@ -135,8 +135,8 @@ export default function AboutPage() {
             </p>
           </article>
           <article className="split-panel">
-            <p className="label">Professional Context</p>
-            <h2 className="h2">The public side of the work.</h2>
+            <p className="label">Professional background</p>
+            <h2 className="h2">Experience that informs the work.</h2>
             <ul className="split-panel__list body">
               {authority.map((item) => (
                 <li key={item}>{item}</li>
@@ -144,6 +144,20 @@ export default function AboutPage() {
             </ul>
           </article>
           </div>
+        </div>
+      </section>
+
+      <section className="section-gap">
+        <div className="split-band split-band--open">
+          <article className="split-panel">
+            <h2 className="h2">Professional credentials.</h2>
+            <ul className="split-panel__list body">
+              <li>Leila Anderson, LMFT-S</li>
+              <li>{siteContent.degree}, {siteContent.degreeInstitution}</li>
+              <li>Texas LMFT-S license #{siteContent.licenseNumber}</li>
+              <li>LMFT-S is the Texas designation for an approved supervisor of LMFT Associates.</li>
+            </ul>
+          </article>
         </div>
       </section>
 

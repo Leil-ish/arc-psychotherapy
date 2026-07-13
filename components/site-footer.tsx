@@ -15,14 +15,14 @@ export function SiteFooter() {
           <p className="site-footer__meta site-footer__meta--muted">{siteConfig.credentials[0]}</p>
           <p className="site-footer__meta site-footer__meta--muted">{siteConfig.locationSummaryLine}</p>
           <div className="site-footer__legal">
-            <Link className="focus-ring no-link-style site-footer__link" href="/work-with-me">
-              Approach
+            <Link className="focus-ring no-link-style site-footer__link" href="/therapy">
+              Therapy
             </Link>
             <Link className="focus-ring no-link-style site-footer__link" href="/supervision">
               Supervision
             </Link>
             <Link className="focus-ring no-link-style site-footer__link" href="/consultation">
-              Consultation
+              Programs &amp; training
             </Link>
             <Link className="focus-ring no-link-style site-footer__link" href="/fair-pay">
               Fair Pay Calculator

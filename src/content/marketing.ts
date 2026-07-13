@@ -23,22 +23,28 @@ export type MarketingIntro = {
 export const homePage = {
   focusAreas: [
     {
-      eyebrow: "Issue Guide",
-      title: "Perfectionism",
-      href: "/perfectionism",
-      body: "When getting it right has stopped feeling good."
+      eyebrow: "Specialty",
+      title: "Religious trauma and religious harm",
+      href: "/therapy/religious-trauma",
+      body: "When old rules still show up in your body, relationships, and decisions."
     },
     {
-      eyebrow: "Issue Guide",
-      title: "Overcontrol",
-      href: "/overcontrol",
-      body: "When being the responsible one has left very little room to be a person."
+      eyebrow: "Specialty",
+      title: "Complex trauma",
+      href: "/therapy/complex-trauma",
+      body: "When the danger is old, but life is still organized around not being caught off guard."
     },
     {
-      eyebrow: "Issue Guide",
-      title: "Religious harm",
-      href: "/religious-harm",
-      body: "When you have left the structure, but it has not quite left you."
+      eyebrow: "Specialty",
+      title: "Perfectionism and overcontrol",
+      href: "/therapy/perfectionism-overcontrol",
+      body: "When being capable has become a full-time private management system."
+    },
+    {
+      eyebrow: "Specialty",
+      title: "Neurodivergent adults",
+      href: "/therapy/neurodivergent-adults",
+      body: "Therapy that makes room for how your mind actually works."
     }
   ] satisfies MarketingIndexItem[],
   writing: [
@@ -72,16 +78,16 @@ export const servicesPage = {
       "I work with individual clients, associate therapists, and clinical teams. Each needs something different. The work should be useful in the room, not just impressive in a meeting."
     ],
     actions: [
-      { label: "Therapy", href: "/work-with-me" },
-      { label: "Contact", href: "/contact", variant: "secondary" }
+      { label: "Therapy", href: "/therapy" },
+      { label: "Ask about availability", href: "/contact", variant: "secondary" }
     ]
   } satisfies MarketingIntro,
   routes: [
     {
       eyebrow: "Therapy",
-      title: "Approach",
-      href: "/work-with-me",
-      body: "Private-pay therapy for people who want to understand themselves and have a better Tuesday."
+      title: "Individual therapy for adults",
+      href: "/therapy",
+      body: "Private-pay individual psychotherapy for adults in Round Rock and online across Texas."
     },
     {
       eyebrow: "For Clinicians",
@@ -91,7 +97,7 @@ export const servicesPage = {
     },
     {
       eyebrow: "For Teams",
-      title: "Consultation",
+      title: "Programs & training",
       href: "/consultation",
       body: "Consultation for teams where people are working hard and the same problems keep coming back."
     }
@@ -102,7 +108,7 @@ export const contactPage = {
   intro: {
     eyebrow: "Contact",
     title: "Get in touch.",
-    lede: "Availability, fees, and whether we might work well together.",
+    lede: "Therapy, supervision, or clinical consultation.",
     body: [
       "This site is not monitored for urgent needs. If you are in immediate danger, call 911. For mental health crisis support, call or text 988."
     ]
@@ -126,8 +132,8 @@ export const contactPage = {
       answer: "It is one way to work with a pattern when physical space helps us see it more clearly. Standard talk therapy is available too."
     },
     {
-      question: "What happens in the consult?",
-      answer: "We talk briefly about what you are looking for, whether I am the right person to help, and the practical details."
+      question: "What happens after I reach out?",
+      answer: "For therapy, the first step is a free, 30-minute video consult. For supervision or programs and training, I will reply within one to two business days with the relevant practical details and next steps."
     }
   ]
 } as const;

@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         <section className="card">
           <h2 className="h3">What this site collects</h2>
           <p className="mt-3 body">
-            This website collects only the information you submit through the contact form: name, email address, phone number (optional), scheduling availability, preferred contact method, and a brief description of your reason for reaching out.
+            This website collects only the information you submit through the contact form: name, email address, phone number (optional), inquiry type, scheduling availability, preferred contact method, and a brief description of your reason for reaching out.
           </p>
           <p className="mt-3 body">
             This site does not use advertising pixels, session-recording tools, or analytics platforms. It uses the technical services needed to host the website and deliver form submissions.

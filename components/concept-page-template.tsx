@@ -9,11 +9,13 @@ import { siteContent } from "@/src/content/site";
 export function ConceptPageTemplate({
   hub,
   imageSrc,
-  imageAlt
+  imageAlt,
+  titleOverride
 }: {
   hub: ConceptHub;
   imageSrc: string;
   imageAlt: string;
+  titleOverride?: string;
 }) {
   const [definitionLead, ...definitionSupport] = hub.definition;
 
@@ -23,7 +25,7 @@ export function ConceptPageTemplate({
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="label">Issue Guide</p>
-            <h1 className="h1 mt-4">{hub.title}</h1>
+            <h1 className="h1 mt-4">{titleOverride ?? hub.title}</h1>
             <p className="hero-lede">{definitionLead}</p>
             <div className="hero-support">
               {definitionSupport.map((item) => (
@@ -34,9 +36,9 @@ export function ConceptPageTemplate({
               <p className="label pt-2">{siteContent.primaryLocation} • {siteContent.telehealthRegion}</p>
             </div>
             <div className="hero-actions">
-              <ButtonLink href="/contact">Contact</ButtonLink>
-              <ButtonLink href="/work-with-me" variant="secondary">
-                Approach
+              <ButtonLink href="/contact">Ask about availability</ButtonLink>
+              <ButtonLink href="/therapy" variant="secondary">
+                Therapy
               </ButtonLink>
             </div>
           </div>

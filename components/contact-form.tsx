@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/content";
 
 type Status = "idle" | "submitting" | "success" | "error";
 type ConsultPreference = "share-availability" | "request-availability";
+type InquiryType = "therapy" | "supervision" | "consultation" | "other";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -27,6 +28,7 @@ export function ContactForm() {
       name: formData.get("name"),
       email: formData.get("email"),
       phone: formData.get("phone"),
+      inquiryType: formData.get("inquiryType"),
       consultPreference: selectedPreference,
       availability: availability || null,
       preferredContactMethod: formData.get("preferredContactMethod"),
@@ -71,8 +73,23 @@ export function ContactForm() {
         </label>
         <input id="phone" name="phone" autoComplete="tel" className="focus-ring field-input" />
 
+        <label className="field-label" htmlFor="inquiryType">
+          I am contacting you about
+        </label>
+        <select
+          id="inquiryType"
+          name="inquiryType"
+          defaultValue="therapy"
+          className="focus-ring field-input"
+        >
+          <option value="therapy">Therapy</option>
+          <option value="supervision">LMFT supervision</option>
+          <option value="consultation">Programs, consultation, or training</option>
+          <option value="other">Something else</option>
+        </select>
+
         <fieldset className="form-choice">
-          <legend className="field-label">Consult scheduling preference</legend>
+          <legend className="field-label">Scheduling preference</legend>
           <div className="form-choice__rows">
             <label className="form-choice__row">
               <input
@@ -92,7 +109,7 @@ export function ContactForm() {
                 checked={consultPreference === "request-availability"}
                 onChange={() => setConsultPreference("request-availability")}
               />
-              <span>Please reach out with your next available consult times.</span>
+              <span>Please reach out with your next available times.</span>
             </label>
           </div>
         </fieldset>

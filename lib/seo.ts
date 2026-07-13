@@ -99,6 +99,7 @@ export function personSchema() {
       "Psychotherapy",
       "Perfectionism",
       "Overcontrol",
+      "Religious trauma",
       "Religious harm",
       "Spiritual trauma",
       "Meaning reconstruction"
@@ -115,7 +116,7 @@ export function professionalServiceSchema() {
     url: siteConfig.siteUrl,
     image: socialImageUrl,
     description:
-      "Private-pay psychotherapy in Downtown Round Rock, Texas for adults navigating perfectionism, overcontrol, and religious harm, with telehealth across Texas.",
+      "Private-pay psychotherapy in Downtown Round Rock, Texas for adults navigating perfectionism, overcontrol, religious trauma, and religious harm, with telehealth across Texas.",
     telephone: siteConfig.phone,
     email: siteConfig.email,
     address: {
@@ -145,7 +146,7 @@ export function professionalServiceSchema() {
             "@type": "Service",
             name: "Individual psychotherapy",
             description:
-              "Private-pay psychotherapy for adults dealing with perfectionism, overcontrol, and religious harm."
+              "Private-pay psychotherapy for adults dealing with perfectionism, overcontrol, religious trauma, and religious harm."
           },
           price: "200",
           priceCurrency: "USD"
