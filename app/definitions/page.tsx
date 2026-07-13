@@ -19,7 +19,7 @@ const definitions: DefinitionEntry[] = [
   {
     term: "Perfectionism",
     definition:
-      "Perfectionism is a control strategy that links worth to performance and treats error as threat. Treatment targets greater flexibility and clearer decision rules, not lower standards.",
+      "Perfectionism is a control strategy that links worth to performance and treats error as threat. The goal of treatment is flexibility, not lower standards.",
     frameworks: [
       { label: "Arc Mapping", href: "/frameworks/arc-mapping" },
       { label: "Control Gradient", href: "/frameworks/control-gradient" }
@@ -116,7 +116,7 @@ export default function DefinitionsPage() {
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Core Concepts</h1>
       <p className="body-lg mt-5 max-w-4xl">
-        If you have cycled through labels — anxiety, burnout, depression — and none of them quite fit, a more precise name helps. The treatment for fear-based control is not the same as the treatment for low mood.
+        If you have cycled through labels — anxiety, burnout, depression — and none of them quite fit, the problem probably hasn&apos;t been named right yet. The treatment for fear-based control is not the same as the treatment for low mood.
       </p>
       <p className="body mt-3 max-w-4xl">
         {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.
