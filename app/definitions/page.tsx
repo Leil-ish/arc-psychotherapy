@@ -116,7 +116,7 @@ export default function DefinitionsPage() {
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Core Concepts</h1>
       <p className="body-lg mt-5 max-w-4xl">
-        Words get slippery in therapy. These are the definitions I actually work from, so when we name a treatment target we both mean the same thing by it.
+        Therapy language gets used loosely. These are the definitions I work from, so when we name a problem we mean the same thing.
       </p>
       <p className="body mt-3 max-w-4xl">
         {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.

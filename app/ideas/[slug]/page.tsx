@@ -140,7 +140,7 @@ export default async function IdeaEssayPage({
         <div className="split-band">
           <article className="split-panel">
             <p className="label">Related Links</p>
-            <h2 className="h2">Where this essay connects.</h2>
+            <h2 className="h2">Related pages and frameworks.</h2>
             <div className="flex flex-wrap gap-2">
               {essay.related.map((link) => (
                 <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">
