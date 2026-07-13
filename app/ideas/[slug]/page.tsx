@@ -165,7 +165,7 @@ export default async function IdeaEssayPage({
           </article>
           <article className="split-panel">
             <p className="label">Related Reading</p>
-            <h2 className="h2">If this one landed, try these.</h2>
+            <h2 className="h2">More on this topic.</h2>
             {related.length > 0 ? (
               <div className="dense-index">
                 {related.map((item) => (
@@ -188,8 +188,8 @@ export default async function IdeaEssayPage({
 
       <section className="section-gap-lg pb-8">
         <div className="route-divider">
-          <p className="label">Next Move</p>
-          <h2 className="h2 mt-3">If this sounds like your situation.</h2>
+          <p className="label">Next</p>
+          <h2 className="h2 mt-3">Next steps.</h2>
           <p className="body mt-3 max-w-3xl">
             If you want to know how therapy works, read the approach page. If you want to ask about a consult, use the contact page.
           </p>

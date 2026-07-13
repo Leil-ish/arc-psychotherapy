@@ -106,7 +106,7 @@ export default async function IdeasPage({
       <section className="section-gap-lg">
         <div className="section-heading">
           <p className="label">{topicFilter ? `Filtered: ${topicFilter}` : "All Essays"}</p>
-          <h2 className="h2">Pick the one that sounds like your week.</h2>
+          <h2 className="h2">Every essay on the site.</h2>
         </div>
         <div className="dense-index mt-6">
           {filteredEssays.map((essay) => (
@@ -125,7 +125,7 @@ export default async function IdeasPage({
       <section className="section-gap-lg pb-8">
         <div className="route-divider">
           <p className="label">Next</p>
-          <h2 className="h2 mt-3">When you&apos;ve read enough.</h2>
+          <h2 className="h2 mt-3">Next steps.</h2>
           <div className="hero-actions">
             <ButtonLink href="/work-with-me">Approach</ButtonLink>
             <ButtonLink href={siteContent.bookingUrl} variant="secondary">
