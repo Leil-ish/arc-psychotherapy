@@ -1,4 +1,4 @@
-# Constructive Therapy of Round Rock (Marketing Site)
+# Arc Psychotherapy
 
 Production-ready Next.js App Router marketing website for a boutique private-pay psychotherapy practice in Downtown Round Rock, TX.
 
