@@ -18,6 +18,9 @@ export function SiteFooter() {
             <Link className="focus-ring no-link-style site-footer__link" href="/therapy">
               Therapy
             </Link>
+            <Link className="focus-ring no-link-style site-footer__link" href="/who-i-work-with">
+              Who I work with
+            </Link>
             <Link className="focus-ring no-link-style site-footer__link" href="/supervision">
               Supervision
             </Link>

@@ -86,11 +86,14 @@ export default function HomePage() {
         <div className="container-wrap">
           <div className="route-divider max-w-4xl">
             <p className="label">Practice</p>
-            <h2 className="h2 mt-3">A queer-affirming, trans-affirming, fat-affirming, and neurodiversity-affirming practice.</h2>
-            <p className="body mt-3">I pay attention to the ways race, migration, disability, religion, family obligation, class, and power shape a life—and the room we make to talk about it.</p>
+            <h2 className="h2 mt-3">Identity, culture, and power are part of the conversation.</h2>
+            <p className="body mt-3">This is a queer-affirming, trans-affirming, fat-affirming, and neurodiversity-affirming practice. I pay attention to the ways race, migration, disability, religion, family obligation, class, and power shape a life—and the room we make to talk about it.</p>
+            <p className="body mt-3">
+              A lot of my work is with <Link href="/who-i-work-with" className="focus-ring font-semibold text-accent underline-offset-4 hover:underline">queer, trans, fat, neurodivergent, and post-religious adults</Link>—often at the intersections of several of those identities.
+            </p>
           </div>
           <div className="section-heading mt-12">
-            <h2 className="h2">Therapy specialties.</h2>
+            <h2 className="h2">Areas I specialize in.</h2>
           </div>
           <div className="index-grid mt-6">
             {homePage.focusAreas.map((item) => (
@@ -99,20 +102,6 @@ export default function HomePage() {
                 <p className="index-card__body body">{item.body}</p>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="container-wrap section-gap-lg">
-        <div className="route-divider max-w-4xl">
-          <h2 className="h2">Neurodivergent-affirming therapy for adults.</h2>
-          <p className="body mt-3 max-w-3xl">
-            For burnout, masking, executive-function differences, sensory strain, relationships, and the exhausting work of translating yourself all day.
-          </p>
-          <div className="hero-actions">
-            <ButtonLink href="/therapy/neurodivergent-adults" variant="secondary">
-              Learn about neurodivergent-affirming therapy
-            </ButtonLink>
           </div>
         </div>
       </section>

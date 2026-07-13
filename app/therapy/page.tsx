@@ -57,6 +57,9 @@ export default function TherapyPage() {
           <div className="hero-support">
             <p className="body">You may understand the problem extremely well. You may have explained it to yourself in several excellent ways. It may still be running the meeting.</p>
             <p className="body">Therapy here is direct, curious, systemic, and allowed to be funny.</p>
+            <p className="body">
+              A lot of my work is with <Link href="/who-i-work-with" className="focus-ring font-semibold text-accent underline-offset-4 hover:underline">queer, trans, fat, neurodivergent, and post-religious adults</Link>—often at the intersections of several of those identities.
+            </p>
           </div>
           <div className="hero-actions">
             <ButtonLink href="/contact">Ask about therapy availability</ButtonLink>
@@ -67,7 +70,7 @@ export default function TherapyPage() {
       <section className="section-gap full-bleed-band full-bleed-band--surface">
         <div className="container-wrap">
           <div className="section-heading">
-            <h2 className="h2">Therapy specialties.</h2>
+            <h2 className="h2">Areas I specialize in.</h2>
           </div>
           <div className="index-grid mt-6">
             {specialtyCards.map(({ specialty, label, body }) => (
@@ -76,17 +79,6 @@ export default function TherapyPage() {
                 <p className="index-card__body body">{body}</p>
               </Link>
             ))}
-          </div>
-          <div className="route-divider mt-12 max-w-4xl">
-            <h2 className="h2">Neurodivergent-affirming therapy for adults.</h2>
-            <p className="body mt-3 max-w-3xl">
-              For burnout, masking, executive-function differences, sensory strain, relationships, and the exhausting work of translating yourself all day.
-            </p>
-            <div className="hero-actions">
-              <ButtonLink href={specialties.neurodivergentAdults.path} variant="secondary">
-                Learn about neurodivergent-affirming therapy
-              </ButtonLink>
-            </div>
           </div>
         </div>
       </section>
