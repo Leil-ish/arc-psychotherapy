@@ -116,7 +116,7 @@ export default function DefinitionsPage() {
     <section className="container-wrap py-16 md:py-20">
       <h1 className="h1">Core Concepts</h1>
       <p className="body-lg mt-5 max-w-4xl">
-        Therapy language gets used loosely. These are the definitions I work from, so when we name a problem we mean the same thing.
+        If you have cycled through labels — anxiety, burnout, depression — and none of them quite fit, a more precise name helps. The treatment for fear-based control is not the same as the treatment for low mood.
       </p>
       <p className="body mt-3 max-w-4xl">
         {siteContent.primaryLocation}. Serving North Austin, Cedar Park, Georgetown, and surrounding communities. {siteContent.telehealthRegion}.

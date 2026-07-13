@@ -18,7 +18,7 @@ const intro = {
   title: "How to figure out if this is the right fit.",
   lede: "The three issues I work with, the approach, and some writing — the shortest path to deciding whether to reach out.",
   body: [
-    "The issue pages are the fastest way to check fit — the approach page explains what therapy actually looks like, and the essays tend to give people a clearer picture of the practice than a bio page usually does.",
+    "The issue pages are the fastest way to check whether I work with what you are dealing with. The approach page shows what the work actually looks like.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;

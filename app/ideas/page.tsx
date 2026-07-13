@@ -25,7 +25,7 @@ const intro = {
   title: "Essays on perfectionism, overcontrol, and religious harm.",
   lede: "Short pieces on the three main things I work with and how I think about each one.",
   body:
-    "They are meant to give you a sense of whether this approach makes sense for you — more useful for that, usually, than a bio page."
+    "They are the fastest way to tell whether this approach makes sense for what you are dealing with."
 } as const;
 
 export default async function IdeasPage({
