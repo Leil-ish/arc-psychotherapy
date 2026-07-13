@@ -97,7 +97,6 @@ export default async function FrameworkDetailPage({
       <section className="container-wrap section-gap">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">Why it helps</p>
             <h2 className="h2">What this helps us notice.</h2>
             <ul className="split-panel__list body">
               {framework.whyItMatters.map((item) => (
@@ -106,7 +105,6 @@ export default async function FrameworkDetailPage({
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">Where it shows up</p>
             <h2 className="h2">When this becomes useful.</h2>
             <ul className="split-panel__list body">
               {framework.howItShowsUp.map((item) => (
@@ -120,7 +118,6 @@ export default async function FrameworkDetailPage({
       <section className="container-wrap section-gap-lg">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">In practice</p>
             <h2 className="h2">What we might try.</h2>
             <ul className="split-panel__list body">
               {framework.whatHelps.map((item) => (
@@ -129,7 +126,6 @@ export default async function FrameworkDetailPage({
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">Related</p>
             <h2 className="h2">Where this framework is used.</h2>
             <div className="flex flex-wrap gap-2">
               {framework.relatedLinks.map((link) => (

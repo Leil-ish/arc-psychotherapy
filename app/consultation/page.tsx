@@ -124,7 +124,6 @@ export default function ConsultationPage() {
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">Speaking and Training</p>
             <h2 className="h2">Topics I teach publicly.</h2>
             <ul className="split-panel__list body">
               {speaking.map((item) => (

@@ -41,7 +41,7 @@ export const specialties = {
       "Losing community, identity, or practical support when you questioned the system.",
       "Feeling responsible for other people’s faith, salvation, reputation, or stability."
     ],
-    approachTitle: "We look at the system, not just the belief.",
+    approachTitle: "Looking at the system, not just the belief.",
     approach: [
       "We pay attention to who held authority, what belonging cost, what disagreement made dangerous, and which rules eventually became private rules you had to enforce on yourself.",
       "Faith can be part of the conversation, or not. The work can include guilt, grief, anger, relationships, sexuality, identity, present-day decisions, and the practical project of building a life after certainty."
@@ -205,7 +205,7 @@ export const specialties = {
       "You may be autistic, ADHD, otherwise neurodivergent, questioning, formally diagnosed, or making sense of yourself without a label that quite fits yet.",
       "This is therapy for burnout, masking, executive-function differences, sensory strain, relationships, trauma, and the exhausting work of translating yourself all day."
     ],
-    patternTitle: "A different mind is not a character problem.",
+    patternTitle: "What might bring you to therapy.",
     patterns: [
       "Burnout after years of masking or overfunctioning.",
       "Shame around inconsistency, directness, intensity, or recovery needs.",
@@ -214,7 +214,7 @@ export const specialties = {
       "Perfectionism built to compensate for misunderstanding or executive-function differences.",
       "Workplaces, families, schools, or religious systems that punished difference."
     ],
-    approachTitle: "Affirming can still be concrete and challenging.",
+    approachTitle: "Making the work fit your actual life.",
     approach: [
       "We can use direct questions, clear summaries, written or visual organization, more processing time, and practical experiments adjusted to real life rather than moralized when they do not work.",
       "We also look at the environment: which expectations are workable, which are merely familiar, and where a communication problem belongs to a relationship rather than entirely to you."

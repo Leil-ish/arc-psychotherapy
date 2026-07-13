@@ -58,8 +58,7 @@ export function ConceptPageTemplate({
       <section className="container-wrap section-gap">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">This can look like</p>
-            <h2 className="h2">Some familiar versions of the problem.</h2>
+            <h2 className="h2">What this can look like.</h2>
             <ul className="split-panel__list body">
               {hub.commonPresentations.map((item) => (
                 <li key={item}>{item}</li>
@@ -67,8 +66,7 @@ export function ConceptPageTemplate({
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">What people often try</p>
-            <h2 className="h2">Things that sound helpful and often are not.</h2>
+            <h2 className="h2">What people often try.</h2>
             <ul className="split-panel__list body">
               {hub.whatDoesNotWork.map((item) => (
                 <li key={item}>{item}</li>
@@ -81,8 +79,7 @@ export function ConceptPageTemplate({
       <section className="container-wrap section-gap">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">What can help</p>
-            <h2 className="h2">What can make some room.</h2>
+            <h2 className="h2">What can help.</h2>
             <ul className="split-panel__list body">
               {hub.whatHelps.map((item) => (
                 <li key={item}>{item}</li>
@@ -90,8 +87,7 @@ export function ConceptPageTemplate({
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">How I work with it</p>
-            <h2 className="h2">What therapy might look like.</h2>
+            <h2 className="h2">How therapy can help.</h2>
             <p className="body">{hub.arcApproach}</p>
           </article>
         </div>
@@ -102,7 +98,6 @@ export function ConceptPageTemplate({
       <section className="container-wrap section-gap-lg">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">Related Essays</p>
             <h2 className="h2">Related writing.</h2>
             <div className="flex flex-wrap gap-2">
               {hub.relatedEssays.map((link) => (
@@ -113,8 +108,7 @@ export function ConceptPageTemplate({
             </div>
           </article>
           <article className="split-panel">
-            <p className="label">Related working ideas</p>
-            <h2 className="h2">Useful tools, not homework.</h2>
+            <h2 className="h2">Related working ideas.</h2>
             <div className="flex flex-wrap gap-2">
               {hub.relatedFrameworks.map((link) => (
                 <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">

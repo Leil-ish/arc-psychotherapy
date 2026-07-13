@@ -30,7 +30,6 @@ export function FaqBlock({
   return (
     <section className="container-wrap section-gap-lg">
       <div className="section-heading">
-        <p className="label">Questions</p>
         <h2 className="h2">{heading}</h2>
       </div>
       <div className="faq-list">

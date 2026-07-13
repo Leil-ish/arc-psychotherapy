@@ -107,7 +107,6 @@ export default function SupervisionPage() {
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">Format</p>
             <h2 className="h2">Direct, specific, and rooted in the actual case.</h2>
             <p className="body">We make room for the clinical question, the person in front of you, and the parts of your own response that may be shaping the work.</p>
           </article>

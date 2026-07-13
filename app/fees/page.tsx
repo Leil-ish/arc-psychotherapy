@@ -51,7 +51,7 @@ export default function FeesPage() {
             <p className="body">Private pay lets me work without insurance restrictions shaping the diagnosis, pace, or scope of therapy. It also means continuity with one clinician and a limited caseload with room to think carefully about complex work.</p>
           </article>
           <article className="split-panel">
-            <h2 className="h2">Access.</h2>
+            <h2 className="h2">Reduced-fee availability.</h2>
             <p className="body">A portion of my caseload is reserved for reduced-fee spots. Ask about availability if the standard fee would make therapy inaccessible.</p>
           </article>
         </div>

@@ -95,8 +95,7 @@ export default function AboutPage() {
         <div className="container-wrap">
         <div className="split-band split-band--open">
           <article className="split-panel">
-            <p className="label">How I Work</p>
-            <h2 className="h2">What I am interested in.</h2>
+            <h2 className="h2">How I work.</h2>
             <p className="body">
               I like getting close enough to a story to see how it is actually put together: private rules, useful adaptations, old myths, social context, and the things that make perfect sense once someone says them out loud.
             </p>
@@ -105,7 +104,6 @@ export default function AboutPage() {
             </p>
           </article>
           <article className="split-panel">
-            <p className="label">Background</p>
             <h2 className="h2">What shapes the way I work.</h2>
             <p className="body">
               I grew up in Uganda. Growing up between cultures made me suspicious of things presented as universal when they are not: how authority works, who gets to have needs, what belonging costs, and which rules only become visible once you are outside them.
@@ -128,14 +126,12 @@ export default function AboutPage() {
         <div className="container-wrap">
           <div className="split-band">
           <article className="split-panel">
-            <p className="label">Values</p>
-            <h2 className="h2">The basics.</h2>
+            <h2 className="h2">What I am committed to.</h2>
             <p className="body">
               My practice is queer-affirming, trans-affirming, fat-affirming, and neurodiversity-affirming. Race, migration, religion, family obligation, disability, and power are part of a life—not side notes.
             </p>
           </article>
           <article className="split-panel">
-            <p className="label">Professional background</p>
             <h2 className="h2">Experience that informs the work.</h2>
             <ul className="split-panel__list body">
               {authority.map((item) => (

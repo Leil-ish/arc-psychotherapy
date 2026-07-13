@@ -27,11 +27,6 @@ const specialtyCards = [
     specialty: specialties.perfectionismOvercontrol,
     label: "Perfectionism and overcontrol",
     body: "When being capable has become a full-time private management system."
-  },
-  {
-    specialty: specialties.neurodivergentAdults,
-    label: "Neurodivergent adults",
-    body: "Therapy that makes room for how your mind actually works."
   }
 ] as const;
 
@@ -71,13 +66,27 @@ export default function TherapyPage() {
 
       <section className="section-gap full-bleed-band full-bleed-band--surface">
         <div className="container-wrap">
-          <div className="index-grid">
+          <div className="section-heading">
+            <h2 className="h2">Some reasons people look for therapy.</h2>
+          </div>
+          <div className="index-grid mt-6">
             {specialtyCards.map(({ specialty, label, body }) => (
               <Link key={specialty.path} href={specialty.path as Route} className="focus-ring no-link-style index-card">
                 <h2 className="index-card__title">{label}</h2>
                 <p className="index-card__body body">{body}</p>
               </Link>
             ))}
+          </div>
+          <div className="route-divider mt-12 max-w-4xl">
+            <h2 className="h2">Neurodivergent-affirming therapy for adults.</h2>
+            <p className="body mt-3 max-w-3xl">
+              For burnout, masking, executive-function differences, sensory strain, relationships, and the exhausting work of translating yourself all day.
+            </p>
+            <div className="hero-actions">
+              <ButtonLink href={specialties.neurodivergentAdults.path} variant="secondary">
+                Learn about neurodivergent-affirming therapy
+              </ButtonLink>
+            </div>
           </div>
         </div>
       </section>
