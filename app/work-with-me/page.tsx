@@ -19,7 +19,7 @@ const intro = {
     "Therapy that is specific enough to change something outside the session.",
   body: [
     "I don't do small-talk therapy. We get specific about what keeps happening, where it started, and what keeps it in place.",
-    "Then we work on it until your body believes what your mind already knows — change you can notice in your actual week, not just in the room."
+    "Then we work on it until your body believes what your mind already knows — changes you can notice in your actual life, not just in the room."
   ]
 } as const;
 
@@ -31,7 +31,7 @@ const process = [
   },
   {
     step: "Therapy",
-    title: "Get specific.",
+    title: "Get specific about the pattern.",
     body: "We look closely at what happens during the week, not only at what you understand in session."
   },
   {
@@ -42,10 +42,11 @@ const process = [
 ] as const;
 
 const values = [
-  "LGBTQ+ affirming means identity is not treated as pathology or debate.",
-  "HAES-aligned means body size is not treated as a moral issue or a treatment target.",
-  "Neurodiversity-affirming means communication, pacing, and problem-solving do not have to follow one narrow standard.",
-  "Immigrant and cross-cultural realities are treated as real context, not side notes."
+  "Queer and trans affirming.",
+  "Fat positive and HAES-aligned.",
+  "Neurodivergent-affirming. No masking required.",
+  "Anti-racist and decolonial.",
+  "Migration, religion, family obligation, and power are part of the clinical picture."
 ] as const;
 
 const goodFit = [

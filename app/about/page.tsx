@@ -33,10 +33,11 @@ const notBestFit = [
 ] as const;
 
 const valuesInPractice = [
-  "LGBTQ+ affirming means identity is not treated as pathology or debate.",
-  "HAES-aligned means body size is not treated as a moral issue or a treatment target.",
-  "Neurodiversity-affirming means communication, pacing, and problem-solving do not have to follow one narrow standard.",
-  "Cross-cultural respect means language, migration, family obligation, religion, race, and mixed-context identity are treated as real context, not side notes."
+  "Queer and trans affirming.",
+  "Fat positive and HAES-aligned.",
+  "Neurodivergent-affirming. No masking required.",
+  "Anti-racist and decolonial.",
+  "Migration, religion, family obligation, and power are part of the clinical picture."
 ] as const;
 
 const authority = [
@@ -118,13 +119,13 @@ export default function AboutPage() {
               I grew up in Uganda. This comes up in my work more than you might expect — not because I make it a topic, but because growing up between cultures tends to make you notice the things people assume are universal. How authority functions. Who gets to have needs. What belonging costs. Those questions come up constantly in clinical work.
             </p>
             <p className="body">
-              I also know from the inside what it costs to untangle a life from systems — religious, family, corporate — that reward shrinking. Outgrowing your environment comes with its own specific grief, and I know it from both sides of the room.
+              I know what it&apos;s like to untangle a life from systems — religious, family, corporate — that reward shrinking. Outgrowing your environment comes with a specific kind of grief, and I know it firsthand.
             </p>
             <p className="body">
               I&apos;ve also spent a lot of time in settings that don&apos;t look like private practice — residential treatment, crisis work, systems built to run under pressure. What I took from that period was mostly an allergy to things that sound good but don&apos;t actually help.
             </p>
             <p className="body">
-              Outside of work: married, three kids, a lot of reading and hiking, and a long-running d&eacute;tente with household clutter.
+              Outside of work: married, three kids, a lot of reading and hiking, and a complicated relationship with keeping the house in order.
             </p>
           </article>
         </div>
@@ -136,7 +137,7 @@ export default function AboutPage() {
           <div className="split-band">
           <article className="split-panel">
             <p className="label">Values</p>
-            <h2 className="h2">What that means in practice.</h2>
+            <h2 className="h2">Where I stand.</h2>
             <ul className="split-panel__list body">
               {valuesInPractice.map((item) => (
                 <li key={item}>{item}</li>
