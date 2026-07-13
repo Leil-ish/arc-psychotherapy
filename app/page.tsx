@@ -19,7 +19,7 @@ const intro = {
   title: "Bring the complicated version.",
   lede: "In Round Rock and online across Texas, for perfectionism, overcontrol, religious trauma and religious harm, and the things you can explain well but have not been able to think your way out of.",
   body: [
-    "I am Leila Anderson, LMFT-S. I work with adults who notice context, contradiction, and power—and get frustrated when a problem is reduced to a simple technique.",
+    "I am Leila Anderson, LMFT-S. I work with adults who notice context, contradiction, and power—and are tired of being handed simple answers to complicated problems.",
     "Therapy can be deep, useful, challenging, and funny."
   ]
 } as const;
