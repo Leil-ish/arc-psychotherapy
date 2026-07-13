@@ -39,12 +39,6 @@ export const homePage = {
       title: "Perfectionism and overcontrol",
       href: "/therapy/perfectionism-overcontrol",
       body: "When being capable has become a full-time private management system."
-    },
-    {
-      eyebrow: "Specialty",
-      title: "Neurodivergent adults",
-      href: "/therapy/neurodivergent-adults",
-      body: "Therapy that makes room for how your mind actually works."
     }
   ] satisfies MarketingIndexItem[],
   writing: [
