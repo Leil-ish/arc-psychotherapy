@@ -148,7 +148,7 @@ export default function ConstructivePage() {
             Start here
           </ButtonLink>
           <ButtonLink href="/frameworks" variant="secondary">
-            Frameworks
+            Working ideas
           </ButtonLink>
           <ButtonLink href="/ideas" variant="secondary">
             Writing

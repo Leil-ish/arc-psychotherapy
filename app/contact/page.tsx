@@ -62,7 +62,7 @@ export default function ContactPage() {
           </div>
           <div className="meta-block">
             <p className="label">Response Time</p>
-            <p className="body">I reply to inquiries within 1-2 business days.</p>
+            <p className="body">I reply to inquiries within one to two business days.</p>
           </div>
         </aside>
       </div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
             <ul className="split-panel__list body mt-4">
               <li>Standard session fee is $200 for 50–55 minutes.</li>
               <li>Private-pay practice. Superbills may be available for out-of-network reimbursement.</li>
-              <li>Telehealth available across Texas when clinically appropriate.</li>
+              <li>Telehealth is available to Texas residents when clinically appropriate.</li>
               <li>24-hour cancellation policy. Late cancellations or no-shows may be billed in full.</li>
             </ul>
           </aside>

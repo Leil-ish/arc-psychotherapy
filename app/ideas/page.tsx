@@ -11,9 +11,9 @@ import {
 import { siteContent } from "@/src/content/site";
 
 export const metadata = pageMetadata({
-  title: "Writing | Round Rock, TX",
+  title: "Writing on Perfectionism & Religious Harm | Round Rock, TX",
   description:
-    "Short, practical essays on perfectionism, overcontrol, religious harm, and meaning from Arc Psychotherapy in Downtown Round Rock, Texas.",
+    "Essays on perfectionism, overcontrol, religious harm, and meaning from Arc Psychotherapy in Downtown Round Rock, Texas.",
   path: "/ideas"
 });
 
@@ -22,10 +22,10 @@ function isIdeaTag(value: string): value is IdeaTag {
 }
 
 const intro = {
-  title: "Essays on perfectionism, overcontrol, and religious harm.",
-  lede: "Short pieces on the three main things I work with and how I think about each one.",
+  title: "Writing about the things that keep getting mistaken for personal failures.",
+  lede: "Perfectionism, overcontrol, religious harm, and the systems around them.",
   body:
-    "They are the fastest way to tell whether this approach makes sense for what you are dealing with."
+    "These are not assignments and they are not disguised intake forms. They are a way to see how I think about a problem before deciding whether you want to talk."
 } as const;
 
 export default async function IdeasPage({
@@ -49,7 +49,7 @@ export default async function IdeasPage({
         data={webPageSchema({
           name: "Writing",
           description:
-            "Short, practical essays on perfectionism, overcontrol, religious harm, and meaning from Arc Psychotherapy in Downtown Round Rock, Texas.",
+            "Essays on perfectionism, overcontrol, religious harm, and meaning from Arc Psychotherapy in Downtown Round Rock, Texas.",
           path: "/ideas",
           type: "CollectionPage"
         })}
@@ -125,7 +125,7 @@ export default async function IdeasPage({
       <section className="section-gap-lg pb-8">
         <div className="route-divider">
           <p className="label">Next</p>
-          <h2 className="h2 mt-3">Next steps.</h2>
+          <h2 className="h2 mt-3">A reasonable next step.</h2>
           <div className="hero-actions">
             <ButtonLink href="/work-with-me">Approach</ButtonLink>
             <ButtonLink href={siteContent.bookingUrl} variant="secondary">

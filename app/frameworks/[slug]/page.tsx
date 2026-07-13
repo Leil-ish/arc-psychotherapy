@@ -21,10 +21,10 @@ export async function generateMetadata({
   const framework = getFrameworkBySlug(slug);
 
   if (!framework) {
-    return { title: "Frameworks" };
+    return { title: "Working Ideas" };
   }
 
-  const title = `${framework.name} | Frameworks`;
+  const title = `${framework.name} | Working Ideas`;
   const url = `${siteContent.siteUrl}/frameworks/${framework.slug}`;
 
   return {
@@ -82,13 +82,13 @@ export default async function FrameworkDetailPage({
         id={`framework-breadcrumb-schema-${framework.slug}`}
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: "Frameworks", path: "/frameworks" },
+          { name: "Working Ideas", path: "/frameworks" },
           { name: framework.name, path: `/frameworks/${framework.slug}` }
         ])}
       />
       <section className="container-wrap py-16 md:py-20">
         <div className="hero-copy">
-          <p className="label">Framework</p>
+          <p className="label">Working idea</p>
           <h1 className="h1 mt-4">{framework.name}</h1>
           <p className="hero-lede max-w-3xl">{framework.definition}</p>
         </div>
@@ -97,8 +97,8 @@ export default async function FrameworkDetailPage({
       <section className="container-wrap section-gap">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">Why It Matters</p>
-            <h2 className="h2">Why this tool exists.</h2>
+            <p className="label">Why it helps</p>
+            <h2 className="h2">What this helps us notice.</h2>
             <ul className="split-panel__list body">
               {framework.whyItMatters.map((item) => (
                 <li key={item}>{item}</li>
@@ -106,8 +106,8 @@ export default async function FrameworkDetailPage({
             </ul>
           </article>
           <article className="split-panel">
-            <p className="label">How It Shows Up</p>
-            <h2 className="h2">When it becomes useful.</h2>
+            <p className="label">Where it shows up</p>
+            <h2 className="h2">When this becomes useful.</h2>
             <ul className="split-panel__list body">
               {framework.howItShowsUp.map((item) => (
                 <li key={item}>{item}</li>
@@ -120,8 +120,8 @@ export default async function FrameworkDetailPage({
       <section className="container-wrap section-gap-lg">
         <div className="split-band">
           <article className="split-panel">
-            <p className="label">What Helps</p>
-            <h2 className="h2">How the tool gets used.</h2>
+            <p className="label">In practice</p>
+            <h2 className="h2">What we might try.</h2>
             <ul className="split-panel__list body">
               {framework.whatHelps.map((item) => (
                 <li key={item}>{item}</li>
@@ -140,7 +140,7 @@ export default async function FrameworkDetailPage({
             </div>
             <div className="hero-actions">
               <ButtonLink href="/frameworks" variant="secondary">
-                Framework Index
+                All working ideas
               </ButtonLink>
             </div>
           </article>

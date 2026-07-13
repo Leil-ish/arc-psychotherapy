@@ -114,8 +114,8 @@ export function ConceptPageTemplate({
             </div>
           </article>
           <article className="split-panel">
-            <p className="label">Related Frameworks</p>
-            <h2 className="h2">Optional tools, not homework.</h2>
+            <p className="label">Related working ideas</p>
+            <h2 className="h2">Useful tools, not homework.</h2>
             <div className="flex flex-wrap gap-2">
               {hub.relatedFrameworks.map((link) => (
                 <Link key={link.href} href={link.href as Route} className="focus-ring no-link-style chip-link">

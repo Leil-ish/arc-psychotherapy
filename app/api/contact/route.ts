@@ -10,7 +10,7 @@ function formatEmailBody(body: {
   consultPreference: ConsultPreference;
   availability?: string | null;
   preferredContactMethod?: string;
-  message: string;
+  message?: string | null;
 }): string {
   const lines = [
     `Name: ${body.name}`,
@@ -21,7 +21,7 @@ function formatEmailBody(body: {
     body.availability ? `Availability: ${body.availability}` : null,
     ``,
     `Message:`,
-    body.message
+    body.message || "No additional note provided."
   ];
   return lines.filter((l) => l !== null).join("\n");
 }
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
     consultPreference?: ConsultPreference;
     availability?: string | null;
     preferredContactMethod?: "email" | "phone" | "either";
-    message?: string;
+    message?: string | null;
     website?: string; // honeypot
   };
 
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  if (!body?.name || !body?.email || !body?.message || !body?.consultPreference) {
+  if (!body?.name || !body?.email || !body?.consultPreference) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 

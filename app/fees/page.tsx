@@ -16,10 +16,10 @@ export default function FeesPage() {
       <section className="container-wrap py-16 md:py-20">
         <h1 className="h1">Fees & policies</h1>
         <p className="body-lg mt-6 max-w-3xl">
-          Private-pay practice. Superbills may be available upon request for out-of-network reimbursement.
+          Standard individual therapy is ${pricing.standardSession.fee} for {pricing.standardSession.duration}. This is a private-pay practice; a superbill is available if you use out-of-network benefits.
         </p>
         <p className="body mt-3 max-w-3xl">
-          If you&apos;d rather not wrangle claims yourself,{" "}
+          If you use out-of-network benefits and do not want to handle claims yourself,{" "}
           <a href="https://www.mentaya.com/" target="_blank" rel="noopener noreferrer" className="focus-ring font-semibold text-accent underline-offset-4 hover:underline">Mentaya</a>{" "}
           and{" "}
           <a href="https://www.thrizer.com/" target="_blank" rel="noopener noreferrer" className="focus-ring font-semibold text-accent underline-offset-4 hover:underline">Thrizer</a>{" "}
@@ -59,14 +59,14 @@ export default function FeesPage() {
         <article className="card">
           <p className="h3">Payment</p>
           <p className="mt-3 body">
-            Payment is due at time of service. Track packages are paid upfront or via approved installment arrangement.
+            Payment is due at the time of service. Model-building tracks are paid upfront or through an approved installment arrangement. Ask before scheduling if you want to talk through the numbers first.
           </p>
         </article>
       </section>
 
       <SectionCta
-        title="Questions about pricing or fit?"
-        body="Use the contact page or schedule a consult for current availability and package timing."
+        title="A question before you reach out is allowed."
+        body="Use the contact page to ask about current availability, payment, or whether a model-building track is relevant. You do not need to explain your whole situation first."
       />
     </>
   );

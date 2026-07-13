@@ -19,14 +19,14 @@ export default function PrivacyPage() {
             This website collects only the information you submit through the contact form: name, email address, phone number (optional), scheduling availability, preferred contact method, and a brief description of your reason for reaching out.
           </p>
           <p className="mt-3 body">
-            No tracking cookies, analytics platforms, or advertising tools are installed on this site.
+            This site does not use advertising pixels, session-recording tools, or analytics platforms. It uses the technical services needed to host the website and deliver form submissions.
           </p>
         </section>
 
         <section className="card">
           <h2 className="h3">How your information is used</h2>
           <p className="mt-3 body">
-            Form submissions are transmitted by email to {siteContent.email} for the purpose of responding to your inquiry. They are not stored on a server, sold to third parties, or shared with anyone outside the practice.
+            Form submissions are delivered to {siteContent.email} through Resend, the email-delivery service used by this website, so the practice can respond to your inquiry. Information submitted through the form is not sold or used for advertising.
           </p>
           <p className="mt-3 body">
             This contact form is not a secure clinical channel. Do not submit protected health information (PHI) through this form.
@@ -34,16 +34,16 @@ export default function PrivacyPage() {
         </section>
 
         <section className="card">
-          <h2 className="h3">HIPAA notice</h2>
+          <h2 className="h3">A note about sensitive information</h2>
           <p className="mt-3 body">
-            This website is not a HIPAA-covered electronic health record system. Clinical records and communications that constitute protected health information (PHI) are handled through the practice&apos;s secure client portal and clinical documentation systems, not through this website.
+            This contact form is for a brief practical inquiry, not for therapy or clinical communication. Do not submit protected health information, diagnoses, or a detailed history here. If you become a client, the practice will provide the secure communication methods used for care.
           </p>
         </section>
 
         <section className="card">
           <h2 className="h3">Data retention</h2>
           <p className="mt-3 body">
-            Inquiry emails are retained only as long as operationally necessary to respond to and process your request. If you become a client, information is handled in accordance with clinical record-keeping requirements under Texas law.
+            Inquiry emails are retained only as long as operationally necessary to respond to and process your request. If you become a client, records are handled through the practice&apos;s clinical systems and under the applicable record-keeping requirements.
           </p>
         </section>
 

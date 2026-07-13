@@ -12,35 +12,35 @@ export const metadata = pageMetadata({
 const intro = {
   eyebrow: "Consultation",
   title: "Consultation for treatment programs, teams, and leaders.",
-  lede: "I help when people are working hard and the same problems keep coming back.",
+  lede: "I help when a team is working hard and the same problem keeps returning in a different outfit.",
   body: [
-    "Sometimes the problem is not effort. It is the way the work is organized.",
-    "Consultation can focus on program design, staff training, leadership, shame and trauma treatment, or treatment culture."
+    "Sometimes the problem is not effort, morale, or one difficult person. It is the way the work is organized: who holds authority, how decisions get made, where the process breaks, and what the system rewards.",
+    "Consultation can focus on program design, staff training, leadership, treatment culture, and the clinical work of shame, trauma, and relationships."
   ]
 } as const;
 
 const services = [
   {
     label: "Program Design",
-    title: "Fix the system, not only the morale problem.",
-    body: "Clinical systems, treatment flow, role clarity, documentation habits, and process design."
+    title: "Find the structure underneath the morale problem.",
+    body: "Clinical systems, treatment flow, role clarity, documentation habits, and the ordinary processes that are making good work harder than it needs to be."
   },
   {
     label: "Training",
-    title: "Teach people something they can still use next month.",
-    body: "Talks, workshops, and staff training on trauma, shame, leadership, ethics, and relational dynamics."
+    title: "Teach something people can still use next month.",
+    body: "Talks, workshops, and training on trauma, shame, leadership, ethics, and relational dynamics—designed for the actual decisions people have to make after the slides are gone."
   },
   {
     label: "Leadership",
-    title: "Reduce fear-based management.",
-    body: "Support for leaders who want better standards without building a culture of dread."
+    title: "Build standards without building dread.",
+    body: "Support for leaders who want more clarity, better accountability, and less fear-based management."
   }
 ] as const;
 
 const goodFor = [
-  "Organizations building or cleaning up trauma, addiction, or relational treatment programs",
-  "Teams that want better thinking around shame, conflict, authority, and treatment culture",
-  "Leaders who know something is off and want to get specific about it"
+  "Organizations building or revising trauma, addiction, or relational treatment programs",
+  "Teams that want sharper thinking about shame, conflict, authority, and treatment culture",
+  "Leaders who can tell something is off and are ready to become specific about it"
 ] as const;
 
 const speaking = [
@@ -88,7 +88,7 @@ export default function ConsultationPage() {
         <aside className="hero-meta hero-meta--ultramarine">
           <div className="meta-block">
             <p className="label">Best For</p>
-            <p className="body">Clinical programs, treatment teams, and leaders who want a culture that doesn&apos;t rely on burnout as a feature.</p>
+            <p className="body">Clinical programs, treatment teams, and leaders who want a culture that does not rely on burnout, fear, or professional theater as operating systems.</p>
           </div>
           <div className="meta-block">
             <p className="label">Topics</p>
@@ -141,7 +141,7 @@ export default function ConsultationPage() {
           <p className="label">Next Step</p>
           <h2 className="h2 mt-3">Ask about consultation.</h2>
           <p className="body mt-3 max-w-3xl">
-            Reach out with a short description of the problem, who is involved, and what needs to work better.
+            Reach out with a short description of the problem, who is involved, and what needs to work better. We can decide together whether a conversation, training, or longer consultation makes sense.
           </p>
           <div className="hero-actions">
             <ButtonLink href="/contact">Contact</ButtonLink>

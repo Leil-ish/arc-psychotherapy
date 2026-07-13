@@ -14,30 +14,29 @@ export const metadata = pageMetadata({
 const intro = {
   eyebrow: "About",
   title: "I am Leila Anderson, LMFT-S.",
-  lede: "Most people who arrive here already understand themselves well. They're tired of the part insight hasn't fixed.",
+  lede: "I work with people who have spent a long time trying to become the kind of person who would not have this problem anymore.",
   body: [
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;
 
 const goodFit = [
-  "Insight has not changed enough on its own.",
-  "You are dealing with perfectionism, overcontrol, chronic over-responsibility, or the aftermath of rigid religion.",
-  "You want therapy that is direct and concrete."
+  "You are tired of being able to explain the pattern better than you can interrupt it.",
+  "Perfectionism, overcontrol, chronic over-responsibility, or the aftermath of rigid religion have become too expensive to keep organizing around.",
+  "You want a therapist who will be clear, curious, and willing to disagree when it matters."
 ] as const;
 
 const notBestFit = [
-  "Very open-ended therapy with little direction.",
+  "Therapy with no shared sense of what we are trying to change.",
   "Crisis stabilization or emergency response.",
-  "A strong need for certainty or formulas from therapy."
+  "A formula, a verdict, or someone to take over your decisions."
 ] as const;
 
 const valuesInPractice = [
-  "Queer and trans affirming.",
-  "Fat positive and HAES-aligned.",
-  "Neurodivergent-affirming. No masking required.",
-  "Anti-racist and decolonial.",
-  "Migration, religion, family obligation, and power are part of the clinical picture."
+  "Queer and trans affirming. Identity is not a pathology or a debate topic here.",
+  "Fat positive and HAES-aligned. Body size is not a moral issue or a treatment target.",
+  "Neurodivergent-affirming. No masking required; communication, pacing, and problem-solving do not have to follow one narrow standard.",
+  "Anti-racist and decolonial. Race, migration, religion, family obligation, and power are part of the clinical picture—not side notes."
 ] as const;
 
 const authority = [
@@ -106,26 +105,26 @@ export default function AboutPage() {
             <p className="label">How I Work</p>
             <h2 className="h2">Where we usually start.</h2>
             <p className="body">
-              What I&apos;m looking for is the place where your coping strategy became the problem — where what helped you manage something hard is now the thing keeping you stuck. That shift usually happens gradually enough that it&apos;s hard to see from the inside.
+              I am usually looking for the point at which a strategy that once made good sense became too expensive. The person who checks everything may have learned that mistakes were dangerous. The person who never asks for help may have had excellent reasons to become low-maintenance. Those strategies do not become irrational just because they have started narrowing a life.
             </p>
             <p className="body">
-              I&apos;ll tell you what I see. When I&apos;ve gotten it wrong, you&apos;ll usually know before I do — and that&apos;s useful too.
+              I will tell you what I see, including when I think a familiar explanation is protecting the problem. I will also get things wrong. That is not a failure of the work; it is information about where my map does not yet match the territory.
             </p>
           </article>
           <article className="split-panel">
             <p className="label">Background</p>
             <h2 className="h2">What shapes the way I work.</h2>
             <p className="body">
-              I grew up in Uganda. This comes up in my work more than you might expect — not because I make it a topic, but because growing up between cultures tends to make you notice the things people assume are universal. How authority functions. Who gets to have needs. What belonging costs. Those questions come up constantly in clinical work.
+              I grew up in Uganda. Growing up between cultures made me attentive to things people often present as universal when they are not: how authority functions, who is allowed to have needs, what belonging costs, and which rules only become visible once you are outside them. Those questions show up constantly in therapy.
             </p>
             <p className="body">
-              I know what it&apos;s like to untangle a life from systems — religious, family, corporate — that reward shrinking. Outgrowing your environment comes with a specific kind of grief, and I know it firsthand.
+              I also know, from the inside, what it costs to untangle a life from systems—religious, family, corporate—that reward shrinking. Outgrowing an environment can be a relief and a grief at the same time. Therapy needs room for both.
             </p>
             <p className="body">
-              I&apos;ve also spent a lot of time in settings that don&apos;t look like private practice — residential treatment, crisis work, systems built to run under pressure. What I took from that period was mostly an allergy to things that sound good but don&apos;t actually help.
+              Before private practice, I spent years in residential treatment, crisis work, and systems built to run under pressure. It made me suspicious of interventions that sound excellent in a meeting and do not help anyone on Tuesday afternoon.
             </p>
             <p className="body">
-              Outside of work: married, three kids, a lot of reading and hiking, and a complicated relationship with keeping the house in order.
+              Outside work, I am married with three children. I read, hike, take too many pictures of ordinary moments, and remain in a long-running detente with household clutter.
             </p>
           </article>
         </div>

@@ -15,10 +15,10 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Start Here",
-  title: "How to figure out if this is the right fit.",
-  lede: "The three issues I work with, the approach, and some writing — the shortest path to deciding whether to reach out.",
+  title: "A useful way to decide whether to reach out.",
+  lede: "Read the page that feels most familiar, then decide whether you want a first conversation. That is enough for now.",
   body: [
-    "The issue pages are the fastest way to check whether I work with what you are dealing with. The approach page shows what the work actually looks like.",
+    "The issue pages describe the patterns I work with. The approach page explains what we would actually do together. The essays offer the clearest picture of how I think—and therefore, usually, what it is like to sit with me.",
     "Downtown Round Rock, Texas. Serving North Austin and surrounding communities. Telehealth across Texas."
   ]
 } as const;
@@ -113,9 +113,9 @@ export default function StartHerePage() {
       <section className="section-gap-lg pb-8">
         <div className="route-divider">
           <p className="label">From here</p>
-          <h2 className="h2 mt-3">If something sounds familiar, that is where to start.</h2>
+          <h2 className="h2 mt-3">Recognition is useful. It is not a diagnosis.</h2>
           <p className="body mt-3 max-w-3xl">
-            The issue pages go deeper. If you want a clearer picture of what therapy looks like, the approach page is the next stop.
+            If a page names something you have been trying to explain, read it. If you want to know what therapy would look like, go to the approach page. If you are ready to ask a practical question, get in touch.
           </p>
           <div className="hero-actions">
             <ButtonLink href="/work-with-me">Approach</ButtonLink>

@@ -148,7 +148,7 @@ export default async function IdeaEssayPage({
                 </Link>
               ))}
               <Link href="/frameworks" className="focus-ring no-link-style chip-link">
-                Frameworks Index
+                Working ideas
               </Link>
               <Link href="/start-here" className="focus-ring no-link-style chip-link">
                 Start Here
@@ -188,10 +188,10 @@ export default async function IdeaEssayPage({
 
       <section className="section-gap-lg pb-8">
         <div className="route-divider">
-          <p className="label">Next</p>
-          <h2 className="h2 mt-3">Next steps.</h2>
+          <p className="label">From here</p>
+          <h2 className="h2 mt-3">Read about therapy or ask a practical question.</h2>
           <p className="body mt-3 max-w-3xl">
-            If you want to know how therapy works, read the approach page. If you want to ask about a consult, use the contact page.
+            If you want to know how therapy works, read the approach page. If you want to ask about fit, availability, or fees, use the contact page.
           </p>
           <div className="hero-actions">
             <ButtonLink href="/work-with-me">Approach</ButtonLink>

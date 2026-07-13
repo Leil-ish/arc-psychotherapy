@@ -13,19 +13,19 @@ export const metadata = pageMetadata({
 const faqs = [
   {
     q: "What do sessions look like?",
-    a: "Sessions are 50–55 minutes. We get specific about what is actually happening — not just why it makes sense, but what the sequence looks like, when it happens, and what keeps it in place. Between sessions, you pay attention to what changes and what doesn't. We adjust from there."
+    a: "Sessions are 50–55 minutes. We talk about history, meaning, and relationships, but we also get concrete about the sequence that keeps repeating: what happens, what you predict, what you do next, and what it costs. Between sessions, you may notice or try things; there is no gold star for doing therapy “correctly.” We use what happens to guide the next session."
   },
   {
     q: "How long does therapy typically take?",
-    a: "It depends on what you are working on and how entrenched the pattern is. Some people make meaningful changes in a few months. Others work longer on deeper or more layered problems. I'll be direct with you about what I see rather than extend therapy past its usefulness."
+    a: "It depends on the problem, its history, and what changes once we begin. Some people come for a focused period; others need more time for problems with deeper roots or larger consequences. I will be direct about what I am seeing, including when the work appears to be complete or needs a different kind of support."
   },
   {
     q: "What do you mean by 'direct and practical' therapy?",
-    a: "It means we define the problem specifically, set real targets, and track whether anything is shifting outside the session. You will not spend months exploring without a direction. If something is not working, we will say so and try something else."
+    a: "It means we do not mistake a good explanation for a change plan. We will define the problem clearly enough to know what we are working on, and we will keep checking whether the work is making a difference outside the room. Direct does not mean harsh, rushed, or certain about everything."
   },
   {
     q: "Do you work with medication providers?",
-    a: "I do not prescribe medication, but I will coordinate with your prescriber when it supports the work. If medication evaluation seems relevant, I will say so directly."
+    a: "I do not prescribe medication. With your written permission, I can coordinate with a prescriber when that would support your care. If a medication evaluation seems worth considering, I will say so."
   },
   {
     q: "Do you offer telehealth?",
@@ -33,15 +33,15 @@ const faqs = [
   },
   {
     q: "Do you offer walk-and-talk sessions?",
-    a: "Yes. Weather and clinical fit permitting, sessions can happen on foot at parks and trails around Round Rock and North Austin. Some people think better in motion, and some conversations are easier side by side than face to face."
+    a: "Yes, when weather and clinical fit permit. Sessions can happen on foot at parks and trails around Round Rock and North Austin. Some people think better in motion; some conversations are easier side by side than face to face."
   },
   {
     q: "Do you accept insurance?",
-    a: "No — the practice is private-pay. I can provide a superbill for out-of-network reimbursement, and services like Mentaya or Thrizer can automate the claims if you'd rather skip the paperwork."
+    a: "No. This is a private-pay practice. I can provide a superbill for out-of-network reimbursement. Mentaya and Thrizer are separate services that can help with claims if you do not want to handle that paperwork yourself."
   },
   {
     q: "What is the model-building track?",
-    a: "Structured model-building is an optional method used within ongoing therapy for clients who benefit from making patterns visible in physical form. It is not required. See the dedicated page for details."
+    a: "Model-building is an optional way of putting a pattern into physical space when words alone are not getting us far enough. It is not required, not a separate diagnosis, and not a replacement for therapy. The dedicated page explains it in more detail."
   }
 ];
 

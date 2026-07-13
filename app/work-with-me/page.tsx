@@ -14,12 +14,11 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Approach",
-  title: "What therapy looks like when insight alone has not been enough.",
-  lede:
-    "Therapy that is specific enough to change something outside the session.",
+  title: "Therapy for the part after you understand why.",
+  lede: "Insight matters. It is just not always enough to alter a pattern that has been protecting you for years.",
   body: [
-    "I don't do small-talk therapy. We get specific about what keeps happening, where it started, and what keeps it in place.",
-    "Then we work on it until your body believes what your mind already knows — changes you can notice in your actual life, not just in the room."
+    "We will talk about your history, but we will not treat history as an explanation that ends the conversation. We will also look at the moment the pattern turns on: the email you cannot send, the request you cannot make, the rule you follow even when you no longer believe it.",
+    "Then we test the smallest useful change. Not because small is inherently virtuous, but because a change that your life can actually absorb tells us more than a dramatic plan you cannot carry home."
   ]
 } as const;
 
@@ -27,17 +26,17 @@ const process = [
   {
     step: "Consult",
     title: "Start with a consult.",
-    body: "We talk through what is going on, what you want help with, and the practical details."
+    body: "We talk through what you are looking for, whether I am the right person to help, and the practical details."
   },
   {
     step: "Therapy",
-    title: "Get specific about the pattern.",
-    body: "We look closely at what happens during the week, not only at what you understand in session."
+    title: "Map the actual sequence.",
+    body: "We get specific about what happens during the week: the trigger, the rule, the protective move, and the cost."
   },
   {
     step: "Adjustment",
-    title: "Keep what helps.",
-    body: "If something is useful, we keep it. If it isn't working, we say so and change course."
+    title: "Keep revising the map.",
+    body: "We pay attention to what changes and what does not. If an approach is not useful, we say so and adjust it instead of pretending it is working."
   }
 ] as const;
 
@@ -50,15 +49,15 @@ const values = [
 ] as const;
 
 const goodFit = [
-  "You want therapy that is direct and concrete.",
-  "You are dealing with perfectionism, overcontrol, religious harm, chronic over-responsibility, or the general experience of being high-achieving and privately exhausted.",
-  "You are tired of sounding insightful while nothing important changes."
+  "You want therapy that can hold complexity without becoming vague.",
+  "You are dealing with perfectionism, overcontrol, religious harm, chronic over-responsibility, or an old strategy that has begun taking up too much space.",
+  "You are tired of being articulate about your life and unable to change the part that hurts."
 ] as const;
 
 const notFit = [
   "Crisis stabilization or emergency response.",
   "Insurance-based care.",
-  "Very open-ended therapy with little direction."
+  "Therapy with no shared direction or a formula applied to everyone."
 ] as const;
 
 export default function WorkWithMePage() {
@@ -186,7 +185,7 @@ export default function WorkWithMePage() {
               <p className="label">Optional Method</p>
               <h2 className="feature-stage__title">Some sessions, we build.</h2>
               <p className="body">
-                Using LEGO brick sets as a structured clinical tool, we build the problem — the pattern, the system, the belief structure — so it exists outside your head and can be worked on directly.
+                Some clients use LEGO sets as a way of putting a pattern on the table—the people, rules, turning points, and impossible choices that are difficult to hold in their head all at once.
               </p>
               <p className="body">{constructive.opening[0]}</p>
               <div className="hero-actions">

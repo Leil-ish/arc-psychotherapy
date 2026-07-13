@@ -19,7 +19,7 @@ export const frameworks: Framework[] = [
     name: "Arc Mapping",
     slug: "arc-mapping",
     definition:
-      "Arc Mapping is a session-to-session map that links triggers, protective strategies, and chosen behavior shifts.",
+      "A simple way to follow a pattern across time: what sets it off, what you do to protect yourself, and what changes when you try something different.",
     whyItMatters: [
       "Prevents treatment from drifting into insight without implementation.",
       "Clarifies what changes and what stays stable across an arc.",
@@ -49,7 +49,7 @@ export const frameworks: Framework[] = [
     name: "Control Gradient",
     slug: "control-gradient",
     definition:
-      "Control Gradient scales flexibility in deliberate increments to reduce all-or-nothing reactions.",
+      "A way to practice flexibility in increments, so the alternative to control is not “just make a reckless leap.”",
     whyItMatters: [
       "Builds tolerance without forcing abrupt exposure.",
       "Creates measurable shifts for high-control clients.",
@@ -79,7 +79,7 @@ export const frameworks: Framework[] = [
     name: "Belief Deconstruction Grid",
     slug: "belief-deconstruction-grid",
     definition:
-      "Belief Deconstruction Grid organizes inherited beliefs into retain, revise, and release categories.",
+      "A way to sort inherited beliefs into what you want to keep, revise, or release—without rushing yourself into a new certainty.",
     whyItMatters: [
       "Reduces confusion during identity reconstruction.",
       "Separates values from fear-conditioned rules.",
@@ -109,7 +109,7 @@ export const frameworks: Framework[] = [
     name: "Pattern Externalization",
     slug: "pattern-externalization",
     definition:
-      "Pattern Externalization moves internal loops into observable language, sequence, or task format.",
+      "Putting an internal loop into words, a diagram, or physical space so it becomes something you can examine instead of something you are trapped inside.",
     whyItMatters: [
       "Improves precision when clients feel flooded or fused with the problem.",
       "Supports collaborative analysis without self-attack.",
@@ -139,7 +139,7 @@ export const frameworks: Framework[] = [
     name: "Uncertainty Capacity",
     slug: "uncertainty-capacity",
     definition:
-      "Uncertainty Capacity is the ability to act in line with your values without rushing to certainty.",
+      "The ability to make a values-based move before every uncertainty has been resolved.",
     whyItMatters: [
       "Reduces compulsive decision loops.",
       "Supports meaningful risk-taking with structure.",
@@ -169,7 +169,7 @@ export const frameworks: Framework[] = [
     name: "Meaning Reconstruction",
     slug: "meaning-reconstruction",
     definition:
-      "Meaning Reconstruction is a guided process for rebuilding identity, values, and direction after major belief disruption.",
+      "The slow work of rebuilding identity, values, and direction after a belief system or major relationship has stopped making sense.",
     whyItMatters: [
       "Supports coherence after religious or relational rupture.",
       "Prevents reactive identity foreclosure.",

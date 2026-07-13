@@ -55,7 +55,7 @@ export function ContactForm() {
       {/* Honeypot — hidden from users, filled by bots */}
       <input type="text" name="website" autoComplete="off" tabIndex={-1} aria-hidden="true" style={{ display: "none" }} />
       <p className="label">Consult request</p>
-      <p className="form-panel__note">Please do not include sensitive clinical details (PHI) in this form.</p>
+      <p className="form-panel__note">Please do not include sensitive clinical details, diagnoses, or a full history here. This form is only for starting the practical conversation.</p>
       <div className="form-grid">
         <label className="field-label" htmlFor="name">
           Name
@@ -130,9 +130,15 @@ export function ContactForm() {
         </select>
 
         <label className="field-label" htmlFor="message">
-          What brings you here
+          Anything useful for deciding whether to talk (optional)
         </label>
-        <textarea id="message" name="message" rows={5} required className="focus-ring field-input field-input--textarea" />
+        <textarea
+          id="message"
+          name="message"
+          rows={4}
+          placeholder="For example: I am looking for therapy for perfectionism, or I have a question about availability."
+          className="focus-ring field-input field-input--textarea"
+        />
       </div>
       <button
         type="submit"
@@ -142,8 +148,8 @@ export function ContactForm() {
         {status === "submitting" ? "Sending..." : "Send request"}
       </button>
       <div aria-live="polite">
-        {status === "success" && <p className="form-panel__status form-panel__status--success">Request sent. I&apos;ll follow up within 1–2 business days.</p>}
-        {status === "error" && <p className="form-panel__status">Please complete required fields and try again. You can also call or email directly.</p>}
+        {status === "success" && <p className="form-panel__status form-panel__status--success">Request sent. I&apos;ll follow up within one to two business days.</p>}
+        {status === "error" && <p className="form-panel__status">Please complete the required fields and try again. You can also call or email directly.</p>}
       </div>
     </form>
   );

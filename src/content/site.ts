@@ -46,17 +46,17 @@ export const siteContent = {
   constructive: {
     title: "Building the Problem",
     subtitle:
-      "In some sessions, we build. Using LEGO brick sets as a structured clinical tool, we construct the problem in physical space — sequence visible, relationships literal — so what stays abstract in conversation becomes something you can see and rearrange.",
+      "In some sessions, we build. LEGO sets give a pattern a physical form: the people, rules, turning points, and impossible choices can sit on the table instead of having to stay organized in your head.",
     opening: [
-      "The bricks are not the point. The point is that some patterns — perfectionism, overcontrol, the shape of a system that harmed you — are easier to work on once they exist outside your head.",
-      "The method applies most directly to perfectionism, rigidity/overcontrol, and religious harm — places where the pattern is clear in conversation but hasn't shifted in behavior."
+      "The bricks are not the point. The point is that some patterns—perfectionism, overcontrol, the shape of a system that harmed you—become easier to notice once they exist outside your head.",
+      "This is most useful when the pattern is clear in conversation but the usual insight has not changed what happens next."
     ],
     whyItHelps: [
-      "Externalization: patterns move from internal pressure to observable process.",
-      "Sequencing: complex change is broken into ordered, manageable steps.",
-      "Tolerance of imperfection: disruptions become material for treatment, not failure.",
-      "Narrative integration: clients connect behavior, meaning, and identity across sessions.",
-      "Paced work: structure slows reactivity and supports deliberate adaptation."
+      "Externalization: a pattern becomes something you can look at instead of something you are trapped inside.",
+      "Sequence: you can see what comes first, what follows, and where there may actually be room to intervene.",
+      "Imperfection: a disruption is something to learn from, rather than proof you have failed the exercise.",
+      "Integration: meaning, behavior, and identity can be held together without turning the session into a lecture.",
+      "Pacing: having a shared structure can slow a fast, reactive problem down enough to see it."
     ],
     sessionFlow: [
       "Consult",
@@ -67,14 +67,14 @@ export const siteContent = {
     ],
     fit: {
       good: [
-        "You value structure and want a concrete way to work with control patterns.",
-        "You can tolerate an experiential format while keeping psychological depth.",
-        "You want a paced method that makes process visible session by session."
+        "You want a concrete way to work with a control pattern, a relationship dynamic, or a belief system.",
+        "You are open to an experiential format without needing to be “creative” or good at LEGO.",
+        "You think more clearly when you can see a structure rather than only describe it."
       ],
       notFit: [
-        "You prefer insight-only conversation without experiential methods.",
+        "You strongly prefer conversation-only therapy and have no interest in an experiential method.",
         "You need acute crisis stabilization rather than a planned treatment arc.",
-        "You are seeking guaranteed outcomes or rapid symptom promises."
+        "You need immediate stabilization, or you are looking for a quick or guaranteed result."
       ]
     },
     packages: {
@@ -95,22 +95,22 @@ export const siteContent = {
       {
         question: "How does this relate to perfectionism and overcontrol?",
         answer:
-          "The format makes control strategies visible in session and allows direct work on flexibility, tolerance, and pacing."
+          "It can make the sequence of a control strategy visible: what the rule is, what it is protecting, and where the pattern tightens. That gives us something concrete to work with."
       },
       {
         question: "Can this be used for religious harm work?",
         answer:
-          "When appropriate, yes. It can support reconstruction of meaning, authority, and identity within a clear treatment plan."
+          "Sometimes. It can help make inherited authority, rules, and belonging structures visible, especially when the problem is hard to explain without getting lost in abstractions."
       },
       {
         question: "What if I am not creative?",
         answer:
-          "Creativity is not the target. The work focuses on sequence, pattern awareness, and decision-making under pressure."
+          "You do not need to be creative. This is not an art project. The work is about sequence, pattern awareness, and what happens when you have to make a choice under pressure."
       },
       {
         question: "What if I do not finish?",
         answer:
-          "Not finishing can itself provide useful data for treatment. We review what interrupted the process and decide whether to continue, adapt, or shift formats."
+          "Not finishing is not a failure. We look at what got in the way, what that tells us, and whether to continue, adapt, or use a different format."
       },
       {
         question: "Do I keep what we build?",
@@ -123,9 +123,9 @@ export const siteContent = {
           "In some cases, yes. Telehealth use depends on logistics, clinical fit, and whether the format can be delivered with adequate structure."
       },
       {
-        question: "Is this evidence-based?",
+        question: "What is the clinical basis for this?",
         answer:
-          "The core treatment remains talk therapy with a clear plan. Model-building is used as a guided experiential tool to support externalization, reflection, and integration."
+          "The core treatment is psychotherapy. Model-building is an experiential tool used to support reflection and make a hard-to-see pattern more concrete. It is not presented as a stand-alone cure or replacement for therapy."
       },
       {
         question: "Is this required?",
@@ -134,6 +134,6 @@ export const siteContent = {
       }
     ],
     curious:
-      "The rationale is simple: patterns are easier to change when you can see them, and harder to argue with when they are sitting on the table."
+      "The rationale is simple: a pattern is easier to work with when you can see its shape. It is also harder to let it hide behind a good explanation when it is sitting on the table."
   }
 } as const;

@@ -11,31 +11,31 @@ export const metadata = pageMetadata({
 
 const intro = {
   eyebrow: "Supervision",
-  title: "LMFT supervision for associates who want direct feedback and better clinical thinking.",
-  lede: "This is for associates who want more than signatures and hours.",
+  title: "LMFT supervision for associates who want to think clearly under pressure.",
+  lede: "For associates who want more than signatures, hours, and a vague sense that they are probably doing fine.",
   body: [
-    "We work on case formulation, ethics, countertransference, and treatment decisions.",
-    "The feedback is direct. If something is getting in the way of the work — countertransference, fear, over-accommodation — we'll name it."
+    "We work on case formulation, ethics, countertransference, and treatment decisions—the parts of clinical work that are usually more complicated than a modality acronym makes them sound.",
+    "I will give direct feedback. If fear, over-accommodation, certainty, or a value conflict is getting in the way of the work, we will name it without making it a character indictment."
   ]
 } as const;
 
 const fit = [
-  "You want supervision that is direct and specific.",
-  "You want help with case formulation, countertransference, ethics, and treatment decisions.",
-  "You want feedback that helps you improve, not just approval."
+  "You want supervision that is direct, specific, and grounded in the actual case.",
+  "You want help making sense of countertransference, ethics, authority, and treatment decisions.",
+  "You want feedback that helps you grow rather than empty reassurance or a performance of certainty."
 ] as const;
 
 const notFit = [
-  "Rubber-stamp supervision.",
-  "Minimal challenge.",
-  "A strong preference for canned language over clinical thinking."
+  "Rubber-stamp supervision or a place to collect signatures.",
+  "A supervisory relationship with minimal challenge or accountability.",
+  "Canned language in place of clinical thinking."
 ] as const;
 
 const topics = [
-  "Case formulation that does not collapse into modality language",
-  "Countertransference, including fear, disgust, over-identification, and value conflicts",
-  "Ethics in real situations, not only classroom examples",
-  "Authority, boundaries, documentation, and decision-making"
+  "Case formulation that does not collapse into a list of symptoms and modality names",
+  "Countertransference, including fear, disgust, over-identification, and value conflict",
+  "Ethics in the situations that do not arrive with a clean classroom answer",
+  "Authority, boundaries, documentation, and how to make a decision you can stand behind"
 ] as const;
 
 
@@ -92,7 +92,7 @@ export default function SupervisionPage() {
           </div>
           <div className="meta-block">
             <p className="label">Format</p>
-            <p className="body">Direct supervision with one supervisor who will tell you what she thinks.</p>
+            <p className="body">Direct supervision with one supervisor who will tell you what she sees and explain her thinking.</p>
           </div>
         </aside>
       </div>
@@ -123,7 +123,7 @@ export default function SupervisionPage() {
       <section className="section-gap-lg full-bleed-band full-bleed-band--ultramarine">
         <div className="container-wrap">
           <article className="split-panel">
-            <h2 className="h2">Cases, ethics, and where you get stuck.</h2>
+            <h2 className="h2">Cases, ethics, and the places where your usual strengths stop being enough.</h2>
             <ul className="split-panel__list body">
               {topics.map((item) => (
                 <li key={item}>{item}</li>
