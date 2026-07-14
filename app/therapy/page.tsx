@@ -55,7 +55,7 @@ export default function TherapyPage() {
           <h1 className="h1 mt-4">Bring the complicated version.</h1>
           <p className="hero-lede">Individual therapy in Round Rock and online across Texas for complex trauma, religious trauma and religious harm, perfectionism, overcontrol, and neurodivergence.</p>
           <div className="hero-support">
-            <p className="body">You may understand the problem extremely well. You may have explained it to yourself in several excellent ways. It may still be running the meeting.</p>
+            <p className="body">You may understand the pattern extremely well. You may have explained it to yourself in several excellent ways. And still find yourself in the same fight, putting off the same decision, or building an elaborate system to keep an ordinary week from coming apart.</p>
             <p className="body">Therapy here is direct, curious, systemic, and allowed to be funny.</p>
             <p className="body">
               A lot of my work is with <Link href="/who-i-work-with" className="focus-ring font-semibold text-accent underline-offset-4 hover:underline">queer, trans, fat, neurodivergent, and post-religious adults</Link>—often at the intersections of several of those identities.
