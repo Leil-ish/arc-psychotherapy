@@ -15,14 +15,14 @@ export default function FeesPage() {
       <section className="container-wrap py-16 md:py-20">
         <h1 className="h1">Fees & policies</h1>
         <p className="body-lg mt-6 max-w-3xl">
-          Standard individual therapy is ${pricing.standardSession.fee} for {pricing.standardSession.duration}. This is a private-pay practice; a superbill is available if you use out-of-network benefits.
+          Standard individual therapy is ${pricing.standardSession.fee} per psychotherapy session, {pricing.standardSession.duration}. This is a private-pay practice; a superbill is available if you use out-of-network benefits.
         </p>
         <p className="body mt-3 max-w-3xl">
           If you use out-of-network benefits and do not want to handle claims yourself,{" "}
           <a href="https://www.mentaya.com/" target="_blank" rel="noopener noreferrer" className="focus-ring font-semibold text-accent underline-offset-4 hover:underline">Mentaya</a>{" "}
           and{" "}
           <a href="https://www.thrizer.com/" target="_blank" rel="noopener noreferrer" className="focus-ring font-semibold text-accent underline-offset-4 hover:underline">Thrizer</a>{" "}
-          can automate out-of-network reimbursement.
+          are separate third-party services you can choose to use to help with claims. Their fees, terms, and any information they require are set by those services; reimbursement depends on your plan and is not guaranteed.
         </p>
       </section>
 

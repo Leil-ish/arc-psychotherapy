@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What do sessions look like?",
-    a: "Sessions are 50–55 minutes. We talk about history, meaning, and relationships, then get concrete about the sequence that keeps repeating: what happens, what you predict, what you do next, and what it costs. Between sessions, you may notice or try things; we use what happens to guide the next session."
+    a: "Sessions are typically 50–55 minutes. We talk about history, meaning, and relationships, then get concrete about the sequence that keeps repeating: what happens, what you predict, what you do next, and what it costs. Between sessions, you may notice or try things; we use what happens to guide the next session."
   },
   {
     q: "How long does therapy typically take?",
@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "Do you accept insurance?",
-    a: "No. This is a private-pay practice. I can provide a superbill for out-of-network reimbursement. Mentaya and Thrizer are separate services that can help with claims if you do not want to handle that paperwork yourself."
+    a: "No. This is a private-pay practice. I can provide a superbill for out-of-network reimbursement. Mentaya and Thrizer are separate third-party services you can choose to use for help with claims; their fees, terms, and any reimbursement are determined by the service and your insurance plan."
   },
   {
     q: "How does playing with LEGO fit into therapy?",

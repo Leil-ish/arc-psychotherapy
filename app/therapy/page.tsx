@@ -2,6 +2,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import { ButtonLink } from "@/components/button-link";
 import { SchemaScript } from "@/components/schema-script";
+import { pricing, siteConfig } from "@/lib/content";
 import { breadcrumbSchema, pageMetadata, webPageSchema } from "@/lib/seo";
 import { specialties } from "@/src/content/specialties";
 
@@ -27,6 +28,11 @@ const specialtyCards = [
     specialty: specialties.perfectionismOvercontrol,
     label: "Perfectionism and overcontrol",
     body: "When being capable has become a full-time private management system."
+  },
+  {
+    specialty: specialties.neurodivergentAdults,
+    label: "Neurodivergent-affirming therapy",
+    body: "For burnout, masking, sensory strain, executive-function differences, and the work of translating yourself all day."
   }
 ] as const;
 
@@ -79,6 +85,50 @@ export default function TherapyPage() {
                 <p className="index-card__body body">{body}</p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-gap-lg">
+        <div className="container-wrap">
+          <div className="section-heading">
+            <h2 className="h2">How therapy works here.</h2>
+          </div>
+          <div className="split-band split-band--open mt-6">
+            <article className="split-panel">
+              <h3 className="h3">Starting.</h3>
+              <p className="body">Therapy starts with a free, 30-minute video consultation. We talk about what has brought you here, what you hope would be different, and the practical questions that make a first appointment possible.</p>
+              <p className="body">At the first full session, we take more room to get specific about what is happening now, who and what is involved, the history that matters, and what you have already tried.</p>
+            </article>
+            <article className="split-panel">
+              <h3 className="h3">Ongoing work.</h3>
+              <p className="body">Most people begin weekly. Once we have a treatment plan and a sense of what is helping, we can adjust frequency around the work and your life.</p>
+              <p className="body">Some sessions are wide-open conversation. Other times, a visual map, a walk, or playing with LEGO gives us a more useful way to see a relationship, decision, or pattern. I bring questions, observations, and a willingness to say when I think we are looking in the wrong place.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-gap full-bleed-band full-bleed-band--ultramarine">
+        <div className="container-wrap">
+          <div className="split-band">
+            <article className="split-panel">
+              <h2 className="h2">How we know whether it is helping.</h2>
+              <p className="body">We take stock along the way: Do you have more choice in a familiar situation? Are your relationships, decisions, or ordinary days changing in ways that matter to you? Has something become clearer, easier, or more yours?</p>
+              <p className="body">If we hit a wall, that is worth talking about directly. We can change the focus, pace, or method—or decide another kind of care would be more useful.</p>
+            </article>
+            <article className="split-panel">
+              <h2 className="h2">The practical details.</h2>
+              <ul className="split-panel__list body">
+                <li>Free 30-minute video consultation.</li>
+                <li>${pricing.standardSession.fee} per psychotherapy session, {pricing.standardSession.duration}.</li>
+                <li>In person in {siteConfig.primaryLocation}, with telehealth across Texas.</li>
+                <li>Private-pay practice; superbills may be available for out-of-network reimbursement.</li>
+              </ul>
+              <div className="hero-actions">
+                <ButtonLink href="/contact">Ask about therapy availability</ButtonLink>
+              </div>
+            </article>
           </div>
         </div>
       </section>

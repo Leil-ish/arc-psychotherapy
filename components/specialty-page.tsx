@@ -74,7 +74,7 @@ export function SpecialtyPage({ specialty }: { specialty: SpecialtyPage }) {
         <div className="split-band split-band--open">
           <article className="split-panel">
             <h2 className="h2">The practical details.</h2>
-            <p className="body">Private-pay individual therapy with one therapist from the first conversation onward. The standard fee is ${pricing.standardSession.fee} for {pricing.standardSession.duration}; reduced-fee spots are limited and availability varies. In person in {siteConfig.primaryLocation}, with telehealth across Texas.</p>
+            <p className="body">Private-pay individual therapy with one therapist from the first conversation onward. The standard fee is ${pricing.standardSession.fee} per psychotherapy session, {pricing.standardSession.duration}; reduced-fee spots are limited and availability varies. In person in {siteConfig.primaryLocation}, with telehealth across Texas.</p>
           </article>
           <article className="split-panel">
             <h2 className="h2">Who you will work with.</h2>

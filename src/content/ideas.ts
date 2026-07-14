@@ -182,7 +182,7 @@ export function formatEssayDate(date: string) {
 }
 
 export function getAllEssays() {
-  return [...essays].sort((a, b) => a.title.localeCompare(b.title));
+  return [...essays].sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export function getEssayBySlug(slug: string) {

@@ -46,7 +46,7 @@ export default function GoodFaithEstimatePage() {
         </p>
         <ul className="mt-4 space-y-2 body">
           <li>
-            <strong>Standard individual therapy session:</strong> ${pricing.standardSession.fee} per {pricing.standardSession.duration}
+            <strong>Standard individual therapy session:</strong> ${pricing.standardSession.fee}, {pricing.standardSession.duration}
           </li>
           <li>
             <strong>{pricing.constructiveTrack.arc6.label} (LEGO therapy):</strong> ${pricing.constructiveTrack.arc6.fee} — {pricing.constructiveTrack.arc6.details}

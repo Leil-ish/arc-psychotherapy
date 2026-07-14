@@ -50,6 +50,13 @@ const speaking = [
   "Countertransference, ethics, and supervision"
 ] as const;
 
+const deliverables = [
+  "Program assessment and workflow map",
+  "Leadership consultation",
+  "Training curriculum or facilitated team session",
+  "Recommendations for the next practical changes"
+] as const;
+
 export default function ConsultationPage() {
   return (
     <section className="container-wrap py-16 md:py-20">
@@ -93,6 +100,10 @@ export default function ConsultationPage() {
           <div className="meta-block">
             <p className="label">Topics</p>
             <p className="body">Program design, training, shame and trauma treatment, leadership, and treatment culture.</p>
+          </div>
+          <div className="meta-block">
+            <p className="label">Background</p>
+            <p className="body">Former executive clinical leadership in residential dual-diagnosis and high-acuity treatment, with experience in program design, treatment planning, crisis systems, and TAMFT governance and education.</p>
           </div>
         </aside>
       </div>
@@ -143,6 +154,19 @@ export default function ConsultationPage() {
           <article className="split-panel">
             <h2 className="h2">Pricing.</h2>
             <p className="body">Every engagement is priced to its scope. Nonprofits receive discounted pricing. Trainings are priced per attendee, with a cap so a useful roomful of people does not become financially absurd.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section-gap pb-8">
+        <div className="split-band split-band--open">
+          <article className="split-panel">
+            <h2 className="h2">What an engagement can include.</h2>
+            <ul className="split-panel__list body">
+              {deliverables.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </article>
         </div>
       </section>

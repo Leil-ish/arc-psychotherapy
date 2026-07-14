@@ -9,6 +9,16 @@ import { navItems, siteConfig } from "@/lib/content";
 export function SiteHeader() {
   const pathname = usePathname();
 
+  const headerAction = pathname.startsWith("/consultation")
+    ? { label: "Discuss a project", href: "/contact#consult-request" }
+    : pathname.startsWith("/supervision")
+      ? { label: "Ask about supervision", href: "/contact#consult-request" }
+      : pathname.startsWith("/therapy") || pathname.startsWith("/who-i-work-with")
+        ? { label: "Ask about therapy", href: "/contact#consult-request" }
+        : pathname.startsWith("/contact")
+          ? null
+          : { label: "Get in touch", href: siteConfig.bookingUrl };
+
   const isActive = (href: string) =>
     pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
 
@@ -29,9 +39,11 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link href={siteConfig.bookingUrl} className="focus-ring no-link-style button button--secondary site-header__cta">
-          Ask about availability
-        </Link>
+        {headerAction ? (
+          <Link href={headerAction.href as Route} className="focus-ring no-link-style button button--secondary site-header__cta">
+            {headerAction.label}
+          </Link>
+        ) : null}
       </div>
     </header>
   );

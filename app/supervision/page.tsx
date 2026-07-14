@@ -87,11 +87,11 @@ export default function SupervisionPage() {
           </div>
           <div className="meta-block">
             <p className="label">Fee</p>
-            <p className="body">Pay what you can. Most supervisees pay $200–$400 per month; I make room for the life things that happen because supervision should not be a barrier to becoming a clinician.</p>
+            <p className="body">Pay what you can. Most supervisees pay $200–$400 per month, depending on their supervision arrangement and circumstances. We set a fee together and revisit it when life changes, because supervision should not be a barrier to becoming a clinician.</p>
           </div>
           <div className="meta-block">
             <p className="label">Openings</p>
-            <p className="body">I do not currently have openings, but several supervisees are rotating off soon. You are welcome to inquire.</p>
+            <p className="body">I do not currently have an immediate opening. You are welcome to inquire about anticipated availability.</p>
           </div>
         </aside>
       </div>

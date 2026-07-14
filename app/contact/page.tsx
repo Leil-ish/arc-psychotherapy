@@ -73,7 +73,7 @@ export default function ContactPage() {
           </div>
           <aside className="split-panel">
             <ul className="split-panel__list body">
-              <li>Standard session fee is $200 for 50–55 minutes.</li>
+              <li>Standard session fee is $200 per psychotherapy session, typically 50–55 minutes.</li>
               <li>Private-pay practice. Superbills may be available for out-of-network reimbursement.</li>
               <li>Telehealth is available to Texas residents when clinically appropriate.</li>
               <li>24-hour cancellation policy. Late cancellations or no-shows may be billed in full.</li>

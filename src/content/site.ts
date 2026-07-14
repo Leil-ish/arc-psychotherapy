@@ -44,7 +44,7 @@ export const siteContent = {
     "Pflugerville"
   ],
   standardSessionFee: 200,
-  sessionLength: "50–55 minutes",
+  sessionLength: "typically 50–55 minutes",
   credentials: [
     "Licensed Marriage and Family Therapist – Texas"
   ],

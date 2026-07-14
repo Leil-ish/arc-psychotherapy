@@ -75,7 +75,7 @@ export default function HomePage() {
             </div>
             <div className="meta-block">
               <p className="label">Rate</p>
-              <p className="body">${siteContent.standardSessionFee} per {siteContent.sessionLength}.</p>
+              <p className="body">${siteContent.standardSessionFee} per psychotherapy session.</p>
               <p className="body">Private-pay practice.</p>
             </div>
           </aside>
