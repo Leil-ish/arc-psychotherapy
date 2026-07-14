@@ -327,33 +327,31 @@ a:not(.no-link-style):hover {
 }
 
 .brand-mark__tile {
-  position: relative;
-  width: 2.15rem;
-  height: 2.7rem;
+  display: grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  place-items: center;
   background: rgb(var(--color-surface));
-  overflow: hidden;
-  border-radius: 0.55rem;
+  border-radius: 0.72rem;
+  padding: 0.2rem;
 }
 
-.brand-mark__arch {
-  position: absolute;
-  left: 0.38rem;
-  right: 0.38rem;
-  top: 0.34rem;
-  bottom: 0.42rem;
-  border-top-left-radius: 999px;
-  border-top-right-radius: 999px;
-  border: 0.28rem solid rgb(var(--color-amaranth));
-  border-bottom: 0;
+.brand-mark__symbol {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.brand-mark__threshold {
-  position: absolute;
-  left: 0.72rem;
-  right: 0.72rem;
-  bottom: 0.42rem;
-  height: 0.26rem;
-  background: rgb(var(--color-citron));
+.brand-mark__symbol .arc-symbol__outer {
+  fill: rgb(var(--color-ultramarine));
+}
+
+.brand-mark__symbol .arc-symbol__sweep {
+  fill: rgb(var(--color-ink));
+}
+
+.brand-mark__symbol .arc-symbol__opening {
+  fill: rgb(var(--color-citron));
 }
 
 .brand-mark__lockup {
@@ -379,8 +377,8 @@ a:not(.no-link-style):hover {
 }
 
 .brand-mark--footer .brand-mark__tile {
-  width: 2rem;
-  height: 2rem;
+  width: 2.3rem;
+  height: 2.3rem;
   background: rgb(var(--color-surface));
 }
 
@@ -430,8 +428,8 @@ a:not(.no-link-style):hover {
 }
 
 .site-footer__brand .brand-mark__tile {
-  width: 2.25rem;
-  height: 2.7rem;
+  width: 2.45rem;
+  height: 2.45rem;
 }
 
 .site-footer__brand .brand-mark__logotype {

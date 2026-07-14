@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Route } from "next";
+import { ArcSymbol } from "@/components/arc-symbol";
 
 export function BrandMark({
   href = "/",
@@ -11,8 +12,7 @@ export function BrandMark({
   return (
     <Link href={href} className={`focus-ring no-link-style brand-mark brand-mark--${variant}`}>
       <span className="brand-mark__tile" aria-hidden="true">
-        <span className="brand-mark__arch" />
-        <span className="brand-mark__threshold" />
+        <ArcSymbol className="brand-mark__symbol" />
       </span>
       <span className="brand-mark__lockup">
         <span className="brand-mark__logotype">Arc</span>
